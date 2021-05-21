@@ -27,6 +27,12 @@
       "@msk/shared/app-config": [
         "libs/shared/app-config/src/index.ts"
       ],
+      "@msk/shared/data-access/api": [
+        "libs/shared/data-access/api/src/index.ts"
+      ],
+      "@msk/shared/data-access/models": [
+        "libs/shared/data-access/models/src/index.ts"
+      ],
       "@msk/shared/utils": [
         "libs/shared/utils/src/index.ts"
       ]

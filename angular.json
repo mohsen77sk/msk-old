@@ -49,12 +49,20 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/web-app/src/favicon.ico",
-              "apps/web-app/src/assets"
+              "apps/web-app/src/assets",
+              "apps/web-app/src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "libs/shared/assets/src/assets",
+                "output": "assets"
+              }
             ],
             "styles": [
               "apps/web-app/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "apps/web-app/ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -293,6 +301,60 @@
             "lintFilePatterns": [
               "libs/shared/app-config/src/**/*.ts",
               "libs/shared/app-config/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-data-access-api": {
+      "projectType": "library",
+      "root": "libs/shared/data-access/api",
+      "sourceRoot": "libs/shared/data-access/api/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/data-access/api"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/data-access/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access/api/src/**/*.ts",
+              "libs/shared/data-access/api/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-data-access-models": {
+      "projectType": "library",
+      "root": "libs/shared/data-access/models",
+      "sourceRoot": "libs/shared/data-access/models/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/data-access/models"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/data-access/models/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access/models/src/**/*.ts",
+              "libs/shared/data-access/models/src/**/*.html"
             ]
           }
         }

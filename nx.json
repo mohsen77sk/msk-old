@@ -45,6 +45,12 @@
     "shared-app-config": {
       "tags": []
     },
+    "shared-data-access-api": {
+      "tags": []
+    },
+    "shared-data-access-models": {
+      "tags": []
+    },
     "shared-utils": {
       "tags": []
     }
