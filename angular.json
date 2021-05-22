@@ -306,6 +306,12 @@
         }
       }
     },
+    "shared-assets": {
+      "projectType": "library",
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/web/shared/assets/src",
+      "architect": {}
+    },
     "shared-data-access-api": {
       "projectType": "library",
       "root": "libs/shared/data-access/api",

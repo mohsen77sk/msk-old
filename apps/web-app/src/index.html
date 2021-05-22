@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
 
   <title>WebApp</title>
   <base href="/" />
@@ -28,13 +28,24 @@
 
   <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/fonts/Icon/fontIcons.css" rel="stylesheet">
+  <link href="assets/fonts/IRANSansWeb/fonts.css" rel="stylesheet">
+  <link href="assets/styles/splash-screen.css" rel="stylesheet">
 </head>
 
 <body class="mat-typography light">
 
+  <!-- Splash screen -->
+  <msk-splash-screen>
+    <img src="assets/images/logos/logo.png" alt="NX logo">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </msk-splash-screen>
+
+  <!-- App root -->
   <msk-root></msk-root>
 
   <noscript>Please enable JavaScript to continue using this application.</noscript>

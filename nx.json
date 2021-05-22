@@ -45,6 +45,9 @@
     "shared-app-config": {
       "tags": []
     },
+    "shared-assets": {
+      "tags": []
+    },
     "shared-data-access-api": {
       "tags": []
     },
