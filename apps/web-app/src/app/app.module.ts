@@ -4,8 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { WebShellModule } from '@msk/shell/feature';
-import { GetAppConfigProvider } from '@msk/shared/app-config';
+import { WebShellModule } from '@msk/app/shell/feature';
+import { GetAppConfigProvider } from '@msk/app/shared/app-config';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';

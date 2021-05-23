@@ -36,22 +36,25 @@
     "web-api": {
       "tags": []
     },
-    "shell-feature": {
+    "app-shell-feature": {
       "tags": []
     },
-    "shell-ui-layout": {
+    "app-shell-ui-layout": {
       "tags": []
     },
-    "shared-app-config": {
+    "app-shared-app-config": {
+      "tags": []
+    },
+    "app-shared-data-access-api": {
+      "tags": []
+    },
+    "app-shared-data-access-models": {
+      "tags": []
+    },
+    "app-shared-utils": {
       "tags": []
     },
     "shared-assets": {
-      "tags": []
-    },
-    "shared-data-access-api": {
-      "tags": []
-    },
-    "shared-data-access-models": {
       "tags": []
     },
     "shared-utils": {

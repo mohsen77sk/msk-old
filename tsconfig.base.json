@@ -18,20 +18,23 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@msk/shell/feature": [
-        "libs/shell/feature/src/index.ts"
+      "@msk/app/shell/feature": [
+        "libs/app/shell/feature/src/index.ts"
       ],
-      "@msk/shell/ui/layout": [
-        "libs/shell/ui/layout/src/index.ts"
+      "@msk/app/shell/ui/layout": [
+        "libs/app/shell/ui/layout/src/index.ts"
       ],
-      "@msk/shared/app-config": [
-        "libs/shared/app-config/src/index.ts"
+      "@msk/app/shared/app-config": [
+        "libs/app/shared/app-config/src/index.ts"
       ],
-      "@msk/shared/data-access/api": [
-        "libs/shared/data-access/api/src/index.ts"
+      "@msk/app/shared/data-access/api": [
+        "libs/app/shared/data-access/api/src/index.ts"
       ],
-      "@msk/shared/data-access/models": [
-        "libs/shared/data-access/models/src/index.ts"
+      "@msk/app/shared/data-access/models": [
+        "libs/app/shared/data-access/models/src/index.ts"
+      ],
+      "@msk/app/shared/utils": [
+        "libs/app/shared/utils/src/index.ts"
       ],
       "@msk/shared/utils": [
         "libs/shared/utils/src/index.ts"
