@@ -24,6 +24,9 @@
       "@msk/app/shell/ui/layout": [
         "libs/app/shell/ui/layout/src/index.ts"
       ],
+      "@msk/app/shell/ui/splash-screen": [
+        "libs/app/shell/ui/splash-screen/src/index.ts"
+      ],
       "@msk/app/shared/app-config": [
         "libs/app/shared/app-config/src/index.ts"
       ],
@@ -33,8 +36,14 @@
       "@msk/app/shared/data-access/models": [
         "libs/app/shared/data-access/models/src/index.ts"
       ],
+      "@msk/app/shared/directives/scrollbar": [
+        "libs/app/shared/directives/scrollbar/src/index.ts"
+      ],
       "@msk/app/shared/utils": [
         "libs/app/shared/utils/src/index.ts"
+      ],
+      "@msk/shared/styles": [
+        "libs/shared/styles/src/styles.scss"
       ],
       "@msk/shared/utils": [
         "libs/shared/utils/src/index.ts"

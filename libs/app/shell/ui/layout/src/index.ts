@@ -1,1 +1,2 @@
-export * from './lib/app-shell-ui-layout.module';
+export * from './lib/app-layout.module';
+export * from './lib/app-layout.component';

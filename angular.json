@@ -60,7 +60,15 @@
             "styles": [
               "apps/web-app/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared/styles/src"
+              ]
+            },
             "scripts": [],
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ],
             "serviceWorker": true,
             "ngswConfigPath": "apps/web-app/ngsw-config.json"
           },
@@ -279,6 +287,33 @@
         }
       }
     },
+    "app-shell-ui-splash-screen": {
+      "projectType": "library",
+      "root": "libs/app/shell/ui/splash-screen",
+      "sourceRoot": "libs/app/shell/ui/splash-screen/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/app/shell/ui/splash-screen"
+          ],
+          "options": {
+            "jestConfig": "libs/app/shell/ui/splash-screen/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/ui/splash-screen/src/**/*.ts",
+              "libs/app/shell/ui/splash-screen/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-app-config": {
       "projectType": "library",
       "root": "libs/app/shared/app-config",
@@ -360,6 +395,33 @@
         }
       }
     },
+    "app-shared-directives-scrollbar": {
+      "projectType": "library",
+      "root": "libs/app/shared/directives/scrollbar",
+      "sourceRoot": "libs/app/shared/directives/scrollbar/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/app/shared/directives/scrollbar"
+          ],
+          "options": {
+            "jestConfig": "libs/app/shared/directives/scrollbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/directives/scrollbar/src/**/*.ts",
+              "libs/app/shared/directives/scrollbar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-utils": {
       "projectType": "library",
       "root": "libs/app/shared/utils",
@@ -391,6 +453,12 @@
       "projectType": "library",
       "root": "libs/shared/assets",
       "sourceRoot": "libs/web/shared/assets/src",
+      "architect": {}
+    },
+    "shared-styles": {
+      "projectType": "library",
+      "root": "libs/shared/styles",
+      "sourceRoot": "libs/web/shared/styles/src",
       "architect": {}
     },
     "shared-utils": {
