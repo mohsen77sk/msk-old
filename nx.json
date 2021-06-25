@@ -24,25 +24,7 @@
     }
   },
   "projects": {
-    "web-app": {
-      "tags": []
-    },
-    "web-app-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "web-app"
-      ]
-    },
-    "web-api": {
-      "tags": []
-    },
-    "app-shell-feature": {
-      "tags": []
-    },
-    "app-shell-ui-layout": {
-      "tags": []
-    },
-    "app-shell-ui-splash-screen": {
+    "app-home-feature": {
       "tags": []
     },
     "app-shared-app-config": {
@@ -60,6 +42,15 @@
     "app-shared-utils": {
       "tags": []
     },
+    "app-shell-feature": {
+      "tags": []
+    },
+    "app-shell-ui-layout": {
+      "tags": []
+    },
+    "app-shell-ui-splash-screen": {
+      "tags": []
+    },
     "shared-assets": {
       "tags": []
     },
@@ -68,6 +59,18 @@
     },
     "shared-utils": {
       "tags": []
+    },
+    "web-api": {
+      "tags": []
+    },
+    "web-app": {
+      "tags": []
+    },
+    "web-app-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "web-app"
+      ]
     }
   }
 }

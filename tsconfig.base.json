@@ -18,14 +18,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@msk/app/shell/feature": [
-        "libs/app/shell/feature/src/index.ts"
-      ],
-      "@msk/app/shell/ui/layout": [
-        "libs/app/shell/ui/layout/src/index.ts"
-      ],
-      "@msk/app/shell/ui/splash-screen": [
-        "libs/app/shell/ui/splash-screen/src/index.ts"
+      "@msk/app/home/feature": [
+        "libs/app/home/feature/src/index.ts"
       ],
       "@msk/app/shared/app-config": [
         "libs/app/shared/app-config/src/index.ts"
@@ -41,6 +35,15 @@
       ],
       "@msk/app/shared/utils": [
         "libs/app/shared/utils/src/index.ts"
+      ],
+      "@msk/app/shell/feature": [
+        "libs/app/shell/feature/src/index.ts"
+      ],
+      "@msk/app/shell/ui/layout": [
+        "libs/app/shell/ui/layout/src/index.ts"
+      ],
+      "@msk/app/shell/ui/splash-screen": [
+        "libs/app/shell/ui/splash-screen/src/index.ts"
       ],
       "@msk/shared/styles": [
         "libs/shared/styles/src/styles.scss"

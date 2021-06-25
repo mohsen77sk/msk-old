@@ -8,12 +8,12 @@ import { SplashScreenModule } from '@msk/app/shell/ui/splash-screen';
 
 @NgModule({
   imports: [
+    LayoutModule,
+    SplashScreenModule,
+
     RouterModule.forRoot(webShellRoutes, {
       scrollPositionRestoration: 'top',
     }),
-
-    LayoutModule,
-    SplashScreenModule,
   ],
   exports: [RouterModule],
 })
