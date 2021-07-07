@@ -122,6 +122,44 @@ const themes = {
   },
 };
 
+/**
+ * Schema
+ */
+const schema = {
+  light: {
+    'bg-status-bar': colors.gray[300],
+    'bg-app-bar': colors.gray[100],
+    'bg-default': colors.gray[50],
+    'bg-hover': 'rgba(0,0,0, 0.04)',
+    'bg-card': '#fff',
+    'bg-dialog': '#fff',
+    'text-default': 'rgba(0,0,0, 0.87)',
+    'text-secondary': 'rgba(0,0,0, 0.54)',
+    'text-disabled': 'rgba(0,0,0, 0.38)',
+    'text-hint': 'rgba(0,0,0, 0.38)',
+    'border': 'rgba(0,0,0, 0.12)',
+    'divider': 'rgba(0,0,0, 0.12)',
+    'icon': 'rgba(0,0,0, 0.54)',
+    'mat-icon': 'rgba(0,0,0, 0.54)',
+  },
+  dark: {
+    'bg-status-bar': '#000',
+    'bg-app-bar': colors.gray[900],
+    'bg-default': '#303030',
+    'bg-hover': 'rgba(255,255,255, 0.04)',
+    'bg-card': colors.gray[800],
+    'bg-dialog': colors.gray[800],
+    'text-default': '#fff',
+    'text-secondary': 'rgba(255,255,255, 0.7)',
+    'text-disabled': 'rgba(255,255,255, 0.5)',
+    'text-hint': 'rgba(255,255,255, 0.5)',
+    'border': 'rgba(255,255,255, 0.12)',
+    'divider': 'rgba(255,255,255, 0.12)',
+    'icon': '#fff',
+    'mat-icon': '#fff',
+  },
+}
+
 module.exports = {
   prefix: '',
   purge: {
@@ -133,19 +171,25 @@ module.exports = {
     fontFamily: {
       sans: fontFamily,
     },
+    backgroundColor: {
+      'default': 'var(--color-bg-default)',
+      'dialog': 'var(--color-bg-dialog)',
+      'card': 'var(--color-bg-card)',
+      'hover': 'var(--color-bg-hover)',
+    },
+    textColor: {
+      'default': 'var(--color-text-default)',
+      'secondary': 'var(--color-text-secondary)',
+      'disabled': 'var(--color-text-disabled)',
+      'hint': 'var(--color-text-hint)',
+    },
     variables: {
-      body: {
-        color: themes.default,
-      },
-      'body.theme-teal': {
-        color: themes.teal,
-      },
-      'body.theme-purple': {
-        color: themes.purple,
-      },
-      'body.theme-amber': {
-        color: themes.amber,
-      },
+      'body': themes.default,
+      'body.theme-teal': themes.teal,
+      'body.theme-purple': themes.purple,
+      'body.theme-amber': themes.amber,
+      'body.light, .light, .dark .light' : schema.light,
+      'body.dark, .dark, .light .dark' : schema.dark
     },
   },
   variants: {
@@ -154,6 +198,7 @@ module.exports = {
   plugins: [
     require('@mertasan/tailwindcss-variables')({
       colorVariables: true,
+      variablePrefix: '--color',
       extendColors: {
         'primary': 'var(--color-primary)',
         'primary-50': 'var(--color-primary-50)',
