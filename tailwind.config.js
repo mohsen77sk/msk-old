@@ -26,7 +26,7 @@ const themes = {
       700: colors.white,
       800: colors.white,
       900: colors.white,
-      DEFAULT: colors.white
+      DEFAULT: colors.white,
     },
     accent: {
       ...colors.blueGray,
@@ -43,7 +43,7 @@ const themes = {
       700: colors.white,
       800: colors.white,
       900: colors.white,
-      DEFAULT: colors.white
+      DEFAULT: colors.white,
     },
     warn: {
       ...colors.red,
@@ -60,7 +60,7 @@ const themes = {
       700: colors.white,
       800: colors.white,
       900: colors.white,
-      DEFAULT: colors.white
+      DEFAULT: colors.white,
     },
   },
 
@@ -82,7 +82,7 @@ const themes = {
       700: colors.white,
       800: colors.white,
       900: colors.white,
-      DEFAULT: colors.white
+      DEFAULT: colors.white,
     },
   },
   purple: {
@@ -101,7 +101,7 @@ const themes = {
       700: colors.white,
       800: colors.white,
       900: colors.white,
-      DEFAULT: colors.white
+      DEFAULT: colors.white,
     },
   },
   amber: {
@@ -117,7 +117,7 @@ const themes = {
       700: colors.white,
       800: colors.white,
       900: colors.white,
-      DEFAULT: colors.white
+      DEFAULT: colors.white,
     },
   },
 };
@@ -158,13 +158,19 @@ const schema = {
     'icon': '#fff',
     'mat-icon': '#fff',
   },
-}
+};
 
 module.exports = {
   prefix: '',
   purge: {
     enabled: guessProductionMode(),
     content: ['./apps/**/*.{html,ts}', './libs/**/*.{html,ts}'],
+    options: {
+      safelist: {
+        standard: ['light', 'dark'],
+        deep: [/body$/]
+      }
+    },
   },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -188,8 +194,15 @@ module.exports = {
       'body.theme-teal': themes.teal,
       'body.theme-purple': themes.purple,
       'body.theme-amber': themes.amber,
-      'body.light, .light, .dark .light' : schema.light,
-      'body.dark, .dark, .light .dark' : schema.dark
+      'body.light, .light, .dark .light': schema.light,
+      'body.dark, .dark, .light .dark': schema.dark,
+    },
+    screens: {
+      'print': 'print',
+      'sm': '600px',
+      'md': '960px',
+      'lg': '1280px',
+      'xl': '1440px',
     },
   },
   variants: {
@@ -260,7 +273,7 @@ module.exports = {
         'on-warn-700': 'var(--color-warn-700)',
         'on-warn-800': 'var(--color-warn-800)',
         'on-warn-900': 'var(--color-warn-900)',
-      }
+      },
     }),
   ],
 };
