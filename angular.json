@@ -182,6 +182,31 @@
         }
       }
     },
+    "app-shared-ui-drawer": {
+      "projectType": "library",
+      "root": "libs/app/shared/ui/drawer",
+      "sourceRoot": "libs/app/shared/ui/drawer/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/ui/drawer"],
+          "options": {
+            "jestConfig": "libs/app/shared/ui/drawer/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/ui/drawer/src/**/*.ts",
+              "libs/app/shared/ui/drawer/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-utils": {
       "projectType": "library",
       "root": "libs/app/shared/utils",

@@ -36,6 +36,9 @@
       "@msk/app/shared/directives/scrollbar": [
         "libs/app/shared/directives/scrollbar/src/index.ts"
       ],
+      "@msk/app/shared/ui/drawer": [
+        "libs/app/shared/ui/drawer/src/index.ts"
+      ],
       "@msk/app/shared/utils": [
         "libs/app/shared/utils/src/index.ts"
       ],

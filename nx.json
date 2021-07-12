@@ -37,6 +37,9 @@
     "app-shared-directives-scrollbar": {
       "tags": []
     },
+    "app-shared-ui-drawer": {
+      "tags": []
+    },
     "app-shared-utils": {
       "tags": []
     },
