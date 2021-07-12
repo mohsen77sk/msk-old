@@ -1,0 +1,23 @@
+@use '~@angular/material' as mat;
+@use "sass:map";
+
+/* Force font family to IRANSans */
+$typography: mat.define-typography-config(
+  $font-family: theme('fontFamily.sans'), /* get on tailwind */
+  $title: mat.define-typography-level(1.25rem, 2rem, 600),
+  $body-2: mat.define-typography-level(0.875rem, 1.5rem, 600),
+  $button: mat.define-typography-level(0.875rem, 0.875rem, 500),
+  $input: mat.define-typography-level(0.875rem, 1.2857142857, 400) /* line-height: 20px */,
+);
+
+/* Include the core Angular Material styles */
+@include mat.core($typography);
+
+/* Create a base theme without color. This will globally set the density and typography for all future color themes. */
+@include mat.all-component-themes(
+  (
+    color: null,
+    density: -2,
+    typography: $typography
+  )
+);

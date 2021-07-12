@@ -3,8 +3,6 @@ const { guessProductionMode } = require('@ngneat/tailwind');
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const fontFamily = ['IRANSans', ...defaultTheme.fontFamily.sans];
-
 /**
  * Themes
  */
@@ -164,30 +162,31 @@ module.exports = {
   prefix: '',
   purge: {
     enabled: guessProductionMode(),
-    content: ['./apps/**/*.{html,ts}', './libs/**/*.{html,ts}'],
+    content: ['./apps/**/*.{html,scss,ts}', './libs/**/*.{html,scss,ts}'],
     options: {
       safelist: {
         standard: ['light', 'dark'],
-        deep: [/body$/]
+        deep: [/theme$/]
       }
     },
   },
   darkMode: 'class', // or 'media' or 'class'
+  important: true,
   theme: {
     fontFamily: {
-      sans: fontFamily,
+      sans: ['IRANSans', ...defaultTheme.fontFamily.sans],
     },
     backgroundColor: {
-      'default': 'var(--color-bg-default)',
-      'dialog': 'var(--color-bg-dialog)',
-      'card': 'var(--color-bg-card)',
-      'hover': 'var(--color-bg-hover)',
+      default: 'var(--color-bg-default)',
+      dialog: 'var(--color-bg-dialog)',
+      card: 'var(--color-bg-card)',
+      hover: 'var(--color-bg-hover)',
     },
     textColor: {
-      'default': 'var(--color-text-default)',
-      'secondary': 'var(--color-text-secondary)',
-      'disabled': 'var(--color-text-disabled)',
-      'hint': 'var(--color-text-hint)',
+      default: 'var(--color-text-default)',
+      secondary: 'var(--color-text-secondary)',
+      disabled: 'var(--color-text-disabled)',
+      hint: 'var(--color-text-hint)',
     },
     variables: {
       'body': themes.default,
@@ -198,11 +197,16 @@ module.exports = {
       'body.dark, .dark, .light .dark': schema.dark,
     },
     screens: {
-      'print': 'print',
-      'sm': '600px',
-      'md': '960px',
-      'lg': '1280px',
-      'xl': '1440px',
+      print: { raw: 'print' },
+      sm: '600px',
+      md: '960px',
+      lg: '1280px',
+      xl: '1440px',
+    },
+    extend: {
+      flex: {
+        0: '0 0 auto',
+      },
     },
   },
   variants: {
