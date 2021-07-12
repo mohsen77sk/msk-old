@@ -1,4 +1,4 @@
-export class PerfectScrollbarGeometry {
+export class ScrollbarGeometry {
   public x: number;
   public y: number;
 
@@ -13,7 +13,7 @@ export class PerfectScrollbarGeometry {
   }
 }
 
-export class PerfectScrollbarPosition {
+export class ScrollbarPosition {
   public x: number | 'start' | 'end';
   public y: number | 'start' | 'end';
 

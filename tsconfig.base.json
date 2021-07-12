@@ -30,6 +30,9 @@
       "@msk/app/shared/data-access/models": [
         "libs/app/shared/data-access/models/src/index.ts"
       ],
+      "@msk/app/shared/directives/scroll-reset": [
+        "libs/app/shared/directives/scroll-reset/src/index.ts"
+      ],
       "@msk/app/shared/directives/scrollbar": [
         "libs/app/shared/directives/scrollbar/src/index.ts"
       ],

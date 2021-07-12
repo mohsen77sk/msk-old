@@ -9,6 +9,7 @@ module.exports = {
     '<rootDir>/libs/app/shared/app-config',
     '<rootDir>/libs/app/shared/data-access/api',
     '<rootDir>/libs/app/shared/data-access/models',
+    '<rootDir>/libs/app/shared/directives/scroll-reset',
     '<rootDir>/libs/app/shared/directives/scrollbar',
     '<rootDir>/libs/app/shared/utils',
     '<rootDir>/libs/shared/utils',

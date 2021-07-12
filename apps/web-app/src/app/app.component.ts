@@ -16,9 +16,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   /**
    * Constructor
-   *
-   * @param {DOCUMENT} document
-   * @param {FuseSplashScreenService} _splashScreenService
    */
   constructor(
     @Inject(DOCUMENT) private document: any,

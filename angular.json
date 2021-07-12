@@ -40,9 +40,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/home/feature"
-          ],
+          "outputs": ["coverage/libs/app/home/feature"],
           "options": {
             "jestConfig": "libs/app/home/feature/jest.config.js",
             "passWithNoTests": true
@@ -67,9 +65,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shared/app-config"
-          ],
+          "outputs": ["coverage/libs/app/shared/app-config"],
           "options": {
             "jestConfig": "libs/app/shared/app-config/jest.config.js",
             "passWithNoTests": true
@@ -94,9 +90,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shared/data-access/api"
-          ],
+          "outputs": ["coverage/libs/app/shared/data-access/api"],
           "options": {
             "jestConfig": "libs/app/shared/data-access/api/jest.config.js",
             "passWithNoTests": true
@@ -121,9 +115,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shared/data-access/models"
-          ],
+          "outputs": ["coverage/libs/app/shared/data-access/models"],
           "options": {
             "jestConfig": "libs/app/shared/data-access/models/jest.config.js",
             "passWithNoTests": true
@@ -140,6 +132,31 @@
         }
       }
     },
+    "app-shared-directives-scroll-reset": {
+      "projectType": "library",
+      "root": "libs/app/shared/directives/scroll-reset",
+      "sourceRoot": "libs/app/shared/directives/scroll-reset/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/directives/scroll-reset"],
+          "options": {
+            "jestConfig": "libs/app/shared/directives/scroll-reset/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/directives/scroll-reset/src/**/*.ts",
+              "libs/app/shared/directives/scroll-reset/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-directives-scrollbar": {
       "projectType": "library",
       "root": "libs/app/shared/directives/scrollbar",
@@ -148,9 +165,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shared/directives/scrollbar"
-          ],
+          "outputs": ["coverage/libs/app/shared/directives/scrollbar"],
           "options": {
             "jestConfig": "libs/app/shared/directives/scrollbar/jest.config.js",
             "passWithNoTests": true
@@ -175,9 +190,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shared/utils"
-          ],
+          "outputs": ["coverage/libs/app/shared/utils"],
           "options": {
             "jestConfig": "libs/app/shared/utils/jest.config.js",
             "passWithNoTests": true
@@ -202,9 +215,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shell/feature"
-          ],
+          "outputs": ["coverage/libs/app/shell/feature"],
           "options": {
             "jestConfig": "libs/app/shell/feature/jest.config.js",
             "passWithNoTests": true
@@ -229,9 +240,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shell/ui/layout"
-          ],
+          "outputs": ["coverage/libs/app/shell/ui/layout"],
           "options": {
             "jestConfig": "libs/app/shell/ui/layout/jest.config.js",
             "passWithNoTests": true
@@ -256,9 +265,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/app/shell/ui/splash-screen"
-          ],
+          "outputs": ["coverage/libs/app/shell/ui/splash-screen"],
           "options": {
             "jestConfig": "libs/app/shell/ui/splash-screen/jest.config.js",
             "passWithNoTests": true
@@ -295,9 +302,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/utils"
-          ],
+          "outputs": ["coverage/libs/shared/utils"],
           "options": {
             "jestConfig": "libs/shared/utils/jest.config.js",
             "passWithNoTests": true
@@ -321,16 +326,12 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/web-api",
             "main": "apps/web-api/src/main.ts",
             "tsConfig": "apps/web-api/tsconfig.app.json",
-            "assets": [
-              "apps/web-api/src/assets"
-            ]
+            "assets": ["apps/web-api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -355,16 +356,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/web-api/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/web-api/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/web-api"
-          ],
+          "outputs": ["coverage/apps/web-api"],
           "options": {
             "jestConfig": "apps/web-api/jest.config.js",
             "passWithNoTests": true
@@ -397,18 +394,12 @@
                 "output": "assets"
               }
             ],
-            "styles": [
-              "apps/web-app/src/styles.scss"
-            ],
+            "styles": ["apps/web-app/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/shared/styles/src"
-              ]
+              "includePaths": ["libs/shared/styles/src"]
             },
             "scripts": [],
-            "allowedCommonJsDependencies": [
-              "lodash"
-            ],
+            "allowedCommonJsDependencies": ["lodash"],
             "serviceWorker": true,
             "ngswConfigPath": "apps/web-app/ngsw-config.json"
           },
@@ -477,9 +468,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/web-app"
-          ],
+          "outputs": ["coverage/apps/web-app"],
           "options": {
             "jestConfig": "apps/web-app/jest.config.js",
             "passWithNoTests": true
@@ -508,9 +497,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/web-app-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/web-app-e2e/**/*.{js,ts}"]
           }
         }
       }
