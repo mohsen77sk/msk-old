@@ -48,8 +48,17 @@
       "@msk/app/shell/ui/layout": [
         "libs/app/shell/ui/layout/src/index.ts"
       ],
+      "@msk/app/shell/ui/media-watcher": [
+        "libs/app/shell/ui/media-watcher/src/index.ts"
+      ],
       "@msk/app/shell/ui/splash-screen": [
         "libs/app/shell/ui/splash-screen/src/index.ts"
+      ],
+      "@msk/app/shell/ui/tailwind": [
+        "libs/app/shell/ui/tailwind/src/index.ts"
+      ],
+      "@msk/app/shell/ui/utils": [
+        "libs/app/shell/ui/utils/src/index.ts"
       ],
       "@msk/shared/styles": [
         "libs/shared/styles/src/styles.scss"

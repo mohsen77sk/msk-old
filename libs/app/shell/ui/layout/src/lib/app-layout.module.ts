@@ -5,8 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MskDrawerModule } from '@msk/app/shared/ui/drawer';
 
-import { EmptyLayoutModule } from './layouts/empty-layout';
-import { ClassicLayoutModule } from './layouts/classic-layout';
+import { EmptyLayoutModule } from './layouts/empty';
+import { ClassicLayoutModule } from './layouts/vertical/classic';
 
 import { LayoutComponent } from './app-layout.component';
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClassicLayoutComponent } from './classic-layout.component';
+import { ClassicLayoutComponent } from './classic.component';
 
 describe('ClassicLayoutComponent', () => {
   let component: ClassicLayoutComponent;
@@ -8,9 +8,8 @@ describe('ClassicLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClassicLayoutComponent ]
-    })
-    .compileComponents();
+      declarations: [ClassicLayoutComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { EmptyLayoutComponent } from './empty-layout.component';
+import { ClassicLayoutComponent } from './classic.component';
 
 @NgModule({
-  declarations: [EmptyLayoutComponent],
+  declarations: [ClassicLayoutComponent],
   imports: [CommonModule, RouterModule],
-  exports: [EmptyLayoutComponent],
+  exports: [ClassicLayoutComponent],
 })
-export class EmptyLayoutModule {}
+export class ClassicLayoutModule {}

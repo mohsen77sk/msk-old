@@ -21,7 +21,7 @@ import {
 } from '@angular/animations';
 import { DrawerMode, DrawerPosition } from './drawer.types';
 import { MskDrawerService } from './drawer.service';
-import { UtilsService } from '@msk/app/shared/utils';
+import { UtilsService } from '@msk/app/shell/ui/utils';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({

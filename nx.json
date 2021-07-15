@@ -49,7 +49,16 @@
     "app-shell-ui-layout": {
       "tags": []
     },
+    "app-shell-ui-media-watcher": {
+      "tags": []
+    },
     "app-shell-ui-splash-screen": {
+      "tags": []
+    },
+    "app-shell-ui-tailwind": {
+      "tags": []
+    },
+    "app-shell-ui-utils": {
       "tags": []
     },
     "shared-assets": {

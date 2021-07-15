@@ -282,6 +282,31 @@
         }
       }
     },
+    "app-shell-ui-media-watcher": {
+      "projectType": "library",
+      "root": "libs/app/shell/ui/media-watcher",
+      "sourceRoot": "libs/app/shell/ui/media-watcher/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shell/ui/media-watcher"],
+          "options": {
+            "jestConfig": "libs/app/shell/ui/media-watcher/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/ui/media-watcher/src/**/*.ts",
+              "libs/app/shell/ui/media-watcher/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shell-ui-splash-screen": {
       "projectType": "library",
       "root": "libs/app/shell/ui/splash-screen",
@@ -302,6 +327,56 @@
             "lintFilePatterns": [
               "libs/app/shell/ui/splash-screen/src/**/*.ts",
               "libs/app/shell/ui/splash-screen/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shell-ui-tailwind": {
+      "projectType": "library",
+      "root": "libs/app/shell/ui/tailwind",
+      "sourceRoot": "libs/app/shell/ui/tailwind/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shell/ui/tailwind"],
+          "options": {
+            "jestConfig": "libs/app/shell/ui/tailwind/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/ui/tailwind/src/**/*.ts",
+              "libs/app/shell/ui/tailwind/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shell-ui-utils": {
+      "projectType": "library",
+      "root": "libs/app/shell/ui/utils",
+      "sourceRoot": "libs/app/shell/ui/utils/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shell/ui/utils"],
+          "options": {
+            "jestConfig": "libs/app/shell/ui/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/ui/utils/src/**/*.ts",
+              "libs/app/shell/ui/utils/src/**/*.html"
             ]
           }
         }

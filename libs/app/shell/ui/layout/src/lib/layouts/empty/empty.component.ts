@@ -3,8 +3,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'empty-layout',
-  templateUrl: './empty-layout.component.html',
-  styleUrls: ['./empty-layout.component.scss'],
+  templateUrl: './empty.component.html',
+  styleUrls: ['./empty.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class EmptyLayoutComponent {
