@@ -340,6 +340,12 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
       ])
       .create(this._overlay);
 
+    // Once the animation is done...
+    this._player.onDone(() => {
+      // Destroy the player
+      this._player?.destroy();
+    });
+
     // Play the animation
     this._player.play();
 
@@ -374,6 +380,9 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
 
     // Once the animation is done...
     this._player.onDone(() => {
+      // Destroy the player
+      this._player?.destroy();
+
       // If the backdrop still exists...
       if (this._overlay) {
         // Remove the backdrop

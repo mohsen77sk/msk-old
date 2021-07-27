@@ -1,5 +1,6 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'layout',
@@ -7,7 +8,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app-layout.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, OnDestroy {
+  private _unsubscribeAll: Subject<any> = new Subject<any>();
+
+  /**
+   * Constructor
+   */
   constructor() {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -18,4 +24,17 @@ export class LayoutComponent implements OnInit {
    * On init
    */
   ngOnInit(): void {}
+
+  /**
+   * On destroy
+   */
+  ngOnDestroy(): void {
+    // Unsubscribe from all subscriptions
+    this._unsubscribeAll.next();
+    this._unsubscribeAll.complete();
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Public methods
+  // -----------------------------------------------------------------------------------------------------
 }
