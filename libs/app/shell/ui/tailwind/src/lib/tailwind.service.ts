@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, ReplaySubject } from 'rxjs';
 import { fromPairs, map } from 'lodash';
-import * as extractedTailwindConfigStyle from '@msk/shared/styles/src/core/tailwind-config.scss';
+import * as extractedTailwindConfigStyle from '../../../../../../shared/styles/src/core/tailwind-config.scss';
 
 @Injectable()
 export class TailwindService {
