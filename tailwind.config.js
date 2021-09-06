@@ -1,4 +1,6 @@
-const { guessProductionMode } = require('@ngneat/tailwind');
+const {
+  guessProductionMode
+} = require('@ngneat/tailwind');
 
 const path = require('path');
 const process = require('process');
@@ -89,7 +91,9 @@ const config = {
       '10xl': '8rem',
     },
     screens: {
-      print: { raw: 'print' },
+      print: {
+        raw: 'print'
+      },
       sm: '600px',
       md: '960px',
       lg: '1280px',
@@ -98,6 +102,18 @@ const config = {
     extend: {
       flex: {
         0: '0 0 auto',
+      },
+      opacity: {
+        12: '0.12',
+        38: '0.38',
+        87: '0.87'
+      },
+      rotate: {
+        '-270': '270deg',
+        '15': '15deg',
+        '30': '30deg',
+        '60': '60deg',
+        '270': '270deg'
       },
       scale: {
         '-1': '-1',
@@ -162,6 +178,10 @@ const config = {
             'tbody tr': {
               borderBottomColor: 'var(--color-border)',
             },
+            'ol[type="A" s]': false,
+            'ol[type="a" s]': false,
+            'ol[type="I" s]': false,
+            'ol[type="i" s]': false
           },
         },
         sm: {
@@ -189,9 +209,13 @@ const config = {
     require(path.resolve(__dirname, ('libs/shared/styles/src/tailwind/plugins/extract-config'))),
     require(path.resolve(__dirname, ('libs/shared/styles/src/tailwind/plugins/utilities'))),
     require(path.resolve(__dirname, ('libs/shared/styles/src/tailwind/plugins/icon-size'))),
-    require(path.resolve(__dirname, ('libs/shared/styles/src/tailwind/plugins/theming')))({themes}),
+    require(path.resolve(__dirname, ('libs/shared/styles/src/tailwind/plugins/theming')))({
+      themes
+    }),
     // Other third party and/or custom plugins
-    require('@tailwindcss/typography')({modifiers: ['sm', 'lg']}),
+    require('@tailwindcss/typography')({
+      modifiers: ['sm', 'lg']
+    }),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp')
   ],
