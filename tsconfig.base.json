@@ -39,6 +39,9 @@
       "@msk/app/shared/ui/drawer": [
         "libs/app/shared/ui/drawer/src/index.ts"
       ],
+      "@msk/app/shared/ui/navigation": [
+        "libs/app/shared/ui/navigation/src/index.ts"
+      ],
       "@msk/app/shared/utils": [
         "libs/app/shared/utils/src/index.ts"
       ],

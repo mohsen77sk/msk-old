@@ -1,12 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { SplashScreenService } from '@msk/app/shell/ui/splash-screen';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      providers: [{ provide: SplashScreenService, useValue: {} }],
+      declarations: [AppComponent]
     }).compileComponents();
   });
 

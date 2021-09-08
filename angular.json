@@ -207,6 +207,31 @@
         }
       }
     },
+    "app-shared-ui-navigation": {
+      "projectType": "library",
+      "root": "libs/app/shared/ui/navigation",
+      "sourceRoot": "libs/app/shared/ui/navigation/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/ui/navigation"],
+          "options": {
+            "jestConfig": "libs/app/shared/ui/navigation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/ui/navigation/src/**/*.ts",
+              "libs/app/shared/ui/navigation/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-utils": {
       "projectType": "library",
       "root": "libs/app/shared/utils",

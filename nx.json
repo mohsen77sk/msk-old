@@ -40,6 +40,9 @@
     "app-shared-ui-drawer": {
       "tags": []
     },
+    "app-shared-ui-navigation": {
+      "tags": []
+    },
     "app-shared-utils": {
       "tags": []
     },
