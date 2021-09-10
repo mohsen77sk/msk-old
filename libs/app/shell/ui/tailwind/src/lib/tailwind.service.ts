@@ -4,7 +4,7 @@ import { fromPairs, map } from 'lodash';
 import * as extractedTailwindConfigStyle from '../../../../../../shared/styles/src/core/tailwind-config.scss';
 
 @Injectable()
-export class TailwindService {
+export class MskTailwindService {
   private _tailwindConfig: ReplaySubject<any> = new ReplaySubject(1);
 
   /**

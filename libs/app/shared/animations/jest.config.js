@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'app-shell-ui-utils',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'app-shared-animations',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../../coverage/libs/app/shell/ui/utils',
+  coverageDirectory: '../../../../coverage/libs/app/shared/animations',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

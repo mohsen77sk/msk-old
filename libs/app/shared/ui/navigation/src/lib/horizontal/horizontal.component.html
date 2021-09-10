@@ -1,0 +1,39 @@
+<div class="msk-horizontal-navigation-wrapper">
+  <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+    <!-- Skip the hidden items -->
+    <ng-container *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden">
+      <!-- Basic -->
+      <ng-container *ngIf="item.type === 'basic'">
+        <msk-horizontal-navigation-basic-item
+          class="msk-horizontal-navigation-menu-item"
+          [item]="item"
+          [name]="name"
+        ></msk-horizontal-navigation-basic-item>
+      </ng-container>
+
+      <!-- Branch: aside, collapsable, group -->
+      <ng-container
+        *ngIf="
+          item.type === 'aside' ||
+          item.type === 'collapsable' ||
+          item.type === 'group'
+        "
+      >
+        <msk-horizontal-navigation-branch-item
+          class="msk-horizontal-navigation-menu-item"
+          [item]="item"
+          [name]="name"
+        ></msk-horizontal-navigation-branch-item>
+      </ng-container>
+
+      <!-- Spacer -->
+      <ng-container *ngIf="item.type === 'spacer'">
+        <msk-horizontal-navigation-spacer-item
+          class="msk-horizontal-navigation-menu-item"
+          [item]="item"
+          [name]="name"
+        ></msk-horizontal-navigation-spacer-item>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>

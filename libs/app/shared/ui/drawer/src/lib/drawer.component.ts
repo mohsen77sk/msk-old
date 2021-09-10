@@ -21,7 +21,7 @@ import {
 } from '@angular/animations';
 import { DrawerMode, DrawerPosition } from './drawer.types';
 import { MskDrawerService } from './drawer.service';
-import { UtilsService } from '@msk/app/shell/ui/utils';
+import { MskUtilsService } from '@msk/app/shared/utils';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({
@@ -66,7 +66,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     private _elementRef: ElementRef,
     private _renderer2: Renderer2,
     private _drawerService: MskDrawerService,
-    private _utilsService: UtilsService
+    private _utilsService: MskUtilsService
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

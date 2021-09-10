@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { WebShellModule } from '@msk/app/shell/feature';
+import { MskWebShellModule } from '@msk/app/shell/feature';
 import { GetAppConfigProvider } from '@msk/app/shared/app-config';
 
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    WebShellModule,
+    MskWebShellModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

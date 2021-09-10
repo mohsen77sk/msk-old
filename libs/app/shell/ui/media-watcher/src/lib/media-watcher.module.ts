@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { MediaWatcherService } from './media-watcher.service';
+import { MskMediaWatcherService } from './media-watcher.service';
 
 @NgModule({
-  providers: [MediaWatcherService],
+  providers: [MskMediaWatcherService],
 })
-export class MediaWatcherModule {
+export class MskMediaWatcherModule {
   /**
    * Constructor
    */
-  constructor(private _mediaWatcherService: MediaWatcherService) {}
+  constructor(private _mediaWatcherService: MskMediaWatcherService) {}
 }

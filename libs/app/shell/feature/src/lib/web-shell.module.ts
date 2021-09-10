@@ -3,11 +3,10 @@ import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 
 import { webShellRoutes } from './web-shell.routes';
 
-import { LayoutModule } from '@msk/app/shell/ui/layout';
-import { MediaWatcherModule } from '@msk/app/shell/ui/media-watcher';
-import { SplashScreenModule } from '@msk/app/shell/ui/splash-screen';
-import { TailwindConfigModule } from '@msk/app/shell/ui/tailwind';
-import { UtilsModule } from '@msk/app/shell/ui/utils';
+import { MskLayoutModule } from '@msk/app/shell/ui/layout';
+import { MskMediaWatcherModule } from '@msk/app/shell/ui/media-watcher';
+import { MskSplashScreenModule } from '@msk/app/shell/ui/splash-screen';
+import { MskTailwindConfigModule } from '@msk/app/shell/ui/tailwind';
 
 const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -17,16 +16,15 @@ const routerConfig: ExtraOptions = {
 @NgModule({
   imports: [
     // Services
-    MediaWatcherModule,
-    SplashScreenModule,
-    TailwindConfigModule,
-    UtilsModule,
+    MskMediaWatcherModule,
+    MskSplashScreenModule,
+    MskTailwindConfigModule,
 
     // Layout module of your application
-    LayoutModule,
+    MskLayoutModule,
 
     RouterModule.forRoot(webShellRoutes, routerConfig),
   ],
   exports: [RouterModule],
 })
-export class WebShellModule {}
+export class MskWebShellModule {}

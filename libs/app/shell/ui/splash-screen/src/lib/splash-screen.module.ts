@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
-import { SplashScreenService } from './splash-screen.service';
+import { MskSplashScreenService } from './splash-screen.service';
 
 @NgModule({
-  providers: [SplashScreenService],
+  providers: [MskSplashScreenService],
 })
-export class SplashScreenModule {
+export class MskSplashScreenModule {
   /**
    * Constructor
    */
-  constructor(private _splashScreenService: SplashScreenService) {}
+  constructor(private _splashScreenService: MskSplashScreenService) {}
 }

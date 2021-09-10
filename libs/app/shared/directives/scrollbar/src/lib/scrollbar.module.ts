@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ScrollbarDirective } from './scrollbar.directive';
+import { MskScrollbarDirective } from './scrollbar.directive';
 
 @NgModule({
-  declarations: [ScrollbarDirective],
-  exports: [ScrollbarDirective],
+  declarations: [MskScrollbarDirective],
+  exports: [MskScrollbarDirective],
 })
-export class ScrollbarModule {}
+export class MskScrollbarModule {}

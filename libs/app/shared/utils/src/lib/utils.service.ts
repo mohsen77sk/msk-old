@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IsActiveMatchOptions } from '@angular/router';
 
 @Injectable()
-export class UtilsService {
+export class MskUtilsService {
   /**
    * Constructor
    */

@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./app-layout.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class LayoutComponent implements OnInit, OnDestroy {
+export class MskLayoutComponent implements OnInit, OnDestroy {
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   /**

@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Observable, ReplaySubject } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { TailwindService } from '@msk/app/shell/ui/tailwind';
+import { MskTailwindService } from '@msk/app/shell/ui/tailwind';
 
 @Injectable()
-export class MediaWatcherService {
+export class MskMediaWatcherService {
   private _onMediaChange: ReplaySubject<{
     matchingAliases: string[];
     matchingQueries: any;
@@ -18,7 +18,7 @@ export class MediaWatcherService {
    */
   constructor(
     private _breakpointObserver: BreakpointObserver,
-    private _tailwindConfigService: TailwindService
+    private _tailwindConfigService: MskTailwindService
   ) {
     this._tailwindConfigService.tailwindConfig$
       .pipe(

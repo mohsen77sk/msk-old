@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { TailwindService } from './tailwind.service';
+import { MskTailwindService } from './tailwind.service';
 
 @NgModule({
-  providers: [TailwindService],
+  providers: [MskTailwindService],
 })
-export class TailwindConfigModule {
+export class MskTailwindConfigModule {
   /**
    * Constructor
    */
-  constructor(private _tailwindConfigService: TailwindService) {}
+  constructor(private _tailwindConfigService: MskTailwindService) {}
 }

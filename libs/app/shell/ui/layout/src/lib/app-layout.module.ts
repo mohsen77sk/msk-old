@@ -8,7 +8,7 @@ import { MskDrawerModule } from '@msk/app/shared/ui/drawer';
 import { EmptyLayoutModule } from './layouts/empty';
 import { ClassicLayoutModule } from './layouts/vertical/classic';
 
-import { LayoutComponent } from './app-layout.component';
+import { MskLayoutComponent } from './app-layout.component';
 
 const layoutModules = [
   // Empty
@@ -21,7 +21,7 @@ const layoutModules = [
 ];
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [MskLayoutComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -29,6 +29,6 @@ const layoutModules = [
     MskDrawerModule,
     ...layoutModules,
   ],
-  exports: [LayoutComponent, ...layoutModules],
+  exports: [MskLayoutComponent, ...layoutModules],
 })
-export class LayoutModule {}
+export class MskLayoutModule {}

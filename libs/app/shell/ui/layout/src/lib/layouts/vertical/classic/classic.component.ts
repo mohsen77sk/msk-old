@@ -1,6 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { MediaWatcherService } from '@msk/app/shell/ui/media-watcher';
+
+import { MskMediaWatcherService } from '@msk/app/shell/ui/media-watcher';
+import {
+  MskNavigationService,
+  MskVerticalNavigationComponent,
+} from '@msk/app/shared/ui/navigation';
+
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 
@@ -17,7 +23,10 @@ export class ClassicLayoutComponent implements OnInit, OnDestroy {
   /**
    * Constructor
    */
-  constructor(private _mediaWatcherService: MediaWatcherService) {}
+  constructor(
+    private _mskNavigationService: MskNavigationService,
+    private _mskMediaWatcherService: MskMediaWatcherService
+  ) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks
@@ -28,7 +37,7 @@ export class ClassicLayoutComponent implements OnInit, OnDestroy {
    */
   ngOnInit(): void {
     // Subscribe to media changes
-    this._mediaWatcherService.onMediaChange$
+    this._mskMediaWatcherService.onMediaChange$
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe(({ matchingAliases }) => {
         // Check if the screen is small
@@ -43,5 +52,27 @@ export class ClassicLayoutComponent implements OnInit, OnDestroy {
     // Unsubscribe from all subscriptions
     this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Public methods
+  // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * Toggle navigation
+   *
+   * @param name
+   */
+  toggleNavigation(name: string): void {
+    // Get the navigation
+    const navigation =
+      this._mskNavigationService.getComponent<MskVerticalNavigationComponent>(
+        name
+      );
+
+    if (navigation) {
+      // Toggle the opened status
+      navigation.toggle();
+    }
   }
 }

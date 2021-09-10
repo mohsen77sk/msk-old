@@ -7,7 +7,7 @@ import { filter, takeUntil } from 'rxjs/operators';
   selector: '[mskScrollReset]',
   exportAs: 'mskScrollReset',
 })
-export class ScrollResetDirective implements OnInit, OnDestroy {
+export class MskScrollResetDirective implements OnInit, OnDestroy {
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   /**

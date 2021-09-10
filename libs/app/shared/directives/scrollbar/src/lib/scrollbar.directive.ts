@@ -24,12 +24,12 @@ import { ScrollbarGeometry, ScrollbarPosition } from './scrollbar.types';
   selector: '[mskScrollbar]',
   exportAs: 'mskScrollbar',
 })
-export class ScrollbarDirective implements OnChanges, OnInit, OnDestroy {
+export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
   /* eslint-disable @typescript-eslint/naming-convention */
   static ngAcceptInputType_mskScrollbar: BooleanInput;
   /* eslint-enable @typescript-eslint/naming-convention */
 
-  @Input() mskScrollbar: boolean = true;
+  @Input() mskScrollbar = true;
   @Input() mskScrollbarOptions: PerfectScrollbar.Options | undefined;
 
   private _animation: number | undefined;

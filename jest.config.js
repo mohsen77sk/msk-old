@@ -1,4 +1,6 @@
-const { getJestProjects } = require('@nrwl/jest');
+const {
+  getJestProjects
+} = require('@nrwl/jest');
 
 module.exports = {
   projects: [
@@ -10,8 +12,8 @@ module.exports = {
     '<rootDir>/libs/app/shell/ui/media-watcher',
     '<rootDir>/libs/app/shell/ui/splash-screen',
     '<rootDir>/libs/app/shell/ui/tailwind',
-    '<rootDir>/libs/app/shell/ui/utils',
     '<rootDir>/libs/app/home/feature',
+    '<rootDir>/libs/app/shared/animations',
     '<rootDir>/libs/app/shared/app-config',
     '<rootDir>/libs/app/shared/data-access/api',
     '<rootDir>/libs/app/shared/data-access/models',

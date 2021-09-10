@@ -21,6 +21,9 @@
       "@msk/app/home/feature": [
         "libs/app/home/feature/src/index.ts"
       ],
+      "@msk/app/shared/animations": [
+        "libs/app/shared/animations/src/index.ts"
+      ],
       "@msk/app/shared/app-config": [
         "libs/app/shared/app-config/src/index.ts"
       ],
@@ -59,9 +62,6 @@
       ],
       "@msk/app/shell/ui/tailwind": [
         "libs/app/shell/ui/tailwind/src/index.ts"
-      ],
-      "@msk/app/shell/ui/utils": [
-        "libs/app/shell/ui/utils/src/index.ts"
       ],
       "@msk/shared/styles": [
         "libs/shared/styles/src/styles.scss"

@@ -1,0 +1,119 @@
+<div class="msk-vertical-navigation-wrapper">
+  <!-- Header -->
+  <div class="msk-vertical-navigation-header">
+    <ng-content select="[mskVerticalNavigationHeader]"></ng-content>
+  </div>
+
+  <!-- Content -->
+  <div
+    class="msk-vertical-navigation-content"
+    mskScrollbar
+    [mskScrollbarOptions]="{ wheelPropagation: inner, suppressScrollX: true }"
+    #navigationContent
+  >
+    <!-- Content header -->
+    <div class="msk-vertical-navigation-content-header">
+      <ng-content select="[mskVerticalNavigationContentHeader]"></ng-content>
+    </div>
+
+    <!-- Items -->
+    <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+      <!-- Skip the hidden items -->
+      <ng-container *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden">
+        <!-- Aside -->
+        <ng-container *ngIf="item.type === 'aside'">
+          <msk-vertical-navigation-aside-item
+            [item]="item"
+            [name]="name"
+            [activeItemId]="activeAsideItemId!"
+            [autoCollapse]="autoCollapse"
+            [skipChildren]="true"
+            (click)="toggleAside(item)"
+          ></msk-vertical-navigation-aside-item>
+        </ng-container>
+
+        <!-- Basic -->
+        <ng-container *ngIf="item.type === 'basic'">
+          <msk-vertical-navigation-basic-item
+            [item]="item"
+            [name]="name"
+          ></msk-vertical-navigation-basic-item>
+        </ng-container>
+
+        <!-- Collapsable -->
+        <ng-container *ngIf="item.type === 'collapsable'">
+          <msk-vertical-navigation-collapsable-item
+            [item]="item"
+            [name]="name"
+            [autoCollapse]="autoCollapse"
+          ></msk-vertical-navigation-collapsable-item>
+        </ng-container>
+
+        <!-- Divider -->
+        <ng-container *ngIf="item.type === 'divider'">
+          <msk-vertical-navigation-divider-item
+            [item]="item"
+            [name]="name"
+          ></msk-vertical-navigation-divider-item>
+        </ng-container>
+
+        <!-- Group -->
+        <ng-container *ngIf="item.type === 'group'">
+          <msk-vertical-navigation-group-item
+            [item]="item"
+            [name]="name"
+            [autoCollapse]="autoCollapse"
+          ></msk-vertical-navigation-group-item>
+        </ng-container>
+
+        <!-- Spacer -->
+        <ng-container *ngIf="item.type === 'spacer'">
+          <msk-vertical-navigation-spacer-item
+            [item]="item"
+            [name]="name"
+          ></msk-vertical-navigation-spacer-item>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+
+    <!-- Content footer -->
+    <div class="msk-vertical-navigation-content-footer">
+      <ng-content select="[mskVerticalNavigationContentFooter]"></ng-content>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="msk-vertical-navigation-footer">
+    <ng-content select="[mskVerticalNavigationFooter]"></ng-content>
+  </div>
+</div>
+
+<!-- Aside -->
+<ng-container *ngIf="activeAsideItemId">
+  <div
+    class="msk-vertical-navigation-aside-wrapper"
+    mskScrollbar
+    [mskScrollbarOptions]="{ wheelPropagation: false, suppressScrollX: true }"
+    [@fadeInLeft]="position === 'left'"
+    [@fadeInRight]="position === 'right'"
+    [@fadeOutLeft]="position === 'left'"
+    [@fadeOutRight]="position === 'right'"
+  >
+    <!-- Items -->
+    <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
+      <!-- Skip the hidden items -->
+      <ng-container *ngIf="(item.hidden && !item.hidden(item)) || !item.hidden">
+        <!-- Aside -->
+        <ng-container
+          *ngIf="item.type === 'aside' && item.id === activeAsideItemId"
+        >
+          <msk-vertical-navigation-aside-item
+            [item]="item"
+            [name]="name"
+            [autoCollapse]="autoCollapse"
+          ></msk-vertical-navigation-aside-item>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>
