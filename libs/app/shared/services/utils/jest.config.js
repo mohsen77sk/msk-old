@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'app-shell-ui-splash-screen',
+  displayName: 'app-shared-services-utils',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../../coverage/libs/app/shell/ui/splash-screen',
+  coverageDirectory: '../../../../../coverage/libs/app/shared/services/utils',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',

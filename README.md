@@ -55,6 +55,7 @@ This project was generated using [Nx](https://nx.dev).
 		│		├── data-access (angular:lib, API call, Service or State management to share across the Client app)
 		│		├── ui (dir)
 		│		├── pipes (dir)
+		│		├── services (dir)
 		│		├── directives (dir)
 		│		└── utils (angular:lib, usually shared Guards, Interceptors, Validators...)
 		└── shared (dir, most libs in here are buildable @nrwl/angular:lib)

@@ -42,29 +42,32 @@
       "@msk/app/shared/pipes/find-by-key": [
         "libs/app/shared/pipes/find-by-key/src/index.ts"
       ],
+      "@msk/app/shared/services/config": [
+        "libs/app/shared/services/config/src/index.ts"
+      ],
+      "@msk/app/shared/services/media-watcher": [
+        "libs/app/shared/services/media-watcher/src/index.ts"
+      ],
+      "@msk/app/shared/services/splash-screen": [
+        "libs/app/shared/services/splash-screen/src/index.ts"
+      ],
+      "@msk/app/shared/services/tailwind": [
+        "libs/app/shared/services/tailwind/src/index.ts"
+      ],
+      "@msk/app/shared/services/utils": [
+        "libs/app/shared/services/utils/src/index.ts"
+      ],
       "@msk/app/shared/ui/drawer": [
         "libs/app/shared/ui/drawer/src/index.ts"
       ],
       "@msk/app/shared/ui/navigation": [
         "libs/app/shared/ui/navigation/src/index.ts"
       ],
-      "@msk/app/shared/utils": [
-        "libs/app/shared/utils/src/index.ts"
-      ],
       "@msk/app/shell/feature": [
         "libs/app/shell/feature/src/index.ts"
       ],
       "@msk/app/shell/ui/layout": [
         "libs/app/shell/ui/layout/src/index.ts"
-      ],
-      "@msk/app/shell/ui/media-watcher": [
-        "libs/app/shell/ui/media-watcher/src/index.ts"
-      ],
-      "@msk/app/shell/ui/splash-screen": [
-        "libs/app/shell/ui/splash-screen/src/index.ts"
-      ],
-      "@msk/app/shell/ui/tailwind": [
-        "libs/app/shell/ui/tailwind/src/index.ts"
       ],
       "@msk/shared/styles": [
         "libs/shared/styles/src/styles.scss"

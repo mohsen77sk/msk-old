@@ -30,15 +30,15 @@ import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 import { mskAnimations } from '@msk/app/shared/animations';
-import { MskNavigationService } from '@msk/app/shared/ui/navigation';
+import { MskNavigationService } from '../navigation.service';
 import { MskScrollbarDirective } from '@msk/app/shared/directives/scrollbar';
-import { MskUtilsService } from '@msk/app/shared/utils';
+import { MskUtilsService } from '@msk/app/shared/services/utils';
 import {
   NavigationItem,
   VerticalNavigationAppearance,
   VerticalNavigationMode,
   VerticalNavigationPosition,
-} from '@msk/app/shared/ui/navigation';
+} from '../navigation.types';
 
 import { merge, ReplaySubject, Subject, Subscription } from 'rxjs';
 import { delay, filter, takeUntil } from 'rxjs/operators';

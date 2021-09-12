@@ -232,6 +232,131 @@
         }
       }
     },
+    "app-shared-services-config": {
+      "projectType": "library",
+      "root": "libs/app/shared/services/config",
+      "sourceRoot": "libs/app/shared/services/config/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/services/config"],
+          "options": {
+            "jestConfig": "libs/app/shared/services/config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/services/config/src/**/*.ts",
+              "libs/app/shared/services/config/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shared-services-media-watcher": {
+      "projectType": "library",
+      "root": "libs/app/shared/services/media-watcher",
+      "sourceRoot": "libs/app/shared/services/media-watcher/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/services/media-watcher"],
+          "options": {
+            "jestConfig": "libs/app/shared/services/media-watcher/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/services/media-watcher/src/**/*.ts",
+              "libs/app/shared/services/media-watcher/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shared-services-splash-screen": {
+      "projectType": "library",
+      "root": "libs/app/shared/services/splash-screen",
+      "sourceRoot": "libs/app/shared/services/splash-screen/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/services/splash-screen"],
+          "options": {
+            "jestConfig": "libs/app/shared/services/splash-screen/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/services/splash-screen/src/**/*.ts",
+              "libs/app/shared/services/splash-screen/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shared-services-tailwind": {
+      "projectType": "library",
+      "root": "libs/app/shared/services/tailwind",
+      "sourceRoot": "libs/app/shared/services/tailwind/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/services/tailwind"],
+          "options": {
+            "jestConfig": "libs/app/shared/services/tailwind/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/services/tailwind/src/**/*.ts",
+              "libs/app/shared/services/tailwind/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shared-services-utils": {
+      "projectType": "library",
+      "root": "libs/app/shared/services/utils",
+      "sourceRoot": "libs/app/shared/services/utils/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/services/utils"],
+          "options": {
+            "jestConfig": "libs/app/shared/services/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/services/utils/src/**/*.ts",
+              "libs/app/shared/services/utils/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-ui-drawer": {
       "projectType": "library",
       "root": "libs/app/shared/ui/drawer",
@@ -282,31 +407,6 @@
         }
       }
     },
-    "app-shared-utils": {
-      "projectType": "library",
-      "root": "libs/app/shared/utils",
-      "sourceRoot": "libs/app/shared/utils/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/utils"],
-          "options": {
-            "jestConfig": "libs/app/shared/utils/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/app/shared/utils/src/**/*.ts",
-              "libs/app/shared/utils/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
     "app-shell-feature": {
       "projectType": "library",
       "root": "libs/app/shell/feature",
@@ -352,81 +452,6 @@
             "lintFilePatterns": [
               "libs/app/shell/ui/layout/src/**/*.ts",
               "libs/app/shell/ui/layout/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "app-shell-ui-media-watcher": {
-      "projectType": "library",
-      "root": "libs/app/shell/ui/media-watcher",
-      "sourceRoot": "libs/app/shell/ui/media-watcher/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/ui/media-watcher"],
-          "options": {
-            "jestConfig": "libs/app/shell/ui/media-watcher/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/app/shell/ui/media-watcher/src/**/*.ts",
-              "libs/app/shell/ui/media-watcher/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "app-shell-ui-splash-screen": {
-      "projectType": "library",
-      "root": "libs/app/shell/ui/splash-screen",
-      "sourceRoot": "libs/app/shell/ui/splash-screen/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/ui/splash-screen"],
-          "options": {
-            "jestConfig": "libs/app/shell/ui/splash-screen/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/app/shell/ui/splash-screen/src/**/*.ts",
-              "libs/app/shell/ui/splash-screen/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "app-shell-ui-tailwind": {
-      "projectType": "library",
-      "root": "libs/app/shell/ui/tailwind",
-      "sourceRoot": "libs/app/shell/ui/tailwind/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/ui/tailwind"],
-          "options": {
-            "jestConfig": "libs/app/shell/ui/tailwind/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/app/shell/ui/tailwind/src/**/*.ts",
-              "libs/app/shell/ui/tailwind/src/**/*.html"
             ]
           }
         }
@@ -549,7 +574,7 @@
               "includePaths": ["libs/shared/styles/src"]
             },
             "scripts": [],
-            "allowedCommonJsDependencies": ["lodash"],
+            "allowedCommonJsDependencies": [],
             "serviceWorker": true,
             "ngswConfigPath": "apps/web-app/ngsw-config.json"
           },

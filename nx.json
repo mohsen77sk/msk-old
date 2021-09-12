@@ -43,28 +43,31 @@
     "app-shared-pipes-find-by-key": {
       "tags": []
     },
+    "app-shared-services-config": {
+      "tags": []
+    },
+    "app-shared-services-media-watcher": {
+      "tags": []
+    },
+    "app-shared-services-splash-screen": {
+      "tags": []
+    },
+    "app-shared-services-tailwind": {
+      "tags": []
+    },
+    "app-shared-services-utils": {
+      "tags": []
+    },
     "app-shared-ui-drawer": {
       "tags": []
     },
     "app-shared-ui-navigation": {
       "tags": []
     },
-    "app-shared-utils": {
-      "tags": []
-    },
     "app-shell-feature": {
       "tags": []
     },
     "app-shell-ui-layout": {
-      "tags": []
-    },
-    "app-shell-ui-media-watcher": {
-      "tags": []
-    },
-    "app-shell-ui-splash-screen": {
-      "tags": []
-    },
-    "app-shell-ui-tailwind": {
       "tags": []
     },
     "shared-assets": {

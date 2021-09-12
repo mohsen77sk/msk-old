@@ -1,14 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { MskMediaWatcherService } from '@msk/app/shell/ui/media-watcher';
+import { MskMediaWatcherService } from '@msk/app/shared/services/media-watcher';
 import {
   MskNavigationService,
   MskVerticalNavigationComponent,
 } from '@msk/app/shared/ui/navigation';
 
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/internal/operators/takeUntil';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'classic-layout',

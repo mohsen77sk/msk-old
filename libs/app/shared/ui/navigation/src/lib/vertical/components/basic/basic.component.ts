@@ -10,7 +10,7 @@ import { IsActiveMatchOptions } from '@angular/router';
 
 import { MskVerticalNavigationComponent } from '@msk/app/shared/ui/navigation';
 import { MskNavigationService } from '@msk/app/shared/ui/navigation';
-import { MskUtilsService } from '@msk/app/shared/utils';
+import { MskUtilsService } from '@msk/app/shared/services/utils';
 import { NavigationItem } from '@msk/app/shared/ui/navigation';
 
 import { Subject } from 'rxjs';

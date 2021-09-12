@@ -19,10 +19,11 @@ import {
   AnimationPlayer,
   style,
 } from '@angular/animations';
+import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+
 import { DrawerMode, DrawerPosition } from './drawer.types';
 import { MskDrawerService } from './drawer.service';
-import { MskUtilsService } from '@msk/app/shared/utils';
-import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
+import { MskUtilsService } from '@msk/app/shared/services/utils';
 
 @Component({
   selector: 'msk-drawer',

@@ -10,9 +10,9 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { mskAnimations } from '@msk/app/shared/animations';
-import { MskNavigationService } from '@msk/app/shared/ui/navigation';
-import { MskUtilsService } from '@msk/app/shared/utils';
-import { NavigationItem } from '@msk/app/shared/ui/navigation';
+import { MskUtilsService } from '@msk/app/shared/services/utils';
+import { MskNavigationService } from '../navigation.service';
+import { NavigationItem } from '../navigation.types';
 
 import { ReplaySubject, Subject } from 'rxjs';
 

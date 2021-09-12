@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'app-shared-utils',
-  preset: '../../../../jest.preset.js',
+  displayName: 'app-shared-services-config',
+  preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,11 +8,13 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../coverage/libs/app/shared/utils',
+  coverageDirectory: '../../../../../coverage/libs/app/shared/services/config',
+  transform: {
+    '^.+\\.(ts|js|html)$': 'jest-preset-angular',
+  },
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
-  transform: { '^.+\\.(ts|js|html)$': 'jest-preset-angular' },
 };

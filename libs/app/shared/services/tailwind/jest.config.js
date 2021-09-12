@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'app-shell-ui-tailwind',
+  displayName: 'app-shared-services-tailwind',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,8 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../../coverage/libs/app/shell/ui/tailwind',
+  coverageDirectory:
+    '../../../../../coverage/libs/app/shared/services/tailwind',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

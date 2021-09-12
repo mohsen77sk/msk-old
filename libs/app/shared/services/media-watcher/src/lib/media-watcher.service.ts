@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Observable, ReplaySubject } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { MskTailwindService } from '@msk/app/shell/ui/tailwind';
+import { MskTailwindService } from '@msk/app/shared/services/tailwind';
 
 @Injectable()
 export class MskMediaWatcherService {

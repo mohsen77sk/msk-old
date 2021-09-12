@@ -12,7 +12,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Platform } from '@angular/cdk/platform';
 import { fromEvent, Subject } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 
 import PerfectScrollbar from 'perfect-scrollbar';
 import { ScrollbarGeometry, ScrollbarPosition } from './scrollbar.types';

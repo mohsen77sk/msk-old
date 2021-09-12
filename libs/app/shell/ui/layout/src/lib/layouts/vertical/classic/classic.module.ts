@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 import { MskNavigationModule } from '@msk/app/shared/ui/navigation';
-import { MskMediaWatcherModule } from '@msk/app/shell/ui/media-watcher';
+import { MskMediaWatcherModule } from '@msk/app/shared/services/media-watcher';
 
 import { ClassicLayoutComponent } from './classic.component';
 
