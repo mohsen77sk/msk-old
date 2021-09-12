@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NavigationItem } from './navigation.types';
+import { NavigationItem } from '@msk/app/shared/ui/navigation';
 
 @Injectable({
   providedIn: 'root',

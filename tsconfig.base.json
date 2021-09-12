@@ -39,6 +39,9 @@
       "@msk/app/shared/directives/scrollbar": [
         "libs/app/shared/directives/scrollbar/src/index.ts"
       ],
+      "@msk/app/shared/pipes/find-by-key": [
+        "libs/app/shared/pipes/find-by-key/src/index.ts"
+      ],
       "@msk/app/shared/ui/drawer": [
         "libs/app/shared/ui/drawer/src/index.ts"
       ],

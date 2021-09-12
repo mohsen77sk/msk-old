@@ -41,15 +41,16 @@ This project was generated using [Nx](https://nx.dev).
 		│	│	├── data-access (angular:lib, service, API calls, state management)
 		│	│	├── features
 		│	│	│	├── list (angular:lib listsComponent)
-		│	│	│	└── detail (angular:lib DetailComopnent)
+		│	│	│	└── detail (angular:lib DetailComponent)
 		│	│	└── ui (dir)
 		│	├── note (dir)
 		│	│	├── data-access (angular:lib, service, API calls, state management)
 		│	│	├── features
 		│	│	│	├── list (angular:lib listsComponent)
-		│	│	│	└── detail (angular:lib DetailComopnent)
+		│	│	│	└── detail (angular:lib DetailComponent)
 		│	│	└── ui (dir)
 		│	└── shared (dir)
+		│		├── animations (angular:lib animations)
 		│		├── app-config (injection token for environment)
 		│		├── data-access (angular:lib, API call, Service or State management to share across the Client app)
 		│		├── ui (dir)
