@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 
-import { webShellRoutes } from './web-shell.routes';
+import { mskShellRoutes } from './msk-shell.routes';
 
-import { MskLayoutModule } from '@msk/app/shell/ui/layout';
+import { MskLayoutModule, layoutConfig } from '@msk/app/shell/ui/layout';
+
 import { MskConfigModule } from '@msk/app/shared/services/config';
 import { MskMediaWatcherModule } from '@msk/app/shared/services/media-watcher';
 import { MskSplashScreenModule } from '@msk/app/shared/services/splash-screen';
@@ -18,7 +19,7 @@ const routerConfig: ExtraOptions = {
 @NgModule({
   imports: [
     // Services
-    MskConfigModule,
+    MskConfigModule.forRoot(layoutConfig),
     MskMediaWatcherModule,
     MskSplashScreenModule,
     MskTailwindConfigModule,
@@ -27,7 +28,7 @@ const routerConfig: ExtraOptions = {
     // Layout module of your application
     MskLayoutModule,
 
-    RouterModule.forRoot(webShellRoutes, routerConfig),
+    RouterModule.forRoot(mskShellRoutes, routerConfig),
   ],
   exports: [RouterModule],
 })

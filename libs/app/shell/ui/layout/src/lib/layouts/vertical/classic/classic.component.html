@@ -1,3 +1,16 @@
+<!-- Navigation -->
+<msk-vertical-navigation
+  class="dark bg-gray-900 print:hidden"
+  [mode]="isScreenSmall ? 'over' : 'side'"
+  [name]="'mainNavigation'"
+  [opened]="!isScreenSmall"
+>
+  <!-- Navigation header hook -->
+  <ng-container mskVerticalNavigationContentHeader>
+    <!-- -->
+  </ng-container>
+</msk-vertical-navigation>
+
 <!-- Wrapper -->
 <div class="flex flex-col flex-auto w-full min-w-0">
   <!-- Header -->
@@ -17,7 +30,15 @@
       dark:bg-transparent
       print:hidden
     "
-  ></div>
+  >
+    <!-- Navigation toggle button -->
+    <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!-- Components -->
+    <div class="flex items-center pl-2 ml-auto space-x-1 sm:space-x-2">
+    </div>
+  </div>
 
   <!-- Content -->
   <div class="flex flex-col flex-auto">

@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 import { MskLayoutComponent } from '@msk/app/shell/ui/layout';
 
-export const webShellRoutes: Route[] = [
+export const mskShellRoutes: Route[] = [
   {
     path: '',
     component: MskLayoutComponent,

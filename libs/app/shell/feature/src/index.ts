@@ -1,1 +1,1 @@
-export * from './lib/web-shell.module';
+export * from './lib/msk-shell.module';
