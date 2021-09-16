@@ -7,9 +7,36 @@
 <!-- Layouts with horizontal navigation -->
 <!-- ----------------------------------------------------------------------------------------------------- -->
 
+<!-- Centered -->
+<centered-layout *ngIf="layoutType === 'centered'"></centered-layout>
+
+<!-- Enterprise -->
+<enterprise-layout *ngIf="layoutType === 'enterprise'"></enterprise-layout>
+
+<!-- Material -->
+<material-layout *ngIf="layoutType === 'material'"></material-layout>
+
+<!-- Modern -->
+<modern-layout *ngIf="layoutType === 'modern'"></modern-layout>
+
 <!-- ----------------------------------------------------------------------------------------------------- -->
 <!-- Layouts with vertical navigation -->
 <!-- ----------------------------------------------------------------------------------------------------- -->
 
 <!-- Classic -->
 <classic-layout *ngIf="layoutType === 'classic'"></classic-layout>
+
+<!-- Classy -->
+<classy-layout *ngIf="layoutType === 'classy'"></classy-layout>
+
+<!-- Compact -->
+<compact-layout *ngIf="layoutType === 'compact'"></compact-layout>
+
+<!-- Dense -->
+<dense-layout *ngIf="layoutType === 'dense'"></dense-layout>
+
+<!-- Futuristic -->
+<futuristic-layout *ngIf="layoutType === 'futuristic'"></futuristic-layout>
+
+<!-- Thin -->
+<thin-layout *ngIf="layoutType === 'thin'"></thin-layout>

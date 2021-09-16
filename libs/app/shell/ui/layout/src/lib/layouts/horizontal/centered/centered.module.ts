@@ -10,10 +10,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MskNavigationModule } from '@msk/app/shared/ui/navigation';
 import { MskMediaWatcherModule } from '@msk/app/shared/services/media-watcher';
 
-import { ClassicLayoutComponent } from './classic.component';
+import { CenteredLayoutComponent } from './centered.component';
 
 @NgModule({
-  declarations: [ClassicLayoutComponent],
+  declarations: [CenteredLayoutComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -26,6 +26,6 @@ import { ClassicLayoutComponent } from './classic.component';
     MskNavigationModule,
     MskMediaWatcherModule,
   ],
-  exports: [ClassicLayoutComponent],
+  exports: [CenteredLayoutComponent],
 })
-export class ClassicLayoutModule {}
+export class CenteredLayoutModule {}

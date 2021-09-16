@@ -1,0 +1,125 @@
+<!-- Navigation -->
+<ng-container *ngIf="isScreenSmall">
+  <msk-vertical-navigation
+    class="dark bg-gray-900 print:hidden"
+    [mode]="'over'"
+    [name]="'mainNavigation'"
+    [opened]="false"
+  >
+    <!-- Navigation header hook -->
+    <ng-container mskVerticalNavigationContentHeader>
+      <!-- Logo -->
+      <div class="flex items-center h-20 pt-6 px-8">
+        <img
+          class="w-24"
+          src="assets/images/logo/logo-text-on-dark.svg"
+          alt="Logo image"
+        />
+      </div>
+    </ng-container>
+  </msk-vertical-navigation>
+</ng-container>
+
+<!-- Wrapper -->
+<div
+  class="
+    flex flex-col flex-auto
+    items-center
+    w-full
+    min-w-0
+    bg-gray-200
+    dark:bg-card
+  "
+>
+  <!-- Header -->
+  <div
+    class="
+      relative
+      flex flex-col flex-0
+      justify-center
+      w-full
+      h-16
+      sm:h-20
+      md:h-36
+      overflow-hidden
+      z-49
+      shadow
+      dark:shadow-none
+      print:hidden
+    "
+  >
+    <!-- Top bar -->
+    <div
+      class="
+        relative
+        dark
+        flex flex-auto
+        justify-center
+        w-full
+        px-4
+        md:px-8
+        bg-gray-800
+        dark:bg-gray-900
+      "
+    >
+      <div class="flex items-center w-full max-w-360 h-16 sm:h-20">
+        <!-- Logo -->
+        <ng-container *ngIf="!isScreenSmall">
+          <div class="flex items-center">
+            <img
+              class="w-24"
+              src="assets/images/logo/logo-text-on-dark.svg"
+              alt="Logo image"
+            />
+          </div>
+        </ng-container>
+        <!-- Navigation toggle button -->
+        <ng-container *ngIf="isScreenSmall">
+          <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
+            <mat-icon fontSet="material-icons-outlined">menu</mat-icon>
+          </button>
+        </ng-container>
+        <!-- Components -->
+        <div
+          class="flex items-center pl-2 ml-auto space-x-1 sm:space-x-2"
+        ></div>
+      </div>
+    </div>
+    <!-- Bottom bar -->
+    <ng-container *ngIf="!isScreenSmall">
+      <div
+        class="
+          flex flex-auto
+          justify-center
+          px-4
+          md:px-8
+          bg-card
+          dark:bg-gray-700
+        "
+      >
+        <div class="relative flex items-center w-full max-w-360 h-16">
+          <msk-horizontal-navigation
+            class="-mx-4"
+            [name]="'mainNavigation'"
+          ></msk-horizontal-navigation>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-auto justify-center w-full sm:p-6 md:p-8">
+    <div
+      class="
+        flex flex-col flex-auto
+        w-full
+        sm:max-w-360 sm:shadow-lg sm:rounded-lg sm:overflow-hidden
+        bg-default
+      "
+    >
+      <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
+                 Otherwise, layout changes won't be registered and the view won't be updated! -->
+      <router-outlet *ngIf="true"></router-outlet>
+    </div>
+  </div>
+</div>

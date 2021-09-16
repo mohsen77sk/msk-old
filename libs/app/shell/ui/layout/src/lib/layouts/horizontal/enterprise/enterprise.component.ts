@@ -11,12 +11,12 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'classic-layout',
-  templateUrl: './classic.component.html',
-  styleUrls: ['./classic.component.scss'],
+  selector: 'enterprise-layout',
+  templateUrl: './enterprise.component.html',
+  styleUrls: ['./enterprise.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ClassicLayoutComponent implements OnInit, OnDestroy {
+export class EnterpriseLayoutComponent implements OnInit, OnDestroy {
   //
   isScreenSmall!: boolean;
   private _unsubscribeAll: Subject<unknown> = new Subject();

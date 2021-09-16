@@ -11,14 +11,15 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'classic-layout',
-  templateUrl: './classic.component.html',
-  styleUrls: ['./classic.component.scss'],
+  selector: 'dense-layout',
+  templateUrl: './dense.component.html',
+  styleUrls: ['./dense.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ClassicLayoutComponent implements OnInit, OnDestroy {
+export class DenseLayoutComponent implements OnInit, OnDestroy {
   //
   isScreenSmall!: boolean;
+  navigationAppearance: 'default' | 'dense' = 'dense';
   private _unsubscribeAll: Subject<unknown> = new Subject();
 
   /**
@@ -75,5 +76,13 @@ export class ClassicLayoutComponent implements OnInit, OnDestroy {
       // Toggle the opened status
       navigation.toggle();
     }
+  }
+
+  /**
+   * Toggle the navigation appearance
+   */
+  toggleNavigationAppearance(): void {
+    this.navigationAppearance =
+      this.navigationAppearance === 'default' ? 'dense' : 'default';
   }
 }
