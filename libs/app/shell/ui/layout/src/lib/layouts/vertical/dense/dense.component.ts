@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'dense-layout',
   templateUrl: './dense.component.html',
-  styleUrls: ['./dense.component.css'],
+  styleUrls: ['./dense.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class DenseLayoutComponent implements OnInit, OnDestroy {

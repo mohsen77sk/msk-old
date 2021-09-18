@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'material-layout',
   templateUrl: './material.component.html',
-  styleUrls: ['./material.component.css'],
+  styleUrls: ['./material.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class MaterialLayoutComponent implements OnInit, OnDestroy {

@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'modern-layout',
   templateUrl: './modern.component.html',
-  styleUrls: ['./modern.component.css'],
+  styleUrls: ['./modern.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ModernLayoutComponent implements OnInit, OnDestroy {

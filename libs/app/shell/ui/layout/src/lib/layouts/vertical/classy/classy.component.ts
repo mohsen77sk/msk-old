@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'classy-layout',
   templateUrl: './classy.component.html',
-  styleUrls: ['./classy.component.css'],
+  styleUrls: ['./classy.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ClassyLayoutComponent implements OnInit, OnDestroy {

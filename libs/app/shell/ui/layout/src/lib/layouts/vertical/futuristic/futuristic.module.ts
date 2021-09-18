@@ -10,6 +10,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MskNavigationModule } from '@msk/app/shared/ui/navigation';
 import { MskMediaWatcherModule } from '@msk/app/shared/services/media-watcher';
 
+import { UserModule } from '../../../common/user/user.module';
 import { FuturisticLayoutComponent } from './futuristic.component';
 
 @NgModule({
@@ -25,6 +26,8 @@ import { FuturisticLayoutComponent } from './futuristic.component';
     //
     MskNavigationModule,
     MskMediaWatcherModule,
+    //
+    UserModule
   ],
   exports: [FuturisticLayoutComponent],
 })

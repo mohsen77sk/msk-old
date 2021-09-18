@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'futuristic-layout',
   templateUrl: './futuristic.component.html',
-  styleUrls: ['./futuristic.component.css'],
+  styleUrls: ['./futuristic.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class FuturisticLayoutComponent implements OnInit, OnDestroy {

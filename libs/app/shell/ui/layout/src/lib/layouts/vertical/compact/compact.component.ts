@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'compact-layout',
   templateUrl: './compact.component.html',
-  styleUrls: ['./compact.component.css'],
+  styleUrls: ['./compact.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class CompactLayoutComponent implements OnInit, OnDestroy {

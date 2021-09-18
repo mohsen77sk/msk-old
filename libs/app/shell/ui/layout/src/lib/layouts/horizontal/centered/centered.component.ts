@@ -13,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'centered-layout',
   templateUrl: './centered.component.html',
-  styleUrls: ['./centered.component.css'],
+  styleUrls: ['./centered.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class CenteredLayoutComponent implements OnInit, OnDestroy {
