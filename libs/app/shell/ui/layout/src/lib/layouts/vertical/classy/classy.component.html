@@ -13,7 +13,9 @@
         <img class="w-8" src="assets/images/logo/logo.svg" />
       </div>
       <!-- Components -->
-      <div class="flex items-center ml-auto"></div>
+      <div class="flex items-center ml-auto">
+        <user [showAvatar]="false"></user>
+      </div>
     </div>
   </ng-container>
 </msk-vertical-navigation>
@@ -44,7 +46,7 @@
     </button>
     <!-- Components -->
     <div class="flex items-center pl-2 ml-auto space-x-1 sm:space-x-2">
-      <user></user>
+      <fullscreen class="hidden md:block"></fullscreen>
     </div>
   </div>
 
