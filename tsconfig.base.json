@@ -57,6 +57,9 @@
       "@msk/app/shared/services/utils": [
         "libs/app/shared/services/utils/src/index.ts"
       ],
+      "@msk/app/shared/ui/card": [
+        "libs/app/shared/ui/card/src/index.ts"
+      ],
       "@msk/app/shared/ui/drawer": [
         "libs/app/shared/ui/drawer/src/index.ts"
       ],

@@ -58,6 +58,9 @@
     "app-shared-services-utils": {
       "tags": []
     },
+    "app-shared-ui-card": {
+      "tags": []
+    },
     "app-shared-ui-drawer": {
       "tags": []
     },

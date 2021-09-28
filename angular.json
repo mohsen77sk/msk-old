@@ -357,6 +357,31 @@
         }
       }
     },
+    "app-shared-ui-card": {
+      "projectType": "library",
+      "root": "libs/app/shared/ui/card",
+      "sourceRoot": "libs/app/shared/ui/card/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shared/ui/card"],
+          "options": {
+            "jestConfig": "libs/app/shared/ui/card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shared/ui/card/src/**/*.ts",
+              "libs/app/shared/ui/card/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shared-ui-drawer": {
       "projectType": "library",
       "root": "libs/app/shared/ui/drawer",
