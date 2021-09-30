@@ -1082,6 +1082,24 @@
   }
 }
 
+[dir='rtl'] {
+  .mat-menu-panel {
+    .mat-menu-content {
+      .mat-menu-item {
+        &.mat-menu-item-submenu-trigger {
+          padding-left: 40px;
+          padding-right: 0;
+        }
+
+        .mat-icon {
+          margin-left: 12px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
 /* ----------------------------------------------------------------------------------------------------- */
 /*  @ Paginator
 /* ----------------------------------------------------------------------------------------------------- */

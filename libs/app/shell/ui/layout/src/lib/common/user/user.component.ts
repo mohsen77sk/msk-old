@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/component-selector */
 import { BooleanInput } from '@angular/cdk/coercion';
 import {
   Component,
@@ -21,7 +22,7 @@ export class UserComponent implements OnInit, OnDestroy {
   static ngAcceptInputType_showAvatar: BooleanInput;
   /* eslint-enable @typescript-eslint/naming-convention */
 
-  @Input() showAvatar: boolean = true;
+  @Input() showAvatar = true;
   user: any;
 
   private _unsubscribeAll: Subject<any> = new Subject<any>();
@@ -38,9 +39,7 @@ export class UserComponent implements OnInit, OnDestroy {
   /**
    * On init
    */
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   /**
    * On destroy

@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 
+import { MATERIAL_SANITY_CHECKS } from '@angular/material/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+
 import { mskShellRoutes } from './msk-shell.routes';
+import { TranslocoCoreModule } from './transloco/transloco.module';
 
 import { MskLayoutModule, layoutConfig } from '@msk/app/shell/ui/layout';
 
@@ -28,7 +32,28 @@ const routerConfig: ExtraOptions = {
     // Layout module of your application
     MskLayoutModule,
 
+    // Core module of your application
+    TranslocoCoreModule,
+
     RouterModule.forRoot(mskShellRoutes, routerConfig),
+  ],
+  providers: [
+    {
+      // Disable 'theme' sanity check
+      provide: MATERIAL_SANITY_CHECKS,
+      useValue: {
+        doctype: true,
+        theme: false,
+        version: true,
+      },
+    },
+    {
+      // Use the 'fill' appearance on Angular Material form fields by default
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: {
+        appearance: 'fill',
+      },
+    },
   ],
   exports: [RouterModule],
 })

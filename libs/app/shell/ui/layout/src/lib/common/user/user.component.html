@@ -14,26 +14,40 @@
     </mat-icon>
   </span>
 </button>
-
+<!-- Menu -->
 <mat-menu [xPosition]="'before'" #userActions="matMenu">
   <button mat-menu-item>
     <span class="flex flex-col leading-none">
-      <span>Signed in as</span>
+      <ng-container *transloco="let t">
+        <span>{{ t('signed-in-as') }}</span>
+      </ng-container>
       <span class="mt-1.5 text-md font-medium">{{ user?.email }}</span>
     </span>
   </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item>
-    <mat-icon fontSet="material-icons-outlined">account_circle</mat-icon>
-    <span>Profile</span>
+    <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
+      account_circle
+    </mat-icon>
+    <ng-container *transloco="let t">
+      <span>{{ t('profile') }}</span>
+    </ng-container>
   </button>
   <button mat-menu-item>
-    <mat-icon fontSet="material-icons-outlined">settings</mat-icon>
-    <span>Settings</span>
+    <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
+      settings
+    </mat-icon>
+    <ng-container *transloco="let t">
+      <span>{{ t('settings') }}</span>
+    </ng-container>
   </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item>
-    <mat-icon fontSet="material-icons-outlined">logout</mat-icon>
-    <span>Sign out</span>
+    <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
+      logout
+    </mat-icon>
+    <ng-container *transloco="let t">
+      <span>{{ t('sign-out') }}</span>
+    </ng-container>
   </button>
 </mat-menu>

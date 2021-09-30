@@ -1,7 +1,8 @@
 <!-- Button -->
 <button
   mat-icon-button
-  [matTooltip]="tooltip || 'Toggle Fullscreen'"
+  *transloco="let t"
+  [matTooltip]="tooltip || t('toggle-fullscreen')"
   (click)="toggleFullscreen()"
 >
   <ng-container [ngTemplateOutlet]="iconTpl || defaultIconTpl"></ng-container>
@@ -9,5 +10,7 @@
 
 <!-- Default icon -->
 <ng-template #defaultIconTpl>
-  <mat-icon fontSet="material-icons-outlined">fit_screen</mat-icon>
+  <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
+    fit_screen
+  </mat-icon>
 </ng-template>
