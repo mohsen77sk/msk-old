@@ -14,7 +14,12 @@ import { MskConfigService } from '@msk/app/shared/services/config';
 import { MskMediaWatcherService } from '@msk/app/shared/services/media-watcher';
 import { MskTailwindService } from '@msk/app/shared/services/tailwind';
 
-import { LayoutType, LayoutScheme, LayoutTheme, LayoutDirection } from './app-layout.types';
+import {
+  LayoutType,
+  LayoutScheme,
+  LayoutTheme,
+  LayoutDirection,
+} from './app-layout.types';
 import { LayoutConfig } from './layout.config';
 
 import { combineLatest, Subject } from 'rxjs';
@@ -175,7 +180,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
   setLayoutTheme(theme: LayoutTheme): void {
     this._mskConfigService.config = { theme };
   }
-  
+
   /**
    * Set the direction on the config
    *
@@ -285,7 +290,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
   private _updateLayoutDirection(): void {
     // 1. Set the direction from the layoutConfig
     this.layoutDirection = this.layoutConfig.direction;
-    // Change dir attribute for the currently selected direction
+    // 2. Change dir attribute for the currently selected direction
     this._document.documentElement.setAttribute('dir', this.layoutDirection);
     this._document.body.setAttribute('dir', this.layoutDirection);
   }

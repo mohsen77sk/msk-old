@@ -4,7 +4,6 @@ import {
   OnInit,
   ChangeDetectionStrategy,
   ViewEncapsulation,
-  ChangeDetectorRef,
 } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
 import { MskConfigService } from '@msk/app/shared/services/config';
@@ -28,7 +27,6 @@ export class LanguagesComponent implements OnInit {
    * Constructor
    */
   constructor(
-    private _changeDetectorRef: ChangeDetectorRef,
     private _translocoService: TranslocoService,
     private _mskConfigService: MskConfigService
   ) {}

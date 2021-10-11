@@ -8,7 +8,11 @@ import {
   Input,
   ChangeDetectorRef,
 } from '@angular/core';
+
+import { MskConfigService } from '@msk/app/shared/services/config';
+
 import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'user',
@@ -25,12 +29,17 @@ export class UserComponent implements OnInit, OnDestroy {
   @Input() showAvatar = true;
   user: any;
 
+  layoutDirection!: any;
+
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   /**
    * Constructor
    */
-  constructor(private _changeDetectorRef: ChangeDetectorRef) {}
+  constructor(
+    private _mskConfigService: MskConfigService,
+    private _changeDetectorRef: ChangeDetectorRef
+  ) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks
@@ -39,7 +48,15 @@ export class UserComponent implements OnInit, OnDestroy {
   /**
    * On init
    */
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Subscribe to config changes
+    this._mskConfigService.config$
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((config: any) => {
+        // Store the layoutDirection
+        this.layoutDirection = config.direction;
+      });
+  }
 
   /**
    * On destroy

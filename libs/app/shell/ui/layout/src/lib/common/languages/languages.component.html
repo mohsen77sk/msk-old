@@ -4,6 +4,7 @@
   *transloco="let t"
   [matTooltip]="t('languages')"
   [matMenuTriggerFor]="languages"
+  [dir]="directionCodes[activeLang]"
 >
   <ng-container
     *ngTemplateOutlet="flagImage; context: { $implicit: activeLang }"
@@ -18,7 +19,7 @@
         <ng-container
           *ngTemplateOutlet="flagImage; context: { $implicit: lang.id }"
         ></ng-container>
-        <span class="ml-3">{{ lang.label }}</span>
+        <span class="mx-3">{{ lang.label }}</span>
       </span>
     </button>
   </ng-container>
