@@ -6,6 +6,7 @@ import {
   MskNavigationService,
   MskVerticalNavigationComponent,
 } from '@msk/app/shared/ui/navigation';
+import { Navigation, NavigationService } from '@msk/app/shell/core/navigation';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -18,6 +19,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class CenteredLayoutComponent implements OnInit, OnDestroy {
   //
+  navigation!: Navigation;
   isScreenSmall!: boolean;
   private _unsubscribeAll: Subject<unknown> = new Subject();
 
@@ -25,6 +27,7 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy {
    * Constructor
    */
   constructor(
+    private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
     private _mskMediaWatcherService: MskMediaWatcherService
   ) {}
@@ -37,6 +40,13 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+    // Subscribe to navigation data
+    this._navigationService.navigation$
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((navigation: Navigation) => {
+        this.navigation = navigation;
+      });
+
     // Subscribe to media changes
     this._mskMediaWatcherService.onMediaChange$
       .pipe(takeUntil(this._unsubscribeAll))

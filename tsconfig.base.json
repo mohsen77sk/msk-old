@@ -18,6 +18,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@msk/app/dashboard/feature": [
+        "libs/app/dashboard/feature/src/index.ts"
+      ],
       "@msk/app/home/feature": [
         "libs/app/home/feature/src/index.ts"
       ],
@@ -65,6 +68,9 @@
       ],
       "@msk/app/shared/ui/navigation": [
         "libs/app/shared/ui/navigation/src/index.ts"
+      ],
+      "@msk/app/shell/core/navigation": [
+        "libs/app/shell/core/navigation/src/index.ts"
       ],
       "@msk/app/shell/core/transloco": [
         "libs/app/shell/core/transloco/src/index.ts"

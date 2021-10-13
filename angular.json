@@ -32,6 +32,31 @@
     }
   },
   "projects": {
+    "app-dashboard-feature": {
+      "projectType": "library",
+      "root": "libs/app/dashboard/feature",
+      "sourceRoot": "libs/app/dashboard/feature/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/dashboard/feature"],
+          "options": {
+            "jestConfig": "libs/app/dashboard/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/dashboard/feature/src/**/*.ts",
+              "libs/app/dashboard/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-home-feature": {
       "projectType": "library",
       "root": "libs/app/home/feature",
@@ -427,6 +452,31 @@
             "lintFilePatterns": [
               "libs/app/shared/ui/navigation/src/**/*.ts",
               "libs/app/shared/ui/navigation/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "app-shell-core-navigation": {
+      "projectType": "library",
+      "root": "libs/app/shell/core/navigation",
+      "sourceRoot": "libs/app/shell/core/navigation/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shell/core/navigation"],
+          "options": {
+            "jestConfig": "libs/app/shell/core/navigation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/core/navigation/src/**/*.ts",
+              "libs/app/shell/core/navigation/src/**/*.html"
             ]
           }
         }

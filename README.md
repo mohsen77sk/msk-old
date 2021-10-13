@@ -38,6 +38,9 @@ This project was generated using [Nx](https://nx.dev).
 		│	├── home (dir)
 		│	│	├── features (angular:lib)
 		│	│	└── ui (dir)
+		│	├── dashboard (dir)
+		│	│	├── features (angular:lib)
+		│	│	└── ui (dir)
 		│	├── todo (dir)
 		│	│	├── data-access (angular:lib, service, API calls, state management)
 		│	│	├── features

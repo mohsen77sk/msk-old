@@ -7,6 +7,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { mskShellRoutes } from './msk-shell.routes';
 
 import { TranslocoCoreModule } from '@msk/app/shell/core/transloco';
+import { NavigationCoreModule } from '@msk/app/shell/core/navigation';
 import { MskLayoutModule, layoutConfig } from '@msk/app/shell/ui/layout';
 
 import { MskConfigModule } from '@msk/app/shared/services/config';
@@ -34,6 +35,7 @@ const routerConfig: ExtraOptions = {
 
     // Core module of your application
     TranslocoCoreModule,
+    NavigationCoreModule,
 
     RouterModule.forRoot(mskShellRoutes, routerConfig),
   ],
