@@ -66,6 +66,9 @@
       "@msk/app/shared/ui/navigation": [
         "libs/app/shared/ui/navigation/src/index.ts"
       ],
+      "@msk/app/shell/core/transloco": [
+        "libs/app/shell/core/transloco/src/index.ts"
+      ],
       "@msk/app/shell/feature": [
         "libs/app/shell/feature/src/index.ts"
       ],

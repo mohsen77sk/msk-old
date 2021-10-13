@@ -432,6 +432,31 @@
         }
       }
     },
+    "app-shell-core-transloco": {
+      "projectType": "library",
+      "root": "libs/app/shell/core/transloco",
+      "sourceRoot": "libs/app/shell/core/transloco/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shell/core/transloco"],
+          "options": {
+            "jestConfig": "libs/app/shell/core/transloco/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/core/transloco/src/**/*.ts",
+              "libs/app/shell/core/transloco/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "app-shell-feature": {
       "projectType": "library",
       "root": "libs/app/shell/feature",

@@ -5,8 +5,8 @@ import { MATERIAL_SANITY_CHECKS } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 import { mskShellRoutes } from './msk-shell.routes';
-import { TranslocoCoreModule } from './transloco/transloco.module';
 
+import { TranslocoCoreModule } from '@msk/app/shell/core/transloco';
 import { MskLayoutModule, layoutConfig } from '@msk/app/shell/ui/layout';
 
 import { MskConfigModule } from '@msk/app/shared/services/config';

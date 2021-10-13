@@ -67,6 +67,9 @@
     "app-shared-ui-navigation": {
       "tags": []
     },
+    "app-shell-core-transloco": {
+      "tags": []
+    },
     "app-shell-feature": {
       "tags": []
     },

@@ -31,6 +31,7 @@ This project was generated using [Nx](https://nx.dev).
 		│			└── entities (nest:lib, house entities for the entire app)
 		├── app (dir)
 		│	├── shell (dir)
+		│	│	├── core (dir)
 		│	│	├── feature (angular:lib) - for configure any forRoot modules
 		│	│	└── ui
 		│	│		└── layout (angular:lib)
