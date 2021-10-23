@@ -10,12 +10,7 @@
       *ngIf="showAvatar && user?.avatar"
       [src]="user?.avatar"
     />
-    <mat-icon
-      *ngIf="!showAvatar || !user?.avatar"
-      fontSet="material-icons-outlined"
-    >
-      account_circle
-    </mat-icon>
+    <mat-icon *ngIf="!showAvatar || !user?.avatar"> account_circle </mat-icon>
   </span>
 </button>
 <!-- Menu -->
@@ -30,26 +25,20 @@
   </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item>
-    <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
-      account_circle
-    </mat-icon>
+    <mat-icon class="mat-icon-rtl-mirror"> account_circle </mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('profile') }}</span>
     </ng-container>
   </button>
   <button mat-menu-item>
-    <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
-      settings
-    </mat-icon>
+    <mat-icon class="mat-icon-rtl-mirror"> settings </mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('settings') }}</span>
     </ng-container>
   </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item>
-    <mat-icon class="mat-icon-rtl-mirror" fontSet="material-icons-outlined">
-      logout
-    </mat-icon>
+    <mat-icon class="mat-icon-rtl-mirror"> logout </mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('sign-out') }}</span>
     </ng-container>

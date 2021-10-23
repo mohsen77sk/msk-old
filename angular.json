@@ -460,6 +460,32 @@
       },
       "tags": []
     },
+    "app-shell-core-icons": {
+      "projectType": "library",
+      "root": "libs/app/shell/core/icons",
+      "sourceRoot": "libs/app/shell/core/icons/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app/shell/core/icons"],
+          "options": {
+            "jestConfig": "libs/app/shell/core/icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app/shell/core/icons/src/**/*.ts",
+              "libs/app/shell/core/icons/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "app-shell-core-navigation": {
       "projectType": "library",
       "root": "libs/app/shell/core/navigation",
