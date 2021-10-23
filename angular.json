@@ -1,36 +1,5 @@
 {
   "version": 1,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "defaultProject": "web-app",
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
   "projects": {
     "app-dashboard-feature": {
       "projectType": "library",
@@ -53,9 +22,11 @@
               "libs/app/dashboard/feature/src/**/*.ts",
               "libs/app/dashboard/feature/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-home-feature": {
       "projectType": "library",
@@ -78,9 +49,11 @@
               "libs/app/home/feature/src/**/*.ts",
               "libs/app/home/feature/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-animations": {
       "projectType": "library",
@@ -103,9 +76,11 @@
               "libs/app/shared/animations/src/**/*.ts",
               "libs/app/shared/animations/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-app-config": {
       "projectType": "library",
@@ -128,9 +103,11 @@
               "libs/app/shared/app-config/src/**/*.ts",
               "libs/app/shared/app-config/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-data-access-api": {
       "projectType": "library",
@@ -153,9 +130,11 @@
               "libs/app/shared/data-access/api/src/**/*.ts",
               "libs/app/shared/data-access/api/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-data-access-models": {
       "projectType": "library",
@@ -178,9 +157,11 @@
               "libs/app/shared/data-access/models/src/**/*.ts",
               "libs/app/shared/data-access/models/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-directives-scroll-reset": {
       "projectType": "library",
@@ -203,9 +184,11 @@
               "libs/app/shared/directives/scroll-reset/src/**/*.ts",
               "libs/app/shared/directives/scroll-reset/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-directives-scrollbar": {
       "projectType": "library",
@@ -228,9 +211,11 @@
               "libs/app/shared/directives/scrollbar/src/**/*.ts",
               "libs/app/shared/directives/scrollbar/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-pipes-find-by-key": {
       "projectType": "library",
@@ -253,9 +238,11 @@
               "libs/app/shared/pipes/find-by-key/src/**/*.ts",
               "libs/app/shared/pipes/find-by-key/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-services-config": {
       "projectType": "library",
@@ -278,9 +265,11 @@
               "libs/app/shared/services/config/src/**/*.ts",
               "libs/app/shared/services/config/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-services-media-watcher": {
       "projectType": "library",
@@ -303,9 +292,11 @@
               "libs/app/shared/services/media-watcher/src/**/*.ts",
               "libs/app/shared/services/media-watcher/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-services-splash-screen": {
       "projectType": "library",
@@ -328,9 +319,11 @@
               "libs/app/shared/services/splash-screen/src/**/*.ts",
               "libs/app/shared/services/splash-screen/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-services-tailwind": {
       "projectType": "library",
@@ -353,9 +346,11 @@
               "libs/app/shared/services/tailwind/src/**/*.ts",
               "libs/app/shared/services/tailwind/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-services-utils": {
       "projectType": "library",
@@ -378,9 +373,11 @@
               "libs/app/shared/services/utils/src/**/*.ts",
               "libs/app/shared/services/utils/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-ui-card": {
       "projectType": "library",
@@ -403,9 +400,11 @@
               "libs/app/shared/ui/card/src/**/*.ts",
               "libs/app/shared/ui/card/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-ui-drawer": {
       "projectType": "library",
@@ -428,9 +427,11 @@
               "libs/app/shared/ui/drawer/src/**/*.ts",
               "libs/app/shared/ui/drawer/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shared-ui-navigation": {
       "projectType": "library",
@@ -453,9 +454,11 @@
               "libs/app/shared/ui/navigation/src/**/*.ts",
               "libs/app/shared/ui/navigation/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shell-core-navigation": {
       "projectType": "library",
@@ -478,9 +481,11 @@
               "libs/app/shell/core/navigation/src/**/*.ts",
               "libs/app/shell/core/navigation/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shell-core-transloco": {
       "projectType": "library",
@@ -503,9 +508,11 @@
               "libs/app/shell/core/transloco/src/**/*.ts",
               "libs/app/shell/core/transloco/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shell-feature": {
       "projectType": "library",
@@ -528,9 +535,11 @@
               "libs/app/shell/feature/src/**/*.ts",
               "libs/app/shell/feature/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "app-shell-ui-layout": {
       "projectType": "library",
@@ -553,21 +562,25 @@
               "libs/app/shell/ui/layout/src/**/*.ts",
               "libs/app/shell/ui/layout/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "shared-assets": {
       "projectType": "library",
       "root": "libs/shared/assets",
       "sourceRoot": "libs/web/shared/assets/src",
-      "architect": {}
+      "architect": {},
+      "tags": []
     },
     "shared-styles": {
       "projectType": "library",
       "root": "libs/shared/styles",
       "sourceRoot": "libs/web/shared/styles/src",
-      "architect": {}
+      "architect": {},
+      "tags": []
     },
     "shared-utils": {
       "projectType": "library",
@@ -590,9 +603,11 @@
               "libs/shared/utils/src/**/*.ts",
               "libs/shared/utils/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": []
     },
     "web-api": {
       "root": "apps/web-api",
@@ -632,7 +647,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/web-api/**/*.ts"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -642,7 +658,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "web-app": {
       "projectType": "application",
@@ -739,7 +756,8 @@
               "apps/web-app/src/**/*.ts",
               "apps/web-app/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -749,7 +767,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "web-app-e2e": {
       "root": "apps/web-app-e2e",
@@ -773,9 +792,12 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/web-app-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["web-app"]
     }
   }
 }
