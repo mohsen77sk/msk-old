@@ -14,7 +14,7 @@
       <mat-icon
         class="mat-icon-rtl-mirror msk-vertical-navigation-item-icon"
         [ngClass]="item.classes?.icon!"
-        [svgIcon]="item.icon"
+        [innerText]="item.icon"
       ></mat-icon>
     </ng-container>
 
@@ -48,8 +48,8 @@
 
     <!-- Arrow -->
     <mat-icon
-      class="msk-vertical-navigation-item-arrow icon-size-4"
-      [svgIcon]="'heroicons_solid:chevron-right'"
+      class="mat-icon-rtl-mirror msk-vertical-navigation-item-arrow icon-size-4"
+      [innerText]="'chevron_right'"
     ></mat-icon>
   </div>
 </div>

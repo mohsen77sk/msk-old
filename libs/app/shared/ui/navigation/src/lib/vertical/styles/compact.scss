@@ -142,6 +142,28 @@ msk-vertical-navigation {
         }
       }
 
+      /* Wrapper */
+      .msk-vertical-navigation-wrapper {
+        /* Content */
+        .msk-vertical-navigation-content {
+          > msk-vertical-navigation-aside-item,
+          > msk-vertical-navigation-basic-item {
+            .msk-vertical-navigation-item-wrapper {
+              .msk-vertical-navigation-item {
+                .msk-vertical-navigation-item-icon {
+                  margin-right: unset;
+                  margin-left: 0;
+                }
+                .msk-vertical-navigation-item-badge {
+                  left: unset;
+                  right: 64px;
+                }
+              }
+            }
+          }
+        }
+      }
+
       /* Aside wrapper */
       .msk-vertical-navigation-aside-wrapper {
         left: unset;

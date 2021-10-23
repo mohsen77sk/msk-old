@@ -61,7 +61,7 @@
         print:hidden
       "
     >
-      <ng-container *ngIf="!isScreenSmall">
+      <div class="flex" *ngIf="!isScreenSmall">
         <!-- Logo -->
         <div class="flex items-center mx-2 lg:mr-8">
           <div class="hidden lg:flex">
@@ -87,10 +87,12 @@
         </div>
         <!-- Horizontal navigation -->
         <msk-horizontal-navigation
-          class="mr-2"
+          class="mr-2 flex-1"
           [name]="'mainNavigation'"
+          [navigation]="navigation.horizontal"
+          [dir]="layoutDirection"
         ></msk-horizontal-navigation>
-      </ng-container>
+      </div>
       <!-- Navigation toggle button -->
       <ng-container *ngIf="isScreenSmall">
         <button

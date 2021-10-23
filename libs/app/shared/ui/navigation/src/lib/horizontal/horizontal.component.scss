@@ -164,3 +164,35 @@ msk-horizontal-navigation {
     }
   }
 }
+
+[dir='rtl'] {
+  /* Root navigation specific */
+  msk-horizontal-navigation {
+    .msk-horizontal-navigation-wrapper {
+      /* Basic, Branch */
+      msk-horizontal-navigation-basic-item,
+      msk-horizontal-navigation-branch-item {
+        .msk-horizontal-navigation-item-wrapper {
+          .msk-horizontal-navigation-item {
+            .msk-horizontal-navigation-item-icon {
+              margin-right: unset;
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Navigation menu item common */
+  .msk-horizontal-navigation-menu-item {
+    .msk-horizontal-navigation-item-wrapper {
+      .msk-horizontal-navigation-item {
+        .msk-horizontal-navigation-item-badge {
+          margin-left: unset;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

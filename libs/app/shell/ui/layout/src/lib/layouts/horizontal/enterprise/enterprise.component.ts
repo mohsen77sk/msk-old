@@ -1,6 +1,7 @@
 /* eslint-disable @angular-eslint/component-selector */
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { MskConfigService } from '@msk/app/shared/services/config';
 import { MskMediaWatcherService } from '@msk/app/shared/services/media-watcher';
 import {
   MskNavigationService,
@@ -21,12 +22,14 @@ export class EnterpriseLayoutComponent implements OnInit, OnDestroy {
   //
   navigation!: Navigation;
   isScreenSmall!: boolean;
+  layoutDirection!: any;
   private _unsubscribeAll: Subject<unknown> = new Subject();
 
   /**
    * Constructor
    */
   constructor(
+    private _mskConfigService: MskConfigService,
     private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
     private _mskMediaWatcherService: MskMediaWatcherService
@@ -40,6 +43,13 @@ export class EnterpriseLayoutComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+    // Subscribe to config changes
+    this._mskConfigService.config$
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((config: any) => {
+        // Store the layoutDirection
+        this.layoutDirection = config.direction;
+      });
     // Subscribe to navigation data
     this._navigationService.navigation$
       .pipe(takeUntil(this._unsubscribeAll))

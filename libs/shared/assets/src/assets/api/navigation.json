@@ -1,6 +1,100 @@
 {
-  "default": [],
-  "compact": [],
-  "futuristic": [],
-  "horizontal": []
+  "default": [
+    {
+      "id": "main",
+      "title": "Main",
+      "subtitle": "Overview",
+      "type": "group",
+      "icon": "home",
+      "children": [
+        {
+          "id": "dashboard",
+          "title": "Dashboard",
+          "type": "basic",
+          "icon": "dashboard",
+          "link": "/dashboard"
+        }
+      ]
+    },
+    {
+      "id": "apps",
+      "title": "Applications",
+      "subtitle": "Application management",
+      "type": "group",
+      "icon": "apps",
+      "children": []
+    }
+  ],
+  "compact": [
+    {
+      "id": "main",
+      "title": "Main",
+      "tooltip": "Main",
+      "type": "aside",
+      "icon": "home",
+      "children": [
+        {
+          "id": "dashboard",
+          "title": "Dashboard",
+          "type": "basic",
+          "icon": "dashboard",
+          "link": "/dashboard"
+        }
+      ]
+    },
+    {
+      "id": "apps",
+      "title": "Applications",
+      "tooltip": "Applications",
+      "type": "aside",
+      "icon": "apps",
+      "children": []
+    }
+  ],
+  "futuristic": [
+    {
+      "id": "main",
+      "title": "Main",
+      "type": "group",
+      "children": [
+        {
+          "id": "dashboard",
+          "title": "Dashboard",
+          "type": "basic",
+          "icon": "dashboard",
+          "link": "/dashboard"
+        }
+      ]
+    },
+    {
+      "id": "apps",
+      "title": "Applications",
+      "type": "group",
+      "children": []
+    }
+  ],
+  "horizontal": [
+    {
+      "id": "main",
+      "title": "Main",
+      "type": "group",
+      "icon": "home",
+      "children": [
+        {
+          "id": "dashboard",
+          "title": "Dashboard",
+          "type": "basic",
+          "icon": "dashboard",
+          "link": "/dashboard"
+        }
+      ]
+    },
+    {
+      "id": "apps",
+      "title": "Applications",
+      "type": "group",
+      "icon": "apps",
+      "children": []
+    }
+  ]
 }

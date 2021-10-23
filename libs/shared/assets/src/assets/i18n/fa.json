@@ -1,4 +1,8 @@
 {
+  "navigation": {
+    "main": "اصلی",
+    "applications": "برنامه ها"
+  },
   "signed-in-as": "وارد شده با",
   "profile": "مشخصات",
   "settings": "تنظیمات",

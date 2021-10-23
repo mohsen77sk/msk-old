@@ -485,6 +485,27 @@ msk-vertical-navigation {
         left: #{$msk-vertical-navigation-width}px;
       }
     }
+
+    /* Navigation items common */
+    msk-vertical-navigation-aside-item,
+    msk-vertical-navigation-basic-item,
+    msk-vertical-navigation-collapsable-item,
+    msk-vertical-navigation-divider-item,
+    msk-vertical-navigation-group-item,
+    msk-vertical-navigation-spacer-item {
+      .msk-vertical-navigation-item-wrapper {
+        .msk-vertical-navigation-item {
+          .msk-vertical-navigation-item-icon {
+            margin-right: unset;
+            margin-left: 16px;
+          }
+          .msk-vertical-navigation-item-badge {
+            margin-left: unset;
+            margin-right: auto;
+          }
+        }
+      }
+    }
   }
 }
 
