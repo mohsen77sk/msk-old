@@ -41,8 +41,8 @@ msk-vertical-navigation {
     bottom: 0;
   }
 
-  /* Left position */
-  &.msk-vertical-navigation-position-left {
+  /* Start position */
+  &.msk-vertical-navigation-position-start {
     /* Side mode */
     &.msk-vertical-navigation-mode-side {
       margin-left: -#{$msk-vertical-navigation-width}px;
@@ -68,8 +68,8 @@ msk-vertical-navigation {
     }
   }
 
-  /* Right position */
-  &.msk-vertical-navigation-position-right {
+  /* End position */
+  &.msk-vertical-navigation-position-end {
     /* Side mode */
     &.msk-vertical-navigation-mode-side {
       margin-right: -#{$msk-vertical-navigation-width}px;
@@ -189,7 +189,7 @@ msk-vertical-navigation {
     }
   }
 
-  &.msk-vertical-navigation-position-right {
+  &.msk-vertical-navigation-position-end {
     .msk-vertical-navigation-aside-wrapper {
       left: auto;
       right: #{$msk-vertical-navigation-width}px;
@@ -198,7 +198,7 @@ msk-vertical-navigation {
 
   /* ----------------------------------------------------------------------------------------------------- */
   /* @ Navigation Items
-    /* ----------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------- */
 
   /* Navigation items common */
   msk-vertical-navigation-aside-item,
@@ -401,6 +401,90 @@ msk-vertical-navigation {
   /* Spacer */
   msk-vertical-navigation-spacer-item {
     margin: 6px 0;
+  }
+}
+
+[dir='rtl'] {
+  msk-vertical-navigation {
+    /* Start position */
+    &.msk-vertical-navigation-position-start {
+      /* Side mode */
+      &.msk-vertical-navigation-mode-side {
+        margin-left: unset;
+        margin-right: -#{$msk-vertical-navigation-width}px;
+
+        &.msk-vertical-navigation-opened {
+          margin-left: unset;
+          margin-right: 0;
+        }
+      }
+
+      /* Over mode */
+      &.msk-vertical-navigation-mode-over {
+        left: unset;
+        right: 0;
+        transform: translate3d(100%, 0, 0);
+
+        &.msk-vertical-navigation-opened {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      /* Wrapper */
+      .msk-vertical-navigation-wrapper {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    /* End position */
+    &.msk-vertical-navigation-position-end {
+      /* Side mode */
+      &.msk-vertical-navigation-mode-side {
+        margin-right: unset;
+        margin-left: -#{$msk-vertical-navigation-width}px;
+
+        &.msk-vertical-navigation-opened {
+          margin-right: unset;
+          margin-left: 0;
+        }
+      }
+
+      /* Over mode */
+      &.msk-vertical-navigation-mode-over {
+        right: unset;
+        left: 0;
+        transform: translate3d(-100%, 0, 0);
+
+        &.msk-vertical-navigation-opened {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      /* Wrapper */
+      .msk-vertical-navigation-wrapper {
+        right: unset;
+        left: 0;
+      }
+    }
+
+    /* Wrapper */
+    .msk-vertical-navigation-wrapper {
+      box-shadow: inset 1px 0 0 var(--color-border);
+    }
+
+    /* Aside wrapper */
+    .msk-vertical-navigation-aside-wrapper {
+      left: unset;
+      right: #{$msk-vertical-navigation-width}px;
+    }
+
+    &.msk-vertical-navigation-position-end {
+      .msk-vertical-navigation-aside-wrapper {
+        right: auto;
+        left: #{$msk-vertical-navigation-width}px;
+      }
+    }
   }
 }
 

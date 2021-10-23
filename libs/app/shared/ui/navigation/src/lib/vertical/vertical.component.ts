@@ -68,7 +68,7 @@ export class MskVerticalNavigationComponent
   @Input() name: string = this._mskUtilsService.randomId();
   @Input() navigation!: NavigationItem[];
   @Input() opened = true;
-  @Input() position: VerticalNavigationPosition = 'left';
+  @Input() position: VerticalNavigationPosition = 'start';
   @Input() transparentOverlay = false;
   @Output()
   readonly appearanceChanged: EventEmitter<VerticalNavigationAppearance> = new EventEmitter<VerticalNavigationAppearance>();
@@ -135,8 +135,8 @@ export class MskVerticalNavigationComponent
       'msk-vertical-navigation-mode-over': this.mode === 'over',
       'msk-vertical-navigation-mode-side': this.mode === 'side',
       'msk-vertical-navigation-opened': this.opened,
-      'msk-vertical-navigation-position-left': this.position === 'left',
-      'msk-vertical-navigation-position-right': this.position === 'right',
+      'msk-vertical-navigation-position-start': this.position === 'start',
+      'msk-vertical-navigation-position-end': this.position === 'end',
     };
   }
 

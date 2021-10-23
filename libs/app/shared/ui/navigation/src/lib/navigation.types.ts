@@ -38,4 +38,4 @@ export type VerticalNavigationAppearance =
 
 export type VerticalNavigationMode = 'over' | 'side';
 
-export type VerticalNavigationPosition = 'left' | 'right';
+export type VerticalNavigationPosition = 'start' | 'end';
