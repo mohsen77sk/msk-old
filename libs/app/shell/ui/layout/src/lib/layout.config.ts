@@ -10,6 +10,7 @@ import {
  * object.
  */
 export interface LayoutConfig {
+  language: string;
   direction: LayoutDirection;
   scheme: LayoutScheme;
   theme: LayoutTheme;
@@ -25,6 +26,7 @@ export interface LayoutConfig {
  * MskConfigService and its methods.
  */
 export const layoutConfig: LayoutConfig = {
+  language: 'en',
   direction: 'ltr',
   scheme: 'light',
   theme: 'default',

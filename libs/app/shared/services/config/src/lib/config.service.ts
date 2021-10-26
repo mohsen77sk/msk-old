@@ -32,6 +32,10 @@ export class MskConfigService {
     this._config.next(config);
   }
 
+  get config(): any {
+    return this._config.value;
+  }
+
   get config$(): Observable<any> {
     return this._config.asObservable();
   }

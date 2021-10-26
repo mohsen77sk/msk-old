@@ -766,6 +766,7 @@
           },
           "defaultConfiguration": "development",
           "options": {
+            "port": 5200,
             "proxyConfig": "apps/web-app/proxy.conf.json"
           }
         },
