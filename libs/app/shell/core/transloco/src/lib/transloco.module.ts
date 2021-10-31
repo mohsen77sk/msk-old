@@ -7,6 +7,7 @@ import {
   TranslocoModule,
   TranslocoService,
 } from '@ngneat/transloco';
+import { MskConfigService } from '@msk/app/shared/services/config';
 import { environment } from '../../../../../../../apps/web-app/src/environments/environment';
 import { TranslocoHttpLoader } from './transloco.http-loader';
 
@@ -40,11 +41,14 @@ import { TranslocoHttpLoader } from './transloco.http-loader';
     {
       // Preload the default language before the app starts to prevent empty/jumping content
       provide: APP_INITIALIZER,
-      deps: [TranslocoService],
+      deps: [TranslocoService, MskConfigService],
       useFactory:
-        (translocoService: TranslocoService): any =>
+        (
+          translocoService: TranslocoService,
+          mskConfigService: MskConfigService
+        ): any =>
         (): Promise<Translation> => {
-          const defaultLang = translocoService.getDefaultLang();
+          const defaultLang = mskConfigService.config.language; // translocoService.getDefaultLang();
           translocoService.setActiveLang(defaultLang);
           return translocoService.load(defaultLang).toPromise();
         },

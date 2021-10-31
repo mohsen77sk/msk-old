@@ -76,8 +76,11 @@ export class LanguagesComponent implements OnInit {
   setActiveLang(lang: string): void {
     // Set the active lang
     this._translocoService.setActiveLang(lang);
-    // Set the active direction
-    this._mskConfigService.config = { direction: this.directionCodes[lang] };
+    // Set the active lang & direction in config
+    this._mskConfigService.config = {
+      language: lang,
+      direction: this.directionCodes[lang],
+    };
   }
 
   /**
