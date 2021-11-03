@@ -1,17 +1,17 @@
 {
   "version": 1,
   "projects": {
-    "app-dashboard-feature": {
+    "client-shared-animations": {
       "projectType": "library",
-      "root": "libs/app/dashboard/feature",
-      "sourceRoot": "libs/app/dashboard/feature/src",
+      "root": "libs/client/shared/animations",
+      "sourceRoot": "libs/client/shared/animations/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/dashboard/feature"],
+          "outputs": ["coverage/libs/client/shared/animations"],
           "options": {
-            "jestConfig": "libs/app/dashboard/feature/jest.config.js",
+            "jestConfig": "libs/client/shared/animations/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -19,26 +19,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/dashboard/feature/src/**/*.ts",
-              "libs/app/dashboard/feature/src/**/*.html"
+              "libs/client/shared/animations/src/**/*.ts",
+              "libs/client/shared/animations/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-home-feature": {
+    "client-shared-directives-scroll-reset": {
       "projectType": "library",
-      "root": "libs/app/home/feature",
-      "sourceRoot": "libs/app/home/feature/src",
+      "root": "libs/client/shared/directives/scroll-reset",
+      "sourceRoot": "libs/client/shared/directives/scroll-reset/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/home/feature"],
+          "outputs": ["coverage/libs/client/shared/directives/scroll-reset"],
           "options": {
-            "jestConfig": "libs/app/home/feature/jest.config.js",
+            "jestConfig": "libs/client/shared/directives/scroll-reset/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -46,26 +45,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/home/feature/src/**/*.ts",
-              "libs/app/home/feature/src/**/*.html"
+              "libs/client/shared/directives/scroll-reset/src/**/*.ts",
+              "libs/client/shared/directives/scroll-reset/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-animations": {
+    "client-shared-directives-scrollbar": {
       "projectType": "library",
-      "root": "libs/app/shared/animations",
-      "sourceRoot": "libs/app/shared/animations/src",
+      "root": "libs/client/shared/directives/scrollbar",
+      "sourceRoot": "libs/client/shared/directives/scrollbar/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/animations"],
+          "outputs": ["coverage/libs/client/shared/directives/scrollbar"],
           "options": {
-            "jestConfig": "libs/app/shared/animations/jest.config.js",
+            "jestConfig": "libs/client/shared/directives/scrollbar/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -73,26 +71,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/animations/src/**/*.ts",
-              "libs/app/shared/animations/src/**/*.html"
+              "libs/client/shared/directives/scrollbar/src/**/*.ts",
+              "libs/client/shared/directives/scrollbar/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-app-config": {
+    "client-shared-pipes-find-by-key": {
       "projectType": "library",
-      "root": "libs/app/shared/app-config",
-      "sourceRoot": "libs/app/shared/app-config/src",
+      "root": "libs/client/shared/pipes/find-by-key",
+      "sourceRoot": "libs/client/shared/pipes/find-by-key/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/app-config"],
+          "outputs": ["coverage/libs/client/shared/pipes/find-by-key"],
           "options": {
-            "jestConfig": "libs/app/shared/app-config/jest.config.js",
+            "jestConfig": "libs/client/shared/pipes/find-by-key/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -100,26 +97,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/app-config/src/**/*.ts",
-              "libs/app/shared/app-config/src/**/*.html"
+              "libs/client/shared/pipes/find-by-key/src/**/*.ts",
+              "libs/client/shared/pipes/find-by-key/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-data-access-api": {
+    "client-shared-services-config": {
       "projectType": "library",
-      "root": "libs/app/shared/data-access/api",
-      "sourceRoot": "libs/app/shared/data-access/api/src",
+      "root": "libs/client/shared/services/config",
+      "sourceRoot": "libs/client/shared/services/config/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/data-access/api"],
+          "outputs": ["coverage/libs/client/shared/services/config"],
           "options": {
-            "jestConfig": "libs/app/shared/data-access/api/jest.config.js",
+            "jestConfig": "libs/client/shared/services/config/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -127,26 +123,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/data-access/api/src/**/*.ts",
-              "libs/app/shared/data-access/api/src/**/*.html"
+              "libs/client/shared/services/config/src/**/*.ts",
+              "libs/client/shared/services/config/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-data-access-models": {
+    "client-shared-services-media-watcher": {
       "projectType": "library",
-      "root": "libs/app/shared/data-access/models",
-      "sourceRoot": "libs/app/shared/data-access/models/src",
+      "root": "libs/client/shared/services/media-watcher",
+      "sourceRoot": "libs/client/shared/services/media-watcher/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/data-access/models"],
+          "outputs": ["coverage/libs/client/shared/services/media-watcher"],
           "options": {
-            "jestConfig": "libs/app/shared/data-access/models/jest.config.js",
+            "jestConfig": "libs/client/shared/services/media-watcher/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -154,26 +149,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/data-access/models/src/**/*.ts",
-              "libs/app/shared/data-access/models/src/**/*.html"
+              "libs/client/shared/services/media-watcher/src/**/*.ts",
+              "libs/client/shared/services/media-watcher/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-directives-scroll-reset": {
+    "client-shared-services-splash-screen": {
       "projectType": "library",
-      "root": "libs/app/shared/directives/scroll-reset",
-      "sourceRoot": "libs/app/shared/directives/scroll-reset/src",
+      "root": "libs/client/shared/services/splash-screen",
+      "sourceRoot": "libs/client/shared/services/splash-screen/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/directives/scroll-reset"],
+          "outputs": ["coverage/libs/client/shared/services/splash-screen"],
           "options": {
-            "jestConfig": "libs/app/shared/directives/scroll-reset/jest.config.js",
+            "jestConfig": "libs/client/shared/services/splash-screen/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -181,26 +175,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/directives/scroll-reset/src/**/*.ts",
-              "libs/app/shared/directives/scroll-reset/src/**/*.html"
+              "libs/client/shared/services/splash-screen/src/**/*.ts",
+              "libs/client/shared/services/splash-screen/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-directives-scrollbar": {
+    "client-shared-services-tailwind": {
       "projectType": "library",
-      "root": "libs/app/shared/directives/scrollbar",
-      "sourceRoot": "libs/app/shared/directives/scrollbar/src",
+      "root": "libs/client/shared/services/tailwind",
+      "sourceRoot": "libs/client/shared/services/tailwind/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/directives/scrollbar"],
+          "outputs": ["coverage/libs/client/shared/services/tailwind"],
           "options": {
-            "jestConfig": "libs/app/shared/directives/scrollbar/jest.config.js",
+            "jestConfig": "libs/client/shared/services/tailwind/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -208,26 +201,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/directives/scrollbar/src/**/*.ts",
-              "libs/app/shared/directives/scrollbar/src/**/*.html"
+              "libs/client/shared/services/tailwind/src/**/*.ts",
+              "libs/client/shared/services/tailwind/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-pipes-find-by-key": {
+    "client-shared-services-utils": {
       "projectType": "library",
-      "root": "libs/app/shared/pipes/find-by-key",
-      "sourceRoot": "libs/app/shared/pipes/find-by-key/src",
+      "root": "libs/client/shared/services/utils",
+      "sourceRoot": "libs/client/shared/services/utils/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/pipes/find-by-key"],
+          "outputs": ["coverage/libs/client/shared/services/utils"],
           "options": {
-            "jestConfig": "libs/app/shared/pipes/find-by-key/jest.config.js",
+            "jestConfig": "libs/client/shared/services/utils/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -235,26 +227,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/pipes/find-by-key/src/**/*.ts",
-              "libs/app/shared/pipes/find-by-key/src/**/*.html"
+              "libs/client/shared/services/utils/src/**/*.ts",
+              "libs/client/shared/services/utils/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-services-config": {
+    "client-shared-ui-card": {
       "projectType": "library",
-      "root": "libs/app/shared/services/config",
-      "sourceRoot": "libs/app/shared/services/config/src",
+      "root": "libs/client/shared/ui/card",
+      "sourceRoot": "libs/client/shared/ui/card/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/services/config"],
+          "outputs": ["coverage/libs/client/shared/ui/card"],
           "options": {
-            "jestConfig": "libs/app/shared/services/config/jest.config.js",
+            "jestConfig": "libs/client/shared/ui/card/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -262,26 +253,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/services/config/src/**/*.ts",
-              "libs/app/shared/services/config/src/**/*.html"
+              "libs/client/shared/ui/card/src/**/*.ts",
+              "libs/client/shared/ui/card/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-services-media-watcher": {
+    "client-shared-ui-drawer": {
       "projectType": "library",
-      "root": "libs/app/shared/services/media-watcher",
-      "sourceRoot": "libs/app/shared/services/media-watcher/src",
+      "root": "libs/client/shared/ui/drawer",
+      "sourceRoot": "libs/client/shared/ui/drawer/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/services/media-watcher"],
+          "outputs": ["coverage/libs/client/shared/ui/drawer"],
           "options": {
-            "jestConfig": "libs/app/shared/services/media-watcher/jest.config.js",
+            "jestConfig": "libs/client/shared/ui/drawer/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -289,26 +279,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/services/media-watcher/src/**/*.ts",
-              "libs/app/shared/services/media-watcher/src/**/*.html"
+              "libs/client/shared/ui/drawer/src/**/*.ts",
+              "libs/client/shared/ui/drawer/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-services-splash-screen": {
+    "client-shared-ui-navigation": {
       "projectType": "library",
-      "root": "libs/app/shared/services/splash-screen",
-      "sourceRoot": "libs/app/shared/services/splash-screen/src",
+      "root": "libs/client/shared/ui/navigation",
+      "sourceRoot": "libs/client/shared/ui/navigation/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/services/splash-screen"],
+          "outputs": ["coverage/libs/client/shared/ui/navigation"],
           "options": {
-            "jestConfig": "libs/app/shared/services/splash-screen/jest.config.js",
+            "jestConfig": "libs/client/shared/ui/navigation/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -316,26 +305,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/services/splash-screen/src/**/*.ts",
-              "libs/app/shared/services/splash-screen/src/**/*.html"
+              "libs/client/shared/ui/navigation/src/**/*.ts",
+              "libs/client/shared/ui/navigation/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-services-tailwind": {
+    "client-web-app-dashboard-feature": {
       "projectType": "library",
-      "root": "libs/app/shared/services/tailwind",
-      "sourceRoot": "libs/app/shared/services/tailwind/src",
+      "root": "libs/client/web-app/dashboard/feature",
+      "sourceRoot": "libs/client/web-app/dashboard/feature/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/services/tailwind"],
+          "outputs": ["coverage/libs/client/web-app/dashboard/feature"],
           "options": {
-            "jestConfig": "libs/app/shared/services/tailwind/jest.config.js",
+            "jestConfig": "libs/client/web-app/dashboard/feature/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -343,26 +331,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/services/tailwind/src/**/*.ts",
-              "libs/app/shared/services/tailwind/src/**/*.html"
+              "libs/client/web-app/dashboard/feature/src/**/*.ts",
+              "libs/client/web-app/dashboard/feature/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-services-utils": {
+    "client-web-app-home-feature": {
       "projectType": "library",
-      "root": "libs/app/shared/services/utils",
-      "sourceRoot": "libs/app/shared/services/utils/src",
+      "root": "libs/client/web-app/home/feature",
+      "sourceRoot": "libs/client/web-app/home/feature/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/services/utils"],
+          "outputs": ["coverage/libs/client/web-app/home/feature"],
           "options": {
-            "jestConfig": "libs/app/shared/services/utils/jest.config.js",
+            "jestConfig": "libs/client/web-app/home/feature/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -370,26 +357,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/services/utils/src/**/*.ts",
-              "libs/app/shared/services/utils/src/**/*.html"
+              "libs/client/web-app/home/feature/src/**/*.ts",
+              "libs/client/web-app/home/feature/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-ui-card": {
+    "client-web-app-shared-app-config": {
       "projectType": "library",
-      "root": "libs/app/shared/ui/card",
-      "sourceRoot": "libs/app/shared/ui/card/src",
+      "root": "libs/client/web-app/shared/app-config",
+      "sourceRoot": "libs/client/web-app/shared/app-config/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/ui/card"],
+          "outputs": ["coverage/libs/client/web-app/shared/app-config"],
           "options": {
-            "jestConfig": "libs/app/shared/ui/card/jest.config.js",
+            "jestConfig": "libs/client/web-app/shared/app-config/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -397,26 +383,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/ui/card/src/**/*.ts",
-              "libs/app/shared/ui/card/src/**/*.html"
+              "libs/client/web-app/shared/app-config/src/**/*.ts",
+              "libs/client/web-app/shared/app-config/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-ui-drawer": {
+    "client-web-app-shell-core-icons": {
       "projectType": "library",
-      "root": "libs/app/shared/ui/drawer",
-      "sourceRoot": "libs/app/shared/ui/drawer/src",
+      "root": "libs/client/web-app/shell/core/icons",
+      "sourceRoot": "libs/client/web-app/shell/core/icons/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/ui/drawer"],
+          "outputs": ["coverage/libs/client/web-app/shell/core/icons"],
           "options": {
-            "jestConfig": "libs/app/shared/ui/drawer/jest.config.js",
+            "jestConfig": "libs/client/web-app/shell/core/icons/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -424,26 +409,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/ui/drawer/src/**/*.ts",
-              "libs/app/shared/ui/drawer/src/**/*.html"
+              "libs/client/web-app/shell/core/icons/src/**/*.ts",
+              "libs/client/web-app/shell/core/icons/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shared-ui-navigation": {
+    "client-web-app-shell-core-navigation": {
       "projectType": "library",
-      "root": "libs/app/shared/ui/navigation",
-      "sourceRoot": "libs/app/shared/ui/navigation/src",
+      "root": "libs/client/web-app/shell/core/navigation",
+      "sourceRoot": "libs/client/web-app/shell/core/navigation/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shared/ui/navigation"],
+          "outputs": ["coverage/libs/client/web-app/shell/core/navigation"],
           "options": {
-            "jestConfig": "libs/app/shared/ui/navigation/jest.config.js",
+            "jestConfig": "libs/client/web-app/shell/core/navigation/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -451,26 +435,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shared/ui/navigation/src/**/*.ts",
-              "libs/app/shared/ui/navigation/src/**/*.html"
+              "libs/client/web-app/shell/core/navigation/src/**/*.ts",
+              "libs/client/web-app/shell/core/navigation/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shell-core-icons": {
+    "client-web-app-shell-core-transloco": {
       "projectType": "library",
-      "root": "libs/app/shell/core/icons",
-      "sourceRoot": "libs/app/shell/core/icons/src",
+      "root": "libs/client/web-app/shell/core/transloco",
+      "sourceRoot": "libs/client/web-app/shell/core/transloco/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/core/icons"],
+          "outputs": ["coverage/libs/client/web-app/shell/core/transloco"],
           "options": {
-            "jestConfig": "libs/app/shell/core/icons/jest.config.js",
+            "jestConfig": "libs/client/web-app/shell/core/transloco/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -478,25 +461,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shell/core/icons/src/**/*.ts",
-              "libs/app/shell/core/icons/src/**/*.html"
+              "libs/client/web-app/shell/core/transloco/src/**/*.ts",
+              "libs/client/web-app/shell/core/transloco/src/**/*.html"
             ]
           }
         }
       },
       "tags": []
     },
-    "app-shell-core-navigation": {
+    "client-web-app-shell-feature": {
       "projectType": "library",
-      "root": "libs/app/shell/core/navigation",
-      "sourceRoot": "libs/app/shell/core/navigation/src",
+      "root": "libs/client/web-app/shell/feature",
+      "sourceRoot": "libs/client/web-app/shell/feature/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/core/navigation"],
+          "outputs": ["coverage/libs/client/web-app/shell/feature"],
           "options": {
-            "jestConfig": "libs/app/shell/core/navigation/jest.config.js",
+            "jestConfig": "libs/client/web-app/shell/feature/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -504,26 +487,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shell/core/navigation/src/**/*.ts",
-              "libs/app/shell/core/navigation/src/**/*.html"
+              "libs/client/web-app/shell/feature/src/**/*.ts",
+              "libs/client/web-app/shell/feature/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": []
     },
-    "app-shell-core-transloco": {
+    "client-web-app-shell-ui-layout": {
       "projectType": "library",
-      "root": "libs/app/shell/core/transloco",
-      "sourceRoot": "libs/app/shell/core/transloco/src",
+      "root": "libs/client/web-app/shell/ui/layout",
+      "sourceRoot": "libs/client/web-app/shell/ui/layout/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/core/transloco"],
+          "outputs": ["coverage/libs/client/web-app/shell/ui/layout"],
           "options": {
-            "jestConfig": "libs/app/shell/core/transloco/jest.config.js",
+            "jestConfig": "libs/client/web-app/shell/ui/layout/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -531,157 +513,9 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app/shell/core/transloco/src/**/*.ts",
-              "libs/app/shell/core/transloco/src/**/*.html"
+              "libs/client/web-app/shell/ui/layout/src/**/*.ts",
+              "libs/client/web-app/shell/ui/layout/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
-        }
-      },
-      "tags": []
-    },
-    "app-shell-feature": {
-      "projectType": "library",
-      "root": "libs/app/shell/feature",
-      "sourceRoot": "libs/app/shell/feature/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/feature"],
-          "options": {
-            "jestConfig": "libs/app/shell/feature/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/app/shell/feature/src/**/*.ts",
-              "libs/app/shell/feature/src/**/*.html"
-            ]
-          },
-          "outputs": ["{options.outputFile}"]
-        }
-      },
-      "tags": []
-    },
-    "app-shell-ui-layout": {
-      "projectType": "library",
-      "root": "libs/app/shell/ui/layout",
-      "sourceRoot": "libs/app/shell/ui/layout/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app/shell/ui/layout"],
-          "options": {
-            "jestConfig": "libs/app/shell/ui/layout/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/app/shell/ui/layout/src/**/*.ts",
-              "libs/app/shell/ui/layout/src/**/*.html"
-            ]
-          },
-          "outputs": ["{options.outputFile}"]
-        }
-      },
-      "tags": []
-    },
-    "shared-assets": {
-      "projectType": "library",
-      "root": "libs/shared/assets",
-      "sourceRoot": "libs/web/shared/assets/src",
-      "architect": {},
-      "tags": []
-    },
-    "shared-styles": {
-      "projectType": "library",
-      "root": "libs/shared/styles",
-      "sourceRoot": "libs/web/shared/styles/src",
-      "architect": {},
-      "tags": []
-    },
-    "shared-utils": {
-      "projectType": "library",
-      "root": "libs/shared/utils",
-      "sourceRoot": "libs/shared/utils/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/utils"],
-          "options": {
-            "jestConfig": "libs/shared/utils/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/utils/src/**/*.ts",
-              "libs/shared/utils/src/**/*.html"
-            ]
-          },
-          "outputs": ["{options.outputFile}"]
-        }
-      },
-      "tags": []
-    },
-    "web-api": {
-      "root": "apps/web-api",
-      "sourceRoot": "apps/web-api/src",
-      "projectType": "application",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/apps/web-api",
-            "main": "apps/web-api/src/main.ts",
-            "tsConfig": "apps/web-api/tsconfig.app.json",
-            "assets": ["apps/web-api/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/web-api/src/environments/environment.ts",
-                  "with": "apps/web-api/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "web-api:build"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/web-api/**/*.ts"]
-          },
-          "outputs": ["{options.outputFile}"]
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/web-api"],
-          "options": {
-            "jestConfig": "apps/web-api/jest.config.js",
-            "passWithNoTests": true
           }
         }
       },
@@ -695,6 +529,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/web-app",
             "index": "apps/web-app/src/index.html",
@@ -708,16 +543,15 @@
               "apps/web-app/src/manifest.webmanifest",
               {
                 "glob": "**/*",
-                "input": "libs/shared/assets/src/assets",
+                "input": "libs/client/shared/assets/src",
                 "output": "assets"
               }
             ],
             "styles": ["apps/web-app/src/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared/styles/src"]
+              "includePaths": ["libs/client/shared/styles/src"]
             },
             "scripts": [],
-            "allowedCommonJsDependencies": [],
             "serviceWorker": true,
             "ngswConfigPath": "apps/web-app/ngsw-config.json"
           },
@@ -783,8 +617,7 @@
               "apps/web-app/src/**/*.ts",
               "apps/web-app/src/**/*.html"
             ]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -806,8 +639,8 @@
           "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/web-app-e2e/cypress.json",
-            "tsConfig": "apps/web-app-e2e/tsconfig.e2e.json",
-            "devServerTarget": "web-app:serve:development"
+            "devServerTarget": "web-app:serve:development",
+            "tsConfig": "apps/web-app-e2e/tsconfig.json"
           },
           "configurations": {
             "production": {
@@ -817,10 +650,10 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/web-app-e2e/**/*.{js,ts}"]
-          },
-          "outputs": ["{options.outputFile}"]
+          }
         }
       },
       "tags": [],

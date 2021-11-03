@@ -1,5 +1,3 @@
-const { guessProductionMode } = require('@ngneat/tailwind');
-
 const path = require('path');
 const process = require('process');
 const colors = require('tailwindcss/colors');
@@ -58,7 +56,7 @@ const config = {
   darkMode: 'class',
   important: true,
   purge: {
-    enabled: guessProductionMode(),
+    enabled: process.env.TAILWIND_MODE === 'build',
     content: ['./apps/**/*.{html,scss,ts}', './libs/**/*.{html,scss,ts}'],
     options: {
       safelist: {
@@ -414,19 +412,19 @@ const config = {
     // Tailwind plugins
     require(path.resolve(
       __dirname,
-      'libs/shared/styles/src/tailwind/plugins/extract-config'
+      'libs/client/shared/styles/src/tailwind/plugins/extract-config'
     )),
     require(path.resolve(
       __dirname,
-      'libs/shared/styles/src/tailwind/plugins/utilities'
+      'libs/client/shared/styles/src/tailwind/plugins/utilities'
     )),
     require(path.resolve(
       __dirname,
-      'libs/shared/styles/src/tailwind/plugins/icon-size'
+      'libs/client/shared/styles/src/tailwind/plugins/icon-size'
     )),
     require(path.resolve(
       __dirname,
-      'libs/shared/styles/src/tailwind/plugins/theming'
+      'libs/client/shared/styles/src/tailwind/plugins/theming'
     ))({
       themes,
     }),

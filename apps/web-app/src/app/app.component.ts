@@ -15,9 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   /**
    * Constructor
    */
-  constructor(
-    @Inject(DOCUMENT) private document: any
-  ) {
+  constructor(@Inject(DOCUMENT) private document: any) {
     // Set the private defaults
     this._unsubscribeAll = new Subject();
   }

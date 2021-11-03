@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { RouterModule } from '@angular/router';
 
-import { MskWebShellModule } from '@msk/app/shell/feature';
-import { GetAppConfigProvider } from '@msk/app/shared/app-config';
+import { MskWebShellModule } from '@msk/client/web-app/shell/feature';
+import { GetAppConfigProvider } from '@msk/client/web-app/shared/app-config';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -16,6 +17,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    RouterModule,
 
     MskWebShellModule,
 

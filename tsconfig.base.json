@@ -18,77 +18,68 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@msk/app/dashboard/feature": [
-        "libs/app/dashboard/feature/src/index.ts"
+      "@env/web-app": [
+        "apps/web-app/src/environments/environment.ts"
       ],
-      "@msk/app/home/feature": [
-        "libs/app/home/feature/src/index.ts"
+      "@msk/client/shared/animations": [
+        "libs/client/shared/animations/src/index.ts"
       ],
-      "@msk/app/shared/animations": [
-        "libs/app/shared/animations/src/index.ts"
+      "@msk/client/shared/directives/scroll-reset": [
+        "libs/client/shared/directives/scroll-reset/src/index.ts"
       ],
-      "@msk/app/shared/app-config": [
-        "libs/app/shared/app-config/src/index.ts"
+      "@msk/client/shared/directives/scrollbar": [
+        "libs/client/shared/directives/scrollbar/src/index.ts"
       ],
-      "@msk/app/shared/data-access/api": [
-        "libs/app/shared/data-access/api/src/index.ts"
+      "@msk/client/shared/pipes/find-by-key": [
+        "libs/client/shared/pipes/find-by-key/src/index.ts"
       ],
-      "@msk/app/shared/data-access/models": [
-        "libs/app/shared/data-access/models/src/index.ts"
+      "@msk/client/shared/services/config": [
+        "libs/client/shared/services/config/src/index.ts"
       ],
-      "@msk/app/shared/directives/scroll-reset": [
-        "libs/app/shared/directives/scroll-reset/src/index.ts"
+      "@msk/client/shared/services/media-watcher": [
+        "libs/client/shared/services/media-watcher/src/index.ts"
       ],
-      "@msk/app/shared/directives/scrollbar": [
-        "libs/app/shared/directives/scrollbar/src/index.ts"
+      "@msk/client/shared/services/splash-screen": [
+        "libs/client/shared/services/splash-screen/src/index.ts"
       ],
-      "@msk/app/shared/pipes/find-by-key": [
-        "libs/app/shared/pipes/find-by-key/src/index.ts"
+      "@msk/client/shared/services/tailwind": [
+        "libs/client/shared/services/tailwind/src/index.ts"
       ],
-      "@msk/app/shared/services/config": [
-        "libs/app/shared/services/config/src/index.ts"
+      "@msk/client/shared/services/utils": [
+        "libs/client/shared/services/utils/src/index.ts"
       ],
-      "@msk/app/shared/services/media-watcher": [
-        "libs/app/shared/services/media-watcher/src/index.ts"
+      "@msk/client/shared/ui/card": [
+        "libs/client/shared/ui/card/src/index.ts"
       ],
-      "@msk/app/shared/services/splash-screen": [
-        "libs/app/shared/services/splash-screen/src/index.ts"
+      "@msk/client/shared/ui/drawer": [
+        "libs/client/shared/ui/drawer/src/index.ts"
       ],
-      "@msk/app/shared/services/tailwind": [
-        "libs/app/shared/services/tailwind/src/index.ts"
+      "@msk/client/shared/ui/navigation": [
+        "libs/client/shared/ui/navigation/src/index.ts"
       ],
-      "@msk/app/shared/services/utils": [
-        "libs/app/shared/services/utils/src/index.ts"
+      "@msk/client/web-app/dashboard/feature": [
+        "libs/client/web-app/dashboard/feature/src/index.ts"
       ],
-      "@msk/app/shared/ui/card": [
-        "libs/app/shared/ui/card/src/index.ts"
+      "@msk/client/web-app/home/feature": [
+        "libs/client/web-app/home/feature/src/index.ts"
       ],
-      "@msk/app/shared/ui/drawer": [
-        "libs/app/shared/ui/drawer/src/index.ts"
+      "@msk/client/web-app/shared/app-config": [
+        "libs/client/web-app/shared/app-config/src/index.ts"
       ],
-      "@msk/app/shared/ui/navigation": [
-        "libs/app/shared/ui/navigation/src/index.ts"
+      "@msk/client/web-app/shell/core/icons": [
+        "libs/client/web-app/shell/core/icons/src/index.ts"
       ],
-      "@msk/app/shell/core/icons": [
-        "libs/app/shell/core/icons/src/index.ts"
+      "@msk/client/web-app/shell/core/navigation": [
+        "libs/client/web-app/shell/core/navigation/src/index.ts"
       ],
-      "@msk/app/shell/core/navigation": [
-        "libs/app/shell/core/navigation/src/index.ts"
+      "@msk/client/web-app/shell/core/transloco": [
+        "libs/client/web-app/shell/core/transloco/src/index.ts"
       ],
-      "@msk/app/shell/core/transloco": [
-        "libs/app/shell/core/transloco/src/index.ts"
+      "@msk/client/web-app/shell/feature": [
+        "libs/client/web-app/shell/feature/src/index.ts"
       ],
-      "@msk/app/shell/feature": [
-        "libs/app/shell/feature/src/index.ts"
-      ],
-      "@msk/app/shell/ui/layout": [
-        "libs/app/shell/ui/layout/src/index.ts"
-      ],
-      "@msk/shared/styles": [
-        "libs/shared/styles/src/styles.scss"
-      ],
-      "@msk/shared/utils": [
-        "libs/shared/utils/src/index.ts"
+      "@msk/client/web-app/shell/ui/layout": [
+        "libs/client/web-app/shell/ui/layout/src/index.ts"
       ]
     }
   },
