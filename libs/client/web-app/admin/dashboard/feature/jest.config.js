@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'client-web-app-dashboard-feature',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'client-web-app-admin-dashboard-feature',
+  preset: '../../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../../coverage/libs/client/web-app/dashboard/feature',
+    '../../../../../../coverage/libs/client/web-app/admin/dashboard/feature',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

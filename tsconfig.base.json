@@ -57,11 +57,11 @@
       "@msk/client/shared/ui/navigation": [
         "libs/client/shared/ui/navigation/src/index.ts"
       ],
-      "@msk/client/web-app/dashboard/feature": [
-        "libs/client/web-app/dashboard/feature/src/index.ts"
+      "@msk/client/web-app/admin/dashboard/feature": [
+        "libs/client/web-app/admin/dashboard/feature/src/index.ts"
       ],
-      "@msk/client/web-app/home/feature": [
-        "libs/client/web-app/home/feature/src/index.ts"
+      "@msk/client/web-app/landing/home/feature": [
+        "libs/client/web-app/landing/home/feature/src/index.ts"
       ],
       "@msk/client/web-app/shared/app-config": [
         "libs/client/web-app/shared/app-config/src/index.ts"

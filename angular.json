@@ -313,17 +313,17 @@
       },
       "tags": []
     },
-    "client-web-app-dashboard-feature": {
+    "client-web-app-admin-dashboard-feature": {
       "projectType": "library",
-      "root": "libs/client/web-app/dashboard/feature",
-      "sourceRoot": "libs/client/web-app/dashboard/feature/src",
+      "root": "libs/client/web-app/admin/dashboard/feature",
+      "sourceRoot": "libs/client/web-app/admin/dashboard/feature/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/dashboard/feature"],
+          "outputs": ["coverage/libs/client/web-app/admin/dashboard/feature"],
           "options": {
-            "jestConfig": "libs/client/web-app/dashboard/feature/jest.config.js",
+            "jestConfig": "libs/client/web-app/admin/dashboard/feature/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -331,25 +331,25 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/client/web-app/dashboard/feature/src/**/*.ts",
-              "libs/client/web-app/dashboard/feature/src/**/*.html"
+              "libs/client/web-app/admin/dashboard/feature/src/**/*.ts",
+              "libs/client/web-app/admin/dashboard/feature/src/**/*.html"
             ]
           }
         }
       },
       "tags": []
     },
-    "client-web-app-home-feature": {
+    "client-web-app-landing-home-feature": {
       "projectType": "library",
-      "root": "libs/client/web-app/home/feature",
-      "sourceRoot": "libs/client/web-app/home/feature/src",
+      "root": "libs/client/web-app/landing/home/feature",
+      "sourceRoot": "libs/client/web-app/landing/home/feature/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/home/feature"],
+          "outputs": ["coverage/libs/client/web-app/landing/home/feature"],
           "options": {
-            "jestConfig": "libs/client/web-app/home/feature/jest.config.js",
+            "jestConfig": "libs/client/web-app/landing/home/feature/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -357,8 +357,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/client/web-app/home/feature/src/**/*.ts",
-              "libs/client/web-app/home/feature/src/**/*.html"
+              "libs/client/web-app/landing/home/feature/src/**/*.ts",
+              "libs/client/web-app/landing/home/feature/src/**/*.html"
             ]
           }
         }

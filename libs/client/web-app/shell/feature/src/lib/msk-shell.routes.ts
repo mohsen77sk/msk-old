@@ -19,7 +19,7 @@ export const mskShellRoutes: Route[] = [
       {
         path: 'home',
         loadChildren: async () =>
-          (await import('@msk/client/web-app/home/feature')).HomeModule,
+          (await import('@msk/client/web-app/landing/home/feature')).HomeModule,
       },
     ],
   },
@@ -36,7 +36,7 @@ export const mskShellRoutes: Route[] = [
       {
         path: 'dashboard',
         loadChildren: async () =>
-          (await import('@msk/client/web-app/dashboard/feature'))
+          (await import('@msk/client/web-app/admin/dashboard/feature'))
             .DashboardModule,
       },
 
