@@ -11,11 +11,8 @@
     <ng-container mskVerticalNavigationContentHeader>
       <!-- Logo -->
       <div class="flex items-center h-20 pt-6 px-8">
-        <img
-          class="w-24"
-          src="assets/images/logo/logo-text-on-dark.svg"
-          alt="Logo image"
-        />
+        <img class="w-10" src="assets/images/logo/logo.svg" />
+        <label class="mx-4 text-2xl font-black">MSK</label>
       </div>
     </ng-container>
   </msk-vertical-navigation>
@@ -73,18 +70,12 @@
         <!-- Logo -->
         <ng-container *ngIf="!isScreenSmall">
           <div class="flex items-center mx-2">
-            <!-- Light version -->
             <img
-              class="w-24 dark:hidden"
-              src="assets/images/logo/logo-text.svg"
+              class="w-10"
+              src="assets/images/logo/logo.svg"
               alt="Logo image"
             />
-            <!-- Dark version -->
-            <img
-              class="hidden dark:flex w-24"
-              src="assets/images/logo/logo-text-on-dark.svg"
-              alt="Logo image"
-            />
+            <label class="mx-4 text-2xl font-black">MSK</label>
           </div>
         </ng-container>
         <!-- Navigation toggle button -->

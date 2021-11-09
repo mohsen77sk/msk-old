@@ -7,6 +7,7 @@ import {
   EventEmitter,
   HostBinding,
   HostListener,
+  Inject,
   Input,
   OnChanges,
   OnDestroy,
@@ -25,6 +26,7 @@ import {
   AnimationPlayer,
   style,
 } from '@angular/animations';
+import { DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
 import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
@@ -107,6 +109,7 @@ export class MskVerticalNavigationComponent
     private _elementRef: ElementRef,
     private _renderer2: Renderer2,
     private _router: Router,
+    @Inject(DOCUMENT) private _document: any,
     private _scrollStrategyOptions: ScrollStrategyOptions,
     private _mskNavigationService: MskNavigationService,
     private _mskUtilsService: MskUtilsService
@@ -511,6 +514,17 @@ export class MskVerticalNavigationComponent
    */
   trackByFn(index: number, item: any): any {
     return item.id || index;
+  }
+
+  /**
+   * Check Direction
+   *
+   * @returns direction
+   */
+  checkDirection(): string {
+    console.log(this._document.body.getAttribute('dir'));
+
+    return this._document.body.getAttribute('dir');
   }
 
   // -----------------------------------------------------------------------------------------------------

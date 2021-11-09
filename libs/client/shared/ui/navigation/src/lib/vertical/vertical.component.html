@@ -94,10 +94,22 @@
     class="msk-vertical-navigation-aside-wrapper"
     mskScrollbar
     [mskScrollbarOptions]="{ wheelPropagation: false, suppressScrollX: true }"
-    [@fadeInLeft]="position === 'start'"
-    [@fadeInRight]="position === 'end'"
-    [@fadeOutLeft]="position === 'start'"
-    [@fadeOutRight]="position === 'end'"
+    [@fadeInLeft]="
+      (position === 'start' && checkDirection() === 'ltr') ||
+      (position === 'end' && checkDirection() === 'rtl')
+    "
+    [@fadeInRight]="
+      (position === 'start' && checkDirection() === 'rtl') ||
+      (position === 'end' && checkDirection() === 'ltr')
+    "
+    [@fadeOutLeft]="
+      (position === 'start' && checkDirection() === 'ltr') ||
+      (position === 'end' && checkDirection() === 'rtl')
+    "
+    [@fadeOutRight]="
+      (position === 'start' && checkDirection() === 'rtl') ||
+      (position === 'end' && checkDirection() === 'ltr')
+    "
   >
     <!-- Items -->
     <ng-container *ngFor="let item of navigation; trackBy: trackByFn">
