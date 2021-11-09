@@ -9,6 +9,7 @@ import { mskShellRoutes } from './msk-shell.routes';
 import { IconsCoreModule } from '@msk/client/web-app/shell/core/icons';
 import { TranslocoCoreModule } from '@msk/client/web-app/shell/core/transloco';
 import { NavigationCoreModule } from '@msk/client/web-app/shell/core/navigation';
+import { UserCoreModule } from '@msk/client/web-app/shell/core/user';
 import {
   MskLayoutModule,
   layoutConfig,
@@ -41,6 +42,7 @@ const routerConfig: ExtraOptions = {
     IconsCoreModule,
     TranslocoCoreModule,
     NavigationCoreModule,
+    UserCoreModule,
 
     RouterModule.forRoot(mskShellRoutes, routerConfig),
   ],

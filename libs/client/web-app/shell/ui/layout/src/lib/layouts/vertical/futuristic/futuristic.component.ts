@@ -10,6 +10,7 @@ import {
   Navigation,
   NavigationService,
 } from '@msk/client/web-app/shell/core/navigation';
+import { User, UserService } from '@msk/client/web-app/shell/core/user';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -24,12 +25,14 @@ export class FuturisticLayoutComponent implements OnInit, OnDestroy {
   //
   navigation!: Navigation;
   isScreenSmall!: boolean;
+  user!: User;
   private _unsubscribeAll: Subject<unknown> = new Subject();
 
   /**
    * Constructor
    */
   constructor(
+    private _userService: UserService,
     private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
     private _mskMediaWatcherService: MskMediaWatcherService
@@ -48,6 +51,13 @@ export class FuturisticLayoutComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe((navigation: Navigation) => {
         this.navigation = navigation;
+      });
+
+    // Subscribe to the user service
+    this._userService.user$
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((user: User) => {
+        this.user = user;
       });
 
     // Subscribe to media changes

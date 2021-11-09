@@ -8,7 +8,9 @@ import {
   Input,
   ChangeDetectorRef,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { User, UserService } from '@msk/client/web-app/shell/core/user';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
 import { Subject } from 'rxjs';
@@ -37,6 +39,8 @@ export class UserComponent implements OnInit, OnDestroy {
    * Constructor
    */
   constructor(
+    private _router: Router,
+    private _userService: UserService,
     private _mskConfigService: MskConfigService,
     private _changeDetectorRef: ChangeDetectorRef
   ) {}
@@ -56,6 +60,14 @@ export class UserComponent implements OnInit, OnDestroy {
         // Store the layoutDirection
         this.layoutDirection = config.direction;
       });
+    // Subscribe to user changes
+    this._userService.user$
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((user: User) => {
+        this.user = user;
+        // Mark for check
+        this._changeDetectorRef.markForCheck();
+      });
   }
 
   /**
@@ -65,5 +77,16 @@ export class UserComponent implements OnInit, OnDestroy {
     // Unsubscribe from all subscriptions
     this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Public methods
+  // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * Sign out
+   */
+  signOut(): void {
+    this._router.navigate(['/sign-out']);
   }
 }
