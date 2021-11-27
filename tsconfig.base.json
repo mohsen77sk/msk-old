@@ -54,6 +54,9 @@
       "@msk/client/shared/ui/navigation": [
         "libs/client/shared/ui/navigation/src/index.ts"
       ],
+      "@msk/client/shared/validators": [
+        "libs/client/shared/validators/src/index.ts"
+      ],
       "@msk/client/web-app/admin/dashboard/feature": [
         "libs/client/web-app/admin/dashboard/feature/src/index.ts"
       ],
