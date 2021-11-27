@@ -18,9 +18,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@env/web-app": [
-        "apps/web-app/src/environments/environment.ts"
-      ],
       "@msk/client/shared/animations": [
         "libs/client/shared/animations/src/index.ts"
       ],

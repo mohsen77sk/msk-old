@@ -10,9 +10,6 @@ import {
 import { TranslocoHttpLoader } from './transloco.http-loader';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { environment } from '@env/web-app';
-
 @NgModule({
   providers: [
     {
@@ -32,7 +29,7 @@ import { environment } from '@env/web-app';
         defaultLang: 'en',
         fallbackLang: 'en',
         reRenderOnLangChange: true,
-        prodMode: environment.production,
+        prodMode: true,
       }),
     },
     {
