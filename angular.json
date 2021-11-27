@@ -365,6 +365,32 @@
       },
       "tags": []
     },
+    "client-web-app-admin-error-not-found": {
+      "projectType": "library",
+      "root": "libs/client/web-app/admin/error/not-found",
+      "sourceRoot": "libs/client/web-app/admin/error/not-found/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/web-app/admin/error/not-found"],
+          "options": {
+            "jestConfig": "libs/client/web-app/admin/error/not-found/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/admin/error/not-found/src/**/*.ts",
+              "libs/client/web-app/admin/error/not-found/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-web-app-landing-home-feature": {
       "projectType": "library",
       "root": "libs/client/web-app/landing/home/feature",

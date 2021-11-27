@@ -45,6 +45,17 @@ export const mskShellRoutes: Route[] = [
         path: 'apps',
         children: [],
       },
+
+      // 404 & Catch all
+      {
+        path: 'not-found',
+        pathMatch: 'full',
+        loadChildren: () =>
+          import('@msk/client/web-app/admin/error/not-found').then(
+            (m) => m.NotFoundModule
+          ),
+      },
+      { path: '**', redirectTo: 'not-found' },
     ],
   },
 ];
