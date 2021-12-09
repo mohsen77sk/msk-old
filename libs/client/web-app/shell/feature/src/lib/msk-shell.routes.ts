@@ -46,12 +46,20 @@ export const mskShellRoutes: Route[] = [
         children: [],
       },
 
-      // 404 & Catch all
+      // errors & Catch all
+      {
+        path: 'internal-server-error',
+        pathMatch: 'full',
+        loadChildren: () =>
+          import(
+            '@msk/client/web-app/admin/error/internal-server-error/feature'
+          ).then((m) => m.InternalServerErrorModule),
+      },
       {
         path: 'not-found',
         pathMatch: 'full',
         loadChildren: () =>
-          import('@msk/client/web-app/admin/error/not-found').then(
+          import('@msk/client/web-app/admin/error/not-found/feature').then(
             (m) => m.NotFoundModule
           ),
       },

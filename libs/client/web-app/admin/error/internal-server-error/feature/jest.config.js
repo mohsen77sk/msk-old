@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'client-web-app-admin-error-not-found',
-  preset: '../../../../../../jest.preset.js',
+  displayName: 'client-web-app-admin-error-internal-server-error-feature',
+  preset: '../../../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../../../coverage/libs/client/web-app/admin/error/not-found',
+    '../../../../../../../coverage/libs/client/web-app/admin/error/internal-server-error/feature',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

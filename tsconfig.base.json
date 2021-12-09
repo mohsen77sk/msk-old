@@ -60,8 +60,11 @@
       "@msk/client/web-app/admin/dashboard/feature": [
         "libs/client/web-app/admin/dashboard/feature/src/index.ts"
       ],
-      "@msk/client/web-app/admin/error/not-found": [
-        "libs/client/web-app/admin/error/not-found/src/index.ts"
+      "@msk/client/web-app/admin/error/internal-server-error/feature": [
+        "libs/client/web-app/admin/error/internal-server-error/feature/src/index.ts"
+      ],
+      "@msk/client/web-app/admin/error/not-found/feature": [
+        "libs/client/web-app/admin/error/not-found/feature/src/index.ts"
       ],
       "@msk/client/web-app/landing/home/feature": [
         "libs/client/web-app/landing/home/feature/src/index.ts"

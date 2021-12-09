@@ -365,17 +365,19 @@
       },
       "tags": []
     },
-    "client-web-app-admin-error-not-found": {
+    "client-web-app-admin-error-internal-server-error-feature": {
       "projectType": "library",
-      "root": "libs/client/web-app/admin/error/not-found",
-      "sourceRoot": "libs/client/web-app/admin/error/not-found/src",
+      "root": "libs/client/web-app/admin/error/internal-server-error/feature",
+      "sourceRoot": "libs/client/web-app/admin/error/internal-server-error/feature/src",
       "prefix": "msk",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/admin/error/not-found"],
+          "outputs": [
+            "coverage/libs/client/web-app/admin/error/internal-server-error/feature"
+          ],
           "options": {
-            "jestConfig": "libs/client/web-app/admin/error/not-found/jest.config.js",
+            "jestConfig": "libs/client/web-app/admin/error/internal-server-error/feature/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -383,8 +385,36 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/client/web-app/admin/error/not-found/src/**/*.ts",
-              "libs/client/web-app/admin/error/not-found/src/**/*.html"
+              "libs/client/web-app/admin/error/internal-server-error/feature/src/**/*.ts",
+              "libs/client/web-app/admin/error/internal-server-error/feature/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-web-app-admin-error-not-found-feature": {
+      "projectType": "library",
+      "root": "libs/client/web-app/admin/error/not-found/feature",
+      "sourceRoot": "libs/client/web-app/admin/error/not-found/feature/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/client/web-app/admin/error/not-found/feature"
+          ],
+          "options": {
+            "jestConfig": "libs/client/web-app/admin/error/not-found/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/admin/error/not-found/feature/src/**/*.ts",
+              "libs/client/web-app/admin/error/not-found/feature/src/**/*.html"
             ]
           }
         }
