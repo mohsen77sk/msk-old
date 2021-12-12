@@ -66,6 +66,12 @@
       "@msk/client/web-app/admin/error/not-found/feature": [
         "libs/client/web-app/admin/error/not-found/feature/src/index.ts"
       ],
+      "@msk/client/web-app/auth/sign-in/feature": [
+        "libs/client/web-app/auth/sign-in/feature/src/index.ts"
+      ],
+      "@msk/client/web-app/auth/sign-out/feature": [
+        "libs/client/web-app/auth/sign-out/feature/src/index.ts"
+      ],
       "@msk/client/web-app/landing/home/feature": [
         "libs/client/web-app/landing/home/feature/src/index.ts"
       ],

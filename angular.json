@@ -421,6 +421,58 @@
       },
       "tags": []
     },
+    "client-web-app-auth-sign-in-feature": {
+      "projectType": "library",
+      "root": "libs/client/web-app/auth/sign-in/feature",
+      "sourceRoot": "libs/client/web-app/auth/sign-in/feature/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/web-app/auth/sign-in/feature"],
+          "options": {
+            "jestConfig": "libs/client/web-app/auth/sign-in/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/auth/sign-in/feature/src/**/*.ts",
+              "libs/client/web-app/auth/sign-in/feature/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-web-app-auth-sign-out-feature": {
+      "projectType": "library",
+      "root": "libs/client/web-app/auth/sign-out/feature",
+      "sourceRoot": "libs/client/web-app/auth/sign-out/feature/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/web-app/auth/sign-out/feature"],
+          "options": {
+            "jestConfig": "libs/client/web-app/auth/sign-out/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/auth/sign-out/feature/src/**/*.ts",
+              "libs/client/web-app/auth/sign-out/feature/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-web-app-landing-home-feature": {
       "projectType": "library",
       "root": "libs/client/web-app/landing/home/feature",

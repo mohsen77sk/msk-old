@@ -24,6 +24,42 @@ export const mskShellRoutes: Route[] = [
     ],
   },
 
+  // Auth routes for guests
+  {
+    path: '',
+    component: MskLayoutComponent,
+    data: {
+      layoutType: 'empty',
+    },
+    children: [
+      {
+        path: 'sign-in',
+        loadChildren: () =>
+          import('@msk/client/web-app/auth/sign-in/feature').then(
+            (m) => m.AuthSignInModule
+          ),
+      },
+    ],
+  },
+
+  // Auth routes for authenticated users
+  {
+    path: '',
+    component: MskLayoutComponent,
+    data: {
+      layoutType: 'empty',
+    },
+    children: [
+      {
+        path: 'sign-out',
+        loadChildren: () =>
+          import('@msk/client/web-app/auth/sign-out/feature').then(
+            (m) => m.AuthSignOutModule
+          ),
+      },
+    ],
+  },
+
   // Admin routes
   {
     path: '',
