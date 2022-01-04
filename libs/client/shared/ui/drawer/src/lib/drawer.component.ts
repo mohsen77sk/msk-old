@@ -219,6 +219,11 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
    * On destroy
    */
   ngOnDestroy(): void {
+    // Finish the animation
+    if (this._player) {
+      this._player.finish();
+    }
+
     // Deregister the drawer from the registry
     this._drawerService.deregisterComponent(this.name);
   }

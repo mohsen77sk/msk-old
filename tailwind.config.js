@@ -195,6 +195,12 @@ const config = {
         ...theme('extendedSpacing'),
         screen: '100vw',
       }),
+      transitionDuration: {
+        400: '400ms',
+      },
+      transitionTimingFunction: {
+        drawer: 'cubic-bezier(0.25, 0.8, 0.25, 1)',
+      },
       // @tailwindcss/typography
       typography: (theme) => ({
         DEFAULT: {
@@ -389,7 +395,7 @@ const config = {
       transitionDuration: [],
       transitionProperty: [],
       transitionTimingFunction: [],
-      translate: ['hover'],
+      translate: ['responsive', 'hover'],
       userSelect: ['responsive'],
       visibility: ['responsive'],
       whitespace: ['responsive'],

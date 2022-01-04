@@ -10,14 +10,15 @@ msk-drawer {
   min-width: #{$msk-drawer-width}px;
   max-width: #{$msk-drawer-width}px;
   z-index: 300;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .35);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.35);
   @apply bg-card;
 
   /* Animations */
   &.msk-drawer-animations-enabled {
     transition-duration: 400ms;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-property: visibility, margin-left, margin-right, transform, width, max-width, min-width;
+    transition-property: visibility, margin-left, margin-right, transform, width,
+      max-width, min-width;
 
     .msk-drawer-content {
       transition-duration: 400ms;
@@ -40,7 +41,6 @@ msk-drawer {
 
   /* Left position */
   &.msk-drawer-position-left {
-
     /* Side mode */
     &.msk-drawer-mode-side {
       margin-left: -#{$msk-drawer-width}px;
@@ -68,7 +68,6 @@ msk-drawer {
 
   /* Right position */
   &.msk-drawer-position-right {
-
     /* Side mode */
     &.msk-drawer-mode-side {
       margin-right: -#{$msk-drawer-width}px;
@@ -116,7 +115,7 @@ msk-drawer {
   left: 0;
   right: 0;
   z-index: 299;
-  opacity: 0;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.6);
 
   /* Fixed mode */
