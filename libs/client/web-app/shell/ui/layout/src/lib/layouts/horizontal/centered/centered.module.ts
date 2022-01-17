@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { MskNavigationModule } from '@msk/client/shared/ui/navigation';
+import { MskLoadingBarModule } from '@msk/client/shared/ui/loading-bar';
 import { MskMediaWatcherModule } from '@msk/client/shared/services/media-watcher';
 
 import { FullscreenModule } from '../../../common/fullscreen/fullscreen.module';
@@ -27,6 +28,7 @@ import { CenteredLayoutComponent } from './centered.component';
     MatDividerModule,
     //
     MskNavigationModule,
+    MskLoadingBarModule,
     MskMediaWatcherModule,
     //
     FullscreenModule,

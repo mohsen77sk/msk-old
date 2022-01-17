@@ -287,6 +287,32 @@
       },
       "tags": []
     },
+    "client-shared-ui-loading-bar": {
+      "projectType": "library",
+      "root": "libs/client/shared/ui/loading-bar",
+      "sourceRoot": "libs/client/shared/ui/loading-bar/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/ui/loading-bar"],
+          "options": {
+            "jestConfig": "libs/client/shared/ui/loading-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/ui/loading-bar/src/**/*.ts",
+              "libs/client/shared/ui/loading-bar/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-ui-navigation": {
       "projectType": "library",
       "root": "libs/client/shared/ui/navigation",

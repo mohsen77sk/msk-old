@@ -51,6 +51,9 @@
       "@msk/client/shared/ui/drawer": [
         "libs/client/shared/ui/drawer/src/index.ts"
       ],
+      "@msk/client/shared/ui/loading-bar": [
+        "libs/client/shared/ui/loading-bar/src/index.ts"
+      ],
       "@msk/client/shared/ui/navigation": [
         "libs/client/shared/ui/navigation/src/index.ts"
       ],
