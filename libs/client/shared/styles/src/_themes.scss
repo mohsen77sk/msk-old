@@ -1,5 +1,5 @@
-@use '~@angular/material' as mat;
-@use "sass:map";
+@use '@angular/material' as mat;
+@use 'sass:map';
 
 /* Force font family to IRANSans */
 $typography: mat.define-typography-config(
