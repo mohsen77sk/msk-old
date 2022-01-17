@@ -339,6 +339,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     // Create the enter animation and attach it to the player
     this._player = this._animationBuilder
       .build([
+        style({ opacity: 0 }),
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
           style({ opacity: 1 })
@@ -350,6 +351,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     this._player.onDone(() => {
       // Destroy the player
       this._player?.destroy();
+      this._player = undefined;
     });
 
     // Play the animation
@@ -388,6 +390,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     this._player.onDone(() => {
       // Destroy the player
       this._player?.destroy();
+      this._player = undefined;
 
       // If the backdrop still exists...
       if (this._overlay) {
