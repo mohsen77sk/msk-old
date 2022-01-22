@@ -45,6 +45,9 @@
       "@msk/client/shared/services/utils": [
         "libs/client/shared/services/utils/src/index.ts"
       ],
+      "@msk/client/shared/ui/alert": [
+        "libs/client/shared/ui/alert/src/index.ts"
+      ],
       "@msk/client/shared/ui/card": [
         "libs/client/shared/ui/card/src/index.ts"
       ],

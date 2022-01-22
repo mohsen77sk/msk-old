@@ -1,0 +1,52 @@
+<div
+  class="msk-alert-container"
+  *ngIf="!dismissible || (dismissible && !dismissed)"
+  [@fadeIn]="!dismissed"
+  [@fadeOut]="!dismissed"
+>
+  <!-- Border -->
+  <div class="msk-alert-border" *ngIf="appearance === 'border'"></div>
+
+  <!-- Icon -->
+  <div class="msk-alert-icon" *ngIf="showIcon">
+    <!-- Custom icon -->
+    <div class="msk-alert-custom-icon">
+      <ng-content select="[mskAlertIcon]"></ng-content>
+    </div>
+
+    <!-- Default icons -->
+    <div class="msk-alert-default-icon">
+      <mat-icon *ngIf="type === 'primary'">check_circle</mat-icon>
+
+      <mat-icon *ngIf="type === 'accent'">check_circle</mat-icon>
+
+      <mat-icon *ngIf="type === 'warn'">cancel</mat-icon>
+
+      <mat-icon *ngIf="type === 'basic'">check_circle</mat-icon>
+
+      <mat-icon *ngIf="type === 'info'">info</mat-icon>
+
+      <mat-icon *ngIf="type === 'success'">check_circle</mat-icon>
+
+      <mat-icon *ngIf="type === 'warning'">report_problem</mat-icon>
+
+      <mat-icon *ngIf="type === 'error'">cancel</mat-icon>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="msk-alert-content">
+    <div class="msk-alert-title">
+      <ng-content select="[mskAlertTitle]"></ng-content>
+    </div>
+
+    <div class="msk-alert-message">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <!-- Dismiss button -->
+  <button class="msk-alert-dismiss-button" mat-icon-button (click)="dismiss()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

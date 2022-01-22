@@ -235,6 +235,32 @@
       },
       "tags": []
     },
+    "client-shared-ui-alert": {
+      "projectType": "library",
+      "root": "libs/client/shared/ui/alert",
+      "sourceRoot": "libs/client/shared/ui/alert/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/ui/alert"],
+          "options": {
+            "jestConfig": "libs/client/shared/ui/alert/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/ui/alert/src/**/*.ts",
+              "libs/client/shared/ui/alert/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-ui-card": {
       "projectType": "library",
       "root": "libs/client/shared/ui/card",
