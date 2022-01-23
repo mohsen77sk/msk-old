@@ -1,7 +1,13 @@
 {
   "go-to": "برو به",
   "sign-in": "ورود",
+  "sign-up": "ثبت نام",
   "sign-out-title": "شما از سیستم خارج شده اید!",
   "redirecting-in-seconds": "تغییر مسیر در {{ seconds }} ثانیه!",
-  "you-are-now-being-redirected": "شما اکنون در حال تغییر مسیر هستید!"
+  "you-are-now-being-redirected": "شما اکنون در حال تغییر مسیر هستید!",
+  "do-not-have-an-account": "حساب کاربری ندارید؟",
+  "forgot-password": "رمز عبور را فراموش کرده اید؟",
+  "remember-me": "مرا به خاطر بسپار",
+  "email-address": "آدرس ایمیل",
+  "password": "رمز عبور"
 }

@@ -347,7 +347,6 @@
     .mat-checkbox-inner-container {
       display: inline-flex;
       align-items: center;
-      margin: 0 8px 0 0;
 
       /* Add a zero-width space character to trick the container */
       /* into being the same height as a single line of the label */
@@ -713,7 +712,7 @@
       margin-top: 0;
       font-size: 12px;
       font-weight: 500;
-      line-height: 1;
+      line-height: inherit;
 
       > div {
         display: contents; /* Remove the div from flow to stop the subscript animation */
@@ -962,6 +961,108 @@
     .mat-form-field-wrapper {
       .mat-form-field-flex {
         border-width: 2px !important;
+      }
+    }
+  }
+}
+
+[dir='rtl'] {
+  .mat-form-field.mat-form-field-appearance-fill {
+    /* Remove the default arrow for native select */
+    &.mat-form-field-type-mat-native-select {
+      .mat-form-field-infix {
+        select {
+          padding-left: 18px;
+          padding-right: auto;
+          background-position: left -7px center;
+        }
+      }
+    }
+    /* Default style tweaks and enhancements */
+    .mat-form-field-wrapper {
+      .mat-form-field-flex {
+        .mat-form-field-prefix {
+          > .mat-icon {
+            margin-left: 12px;
+            margin-right: auto;
+          }
+
+          > .mat-icon-button {
+            margin: 0 -10px 0 4px;
+          }
+
+          > .mat-select {
+            margin-left: 10px;
+            margin-right: auto;
+          }
+
+          > .mat-datepicker-toggle {
+            margin-left: auto;
+            margin-right: -8px;
+          }
+
+          > *:not(.mat-icon):not(.mat-icon-button):not(.mat-select):not(.mat-datepicker-toggle) {
+            margin-left: 12px;
+            margin-right: auto;
+          }
+        }
+
+        .mat-form-field-suffix {
+          > .mat-icon {
+            margin-left: auto;
+            margin-right: 12px;
+          }
+
+          > .mat-icon-button {
+            margin: 0 4px 0 -10px;
+          }
+
+          > .mat-select {
+            margin-left: auto;
+            margin-right: 10px;
+          }
+
+          > .mat-datepicker-toggle {
+            margin-left: auto;
+            margin-right: -8px;
+          }
+        }
+
+        .mat-form-field-prefix,
+        .mat-form-field-suffix {
+          /* Make mat-select usable as prefix and suffix */
+          .mat-select {
+            .mat-select-trigger {
+              .mat-select-arrow-wrapper {
+                margin-left: auto;
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+
+        .mat-form-field-infix {
+          /* Textarea */
+          textarea.mat-input-element {
+            padding: 0 0 0 6px;
+          }
+
+          /* Select */
+          .mat-select {
+            .mat-select-arrow-wrapper {
+              .mat-select-arrow {
+                margin: 0 8px 0 0;
+              }
+            }
+          }
+
+          /* Chips */
+          .mat-chip-list {
+            .mat-chip-input {
+              margin: 0 8px 0 0;
+            }
+          }
+        }
       }
     }
   }

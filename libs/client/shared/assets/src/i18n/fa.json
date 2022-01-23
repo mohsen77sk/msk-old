@@ -4,5 +4,9 @@
   "settings": "تنظیمات",
   "sign-out": "خروج از سیستم",
   "languages": "زبان سیستم",
-  "toggle-fullscreen": "تغییر حالت تمام صفحه"
+  "toggle-fullscreen": "تغییر حالت تمام صفحه",
+  "error-validation": {
+    "required": "این فیلد اجباری است",
+    "email": "لطفا یک آدرس ایمیل معتبر وارد کنید"
+  }
 }

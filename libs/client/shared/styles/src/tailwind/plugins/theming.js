@@ -3,7 +3,8 @@ const _ = require('lodash');
 const path = require('path');
 const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
-const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default;
+const flattenColorPalette =
+  require('tailwindcss/lib/util/flattenColorPalette').default;
 const generateContrasts = require(path.resolve(
   __dirname,
   '../utils/generate-contrasts'
@@ -232,9 +233,9 @@ const theming = plugin.withOptions(
                 'bg-hover': chroma(colors.gray[400]).alpha(0.12).css(),
               },
               dark: {
-                'bg-status-bar': colors.gray[900],
-                'bg-app-bar': colors.gray[800],
-                'bg-default': colors.gray[800],
+                'bg-status-bar': '#000000',
+                'bg-app-bar': colors.gray[900],
+                'bg-default': colors.gray[900],
                 'bg-card': colors.gray[800],
                 'bg-dialog': colors.gray[800],
                 'bg-hover': 'rgba(255, 255, 255, 0.05)',

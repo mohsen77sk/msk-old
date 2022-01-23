@@ -66,6 +66,23 @@ const config = {
     },
   },
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      pink: colors.pink,
+      gray: colors.gray,
+      red: colors.red,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      green: colors.green,
+      teal: colors.teal,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      purple: colors.purple,
+    },
     fontFamily: {
       sans: ['IRANSans', ...defaultTheme.fontFamily.sans],
     },

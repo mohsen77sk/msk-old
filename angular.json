@@ -79,6 +79,32 @@
       },
       "tags": []
     },
+    "client-shared-directives-spinner": {
+      "projectType": "library",
+      "root": "libs/client/shared/directives/spinner",
+      "sourceRoot": "libs/client/shared/directives/spinner/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/directives/spinner"],
+          "options": {
+            "jestConfig": "libs/client/shared/directives/spinner/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/directives/spinner/src/**/*.ts",
+              "libs/client/shared/directives/spinner/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-pipes-find-by-key": {
       "projectType": "library",
       "root": "libs/client/shared/pipes/find-by-key",
