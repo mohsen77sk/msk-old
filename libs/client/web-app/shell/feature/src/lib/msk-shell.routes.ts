@@ -39,6 +39,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.AuthSignInModule
           ),
       },
+      {
+        path: 'forgot-password',
+        loadChildren: () =>
+          import('@msk/client/web-app/auth/forgot-password/feature').then(
+            (m) => m.AuthForgotPasswordModule
+          ),
+      },
     ],
   },
 

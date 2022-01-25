@@ -1,5 +1,6 @@
 {
   "go-to": "برو به",
+  "return-to": "برگشت به",
   "sign-in": "ورود",
   "sign-up": "ثبت نام",
   "sign-out-title": "شما از سیستم خارج شده اید!",
@@ -7,7 +8,9 @@
   "you-are-now-being-redirected": "شما اکنون در حال تغییر مسیر هستید!",
   "do-not-have-an-account": "حساب کاربری ندارید؟",
   "forgot-password": "رمز عبور را فراموش کرده اید؟",
+  "forgot-password-description": "فرم را برای بازنشانی رمز عبور خود پر کنید",
   "remember-me": "مرا به خاطر بسپار",
   "email-address": "آدرس ایمیل",
-  "password": "رمز عبور"
+  "password": "رمز عبور",
+  "send-reset-link": "ارسال لینک ریست"
 }

@@ -1,5 +1,6 @@
 {
   "go-to": "Go to",
+  "return-to": "Return to",
   "sign-in": "Sign in",
   "sign-up": "Sign up",
   "sign-out-title": "You have signed out!",
@@ -7,7 +8,9 @@
   "you-are-now-being-redirected": "You are now being redirected!",
   "do-not-have-an-account": "Don't have an account?",
   "forgot-password": "Forgot password?",
+  "forgot-password-description": "Fill the form to reset your password",
   "remember-me": "Remember me",
   "email-address": "Email address",
-  "password": "Password"
+  "password": "Password",
+  "send-reset-link": "Send reset link"
 }
