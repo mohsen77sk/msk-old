@@ -1,32 +1,29 @@
-<div class="flex flex-col flex-auto min-w-0">
+<div class="flex min-w-0 flex-auto flex-col">
   <!-- Header -->
   <div class="bg-card">
-    <div class="flex flex-col w-full max-w-screen-xl mx-auto px-6 sm:px-8">
+    <div class="mx-auto flex w-full max-w-screen-xl flex-col px-6 sm:px-8">
       <div
         class="
-          flex flex-col
-          sm:flex-row
-          flex-auto
-          sm:items-center
-          min-w-0
           my-8
-          sm:my-12
+          flex
+          min-w-0
+          flex-auto flex-col
+          sm:my-12 sm:flex-row sm:items-center
         "
       >
         <!-- Avatar and name -->
-        <div class="flex flex-auto items-center min-w-0">
-          <div class="flex-0 w-16 h-16 rounded-full overflow-hidden"></div>
-          <div class="flex flex-col min-w-0 mx-4">
+        <div class="flex min-w-0 flex-auto items-center">
+          <div class="h-16 w-16 flex-0 overflow-hidden rounded-full"></div>
+          <div class="mx-4 flex min-w-0 flex-col">
             <ng-container *transloco="let t">
               <div
                 class="
-                  text-2xl
-                  md:text-5xl
-                  font-semibold
-                  tracking-tight
-                  leading-7
-                  md:leading-snug
                   truncate
+                  text-2xl
+                  font-semibold
+                  leading-7
+                  tracking-tight
+                  md:text-5xl md:leading-snug
                 "
               >
                 {{ t('dashboard.welcome-back') }}, ...!
@@ -35,13 +32,13 @@
           </div>
         </div>
         <!-- Actions -->
-        <div class="flex items-center mt-6 sm:mt-0 sm:ml-2 space-x-3"></div>
+        <div class="mt-6 flex items-center space-x-3 sm:mt-0 sm:ml-2"></div>
       </div>
     </div>
   </div>
 
   <!-- Main -->
-  <div class="flex-auto border-t -mt-px pt-4 sm:pt-6">
-    <div class="w-full max-w-screen-xl mx-auto"></div>
+  <div class="-mt-px flex-auto border-t pt-4 sm:pt-6">
+    <div class="mx-auto w-full max-w-screen-xl"></div>
   </div>
 </div>

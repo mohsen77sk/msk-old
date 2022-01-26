@@ -36,19 +36,19 @@ msk-horizontal-navigation {
       .msk-horizontal-navigation-item-active,
       .msk-horizontal-navigation-item-active-forced {
         .msk-horizontal-navigation-item-title {
-          @apply text-primary #{'!important'};
+          @apply #{'!important'} text-primary;
         }
 
         .msk-horizontal-navigation-item-subtitle {
-          @apply text-primary-400 #{'!important'};
+          @apply #{'!important'} text-primary-400;
 
           .dark & {
-            @apply text-primary-600 #{'!important'};
+            @apply #{'!important'} text-primary-600;
           }
         }
 
         .msk-horizontal-navigation-item-icon {
-          @apply text-primary #{'!important'};
+          @apply #{'!important'} text-primary;
         }
       }
     }
@@ -105,19 +105,19 @@ msk-horizontal-navigation {
     .msk-horizontal-navigation-item-active,
     .msk-horizontal-navigation-item-active-forced {
       .msk-horizontal-navigation-item-title {
-        @apply text-primary #{'!important'};
+        @apply #{'!important'} text-primary;
       }
 
       .msk-horizontal-navigation-item-subtitle {
-        @apply text-primary-400 #{'!important'};
+        @apply #{'!important'} text-primary-400;
 
         .dark & {
-          @apply text-primary-600 #{'!important'};
+          @apply #{'!important'} text-primary-600;
         }
       }
 
       .msk-horizontal-navigation-item-icon {
-        @apply text-primary #{'!important'};
+        @apply #{'!important'} text-primary;
       }
     }
   }

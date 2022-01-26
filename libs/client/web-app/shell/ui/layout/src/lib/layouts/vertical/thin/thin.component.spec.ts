@@ -8,9 +8,8 @@ describe('ThinComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThinComponent ]
-    })
-    .compileComponents();
+      declarations: [ThinComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -8,9 +8,8 @@ describe('DenseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DenseComponent ]
-    })
-    .compileComponents();
+      declarations: [DenseComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

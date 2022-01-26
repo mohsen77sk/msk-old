@@ -4,11 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationService } from './navigation.service';
 
 @NgModule({
-  imports: [HttpClientModule]
+  imports: [HttpClientModule],
 })
 export class NavigationCoreModule {
   /**
    * Constructor
    */
-   constructor(private _navigationService: NavigationService) {}
+  constructor(private _navigationService: NavigationService) {}
 }

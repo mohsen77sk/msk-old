@@ -6,7 +6,7 @@
 /*  @ Overlay
 /* ----------------------------------------------------------------------------------------------------- */
 .msk-backdrop-on-mobile {
-  @apply bg-black bg-opacity-60 sm:bg-transparent #{'!important'};
+  @apply #{'!important'} bg-black bg-opacity-60 sm:bg-transparent;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -21,7 +21,7 @@
     margin-bottom: 24px;
     border-radius: 8px !important;
     transition: box-shadow 225ms cubic-bezier(0.4, 0, 0.2, 1);
-    @apply shadow #{'!important'};
+    @apply #{'!important'} shadow;
 
     &:last-child {
       margin-bottom: 0;
@@ -29,7 +29,7 @@
 
     &.mat-expanded,
     &:hover {
-      @apply shadow-lg #{'!important'};
+      @apply #{'!important'} shadow-lg;
     }
 
     &:not(.mat-expanded) {
@@ -69,7 +69,7 @@
 
     .mat-expansion-panel-body {
       line-height: 1.7;
-      @apply text-secondary #{'!important'};
+      @apply #{'!important'} text-secondary;
     }
   }
 }
@@ -165,7 +165,7 @@
 
   /* Add hover and focus style on all buttons */
   .mat-button-focus-overlay {
-    @apply bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5 #{'!important'};
+    @apply #{'!important'} bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5;
   }
 
   /* On palette colored buttons, use a darker color */
@@ -207,47 +207,47 @@
   /* Apply primary color */
   &.mat-primary:not(.mat-button-disabled) {
     .mat-icon {
-      @apply text-primary #{'!important'};
+      @apply #{'!important'} text-primary;
     }
   }
 
   /* Apply accent color */
   &.mat-accent:not(.mat-button-disabled) {
     .mat-icon {
-      @apply text-accent #{'!important'};
+      @apply #{'!important'} text-accent;
     }
   }
 
   /* Apply warn color */
   &.mat-warn:not(.mat-button-disabled) {
     .mat-icon {
-      @apply text-warn #{'!important'};
+      @apply #{'!important'} text-warn;
     }
   }
 
   /* Add hover and focus styles */
   .mat-button-focus-overlay {
-    @apply bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5 #{'!important'};
+    @apply #{'!important'} bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5;
   }
 
   /* On primary colored buttons, use the primary color as focus overlay */
   &.mat-primary:not(.mat-button-disabled) {
     .mat-button-focus-overlay {
-      @apply bg-primary #{'!important'};
+      @apply #{'!important'} bg-primary;
     }
   }
 
   /* On accent colored buttons, use the accent color as focus overlay */
   &.mat-accent:not(.mat-button-disabled) {
     .mat-button-focus-overlay {
-      @apply bg-accent #{'!important'};
+      @apply #{'!important'} bg-accent;
     }
   }
 
   /* On warn colored buttons, use the warn color as focus overlay */
   &.mat-warn:not(.mat-button-disabled) {
     .mat-button-focus-overlay {
-      @apply bg-warn #{'!important'};
+      @apply #{'!important'} bg-warn;
     }
   }
 
@@ -290,11 +290,11 @@
 .mat-stroked-button {
   /* Border color */
   &:not(.mat-button-disabled) {
-    @apply border-gray-300 dark:border-gray-500 #{'!important'};
+    @apply #{'!important'} border-gray-300 dark:border-gray-500;
   }
 
   &.mat-button-disabled {
-    @apply border-gray-200 dark:border-gray-600 #{'!important'};
+    @apply #{'!important'} border-gray-200 dark:border-gray-600;
   }
 }
 
@@ -319,7 +319,7 @@
 
     &.mat-button-toggle-checked {
       .mat-button-toggle-label-content {
-        @apply text-default #{'!important'};
+        @apply #{'!important'} text-default;
       }
     }
 
@@ -399,7 +399,7 @@
     .mat-form-field-wrapper {
       /* Border color */
       .mat-form-field-flex {
-        @apply border-warn dark:border-warn #{'!important'};
+        @apply #{'!important'} border-warn dark:border-warn;
       }
     }
   }
@@ -409,7 +409,7 @@
     .mat-form-field-wrapper {
       /* Background color */
       .mat-form-field-flex {
-        @apply bg-card dark:bg-card #{'!important'};
+        @apply #{'!important'} bg-card dark:bg-card;
       }
     }
   }
@@ -419,7 +419,7 @@
     .mat-form-field-wrapper {
       /* Border color */
       .mat-form-field-flex {
-        @apply border-primary dark:border-primary #{'!important'};
+        @apply #{'!important'} border-primary dark:border-primary;
       }
     }
   }
@@ -479,7 +479,7 @@
       border-radius: 6px;
       padding: 0 16px;
       border-width: 1px;
-      @apply shadow-sm bg-white border-gray-300 dark:bg-black dark:bg-opacity-5 dark:border-gray-500 #{'!important'};
+      @apply #{'!important'} border-gray-300 bg-white shadow-sm dark:border-gray-500 dark:bg-black dark:bg-opacity-5;
 
       .mat-form-field-prefix {
         > .mat-icon {
@@ -526,7 +526,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        @apply text-hint #{'!important'};
+        @apply #{'!important'} text-hint;
 
         .mat-icon-button {
           width: 40px;
@@ -569,7 +569,7 @@
           &:focus {
             .mat-select-trigger {
               .mat-select-value {
-                @apply text-primary #{'!important'};
+                @apply #{'!important'} text-primary;
               }
 
               .mat-select-arrow-wrapper {
@@ -603,7 +603,7 @@
 
               .mat-select-arrow {
                 min-height: 0;
-                @apply text-gray-500 dark:text-gray-400 #{'!important'};
+                @apply #{'!important'} text-gray-500 dark:text-gray-400;
               }
             }
           }
@@ -693,7 +693,7 @@
             backface-visibility: hidden;
             transition: none;
             font-weight: 500;
-            @apply text-default #{'!important'};
+            @apply #{'!important'} text-default;
           }
         }
       }
@@ -725,7 +725,7 @@
       }
 
       .mat-hint {
-        @apply text-hint #{'!important'};
+        @apply #{'!important'} text-hint;
       }
     }
   }
@@ -950,7 +950,7 @@
 
         .mat-form-field-prefix,
         .mat-form-field-suffix {
-          @apply bg-default border-gray-300 dark:border-gray-500 #{'!important'};
+          @apply #{'!important'} bg-default border-gray-300 dark:border-gray-500;
         }
       }
     }
@@ -1073,7 +1073,7 @@
   .mat-form-field-wrapper {
     .mat-form-field-flex {
       .mat-form-field-outline {
-        @apply text-gray-300 dark:text-gray-500 #{'!important'};
+        @apply #{'!important'} text-gray-300 dark:text-gray-500;
       }
     }
   }
@@ -1088,7 +1088,7 @@
 .cdk-program-focused .mat-calendar-body-active {
   & > .mat-calendar-body-cell-content {
     &:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-      @apply bg-primary bg-opacity-30 #{'!important'};
+      @apply #{'!important'} bg-primary bg-opacity-30;
     }
   }
 }
@@ -1115,22 +1115,22 @@
 .mat-input-element {
   &::placeholder {
     transition: none !important;
-    @apply text-hint #{'!important'};
+    @apply #{'!important'} text-hint;
   }
 
   &::-moz-placeholder {
     transition: none !important;
-    @apply text-hint #{'!important'};
+    @apply #{'!important'} text-hint;
   }
 
   &::-webkit-input-placeholder {
     transition: none !important;
-    @apply text-hint #{'!important'};
+    @apply #{'!important'} text-hint;
   }
 
   &:-ms-input-placeholder {
     transition: none !important;
-    @apply text-hint #{'!important'};
+    @apply #{'!important'} text-hint;
   }
 }
 
@@ -1139,19 +1139,19 @@
   .mat-input-element {
     /* Placeholder color */
     &::placeholder {
-      @apply text-warn #{'!important'};
+      @apply #{'!important'} text-warn;
     }
 
     &::-moz-placeholder {
-      @apply text-warn #{'!important'};
+      @apply #{'!important'} text-warn;
     }
 
     &::-webkit-input-placeholder {
-      @apply text-warn #{'!important'};
+      @apply #{'!important'} text-warn;
     }
 
     &:-ms-input-placeholder {
-      @apply text-warn #{'!important'};
+      @apply #{'!important'} text-warn;
     }
   }
 }
@@ -1261,7 +1261,7 @@
 
   .mat-select-placeholder {
     transition: none !important;
-    @apply text-hint #{'!important'};
+    @apply #{'!important'} text-hint;
   }
 
   .mat-select-trigger {
@@ -1301,7 +1301,7 @@
   .mat-select {
     /* Placeholder color */
     .mat-select-placeholder {
-      @apply text-warn #{'!important'};
+      @apply #{'!important'} text-warn;
     }
   }
 }
@@ -1367,8 +1367,8 @@
             @apply text-secondary;
 
             &.mat-tab-label-active {
-              @apply bg-gray-700 bg-opacity-10 dark:bg-gray-50 dark:bg-opacity-10 #{'!important'};
-              @apply text-default #{'!important'};
+              @apply #{'!important'} bg-gray-700 bg-opacity-10 dark:bg-gray-50 dark:bg-opacity-10;
+              @apply #{'!important'} text-default;
             }
 
             + .mat-tab-label {
@@ -1411,69 +1411,69 @@ textarea.mat-input-element {
   /* Apply primary contrast color */
   &.mat-primary {
     .mat-icon {
-      @apply text-on-primary #{'!important'};
+      @apply #{'!important'} text-on-primary;
     }
 
     .text-secondary {
-      @apply text-on-primary text-opacity-60 #{'!important'};
+      @apply #{'!important'} text-on-primary text-opacity-60;
     }
 
     .text-hint {
-      @apply text-on-primary text-opacity-38 #{'!important'};
+      @apply #{'!important'} text-on-primary text-opacity-38;
     }
 
     .text-disabled {
-      @apply text-on-primary text-opacity-38 #{'!important'};
+      @apply #{'!important'} text-on-primary text-opacity-38;
     }
 
     .divider {
-      @apply text-on-primary text-opacity-12 #{'!important'};
+      @apply #{'!important'} text-on-primary text-opacity-12;
     }
   }
 
   /* Apply accent contrast color */
   &.mat-accent {
     .mat-icon {
-      @apply text-on-accent #{'!important'};
+      @apply #{'!important'} text-on-accent;
     }
 
     .text-secondary {
-      @apply text-on-accent text-opacity-60 #{'!important'};
+      @apply #{'!important'} text-on-accent text-opacity-60;
     }
 
     .text-hint {
-      @apply text-on-accent text-opacity-38 #{'!important'};
+      @apply #{'!important'} text-on-accent text-opacity-38;
     }
 
     .text-disabled {
-      @apply text-on-accent text-opacity-38 #{'!important'};
+      @apply #{'!important'} text-on-accent text-opacity-38;
     }
 
     .divider {
-      @apply text-on-accent text-opacity-12 #{'!important'};
+      @apply #{'!important'} text-on-accent text-opacity-12;
     }
   }
 
   /* Apply warn contrast color */
   &.mat-warn {
     .mat-icon {
-      @apply text-on-warn #{'!important'};
+      @apply #{'!important'} text-on-warn;
     }
 
     .text-secondary {
-      @apply text-on-warn text-opacity-60 #{'!important'};
+      @apply #{'!important'} text-on-warn text-opacity-60;
     }
 
     .text-hint {
-      @apply text-on-warn text-opacity-38 #{'!important'};
+      @apply #{'!important'} text-on-warn text-opacity-38;
     }
 
     .text-disabled {
-      @apply text-on-warn text-opacity-38 #{'!important'};
+      @apply #{'!important'} text-on-warn text-opacity-38;
     }
 
     .divider {
-      @apply text-on-warn text-opacity-12 #{'!important'};
+      @apply #{'!important'} text-on-warn text-opacity-12;
     }
   }
 }

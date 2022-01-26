@@ -127,7 +127,7 @@ msk-alert {
       position: relative;
       overflow: hidden;
       border-radius: 6px;
-      @apply shadow-md bg-card;
+      @apply bg-card shadow-md;
 
       .msk-alert-border {
         position: absolute;
@@ -451,7 +451,7 @@ msk-alert {
         }
 
         code {
-          @apply text-primary-800 bg-primary-200;
+          @apply bg-primary-200 text-primary-800;
         }
       }
     }
@@ -474,7 +474,7 @@ msk-alert {
         }
 
         code {
-          @apply text-accent-800 bg-accent-200;
+          @apply bg-accent-200 text-accent-800;
         }
       }
     }
@@ -497,7 +497,7 @@ msk-alert {
         }
 
         code {
-          @apply text-warn-800 bg-warn-200;
+          @apply bg-warn-200 text-warn-800;
         }
       }
     }
@@ -627,7 +627,7 @@ msk-alert {
     /* Primary */
     &.msk-alert-type-primary {
       .msk-alert-container {
-        @apply bg-primary-50 ring-1 ring-primary-400 ring-inset;
+        @apply bg-primary-50 ring-1 ring-inset ring-primary-400;
 
         .msk-alert-icon {
           @apply text-primary-600;
@@ -643,7 +643,7 @@ msk-alert {
         }
 
         code {
-          @apply text-primary-800 bg-primary-200;
+          @apply bg-primary-200 text-primary-800;
         }
 
         .dark & {
@@ -668,7 +668,7 @@ msk-alert {
     /* Accent */
     &.msk-alert-type-accent {
       .msk-alert-container {
-        @apply bg-accent-100 ring-1 ring-accent-400 ring-inset;
+        @apply bg-accent-100 ring-1 ring-inset ring-accent-400;
 
         .msk-alert-icon {
           @apply text-accent-600;
@@ -684,7 +684,7 @@ msk-alert {
         }
 
         code {
-          @apply text-accent-800 bg-accent-200;
+          @apply bg-accent-200 text-accent-800;
         }
 
         .dark & {
@@ -709,7 +709,7 @@ msk-alert {
     /* Warn */
     &.msk-alert-type-warn {
       .msk-alert-container {
-        @apply bg-warn-50 ring-1 ring-warn-400 ring-inset;
+        @apply bg-warn-50 ring-1 ring-inset ring-warn-400;
 
         .msk-alert-icon {
           @apply text-warn-600;
@@ -725,7 +725,7 @@ msk-alert {
         }
 
         code {
-          @apply text-warn-800 bg-warn-200;
+          @apply bg-warn-200 text-warn-800;
         }
 
         .dark & {
@@ -750,7 +750,7 @@ msk-alert {
     /* Basic */
     &.msk-alert-type-basic {
       .msk-alert-container {
-        @apply bg-gray-100 ring-1 ring-gray-400 ring-inset;
+        @apply bg-gray-100 ring-1 ring-inset ring-gray-400;
 
         .msk-alert-icon {
           @apply text-gray-600;
@@ -791,7 +791,7 @@ msk-alert {
     /* Info */
     &.msk-alert-type-info {
       .msk-alert-container {
-        @apply bg-blue-50 ring-1 ring-blue-400 ring-inset;
+        @apply bg-blue-50 ring-1 ring-inset ring-blue-400;
 
         .msk-alert-icon {
           @apply text-blue-600;
@@ -832,7 +832,7 @@ msk-alert {
     /* Success */
     &.msk-alert-type-success {
       .msk-alert-container {
-        @apply bg-green-50 ring-1 ring-green-400 ring-inset;
+        @apply bg-green-50 ring-1 ring-inset ring-green-400;
 
         .msk-alert-icon {
           @apply text-green-600;
@@ -873,7 +873,7 @@ msk-alert {
     /* Warning */
     &.msk-alert-type-warning {
       .msk-alert-container {
-        @apply bg-amber-50 ring-1 ring-amber-400 ring-inset;
+        @apply bg-amber-50 ring-1 ring-inset ring-amber-400;
 
         .msk-alert-icon {
           @apply text-amber-600;
@@ -914,7 +914,7 @@ msk-alert {
     /* Error */
     &.msk-alert-type-error {
       .msk-alert-container {
-        @apply bg-red-50 ring-1 ring-red-400 ring-inset;
+        @apply bg-red-50 ring-1 ring-inset ring-red-400;
 
         .msk-alert-icon {
           @apply text-red-600;
@@ -978,7 +978,7 @@ msk-alert {
         }
 
         code {
-          @apply text-primary-800 bg-primary-200;
+          @apply bg-primary-200 text-primary-800;
         }
 
         .dark & {
@@ -1019,7 +1019,7 @@ msk-alert {
         }
 
         code {
-          @apply text-accent-800 bg-accent-200;
+          @apply bg-accent-200 text-accent-800;
         }
 
         .dark & {
@@ -1060,7 +1060,7 @@ msk-alert {
         }
 
         code {
-          @apply text-warn-800 bg-warn-200;
+          @apply bg-warn-200 text-warn-800;
         }
 
         .dark & {

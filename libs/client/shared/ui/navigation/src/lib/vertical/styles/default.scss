@@ -649,7 +649,7 @@ msk-vertical-navigation-group-item {
     .msk-vertical-navigation-item {
       .msk-vertical-navigation-item-title-wrapper {
         .msk-vertical-navigation-item-title {
-          @apply opacity-100 text-primary-600 dark:text-primary-400;
+          @apply text-primary-600 opacity-100 dark:text-primary-400;
         }
       }
     }

@@ -2,15 +2,7 @@
 <msk-loading-bar></msk-loading-bar>
 
 <div
-  class="
-    flex flex-auto
-    justify-center
-    w-full
-    sm:p-4
-    md:p-8
-    bg-gray-200
-    dark:bg-card
-  "
+  class="flex w-full flex-auto justify-center bg-gray-200 dark:bg-card sm:p-4 md:p-8"
 >
   <!-- Navigation -->
   <ng-container *ngIf="isScreenSmall">
@@ -24,7 +16,7 @@
       <!-- Navigation header hook -->
       <ng-container mskVerticalNavigationContentHeader>
         <!-- Logo -->
-        <div class="flex items-center h-20 pt-6 px-8">
+        <div class="flex h-20 items-center px-8 pt-6">
           <img class="w-10" src="assets/images/logo/logo.svg" />
           <label class="mx-4 text-2xl font-black">MSK</label>
         </div>
@@ -34,41 +26,16 @@
 
   <!-- Wrapper -->
   <div
-    class="
-      flex flex-col
-      items-center
-      flex-auto
-      min-w-0
-      max-w-360
-      sm:rounded-xl
-      shadow-2xl
-      dark:shadow-none
-      overflow-hidden
-    "
+    class="flex min-w-0 max-w-360 flex-auto flex-col items-center overflow-hidden shadow-2xl dark:shadow-none sm:rounded-xl"
   >
     <!-- Header -->
     <div
-      class="
-        relative
-        flex flex-0
-        items-center
-        justify-between
-        w-full
-        h-16
-        sm:h-20
-        px-4
-        md:px-6
-        z-49
-        bg-card
-        border-b
-        dark:bg-default
-        print:hidden
-      "
+      class="bg-card relative z-49 flex h-16 w-full flex-0 items-center justify-between border-b px-4 dark:bg-default print:hidden sm:h-20 md:px-6"
     >
       <div class="flex" *ngIf="!isScreenSmall">
         <!-- Logo -->
-        <div class="flex items-center mx-2 lg:mx-4">
-          <div class="hidden lg:flex items-center">
+        <div class="mx-2 flex items-center lg:mx-4">
+          <div class="hidden items-center lg:flex">
             <img
               class="w-10"
               src="assets/images/logo/logo.svg"
@@ -78,7 +45,7 @@
           </div>
           <!-- Small version -->
           <img
-            class="flex lg:hidden w-8"
+            class="flex w-8 lg:hidden"
             src="assets/images/logo/logo.svg"
             alt="Logo image"
           />
@@ -104,13 +71,13 @@
       <!-- Components -->
       <div class="flex items-center px-2">
         <languages class="mx-0.5 md:mx-1"></languages>
-        <fullscreen class="mx-0.5 md:mx-1 hidden md:block"></fullscreen>
+        <fullscreen class="mx-0.5 hidden md:mx-1 md:block"></fullscreen>
         <user class="mx-0.5 md:mx-1"></user>
       </div>
     </div>
 
     <!-- Content -->
-    <div class="flex flex-col flex-auto w-full bg-default">
+    <div class="bg-default flex w-full flex-auto flex-col">
       <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
                  Otherwise, layout changes won't be registered and the view won't be updated! -->
       <router-outlet *ngIf="true"></router-outlet>
