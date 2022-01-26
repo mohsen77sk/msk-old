@@ -7,4 +7,4 @@ import { MskCardComponent } from './card.component';
   imports: [CommonModule],
   exports: [MskCardComponent],
 })
-export class FuseCardModule {}
+export class MskCardModule {}

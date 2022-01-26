@@ -12,5 +12,8 @@
   "remember-me": "Remember me",
   "email-address": "Email address",
   "password": "Password",
-  "send-reset-link": "Send reset link"
+  "password-confirm": "Password (Confirm)",
+  "send-reset-link": "Send reset link",
+  "reset-your-password": "Reset your password",
+  "reset-your-password-description": "Create a new password for your account"
 }

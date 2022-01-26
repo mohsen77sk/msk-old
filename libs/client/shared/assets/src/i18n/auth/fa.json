@@ -12,5 +12,8 @@
   "remember-me": "مرا به خاطر بسپار",
   "email-address": "آدرس ایمیل",
   "password": "رمز عبور",
-  "send-reset-link": "ارسال لینک ریست"
+  "password-confirm": "رمز عبور (تایید)",
+  "send-reset-link": "ارسال لینک ریست",
+  "reset-your-password": "رمز عبور خود را بازنشانی کنید",
+  "reset-your-password-description": "یک رمز عبور جدید برای حساب کاربری خود ایجاد کنید"
 }

@@ -78,6 +78,9 @@
       "@msk/client/web-app/auth/forgot-password/feature": [
         "libs/client/web-app/auth/forgot-password/feature/src/index.ts"
       ],
+      "@msk/client/web-app/auth/reset-password/feature": [
+        "libs/client/web-app/auth/reset-password/feature/src/index.ts"
+      ],
       "@msk/client/web-app/auth/sign-in/feature": [
         "libs/client/web-app/auth/sign-in/feature/src/index.ts"
       ],

@@ -46,6 +46,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.AuthForgotPasswordModule
           ),
       },
+      {
+        path: 'reset-password',
+        loadChildren: () =>
+          import('@msk/client/web-app/auth/reset-password/feature').then(
+            (m) => m.AuthResetPasswordModule
+          ),
+      },
     ],
   },
 
