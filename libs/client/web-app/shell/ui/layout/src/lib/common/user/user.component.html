@@ -10,7 +10,9 @@
       *ngIf="showAvatar && user?.avatar"
       [src]="user?.avatar"
     />
-    <mat-icon *ngIf="!showAvatar || !user?.avatar"> account_circle </mat-icon>
+    <mat-icon class="mat-icon-rtl-mirror" *ngIf="!showAvatar || !user?.avatar">
+      account_circle
+    </mat-icon>
   </span>
 </button>
 <!-- Menu -->

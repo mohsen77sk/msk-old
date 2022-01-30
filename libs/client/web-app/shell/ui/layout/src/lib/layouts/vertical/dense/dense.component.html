@@ -36,13 +36,14 @@
         mat-icon-button
         (click)="toggleNavigationAppearance()"
       >
-        <mat-icon>swap_horiz</mat-icon>
+        <mat-icon class="mat-icon-rtl-mirror">swap_horiz</mat-icon>
       </button>
     </div>
     <!-- Components -->
     <div class="flex items-center px-2">
       <languages class="mx-0.5 md:mx-1"></languages>
-      <fullscreen class="mx-0.5 hidden md:mx-1 md:block"></fullscreen>
+      <msk-fullscreen class="mx-0.5 hidden md:mx-1 md:block"></msk-fullscreen>
+      <notifications class="mx-0.5 md:mx-1"></notifications>
       <user class="mx-0.5 md:mx-1"></user>
     </div>
   </div>

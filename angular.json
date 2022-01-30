@@ -339,6 +339,32 @@
       },
       "tags": []
     },
+    "client-shared-ui-fullscreen": {
+      "projectType": "library",
+      "root": "libs/client/shared/ui/fullscreen",
+      "sourceRoot": "libs/client/shared/ui/fullscreen/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/ui/fullscreen"],
+          "options": {
+            "jestConfig": "libs/client/shared/ui/fullscreen/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/ui/fullscreen/src/**/*.ts",
+              "libs/client/shared/ui/fullscreen/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-ui-loading-bar": {
       "projectType": "library",
       "root": "libs/client/shared/ui/loading-bar",
@@ -705,6 +731,32 @@
             "lintFilePatterns": [
               "libs/client/web-app/shell/core/navigation/src/**/*.ts",
               "libs/client/web-app/shell/core/navigation/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-web-app-shell-core-notification": {
+      "projectType": "library",
+      "root": "libs/client/web-app/shell/core/notification",
+      "sourceRoot": "libs/client/web-app/shell/core/notification/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/web-app/shell/core/notification"],
+          "options": {
+            "jestConfig": "libs/client/web-app/shell/core/notification/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/shell/core/notification/src/**/*.ts",
+              "libs/client/web-app/shell/core/notification/src/**/*.html"
             ]
           }
         }

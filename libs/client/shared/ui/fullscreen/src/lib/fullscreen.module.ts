@@ -7,10 +7,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { TranslocoModule } from '@ngneat/transloco';
 
-import { FullscreenComponent } from './fullscreen.component';
+import { MskFullscreenComponent } from './fullscreen.component';
 
 @NgModule({
-  declarations: [FullscreenComponent],
+  declarations: [MskFullscreenComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -18,6 +18,6 @@ import { FullscreenComponent } from './fullscreen.component';
     MatTooltipModule,
     TranslocoModule,
   ],
-  exports: [FullscreenComponent],
+  exports: [MskFullscreenComponent],
 })
-export class FullscreenModule {}
+export class MskFullscreenModule {}

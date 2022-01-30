@@ -1,4 +1,3 @@
-/* eslint-disable @angular-eslint/component-selector */
 import { DOCUMENT } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -12,14 +11,14 @@ import {
 import { FSDocument, FSDocumentElement } from './fullscreen.types';
 
 @Component({
-  selector: 'fullscreen',
+  selector: 'msk-fullscreen',
   templateUrl: './fullscreen.component.html',
   styleUrls: ['./fullscreen.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'fullscreen',
+  exportAs: 'msk-fullscreen',
 })
-export class FullscreenComponent implements OnInit {
+export class MskFullscreenComponent implements OnInit {
   @Input() iconTpl!: TemplateRef<any>;
   @Input() tooltip!: string;
   private _fsDoc!: FSDocument;
