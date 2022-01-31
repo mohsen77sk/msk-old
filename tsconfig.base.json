@@ -33,6 +33,9 @@
       "@msk/client/shared/pipes/find-by-key": [
         "libs/client/shared/pipes/find-by-key/src/index.ts"
       ],
+      "@msk/client/shared/pipes/time-ago": [
+        "libs/client/shared/pipes/time-ago/src/index.ts"
+      ],
       "@msk/client/shared/services/config": [
         "libs/client/shared/services/config/src/index.ts"
       ],

@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { MskTimeAgoPipeModule } from '@msk/client/shared/pipes/time-ago';
+
 import { TranslocoModule } from '@ngneat/transloco';
 
 import { NotificationsComponent } from './notifications.component';
@@ -22,6 +24,7 @@ import { NotificationsComponent } from './notifications.component';
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    MskTimeAgoPipeModule,
     TranslocoModule,
   ],
   exports: [NotificationsComponent],

@@ -131,6 +131,32 @@
       },
       "tags": []
     },
+    "client-shared-pipes-time-ago": {
+      "projectType": "library",
+      "root": "libs/client/shared/pipes/time-ago",
+      "sourceRoot": "libs/client/shared/pipes/time-ago/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/pipes/time-ago"],
+          "options": {
+            "jestConfig": "libs/client/shared/pipes/time-ago/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/pipes/time-ago/src/**/*.ts",
+              "libs/client/shared/pipes/time-ago/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-services-config": {
       "projectType": "library",
       "root": "libs/client/shared/services/config",

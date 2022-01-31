@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MskFindByKeyPipe } from '@msk/client/shared/pipes/find-by-key';
+import { MskFindByKeyPipe } from './find-by-key.pipe';
 
 @NgModule({
   declarations: [MskFindByKeyPipe],
