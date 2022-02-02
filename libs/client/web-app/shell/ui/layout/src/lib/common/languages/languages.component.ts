@@ -5,6 +5,7 @@ import {
   ChangeDetectionStrategy,
   ViewEncapsulation,
 } from '@angular/core';
+import { DateAdapter } from '@angular/material/core';
 import { TranslocoService } from '@ngneat/transloco';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
@@ -27,6 +28,7 @@ export class LanguagesComponent implements OnInit {
    * Constructor
    */
   constructor(
+    private _dateAdapter: DateAdapter<any>,
     private _translocoService: TranslocoService,
     private _mskConfigService: MskConfigService
   ) {}
@@ -74,6 +76,8 @@ export class LanguagesComponent implements OnInit {
    * @param lang
    */
   setActiveLang(lang: string): void {
+    // Set the active locale
+    this._dateAdapter.setLocale(lang);
     // Set the active lang
     this._translocoService.setActiveLang(lang);
     // Set the active lang & direction in config
