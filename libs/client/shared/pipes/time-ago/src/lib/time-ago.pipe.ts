@@ -6,12 +6,12 @@ import { distinctUntilChanged, map } from 'rxjs/operators';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
 import { parseISO, formatDistanceToNow } from 'date-fns';
-import locale_US from 'date-fns/locale/en-US';
-import locale_IR from 'date-fns/locale/fa-IR';
+import locale_enUS from 'date-fns/locale/en-US';
+import locale_faIR from 'date-fns/locale/fa-IR';
 
 const locale: any = {
-  en: locale_US,
-  fa: locale_IR,
+  en: locale_enUS,
+  fa: locale_faIR,
 };
 
 @Pipe({
@@ -46,9 +46,11 @@ export class MskTimeAgoPipe extends AsyncPipe implements PipeTransform {
   /**
    * Transform
    *
-   * @param value Date string
+   * @param value A string to format
    */
   override transform(value: any): any {
+    if (value == null || value === '' || value !== value) return null;
+
     this._time = parseISO(value);
     return super.transform(this._formatted$);
   }

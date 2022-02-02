@@ -30,6 +30,9 @@
       "@msk/client/shared/directives/spinner": [
         "libs/client/shared/directives/spinner/src/index.ts"
       ],
+      "@msk/client/shared/pipes/date-time": [
+        "libs/client/shared/pipes/date-time/src/index.ts"
+      ],
       "@msk/client/shared/pipes/find-by-key": [
         "libs/client/shared/pipes/find-by-key/src/index.ts"
       ],

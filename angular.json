@@ -105,6 +105,32 @@
       },
       "tags": []
     },
+    "client-shared-pipes-date-time": {
+      "projectType": "library",
+      "root": "libs/client/shared/pipes/date-time",
+      "sourceRoot": "libs/client/shared/pipes/date-time/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/pipes/date-time"],
+          "options": {
+            "jestConfig": "libs/client/shared/pipes/date-time/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/pipes/date-time/src/**/*.ts",
+              "libs/client/shared/pipes/date-time/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-pipes-find-by-key": {
       "projectType": "library",
       "root": "libs/client/shared/pipes/find-by-key",
