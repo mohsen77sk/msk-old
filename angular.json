@@ -737,6 +737,32 @@
       },
       "tags": []
     },
+    "client-web-app-shell-core-date": {
+      "projectType": "library",
+      "root": "libs/client/web-app/shell/core/date",
+      "sourceRoot": "libs/client/web-app/shell/core/date/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/web-app/shell/core/date"],
+          "options": {
+            "jestConfig": "libs/client/web-app/shell/core/date/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/shell/core/date/src/**/*.ts",
+              "libs/client/web-app/shell/core/date/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-web-app-shell-core-icons": {
       "projectType": "library",
       "root": "libs/client/web-app/shell/core/icons",

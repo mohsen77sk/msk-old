@@ -3,10 +3,10 @@ import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 
 import { MATERIAL_SANITY_CHECKS } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MatDateFnsModule } from '@angular/material-date-fns-adapter';
 
 import { mskShellRoutes } from './msk-shell.routes';
 
+import { DateCoreModule } from '@msk/client/web-app/shell/core/date';
 import { IconsCoreModule } from '@msk/client/web-app/shell/core/icons';
 import { MessageCoreModule } from '@msk/client/web-app/shell/core/message';
 import { TranslocoCoreModule } from '@msk/client/web-app/shell/core/transloco';
@@ -38,13 +38,11 @@ const routerConfig: ExtraOptions = {
     MskTailwindConfigModule,
     MskUtilsModule,
 
-    // Material date module
-    MatDateFnsModule,
-
     // Layout module of your application
     MskLayoutModule,
 
     // Core module of your application
+    DateCoreModule,
     IconsCoreModule,
     MessageCoreModule,
     TranslocoCoreModule,
