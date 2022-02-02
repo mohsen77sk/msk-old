@@ -14,27 +14,26 @@ import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { MatButton } from '@angular/material/button';
 
-import { Notification } from '@msk/client/web-app/shell/core/notification';
-import { NotificationService } from '@msk/client/web-app/shell/core/notification';
+import { Message } from '@msk/client/web-app/shell/core/message';
+import { MessageService } from '@msk/client/web-app/shell/core/message';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
-import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'notifications',
-  templateUrl: './notifications.component.html',
+  selector: 'messages',
+  templateUrl: './messages.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  exportAs: 'notifications',
+  exportAs: 'messages',
 })
-export class NotificationsComponent implements OnInit, OnDestroy {
-  @ViewChild('notificationsOrigin') private _notificationsOrigin!: MatButton;
-  @ViewChild('notificationsPanel')
-  private _notificationsPanel!: TemplateRef<any>;
+export class MessagesComponent implements OnInit, OnDestroy {
+  @ViewChild('messagesOrigin') private _messagesOrigin!: MatButton;
+  @ViewChild('messagesPanel') private _messagesPanel!: TemplateRef<any>;
 
   layoutDirection!: any;
-  notifications!: Notification[];
+  messages!: Message[];
   unreadCount = 0;
 
   private _overlayRef!: OverlayRef;
@@ -47,7 +46,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
     private _overlay: Overlay,
     private _viewContainerRef: ViewContainerRef,
     private _changeDetectorRef: ChangeDetectorRef,
-    private _notificationService: NotificationService,
+    private _messageService: MessageService,
     private _mskConfigService: MskConfigService
   ) {}
 
@@ -66,12 +65,12 @@ export class NotificationsComponent implements OnInit, OnDestroy {
         // Store the layoutDirection
         this.layoutDirection = config.direction;
       });
-    // Subscribe to notification changes
-    this._notificationService.notifications$
+    // Subscribe to message changes
+    this._messageService.messages$
       .pipe(takeUntil(this._unsubscribeAll))
-      .subscribe((notifications: Notification[]) => {
-        // Load the notifications
-        this.notifications = notifications;
+      .subscribe((messages: Message[]) => {
+        // Load the messages
+        this.messages = messages;
 
         // Calculate the unread count
         this._calculateUnreadCount();
@@ -100,11 +99,11 @@ export class NotificationsComponent implements OnInit, OnDestroy {
   // -----------------------------------------------------------------------------------------------------
 
   /**
-   * Open the notifications panel
+   * Open the messages panel
    */
   openPanel(): void {
-    // Return if the notifications panel or its origin is not defined
-    if (!this._notificationsPanel || !this._notificationsOrigin) {
+    // Return if the messages panel or its origin is not defined
+    if (!this._messagesPanel || !this._messagesOrigin) {
       return;
     }
 
@@ -118,7 +117,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
 
     // Attach the portal to the overlay
     this._overlayRef.attach(
-      new TemplatePortal(this._notificationsPanel, this._viewContainerRef)
+      new TemplatePortal(this._messagesPanel, this._viewContainerRef)
     );
   }
 
@@ -130,30 +129,30 @@ export class NotificationsComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Mark all notifications as read
+   * Mark all messages as read
    */
   markAllAsRead(): void {
     // Mark all as read
-    this._notificationService.markAllAsRead().subscribe();
+    this._messageService.markAllAsRead().subscribe();
   }
 
   /**
-   * Toggle read status of the given notification
+   * Toggle read status of the given message
    */
-  toggleRead(notification: Notification): void {
+  toggleRead(message: Message): void {
     // Toggle the read status
-    notification.read = !notification.read;
+    message.read = !message.read;
 
-    // Update the notification
-    this._notificationService.update(notification.id, notification).subscribe();
+    // Update the message
+    this._messageService.update(message.id, message).subscribe();
   }
 
   /**
-   * Delete the given notification
+   * Delete the given message
    */
-  delete(notification: Notification): void {
-    // Delete the notification
-    this._notificationService.delete(notification.id).subscribe();
+  delete(message: Message): void {
+    // Delete the message
+    this._messageService.delete(message.id).subscribe();
   }
 
   /**
@@ -181,9 +180,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
       scrollStrategy: this._overlay.scrollStrategies.block(),
       positionStrategy: this._overlay
         .position()
-        .flexibleConnectedTo(
-          this._notificationsOrigin._elementRef.nativeElement
-        )
+        .flexibleConnectedTo(this._messagesOrigin._elementRef.nativeElement)
         .withLockedPosition(true)
         .withPush(true)
         .withPositions([
@@ -228,10 +225,8 @@ export class NotificationsComponent implements OnInit, OnDestroy {
   private _calculateUnreadCount(): void {
     let count = 0;
 
-    if (this.notifications && this.notifications.length) {
-      count = this.notifications.filter(
-        (notification) => !notification.read
-      ).length;
+    if (this.messages && this.messages.length) {
+      count = this.messages.filter((message) => !message.read).length;
     }
 
     this.unreadCount = count;

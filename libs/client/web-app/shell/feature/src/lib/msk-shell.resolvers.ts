@@ -8,6 +8,7 @@ import { forkJoin, Observable } from 'rxjs';
 
 import { UserService } from '@msk/client/web-app/shell/core/user';
 import { NavigationService } from '@msk/client/web-app/shell/core/navigation';
+import { MessageService } from '@msk/client/web-app/shell/core/message';
 import { NotificationService } from '@msk/client/web-app/shell/core/notification';
 
 @Injectable({
@@ -20,6 +21,7 @@ export class InitialDataResolver implements Resolve<any> {
   constructor(
     private _userService: UserService,
     private _navigationService: NavigationService,
+    private _messageService: MessageService,
     private _notificationService: NotificationService
   ) {}
 
@@ -41,6 +43,7 @@ export class InitialDataResolver implements Resolve<any> {
     return forkJoin([
       this._userService.get(),
       this._navigationService.get(),
+      this._messageService.getAll(),
       this._notificationService.getAll(),
     ]);
   }
