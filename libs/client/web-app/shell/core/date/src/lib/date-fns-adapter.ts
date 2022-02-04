@@ -6,8 +6,19 @@ import * as jalali from 'date-fns-jalali';
 import locale_enUS from 'date-fns/locale/en-US';
 import locale_faIR from 'date-fns-jalali/locale/fa-IR';
 
+/** Creates an array and fills it with values. */
+function range<T>(length: number, valueFunction: (index: number) => T): T[] {
+  const valuesArray = Array(length);
+  for (let i = 0; i < length; i++) {
+    valuesArray[i] = valueFunction(i);
+  }
+  return valuesArray;
+}
+
 const dateFns = {
   gregorian: {
+    setMonth: gregorian.setMonth,
+    setDate: gregorian.setDate,
     getMonth: gregorian.getMonth,
     getYear: gregorian.getYear,
     getDate: gregorian.getDate,
@@ -19,11 +30,15 @@ const dateFns = {
     addDays: gregorian.addDays,
     isValid: gregorian.isValid,
     isDate: gregorian.isDate,
+    toDate: gregorian.toDate,
     format: gregorian.format,
     parseISO: gregorian.parseISO,
     parse: gregorian.parse,
+    set: gregorian.set,
   },
   jalali: {
+    setMonth: jalali.setMonth,
+    setDate: jalali.setDate,
     getMonth: jalali.getMonth,
     getYear: jalali.getYear,
     getDate: jalali.getDate,
@@ -35,25 +50,20 @@ const dateFns = {
     addDays: jalali.addDays,
     isValid: jalali.isValid,
     isDate: jalali.isDate,
+    toDate: jalali.toDate,
     format: jalali.format,
     parseISO: jalali.parseISO,
     parse: jalali.parse,
+    set: jalali.set,
   },
 };
 
-const locale = {
+type LOCALE_TYPE = 'en' | 'fa';
+
+const Locale = {
   en: locale_enUS,
   fa: locale_faIR,
 };
-
-/** Creates an array and fills it with values. */
-function range<T>(length: number, valueFunction: (index: number) => T): T[] {
-  const valuesArray = Array(length);
-  for (let i = 0; i < length; i++) {
-    valuesArray[i] = valueFunction(i);
-  }
-  return valuesArray;
-}
 
 // date-fns doesn't have a way to read/print month names or days of the week directly,
 // so we get them by formatting a date with a format that produces the desired month/day.
@@ -73,8 +83,6 @@ const DAY_OF_WEEK_FORMATS = {
 export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
   /** Calendar type. */
   private _calendarType!: 'gregorian' | 'jalali';
-  /** Locale code. */
-  private _localeCode!: 'en' | 'fa';
 
   /**
    * constructor
@@ -90,18 +98,21 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
    * @param locale The new locale
    */
   override setLocale(locale: any): void {
-    switch (locale) {
-      case 'en':
-        this._calendarType = 'gregorian';
-        break;
-      case 'fa':
-        this._calendarType = 'jalali';
-        break;
-      default:
-        throw new Error(`Not Support LOCALE_ID (${locale})`);
+    if (typeof locale === 'string') {
+      switch (locale) {
+        case 'en':
+          this._calendarType = 'gregorian';
+          break;
+        case 'fa':
+          this._calendarType = 'jalali';
+          break;
+        default:
+          throw new Error(`Not Support LOCALE_ID (${locale})`);
+      }
+      locale = Locale[locale];
     }
+
     super.setLocale(locale);
-    this._localeCode = locale;
   }
 
   getYear(date: Date): number {
@@ -122,7 +133,12 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
 
   getMonthNames(style: 'long' | 'short' | 'narrow'): string[] {
     const pattern = MONTH_FORMATS[style];
-    return range(12, (i) => this.format(new Date(2017, i, 1), pattern));
+    return range(12, (i) =>
+      this.format(
+        dateFns[this._calendarType].setMonth(this.today(), i),
+        pattern
+      )
+    );
   }
 
   getDateNames(): string[] {
@@ -138,13 +154,15 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
       if (dtf) {
         // date-fns doesn't appear to support this functionality.
         // Fall back to `Intl` on supported browsers.
-        const date = new Date();
-        date.setUTCFullYear(2017, 0, i + 1);
+        let date = new Date();
+        date.setUTCFullYear(2017, 0, 1);
+        date = dateFns[this._calendarType].setMonth(date, 0);
+        date = dateFns[this._calendarType].setDate(date, i + 1);
         date.setUTCHours(0, 0, 0, 0);
         return dtf.format(date).replace(/[\u200e\u200f]/g, '');
       }
 
-      return i + '';
+      return i + 1 + '';
     });
   }
 
@@ -166,7 +184,7 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
   }
 
   clone(date: Date): Date {
-    return new Date(date.getTime());
+    return dateFns[this._calendarType].toDate(date);
   }
 
   createDate(year: number, month: number, date: number): Date {
@@ -182,14 +200,18 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
       throw Error(`Invalid date "${date}". Date has to be greater than 0.`);
     }
 
-    // Passing the year to the constructor causes year numbers <100 to be converted to 19xx.
-    // To work around this we use `setFullYear` and `setHours` instead.
-    const result = new Date();
-    result.setFullYear(year, month, date);
-    result.setHours(0, 0, 0, 0);
+    const result = dateFns[this._calendarType].set(new Date(), {
+      year,
+      month,
+      date,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      milliseconds: 0,
+    });
 
     // Check that the date wasn't above the upper bound for the month, causing the month to overflow
-    if (result.getMonth() != month) {
+    if (this.getMonth(result) != month) {
       throw Error(`Invalid date "${date}" for month with index "${month}".`);
     }
 
@@ -220,7 +242,7 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
           currentFormat,
           new Date(),
           {
-            locale: locale[this._localeCode],
+            locale: Locale[this.locale.code as LOCALE_TYPE],
           }
         );
 
@@ -245,7 +267,7 @@ export class MskDateFnsAdapter extends DateAdapter<Date, Locale> {
     }
 
     return dateFns[this._calendarType].format(date, displayFormat, {
-      locale: locale[this._localeCode],
+      locale: Locale[this.locale.code as LOCALE_TYPE],
     });
   }
 
