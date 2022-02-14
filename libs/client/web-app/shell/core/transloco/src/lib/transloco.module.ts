@@ -3,9 +3,9 @@ import {
   Translation,
   TRANSLOCO_CONFIG,
   TRANSLOCO_LOADER,
-  translocoConfig,
   TranslocoModule,
   TranslocoService,
+  TranslocoConfig,
 } from '@ngneat/transloco';
 import { TranslocoHttpLoader } from './transloco.http-loader';
 import { MskConfigService } from '@msk/client/shared/services/config';
@@ -15,7 +15,8 @@ import { MskConfigService } from '@msk/client/shared/services/config';
     {
       // Provide the default Transloco configuration
       provide: TRANSLOCO_CONFIG,
-      useValue: translocoConfig({
+      deps: [MskConfigService],
+      useFactory: (mskConfigService: MskConfigService): TranslocoConfig => ({
         availableLangs: [
           {
             id: 'en',
@@ -26,8 +27,8 @@ import { MskConfigService } from '@msk/client/shared/services/config';
             label: 'فارسی',
           },
         ],
-        defaultLang: 'en',
-        fallbackLang: 'en',
+        defaultLang: mskConfigService.config.language,
+        fallbackLang: mskConfigService.config.language,
         reRenderOnLangChange: true,
         prodMode: true,
       }),
@@ -40,14 +41,11 @@ import { MskConfigService } from '@msk/client/shared/services/config';
     {
       // Preload the default language before the app starts to prevent empty/jumping content
       provide: APP_INITIALIZER,
-      deps: [TranslocoService, MskConfigService],
+      deps: [TranslocoService],
       useFactory:
-        (
-          translocoService: TranslocoService,
-          mskConfigService: MskConfigService
-        ): any =>
+        (translocoService: TranslocoService): any =>
         (): Promise<Translation> => {
-          const defaultLang = mskConfigService.config.language; // translocoService.getDefaultLang();
+          const defaultLang = translocoService.getDefaultLang();
           translocoService.setActiveLang(defaultLang);
           return translocoService.load(defaultLang).toPromise();
         },

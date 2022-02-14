@@ -121,8 +121,8 @@ export class MskSpinnerDirective implements OnInit {
   /**
    * Set instance spinner
    *
-   * @private
    * @param instance
+   * @private
    */
   private _setInstanceInputs(instance: MatProgressSpinner) {
     instance.mode = 'indeterminate';
@@ -133,8 +133,8 @@ export class MskSpinnerDirective implements OnInit {
   /**
    * Set container style
    *
-   * @private
    * @param container
+   * @private
    */
   private _setContainerStyle(container: unknown) {
     this.renderer.setStyle(container, 'position', 'absolute');

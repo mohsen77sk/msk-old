@@ -7,14 +7,14 @@ import { MSK_APP_CONFIG } from './config.constants';
   providedIn: 'root',
 })
 export class MskConfigService {
-  private _config: BehaviorSubject<any>;
+  private _config!: BehaviorSubject<any>;
 
   /**
    * Constructor
    */
   constructor(@Inject(MSK_APP_CONFIG) config: any) {
     // Private
-    this._config = new BehaviorSubject(config);
+    this._config = new BehaviorSubject(this._getFromStorage() ?? config);
   }
 
   // -----------------------------------------------------------------------------------------------------
@@ -29,6 +29,7 @@ export class MskConfigService {
     const config = merge({}, this._config.getValue(), value);
 
     // Execute the observable
+    this._setToStorage(config);
     this._config.next(config);
   }
 
@@ -49,6 +50,35 @@ export class MskConfigService {
    */
   reset(): void {
     // Set the config
+    this._setToStorage(this.config);
     this._config.next(this.config);
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Private methods
+  // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * Set config to storage
+   *
+   * @param config
+   * @private
+   */
+  private _setToStorage(config: object): void {
+    localStorage.setItem('configToken', btoa(JSON.stringify(config)));
+  }
+
+  /**
+   * Get config from storage
+   *
+   * @private
+   */
+  private _getFromStorage(): object | null {
+    const data = localStorage.getItem('configToken');
+    try {
+      return JSON.parse(atob(data ?? ''));
+    } catch {
+      return null;
+    }
   }
 }
