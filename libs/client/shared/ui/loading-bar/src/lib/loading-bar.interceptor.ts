@@ -5,8 +5,7 @@ import {
   HttpInterceptor,
   HttpRequest,
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { finalize } from 'rxjs/operators';
+import { Observable, finalize } from 'rxjs';
 import { MskLoadingBarService } from './loading-bar.service';
 
 @Injectable()

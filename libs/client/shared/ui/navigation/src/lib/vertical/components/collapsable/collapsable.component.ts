@@ -15,8 +15,7 @@ import { MskVerticalNavigationComponent } from '@msk/client/shared/ui/navigation
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
 import { NavigationItem } from '@msk/client/shared/ui/navigation';
 
-import { Subject } from 'rxjs';
-import { filter, takeUntil } from 'rxjs/operators';
+import { Subject, filter, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'msk-vertical-navigation-collapsable-item',
@@ -168,7 +167,7 @@ export class MskVerticalNavigationCollapsableItemComponent
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

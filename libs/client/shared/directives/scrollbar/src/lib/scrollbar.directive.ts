@@ -10,8 +10,7 @@ import {
 import { Router } from '@angular/router';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Platform } from '@angular/cdk/platform';
-import { fromEvent, Subject } from 'rxjs';
-import { debounceTime, takeUntil } from 'rxjs/operators';
+import { fromEvent, Subject, debounceTime, takeUntil } from 'rxjs';
 import { merge } from 'lodash-es';
 
 import PerfectScrollbar from 'perfect-scrollbar';
@@ -136,7 +135,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
     this._destroy();
 
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

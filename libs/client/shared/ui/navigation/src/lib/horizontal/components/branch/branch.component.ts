@@ -14,8 +14,7 @@ import { MskHorizontalNavigationComponent } from '@msk/client/shared/ui/navigati
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
 import { NavigationItem } from '@msk/client/shared/ui/navigation';
 
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'msk-horizontal-navigation-branch-item',
@@ -71,7 +70,7 @@ export class MskHorizontalNavigationBranchItemComponent
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

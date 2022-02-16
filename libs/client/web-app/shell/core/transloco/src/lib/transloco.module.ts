@@ -44,7 +44,7 @@ import { MskConfigService } from '@msk/client/shared/services/config';
       deps: [TranslocoService],
       useFactory:
         (translocoService: TranslocoService): any =>
-        (): Promise<Translation> => {
+        (): Promise<Translation | undefined> => {
           const defaultLang = translocoService.getDefaultLang();
           translocoService.setActiveLang(defaultLang);
           return translocoService.load(defaultLang).toPromise();

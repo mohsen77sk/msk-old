@@ -42,8 +42,15 @@ import {
   VerticalNavigationPosition,
 } from '../navigation.types';
 
-import { merge, ReplaySubject, Subject, Subscription } from 'rxjs';
-import { delay, filter, takeUntil } from 'rxjs/operators';
+import {
+  merge,
+  ReplaySubject,
+  Subject,
+  Subscription,
+  delay,
+  filter,
+  takeUntil,
+} from 'rxjs';
 
 @Component({
   selector: 'msk-vertical-navigation',
@@ -397,7 +404,7 @@ export class MskVerticalNavigationComponent
     this._mskNavigationService.deregisterComponent(this.name);
 
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

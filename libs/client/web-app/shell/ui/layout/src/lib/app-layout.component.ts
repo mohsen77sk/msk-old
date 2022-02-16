@@ -22,8 +22,7 @@ import {
 } from './app-layout.types';
 import { LayoutConfig } from './layout.config';
 
-import { combineLatest, Subject } from 'rxjs';
-import { filter, map, takeUntil } from 'rxjs/operators';
+import { combineLatest, Subject, filter, map, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'layout',
@@ -135,7 +134,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

@@ -9,8 +9,7 @@ import {
 } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MskLoadingBarService } from './loading-bar.service';
-import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'msk-loading-bar',
@@ -79,7 +78,7 @@ export class MskLoadingBarComponent implements OnChanges, OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter, take } from 'rxjs/operators';
+import { filter, take } from 'rxjs';
 
 @Injectable()
 export class MskSplashScreenService {

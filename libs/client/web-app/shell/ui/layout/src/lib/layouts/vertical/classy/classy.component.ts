@@ -11,8 +11,7 @@ import {
   NavigationService,
 } from '@msk/client/web-app/shell/core/navigation';
 
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'classy-layout',
@@ -64,7 +63,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

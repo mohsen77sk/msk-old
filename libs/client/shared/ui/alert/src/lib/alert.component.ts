@@ -12,8 +12,7 @@ import {
   SimpleChanges,
   ViewEncapsulation,
 } from '@angular/core';
-import { Subject } from 'rxjs';
-import { filter, takeUntil } from 'rxjs/operators';
+import { Subject, filter, takeUntil } from 'rxjs';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
 import { mskAnimations } from '@msk/client/shared/animations';
@@ -149,7 +148,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

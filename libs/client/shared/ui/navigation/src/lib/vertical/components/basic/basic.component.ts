@@ -13,8 +13,7 @@ import { MskNavigationService } from '@msk/client/shared/ui/navigation';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
 import { NavigationItem } from '@msk/client/shared/ui/navigation';
 
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'msk-vertical-navigation-basic-item',
@@ -83,7 +82,7 @@ export class MskVerticalNavigationBasicItemComponent
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 }

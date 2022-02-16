@@ -18,8 +18,7 @@ import { Message } from '@msk/client/web-app/shell/core/message';
 import { MessageService } from '@msk/client/web-app/shell/core/message';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'messages',
@@ -85,7 +84,7 @@ export class MessagesComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
 
     // Dispose the overlay

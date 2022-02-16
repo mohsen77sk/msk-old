@@ -1,7 +1,6 @@
 import { Pipe, ChangeDetectorRef, PipeTransform } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
-import { Observable, timer } from 'rxjs';
-import { distinctUntilChanged, map } from 'rxjs/operators';
+import { Observable, timer, distinctUntilChanged, map } from 'rxjs';
 
 import { MskConfigService } from '@msk/client/shared/services/config';
 

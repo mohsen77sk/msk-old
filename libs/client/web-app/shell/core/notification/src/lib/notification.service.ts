@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, ReplaySubject } from 'rxjs';
-import { map, switchMap, take, tap } from 'rxjs/operators';
+import { Observable, ReplaySubject, map, switchMap, take, tap } from 'rxjs';
 import { Notification } from './notification.types';
 
 @Injectable({

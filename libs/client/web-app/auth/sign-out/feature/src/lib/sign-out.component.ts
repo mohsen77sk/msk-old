@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subject, timer } from 'rxjs';
-import { finalize, takeUntil, takeWhile, tap } from 'rxjs/operators';
+import { Subject, timer, finalize, takeUntil, takeWhile, tap } from 'rxjs';
 
 @Component({
   selector: 'msk-sign-out',
@@ -45,7 +44,7 @@ export class SignOutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 }

@@ -81,7 +81,7 @@ export class MskHorizontalNavigationComponent
     this._mskNavigationService.deregisterComponent(this.name);
 
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 

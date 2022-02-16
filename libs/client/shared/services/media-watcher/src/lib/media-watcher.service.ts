@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { Observable, ReplaySubject } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { Observable, ReplaySubject, map, switchMap } from 'rxjs';
 import { MskTailwindService } from '@msk/client/shared/services/tailwind';
 
 @Injectable()

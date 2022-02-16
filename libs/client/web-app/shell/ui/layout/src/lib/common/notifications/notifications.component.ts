@@ -18,8 +18,7 @@ import { Notification } from '@msk/client/web-app/shell/core/notification';
 import { NotificationService } from '@msk/client/web-app/shell/core/notification';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
-import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'notifications',
@@ -86,7 +85,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
 
     // Dispose the overlay
