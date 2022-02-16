@@ -1,18 +1,18 @@
 /* Variables */
-$msk-vertical-navigation-compact-width: 112;
+$msk-vertical-navigation-compact-width: 112px;
 
 msk-vertical-navigation {
   /* Compact appearance overrides */
   &.msk-vertical-navigation-appearance-compact {
-    width: #{$msk-vertical-navigation-compact-width}px;
-    min-width: #{$msk-vertical-navigation-compact-width}px;
-    max-width: #{$msk-vertical-navigation-compact-width}px;
+    width: $msk-vertical-navigation-compact-width;
+    min-width: $msk-vertical-navigation-compact-width;
+    max-width: $msk-vertical-navigation-compact-width;
 
     /* Start positioned */
     &.msk-vertical-navigation-position-start {
       /* Side mode */
       &.msk-vertical-navigation-mode-side {
-        margin-left: -#{$msk-vertical-navigation-compact-width}px;
+        margin-left: -$msk-vertical-navigation-compact-width;
       }
 
       /* Opened */
@@ -25,7 +25,7 @@ msk-vertical-navigation {
     &.msk-vertical-navigation-position-end {
       /* Side mode */
       &.msk-vertical-navigation-mode-side {
-        margin-right: -#{$msk-vertical-navigation-compact-width}px;
+        margin-right: -$msk-vertical-navigation-compact-width;
       }
 
       /* Opened */
@@ -36,7 +36,7 @@ msk-vertical-navigation {
       /* Aside wrapper */
       .msk-vertical-navigation-aside-wrapper {
         left: auto;
-        right: #{$msk-vertical-navigation-compact-width}px;
+        right: $msk-vertical-navigation-compact-width;
       }
     }
 
@@ -97,7 +97,7 @@ msk-vertical-navigation {
 
     /* Aside wrapper */
     .msk-vertical-navigation-aside-wrapper {
-      left: #{$msk-vertical-navigation-compact-width}px;
+      left: $msk-vertical-navigation-compact-width;
     }
   }
 }
@@ -111,7 +111,7 @@ msk-vertical-navigation {
         /* Side mode */
         &.msk-vertical-navigation-mode-side {
           margin-left: unset;
-          margin-right: -#{$msk-vertical-navigation-compact-width}px;
+          margin-right: -$msk-vertical-navigation-compact-width;
         }
 
         /* Opened */
@@ -126,7 +126,7 @@ msk-vertical-navigation {
         /* Side mode */
         &.msk-vertical-navigation-mode-side {
           margin-right: unset;
-          margin-left: -#{$msk-vertical-navigation-compact-width}px;
+          margin-left: -$msk-vertical-navigation-compact-width;
         }
 
         /* Opened */
@@ -138,7 +138,7 @@ msk-vertical-navigation {
         /* Aside wrapper */
         .msk-vertical-navigation-aside-wrapper {
           right: auto;
-          left: #{$msk-vertical-navigation-compact-width}px;
+          left: $msk-vertical-navigation-compact-width;
         }
       }
 
@@ -167,7 +167,7 @@ msk-vertical-navigation {
       /* Aside wrapper */
       .msk-vertical-navigation-aside-wrapper {
         left: unset;
-        right: #{$msk-vertical-navigation-compact-width}px;
+        right: $msk-vertical-navigation-compact-width;
       }
     }
   }

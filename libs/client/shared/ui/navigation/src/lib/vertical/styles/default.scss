@@ -1,15 +1,16 @@
 /* Variables */
-$msk-vertical-navigation-width: 280;
+$msk-vertical-navigation-width: 280px;
 
 msk-vertical-navigation {
   position: sticky;
+  position: -webkit-sticky;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
   top: 0;
-  width: #{$msk-vertical-navigation-width}px;
-  min-width: #{$msk-vertical-navigation-width}px;
-  max-width: #{$msk-vertical-navigation-width}px;
+  width: $msk-vertical-navigation-width;
+  min-width: $msk-vertical-navigation-width;
+  max-width: $msk-vertical-navigation-width;
   height: 100vh;
   min-height: 100vh;
   max-height: 100vh;
@@ -45,7 +46,7 @@ msk-vertical-navigation {
   &.msk-vertical-navigation-position-start {
     /* Side mode */
     &.msk-vertical-navigation-mode-side {
-      margin-left: -#{$msk-vertical-navigation-width}px;
+      margin-left: -$msk-vertical-navigation-width;
 
       &.msk-vertical-navigation-opened {
         margin-left: 0;
@@ -72,7 +73,7 @@ msk-vertical-navigation {
   &.msk-vertical-navigation-position-end {
     /* Side mode */
     &.msk-vertical-navigation-mode-side {
-      margin-right: -#{$msk-vertical-navigation-width}px;
+      margin-right: -$msk-vertical-navigation-width;
 
       &.msk-vertical-navigation-opened {
         margin-right: 0;
@@ -167,8 +168,8 @@ msk-vertical-navigation {
     flex-direction: column;
     top: 0;
     bottom: 0;
-    left: #{$msk-vertical-navigation-width}px;
-    width: #{$msk-vertical-navigation-width}px;
+    left: $msk-vertical-navigation-width;
+    width: $msk-vertical-navigation-width;
     height: 100%;
     z-index: 5;
     overflow-x: hidden;
@@ -192,7 +193,7 @@ msk-vertical-navigation {
   &.msk-vertical-navigation-position-end {
     .msk-vertical-navigation-aside-wrapper {
       left: auto;
-      right: #{$msk-vertical-navigation-width}px;
+      right: $msk-vertical-navigation-width;
     }
   }
 
@@ -411,7 +412,7 @@ msk-vertical-navigation {
       /* Side mode */
       &.msk-vertical-navigation-mode-side {
         margin-left: unset;
-        margin-right: -#{$msk-vertical-navigation-width}px;
+        margin-right: -$msk-vertical-navigation-width;
 
         &.msk-vertical-navigation-opened {
           margin-left: unset;
@@ -442,7 +443,7 @@ msk-vertical-navigation {
       /* Side mode */
       &.msk-vertical-navigation-mode-side {
         margin-right: unset;
-        margin-left: -#{$msk-vertical-navigation-width}px;
+        margin-left: -$msk-vertical-navigation-width;
 
         &.msk-vertical-navigation-opened {
           margin-right: unset;
@@ -476,13 +477,13 @@ msk-vertical-navigation {
     /* Aside wrapper */
     .msk-vertical-navigation-aside-wrapper {
       left: unset;
-      right: #{$msk-vertical-navigation-width}px;
+      right: $msk-vertical-navigation-width;
     }
 
     &.msk-vertical-navigation-position-end {
       .msk-vertical-navigation-aside-wrapper {
         right: auto;
-        left: #{$msk-vertical-navigation-width}px;
+        left: $msk-vertical-navigation-width;
       }
     }
 

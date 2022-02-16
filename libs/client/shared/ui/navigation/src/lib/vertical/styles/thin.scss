@@ -1,17 +1,17 @@
 /* Variables */
-$msk-vertical-navigation-thin-width: 80;
+$msk-vertical-navigation-thin-width: 80px;
 
 msk-vertical-navigation {
   /* Thin appearance overrides */
   &.msk-vertical-navigation-appearance-thin {
-    width: #{$msk-vertical-navigation-thin-width}px;
-    min-width: #{$msk-vertical-navigation-thin-width}px;
-    max-width: #{$msk-vertical-navigation-thin-width}px;
+    width: $msk-vertical-navigation-thin-width;
+    min-width: $msk-vertical-navigation-thin-width;
+    max-width: $msk-vertical-navigation-thin-width;
 
     /* Start positioned */
     &.msk-vertical-navigation-position-start {
       &.msk-vertical-navigation-mode-side {
-        margin-left: -#{$msk-vertical-navigation-thin-width}px;
+        margin-left: -$msk-vertical-navigation-thin-width;
       }
 
       &.msk-vertical-navigation-opened {
@@ -22,7 +22,7 @@ msk-vertical-navigation {
     /* End positioned */
     &.msk-vertical-navigation-position-end {
       &.msk-vertical-navigation-mode-side {
-        margin-right: -#{$msk-vertical-navigation-thin-width}px;
+        margin-right: -$msk-vertical-navigation-thin-width;
       }
 
       &.msk-vertical-navigation-opened {
@@ -31,7 +31,7 @@ msk-vertical-navigation {
 
       .msk-vertical-navigation-aside-wrapper {
         left: auto;
-        right: #{$msk-vertical-navigation-thin-width}px;
+        right: $msk-vertical-navigation-thin-width;
       }
     }
 
@@ -85,7 +85,7 @@ msk-vertical-navigation {
 
     /* Aside wrapper */
     .msk-vertical-navigation-aside-wrapper {
-      left: #{$msk-vertical-navigation-thin-width}px;
+      left: $msk-vertical-navigation-thin-width;
     }
   }
 }
@@ -98,7 +98,7 @@ msk-vertical-navigation {
       &.msk-vertical-navigation-position-start {
         &.msk-vertical-navigation-mode-side {
           margin-left: unset;
-          margin-right: -#{$msk-vertical-navigation-thin-width}px;
+          margin-right: -$msk-vertical-navigation-thin-width;
         }
 
         &.msk-vertical-navigation-opened {
@@ -111,7 +111,7 @@ msk-vertical-navigation {
       &.msk-vertical-navigation-position-end {
         &.msk-vertical-navigation-mode-side {
           margin-right: unset;
-          margin-left: -#{$msk-vertical-navigation-thin-width}px;
+          margin-left: -$msk-vertical-navigation-thin-width;
         }
 
         &.msk-vertical-navigation-opened {
@@ -121,14 +121,14 @@ msk-vertical-navigation {
 
         .msk-vertical-navigation-aside-wrapper {
           right: auto;
-          left: #{$msk-vertical-navigation-thin-width}px;
+          left: $msk-vertical-navigation-thin-width;
         }
       }
 
       /* Aside wrapper */
       .msk-vertical-navigation-aside-wrapper {
         left: unset;
-        right: #{$msk-vertical-navigation-thin-width}px;
+        right: $msk-vertical-navigation-thin-width;
       }
     }
   }

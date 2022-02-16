@@ -1,20 +1,20 @@
 /* Variables */
-$msk-vertical-navigation-width: 280;
-$msk-vertical-navigation-dense-width: 80;
+$msk-vertical-navigation-width: 280px;
+$msk-vertical-navigation-dense-width: 80px;
 
 msk-vertical-navigation {
   /* Dense appearance overrides */
   &.msk-vertical-navigation-appearance-dense {
     &:not(.msk-vertical-navigation-mode-over) {
-      width: #{$msk-vertical-navigation-dense-width}px;
-      min-width: #{$msk-vertical-navigation-dense-width}px;
-      max-width: #{$msk-vertical-navigation-dense-width}px;
+      width: $msk-vertical-navigation-dense-width;
+      min-width: $msk-vertical-navigation-dense-width;
+      max-width: $msk-vertical-navigation-dense-width;
 
       /* Start positioned */
       &.msk-vertical-navigation-position-start {
         /* Side mode */
         &.msk-vertical-navigation-mode-side {
-          margin-left: -#{$msk-vertical-navigation-dense-width}px;
+          margin-left: -$msk-vertical-navigation-dense-width;
         }
 
         /* Opened */
@@ -27,7 +27,7 @@ msk-vertical-navigation {
       &.msk-vertical-navigation-position-end {
         /* Side mode */
         &.msk-vertical-navigation-mode-side {
-          margin-right: -#{$msk-vertical-navigation-dense-width}px;
+          margin-right: -$msk-vertical-navigation-dense-width;
         }
 
         /* Opened */
@@ -38,13 +38,13 @@ msk-vertical-navigation {
         /* Aside wrapper */
         .msk-vertical-navigation-aside-wrapper {
           left: auto;
-          right: #{$msk-vertical-navigation-dense-width}px;
+          right: $msk-vertical-navigation-dense-width;
         }
 
         &.msk-vertical-navigation-hover {
           .msk-vertical-navigation-aside-wrapper {
             left: auto;
-            right: #{$msk-vertical-navigation-width}px;
+            right: $msk-vertical-navigation-width;
           }
         }
       }
@@ -60,9 +60,9 @@ msk-vertical-navigation {
         msk-vertical-navigation-group-item {
           .msk-vertical-navigation-item-wrapper {
             .msk-vertical-navigation-item {
-              width: #{$msk-vertical-navigation-width}px - 24px;
-              min-width: #{$msk-vertical-navigation-width}px - 24px;
-              max-width: #{$msk-vertical-navigation-width}px - 24px;
+              width: $msk-vertical-navigation-width - 24px;
+              min-width: $msk-vertical-navigation-width - 24px;
+              max-width: $msk-vertical-navigation-width - 24px;
 
               .msk-vertical-navigation-item-arrow,
               .msk-vertical-navigation-item-badge,
@@ -124,13 +124,13 @@ msk-vertical-navigation {
 
     /* Aside wrapper */
     .msk-vertical-navigation-aside-wrapper {
-      left: #{$msk-vertical-navigation-dense-width}px;
+      left: $msk-vertical-navigation-dense-width;
     }
 
     /* Hover */
     &.msk-vertical-navigation-hover {
       .msk-vertical-navigation-wrapper {
-        width: #{$msk-vertical-navigation-width}px;
+        width: $msk-vertical-navigation-width;
 
         .msk-vertical-navigation-content {
           .msk-vertical-navigation-item-wrapper {
@@ -148,7 +148,7 @@ msk-vertical-navigation {
       }
 
       .msk-vertical-navigation-aside-wrapper {
-        left: #{$msk-vertical-navigation-width}px;
+        left: $msk-vertical-navigation-width;
       }
     }
   }
@@ -164,7 +164,7 @@ msk-vertical-navigation {
           /* Side mode */
           &.msk-vertical-navigation-mode-side {
             margin-left: unset;
-            margin-right: -#{$msk-vertical-navigation-dense-width}px;
+            margin-right: -$msk-vertical-navigation-dense-width;
           }
 
           /* Opened */
@@ -179,7 +179,7 @@ msk-vertical-navigation {
           /* Side mode */
           &.msk-vertical-navigation-mode-side {
             margin-right: unset;
-            margin-left: -#{$msk-vertical-navigation-dense-width}px;
+            margin-left: -$msk-vertical-navigation-dense-width;
           }
 
           /* Opened */
@@ -190,13 +190,13 @@ msk-vertical-navigation {
           /* Aside wrapper */
           .msk-vertical-navigation-aside-wrapper {
             right: auto;
-            left: #{$msk-vertical-navigation-dense-width}px;
+            left: $msk-vertical-navigation-dense-width;
           }
 
           &.msk-vertical-navigation-hover {
             .msk-vertical-navigation-aside-wrapper {
               right: auto;
-              left: #{$msk-vertical-navigation-width}px;
+              left: $msk-vertical-navigation-width;
             }
           }
         }
@@ -205,14 +205,14 @@ msk-vertical-navigation {
       /* Aside wrapper */
       .msk-vertical-navigation-aside-wrapper {
         left: unset;
-        right: #{$msk-vertical-navigation-dense-width}px;
+        right: $msk-vertical-navigation-dense-width;
       }
 
       /* Hover */
       &.msk-vertical-navigation-hover {
         .msk-vertical-navigation-aside-wrapper {
           left: unset;
-          right: #{$msk-vertical-navigation-width}px;
+          right: $msk-vertical-navigation-width;
         }
       }
     }
