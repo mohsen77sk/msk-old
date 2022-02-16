@@ -209,6 +209,32 @@
       },
       "tags": []
     },
+    "client-shared-services-confirmation": {
+      "projectType": "library",
+      "root": "libs/client/shared/services/confirmation",
+      "sourceRoot": "libs/client/shared/services/confirmation/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/services/confirmation"],
+          "options": {
+            "jestConfig": "libs/client/shared/services/confirmation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/services/confirmation/src/**/*.ts",
+              "libs/client/shared/services/confirmation/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-services-media-watcher": {
       "projectType": "library",
       "root": "libs/client/shared/services/media-watcher",

@@ -522,8 +522,6 @@ export class MskVerticalNavigationComponent
    * @returns direction
    */
   checkDirection(): string {
-    console.log(this._document.body.getAttribute('dir'));
-
     return this._document.body.getAttribute('dir');
   }
 
