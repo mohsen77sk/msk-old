@@ -433,22 +433,10 @@ const config = {
   },
   plugins: [
     // Tailwind plugins
-    require(path.resolve(
-      __dirname,
-      'libs/client/shared/styles/src/tailwind/plugins/extract-config'
-    )),
-    require(path.resolve(
-      __dirname,
-      'libs/client/shared/styles/src/tailwind/plugins/utilities'
-    )),
-    require(path.resolve(
-      __dirname,
-      'libs/client/shared/styles/src/tailwind/plugins/icon-size'
-    )),
-    require(path.resolve(
-      __dirname,
-      'libs/client/shared/styles/src/tailwind/plugins/theming'
-    ))({
+    require(path.resolve(__dirname, './plugins/extract-config')),
+    require(path.resolve(__dirname, './plugins/utilities')),
+    require(path.resolve(__dirname, './plugins/icon-size')),
+    require(path.resolve(__dirname, './plugins/theming'))({
       themes,
     }),
     // Other third party and/or custom plugins

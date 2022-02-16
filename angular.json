@@ -339,6 +339,13 @@
       },
       "tags": []
     },
+    "tailwind-preset": {
+      "projectType": "library",
+      "root": "libs/client/shared/tailwind-preset",
+      "sourceRoot": "libs/client/shared/tailwind-preset",
+      "architect": {},
+      "tags": []
+    },
     "client-shared-ui-alert": {
       "projectType": "library",
       "root": "libs/client/shared/ui/alert",
