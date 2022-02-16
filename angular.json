@@ -287,32 +287,6 @@
       },
       "tags": []
     },
-    "client-shared-services-tailwind": {
-      "projectType": "library",
-      "root": "libs/client/shared/services/tailwind",
-      "sourceRoot": "libs/client/shared/services/tailwind/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/tailwind"],
-          "options": {
-            "jestConfig": "libs/client/shared/services/tailwind/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/shared/services/tailwind/src/**/*.ts",
-              "libs/client/shared/services/tailwind/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
     "client-shared-services-utils": {
       "projectType": "library",
       "root": "libs/client/shared/services/utils",
@@ -1002,6 +976,13 @@
           }
         }
       },
+      "tags": []
+    },
+    "tailwind-preset": {
+      "projectType": "library",
+      "root": "libs/client/shared/tailwind-preset",
+      "sourceRoot": "libs/client/shared/tailwind-preset",
+      "architect": {},
       "tags": []
     },
     "web-app": {

@@ -116,7 +116,9 @@ const theming = plugin.withOptions(
       // -----------------------------------------------------------------------------------------------------
       const mapVariableColors = _.fromPairs(
         _.map(options.themes, (theme, themeName) => [
-          themeName === 'default' ? 'body' : `body.theme-${e(themeName)}`,
+          themeName === 'default'
+            ? 'body, .theme-default'
+            : `body.theme-${e(themeName)}`,
           _.fromPairs(
             _.flatten(
               _.map(
@@ -267,7 +269,6 @@ const theming = plugin.withOptions(
           themes: generateThemesObject(options.themes),
         },
       },
-      variants: {},
     };
   }
 );

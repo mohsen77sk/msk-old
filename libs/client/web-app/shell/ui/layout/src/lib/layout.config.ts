@@ -1,3 +1,4 @@
+import { LayoutScreens, LayoutThemes } from '..';
 import {
   LayoutDirection,
   LayoutScheme,
@@ -12,7 +13,9 @@ import {
 export interface LayoutConfig {
   language: string;
   direction: LayoutDirection;
+  screens: LayoutScreens;
   scheme: LayoutScheme;
+  themes: LayoutThemes;
   theme: LayoutTheme;
   type: LayoutType;
 }
@@ -28,7 +31,31 @@ export interface LayoutConfig {
 export const layoutConfig: LayoutConfig = {
   language: 'en',
   direction: 'ltr',
-  scheme: 'light',
-  theme: 'default',
   type: 'classic',
+  scheme: 'light',
+  screens: {
+    sm: '600px',
+    md: '960px',
+    lg: '1280px',
+    xl: '1440px',
+  },
+  theme: 'theme-default',
+  themes: [
+    {
+      id: 'theme-default',
+      name: 'Default',
+    },
+    {
+      id: 'theme-teal',
+      name: 'Teal',
+    },
+    {
+      id: 'theme-purple',
+      name: 'Purple',
+    },
+    {
+      id: 'theme-amber',
+      name: 'Amber',
+    },
+  ],
 };

@@ -12,7 +12,6 @@ import { DOCUMENT } from '@angular/common';
 
 import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
-import { MskTailwindService } from '@msk/client/shared/services/tailwind';
 
 import {
   LayoutType,
@@ -34,11 +33,9 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
   //
   layoutConfig!: LayoutConfig;
   layoutDirection!: LayoutDirection;
-  layoutScheme!: 'dark' | 'light';
-  layoutTheme!: string;
+  layoutScheme!: LayoutScheme;
+  layoutTheme!: LayoutTheme;
   layoutType!: LayoutType;
-
-  themes: [string, any][] = [];
 
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
@@ -51,8 +48,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
     private _router: Router,
     @Inject(DOCUMENT) private _document: any,
     private _mskConfigService: MskConfigService,
-    private _mskMediaWatcherService: MskMediaWatcherService,
-    private _mskTailwindConfigService: MskTailwindService
+    private _mskMediaWatcherService: MskMediaWatcherService
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -63,11 +59,6 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
-    // Get the themes
-    this._mskTailwindConfigService.tailwindConfig$.subscribe((config) => {
-      this.themes = Object.entries(config.themes);
-    });
-
     // Set the theme and scheme based on the configuration
     combineLatest([
       this._mskConfigService.config$,
@@ -278,7 +269,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
     });
 
     // Add class name for the currently selected theme
-    this._document.body.classList.add(`theme-${this.layoutTheme}`);
+    this._document.body.classList.add(this.layoutTheme);
   }
 
   /**

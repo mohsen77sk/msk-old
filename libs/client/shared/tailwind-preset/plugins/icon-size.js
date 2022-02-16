@@ -1,12 +1,10 @@
 const plugin = require('tailwindcss/plugin');
 
-const iconSize = plugin(
-  ({ addUtilities, theme, e, variants }) => {
-    const values = theme('iconSize');
-
-    addUtilities(
-      Object.entries(values).map(([key, value]) => ({
-        [`.${e(`icon-size-${key}`)}`]: {
+module.exports = plugin(
+  ({ matchUtilities, theme }) => {
+    matchUtilities(
+      {
+        'icon-size': (value) => ({
           width: value,
           height: value,
           minWidth: value,
@@ -17,9 +15,11 @@ const iconSize = plugin(
             width: value,
             height: value,
           },
-        },
-      })),
-      variants('iconSize')
+        }),
+      },
+      {
+        values: theme('iconSize'),
+      }
     );
   },
   {
@@ -43,10 +43,5 @@ const iconSize = plugin(
         24: '6rem',
       },
     },
-    variants: {
-      iconSize: ['responsive'],
-    },
   }
 );
-
-module.exports = iconSize;

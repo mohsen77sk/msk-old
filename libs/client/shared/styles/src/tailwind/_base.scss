@@ -65,7 +65,7 @@
   body,
   .dark,
   .light {
-    @apply #{'!important'} text-default bg-default;
+    @apply text-default bg-default #{'!important'};
   }
 
   *,
@@ -80,7 +80,7 @@
   }
 
   [disabled] * {
-    @apply #{'!important'} text-disabled;
+    @apply text-disabled #{'!important'};
   }
 
   /* Print styles */

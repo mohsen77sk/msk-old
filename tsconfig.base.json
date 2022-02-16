@@ -52,9 +52,6 @@
       "@msk/client/shared/services/splash-screen": [
         "libs/client/shared/services/splash-screen/src/index.ts"
       ],
-      "@msk/client/shared/services/tailwind": [
-        "libs/client/shared/services/tailwind/src/index.ts"
-      ],
       "@msk/client/shared/services/utils": [
         "libs/client/shared/services/utils/src/index.ts"
       ],

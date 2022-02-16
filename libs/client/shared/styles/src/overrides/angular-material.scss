@@ -6,7 +6,7 @@
 /*  @ Overlay
 /* ----------------------------------------------------------------------------------------------------- */
 .msk-backdrop-on-mobile {
-  @apply #{'!important'} bg-black bg-opacity-60 sm:bg-transparent;
+  @apply bg-black bg-opacity-60 sm:bg-transparent #{!important};
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -21,7 +21,7 @@
     margin-bottom: 24px;
     border-radius: 8px !important;
     transition: box-shadow 225ms cubic-bezier(0.4, 0, 0.2, 1);
-    @apply #{'!important'} shadow;
+    @apply shadow #{!important};
 
     &:last-child {
       margin-bottom: 0;
@@ -29,7 +29,7 @@
 
     &.mat-expanded,
     &:hover {
-      @apply #{'!important'} shadow-lg;
+      @apply shadow-lg #{!important};
     }
 
     &:not(.mat-expanded) {
@@ -69,7 +69,7 @@
 
     .mat-expansion-panel-body {
       line-height: 1.7;
-      @apply #{'!important'} text-secondary;
+      @apply text-secondary #{!important};
     }
   }
 }
@@ -165,7 +165,7 @@
 
   /* Add hover and focus style on all buttons */
   .mat-button-focus-overlay {
-    @apply #{'!important'} bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5;
+    @apply bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5 #{!important};
   }
 
   /* On palette colored buttons, use a darker color */
@@ -207,47 +207,47 @@
   /* Apply primary color */
   &.mat-primary:not(.mat-button-disabled) {
     .mat-icon {
-      @apply #{'!important'} text-primary;
+      @apply text-primary #{!important};
     }
   }
 
   /* Apply accent color */
   &.mat-accent:not(.mat-button-disabled) {
     .mat-icon {
-      @apply #{'!important'} text-accent;
+      @apply text-accent #{!important};
     }
   }
 
   /* Apply warn color */
   &.mat-warn:not(.mat-button-disabled) {
     .mat-icon {
-      @apply #{'!important'} text-warn;
+      @apply text-warn #{!important};
     }
   }
 
   /* Add hover and focus styles */
   .mat-button-focus-overlay {
-    @apply #{'!important'} bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5;
+    @apply bg-gray-400 bg-opacity-20 dark:bg-black dark:bg-opacity-5 #{!important};
   }
 
   /* On primary colored buttons, use the primary color as focus overlay */
   &.mat-primary:not(.mat-button-disabled) {
     .mat-button-focus-overlay {
-      @apply #{'!important'} bg-primary;
+      @apply bg-primary #{!important};
     }
   }
 
   /* On accent colored buttons, use the accent color as focus overlay */
   &.mat-accent:not(.mat-button-disabled) {
     .mat-button-focus-overlay {
-      @apply #{'!important'} bg-accent;
+      @apply bg-accent #{!important};
     }
   }
 
   /* On warn colored buttons, use the warn color as focus overlay */
   &.mat-warn:not(.mat-button-disabled) {
     .mat-button-focus-overlay {
-      @apply #{'!important'} bg-warn;
+      @apply bg-warn #{!important};
     }
   }
 
@@ -290,11 +290,11 @@
 .mat-stroked-button {
   /* Border color */
   &:not(.mat-button-disabled) {
-    @apply #{'!important'} border-gray-300 dark:border-gray-500;
+    @apply border-gray-300 dark:border-gray-500 #{!important};
   }
 
   &.mat-button-disabled {
-    @apply #{'!important'} border-gray-200 dark:border-gray-600;
+    @apply border-gray-200 dark:border-gray-600 #{!important};
   }
 }
 
@@ -319,7 +319,7 @@
 
     &.mat-button-toggle-checked {
       .mat-button-toggle-label-content {
-        @apply #{'!important'} text-default;
+        @apply text-default #{!important};
       }
     }
 
@@ -399,7 +399,7 @@
     .mat-form-field-wrapper {
       /* Border color */
       .mat-form-field-flex {
-        @apply #{'!important'} border-warn dark:border-warn;
+        @apply border-warn dark:border-warn #{!important};
       }
     }
   }
@@ -409,7 +409,7 @@
     .mat-form-field-wrapper {
       /* Background color */
       .mat-form-field-flex {
-        @apply #{'!important'} bg-card dark:bg-card;
+        @apply bg-card dark:bg-card #{!important};
       }
     }
   }
@@ -419,7 +419,7 @@
     .mat-form-field-wrapper {
       /* Border color */
       .mat-form-field-flex {
-        @apply #{'!important'} border-primary dark:border-primary;
+        @apply border-primary dark:border-primary #{!important};
       }
     }
   }
@@ -479,7 +479,7 @@
       border-radius: 6px;
       padding: 0 16px;
       border-width: 1px;
-      @apply #{'!important'} border-gray-300 bg-white shadow-sm dark:border-gray-500 dark:bg-black dark:bg-opacity-5;
+      @apply border-gray-300 bg-white shadow-sm dark:border-gray-500 dark:bg-black dark:bg-opacity-5 #{!important};
 
       .mat-form-field-prefix {
         > .mat-icon {
@@ -526,7 +526,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        @apply #{'!important'} text-hint;
+        @apply text-hint #{!important};
 
         .mat-icon-button {
           width: 40px;
@@ -569,7 +569,7 @@
           &:focus {
             .mat-select-trigger {
               .mat-select-value {
-                @apply #{'!important'} text-primary;
+                @apply text-primary #{!important};
               }
 
               .mat-select-arrow-wrapper {
@@ -603,7 +603,7 @@
 
               .mat-select-arrow {
                 min-height: 0;
-                @apply #{'!important'} text-gray-500 dark:text-gray-400;
+                @apply text-gray-500 dark:text-gray-400 #{!important};
               }
             }
           }
@@ -693,7 +693,7 @@
             backface-visibility: hidden;
             transition: none;
             font-weight: 500;
-            @apply #{'!important'} text-default;
+            @apply text-default #{!important};
           }
         }
       }
@@ -725,7 +725,7 @@
       }
 
       .mat-hint {
-        @apply #{'!important'} text-hint;
+        @apply text-hint #{!important};
       }
     }
   }
@@ -950,7 +950,7 @@
 
         .mat-form-field-prefix,
         .mat-form-field-suffix {
-          @apply #{'!important'} bg-default border-gray-300 dark:border-gray-500;
+          @apply bg-default border-gray-300 dark:border-gray-500 #{!important};
         }
       }
     }
@@ -1206,7 +1206,7 @@
   .mat-form-field-wrapper {
     .mat-form-field-flex {
       .mat-form-field-outline {
-        @apply #{'!important'} text-gray-300 dark:text-gray-500;
+        @apply text-gray-300 dark:text-gray-500 #{!important};
       }
     }
   }
@@ -1221,7 +1221,7 @@
 .cdk-program-focused .mat-calendar-body-active {
   & > .mat-calendar-body-cell-content {
     &:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-      @apply #{'!important'} bg-primary bg-opacity-30;
+      @apply bg-primary bg-opacity-30 #{!important};
     }
   }
 }
@@ -1248,22 +1248,22 @@
 .mat-input-element {
   &::placeholder {
     transition: none !important;
-    @apply #{'!important'} text-hint;
+    @apply text-hint #{!important};
   }
 
   &::-moz-placeholder {
     transition: none !important;
-    @apply #{'!important'} text-hint;
+    @apply text-hint #{!important};
   }
 
   &::-webkit-input-placeholder {
     transition: none !important;
-    @apply #{'!important'} text-hint;
+    @apply text-hint #{!important};
   }
 
   &:-ms-input-placeholder {
     transition: none !important;
-    @apply #{'!important'} text-hint;
+    @apply text-hint #{!important};
   }
 }
 
@@ -1272,19 +1272,19 @@
   .mat-input-element {
     /* Placeholder color */
     &::placeholder {
-      @apply #{'!important'} text-warn;
+      @apply text-warn #{!important};
     }
 
     &::-moz-placeholder {
-      @apply #{'!important'} text-warn;
+      @apply text-warn #{!important};
     }
 
     &::-webkit-input-placeholder {
-      @apply #{'!important'} text-warn;
+      @apply text-warn #{!important};
     }
 
     &:-ms-input-placeholder {
-      @apply #{'!important'} text-warn;
+      @apply text-warn #{!important};
     }
   }
 }
@@ -1394,7 +1394,7 @@
 
   .mat-select-placeholder {
     transition: none !important;
-    @apply #{'!important'} text-hint;
+    @apply text-hint #{!important};
   }
 
   .mat-select-trigger {
@@ -1434,7 +1434,7 @@
   .mat-select {
     /* Placeholder color */
     .mat-select-placeholder {
-      @apply #{'!important'} text-warn;
+      @apply text-warn #{!important};
     }
   }
 }
@@ -1500,8 +1500,8 @@
             @apply text-secondary;
 
             &.mat-tab-label-active {
-              @apply #{'!important'} bg-gray-700 bg-opacity-10 dark:bg-gray-50 dark:bg-opacity-10;
-              @apply #{'!important'} text-default;
+              @apply bg-gray-700 bg-opacity-10 dark:bg-gray-50 dark:bg-opacity-10 #{!important};
+              @apply text-default #{!important};
             }
 
             + .mat-tab-label {
@@ -1544,69 +1544,69 @@ textarea.mat-input-element {
   /* Apply primary contrast color */
   &.mat-primary {
     .mat-icon {
-      @apply #{'!important'} text-on-primary;
+      @apply text-on-primary #{!important};
     }
 
     .text-secondary {
-      @apply #{'!important'} text-on-primary text-opacity-60;
+      @apply text-on-primary text-opacity-60 #{!important};
     }
 
     .text-hint {
-      @apply #{'!important'} text-on-primary text-opacity-38;
+      @apply text-on-primary text-opacity-38 #{!important};
     }
 
     .text-disabled {
-      @apply #{'!important'} text-on-primary text-opacity-38;
+      @apply text-on-primary text-opacity-38 #{!important};
     }
 
     .divider {
-      @apply #{'!important'} text-on-primary text-opacity-12;
+      @apply text-on-primary text-opacity-12 #{!important};
     }
   }
 
   /* Apply accent contrast color */
   &.mat-accent {
     .mat-icon {
-      @apply #{'!important'} text-on-accent;
+      @apply text-on-accent #{!important};
     }
 
     .text-secondary {
-      @apply #{'!important'} text-on-accent text-opacity-60;
+      @apply text-on-accent text-opacity-60 #{!important};
     }
 
     .text-hint {
-      @apply #{'!important'} text-on-accent text-opacity-38;
+      @apply text-on-accent text-opacity-38 #{!important};
     }
 
     .text-disabled {
-      @apply #{'!important'} text-on-accent text-opacity-38;
+      @apply text-on-accent text-opacity-38 #{!important};
     }
 
     .divider {
-      @apply #{'!important'} text-on-accent text-opacity-12;
+      @apply text-on-accent text-opacity-12 #{!important};
     }
   }
 
   /* Apply warn contrast color */
   &.mat-warn {
     .mat-icon {
-      @apply #{'!important'} text-on-warn;
+      @apply text-on-warn #{!important};
     }
 
     .text-secondary {
-      @apply #{'!important'} text-on-warn text-opacity-60;
+      @apply text-on-warn text-opacity-60 #{!important};
     }
 
     .text-hint {
-      @apply #{'!important'} text-on-warn text-opacity-38;
+      @apply text-on-warn text-opacity-38 #{!important};
     }
 
     .text-disabled {
-      @apply #{'!important'} text-on-warn text-opacity-38;
+      @apply text-on-warn text-opacity-38 #{!important};
     }
 
     .divider {
-      @apply #{'!important'} text-on-warn text-opacity-12;
+      @apply text-on-warn text-opacity-12 #{!important};
     }
   }
 }

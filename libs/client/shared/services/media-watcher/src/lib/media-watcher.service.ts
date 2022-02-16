@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Observable, ReplaySubject, map, switchMap } from 'rxjs';
-import { MskTailwindService } from '@msk/client/shared/services/tailwind';
+import { fromPairs } from 'lodash-es';
+import { MskConfigService } from '@msk/client/shared/services/config';
 
 @Injectable()
 export class MskMediaWatcherService {
@@ -17,44 +18,50 @@ export class MskMediaWatcherService {
    */
   constructor(
     private _breakpointObserver: BreakpointObserver,
-    private _tailwindConfigService: MskTailwindService
+    private _mskConfigService: MskConfigService
   ) {
-    this._tailwindConfigService.tailwindConfig$
+    this._mskConfigService.config$
       .pipe(
-        switchMap((config) =>
-          this._breakpointObserver
-            .observe(Object.values(config.breakpoints))
-            .pipe(
-              map((state) => {
-                // Prepare the observable values and set their defaults
-                const matchingAliases: string[] = [];
-                const matchingQueries: any = {};
+        map((config) =>
+          fromPairs(
+            Object.entries(config.screens).map(([alias, screen]) => [
+              alias,
+              `(min-width: ${screen})`,
+            ])
+          )
+        ),
+        switchMap((screens) =>
+          this._breakpointObserver.observe(Object.values(screens)).pipe(
+            map((state) => {
+              // Prepare the observable values and set their defaults
+              const matchingAliases: string[] = [];
+              const matchingQueries: any = {};
 
-                // Get the matching breakpoints and use them to fill the subject
-                const matchingBreakpoints =
-                  Object.entries(state.breakpoints).filter(
-                    ([query, matches]) => matches
-                  ) ?? [];
-                for (const [query] of matchingBreakpoints) {
-                  // Find the alias of the matching query
-                  const matchingAlias = Object.entries(config.breakpoints).find(
-                    ([alias, q]) => q === query
-                  )?.[0];
+              // Get the matching breakpoints and use them to fill the subject
+              const matchingBreakpoints =
+                Object.entries(state.breakpoints).filter(
+                  ([query, matches]) => matches
+                ) ?? [];
+              for (const [query] of matchingBreakpoints) {
+                // Find the alias of the matching query
+                const matchingAlias = Object.entries(screens).find(
+                  ([alias, q]) => q === query
+                )?.[0];
 
-                  // Add the matching query to the observable values
-                  if (matchingAlias) {
-                    matchingAliases.push(matchingAlias);
-                    matchingQueries[matchingAlias] = query;
-                  }
+                // Add the matching query to the observable values
+                if (matchingAlias) {
+                  matchingAliases.push(matchingAlias);
+                  matchingQueries[matchingAlias] = query;
                 }
+              }
 
-                // Execute the observable
-                this._onMediaChange.next({
-                  matchingAliases,
-                  matchingQueries,
-                });
-              })
-            )
+              // Execute the observable
+              this._onMediaChange.next({
+                matchingAliases,
+                matchingQueries,
+              });
+            })
+          )
         )
       )
       .subscribe();

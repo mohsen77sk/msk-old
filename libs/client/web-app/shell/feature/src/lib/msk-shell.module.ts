@@ -22,7 +22,6 @@ import { MskConfigModule } from '@msk/client/shared/services/config';
 import { MskConfirmationModule } from '@msk/client/shared/services/confirmation';
 import { MskMediaWatcherModule } from '@msk/client/shared/services/media-watcher';
 import { MskSplashScreenModule } from '@msk/client/shared/services/splash-screen';
-import { MskTailwindConfigModule } from '@msk/client/shared/services/tailwind';
 import { MskUtilsModule } from '@msk/client/shared/services/utils';
 
 const routerConfig: ExtraOptions = {
@@ -37,7 +36,6 @@ const routerConfig: ExtraOptions = {
     MskConfirmationModule,
     MskMediaWatcherModule,
     MskSplashScreenModule,
-    MskTailwindConfigModule,
     MskUtilsModule,
 
     // Layout module of your application
