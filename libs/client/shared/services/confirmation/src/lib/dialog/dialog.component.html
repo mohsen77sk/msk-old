@@ -15,7 +15,7 @@
     <!-- Icon -->
     <ng-container *ngIf="data.icon?.show">
       <div
-        class="flex h-10 w-10 flex-0 items-center justify-center rounded-full"
+        class="flex-0 flex h-10 w-10 items-center justify-center rounded-full"
         [ngClass]="{
           'bg-primary-100 text-primary-600 dark:bg-primary-600 dark:text-primary-50':
             data.icon?.color === 'primary',
@@ -41,7 +41,7 @@
 
     <ng-container *ngIf="data.title || data.message">
       <div
-        class="z-0 mt-4 flex flex-col items-center space-y-1 text-center sm:mt-0 sm:items-start sm:px-4 sm:text-justify"
+        class="z-0 mt-4 flex flex-col items-center space-y-1 text-center sm:mt-0 sm:items-start sm:px-4 ltr:sm:text-left rtl:sm:text-right"
       >
         <!-- Title -->
         <ng-container *ngIf="data.title">
