@@ -73,6 +73,9 @@
       "@msk/client/shared/ui/navigation": [
         "libs/client/shared/ui/navigation/src/index.ts"
       ],
+      "@msk/client/shared/ui/password-strength-meter": [
+        "libs/client/shared/ui/password-strength-meter/src/index.ts"
+      ],
       "@msk/client/shared/validators": [
         "libs/client/shared/validators/src/index.ts"
       ],

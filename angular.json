@@ -313,13 +313,6 @@
       },
       "tags": []
     },
-    "tailwind-preset": {
-      "projectType": "library",
-      "root": "libs/client/shared/tailwind-preset",
-      "sourceRoot": "libs/client/shared/tailwind-preset",
-      "architect": {},
-      "tags": []
-    },
     "client-shared-ui-alert": {
       "projectType": "library",
       "root": "libs/client/shared/ui/alert",
@@ -470,6 +463,32 @@
             "lintFilePatterns": [
               "libs/client/shared/ui/navigation/src/**/*.ts",
               "libs/client/shared/ui/navigation/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-shared-ui-password-strength-meter": {
+      "projectType": "library",
+      "root": "libs/client/shared/ui/password-strength-meter",
+      "sourceRoot": "libs/client/shared/ui/password-strength-meter/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/ui/password-strength-meter"],
+          "options": {
+            "jestConfig": "libs/client/shared/ui/password-strength-meter/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/ui/password-strength-meter/src/**/*.ts",
+              "libs/client/shared/ui/password-strength-meter/src/**/*.html"
             ]
           }
         }
