@@ -1,8 +1,8 @@
 <div class="flex min-w-0 flex-auto flex-col items-center sm:justify-center">
   <div
-    class="w-full py-8 px-4 sm:bg-card sm:w-auto sm:rounded-2xl sm:p-12 sm:shadow"
+    class="sm:bg-card w-full py-8 px-4 sm:w-auto sm:rounded-2xl sm:p-12 sm:shadow"
   >
-    <div class="mx-auto w-full max-w-80 sm:mx-0 sm:w-80">
+    <div class="max-w-80 mx-auto w-full sm:mx-0 sm:w-80">
       <!-- Logo -->
       <div class="mx-auto w-12">
         <img src="assets/images/logo/logo.svg" />
@@ -33,11 +33,11 @@
       </div>
 
       <!-- Form footer -->
-      <div class="text-secondary mt-8 text-center text-md font-medium">
+      <div class="text-secondary text-md mt-8 text-center font-medium">
         <ng-container *transloco="let t">
           <span>{{ t('auth.go-to') }}</span>
           <a
-            class="ml-1 text-primary-500 hover:underline"
+            class="text-primary-500 ml-1 hover:underline"
             [routerLink]="['/sign-in']"
           >
             {{ t('auth.sign-in') }}

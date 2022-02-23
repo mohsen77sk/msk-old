@@ -1,8 +1,8 @@
 <div class="flex min-w-0 flex-auto flex-col items-center sm:justify-center">
   <div
-    class="w-full py-8 px-4 sm:bg-card sm:w-auto sm:rounded-2xl sm:p-12 sm:shadow"
+    class="sm:bg-card w-full py-8 px-4 sm:w-auto sm:rounded-2xl sm:p-12 sm:shadow"
   >
-    <div class="mx-auto w-full max-w-80 sm:mx-0 sm:w-80">
+    <div class="max-w-80 mx-auto w-full sm:mx-0 sm:w-80">
       <!-- Logo -->
       <div class="w-12">
         <img src="assets/images/logo/logo.svg" />
@@ -21,7 +21,7 @@
           </ng-container>
         </div>
         <a
-          class="mx-1 text-primary-500 hover:underline"
+          class="text-primary-500 mx-1 hover:underline"
           [routerLink]="['/sign-up']"
         >
           <ng-container *transloco="let t">
@@ -116,7 +116,7 @@
             </ng-container>
           </mat-checkbox>
           <a
-            class="text-md font-medium text-primary-500 hover:underline"
+            class="text-md text-primary-500 font-medium hover:underline"
             [routerLink]="['/forgot-password']"
           >
             <ng-container *transloco="let t">
