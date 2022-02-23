@@ -5,6 +5,15 @@ import zxcvbnCommonPackage from '@zxcvbn-ts/language-common';
 import zxcvbnEnPackage from '@zxcvbn-ts/language-en';
 import zxcvbnFaPackage from './language-fa';
 
+import { minLengthMatcher } from './matcher/minLengthMatcher';
+
+type LOCALE_TYPE = 'en' | 'fa';
+
+const Locale = {
+  en: zxcvbnEnPackage.translations,
+  fa: zxcvbnFaPackage.translations,
+};
+
 @Injectable()
 export class MskPasswordStrengthMeterService {
   /**
@@ -26,8 +35,8 @@ export class MskPasswordStrengthMeterService {
    *
    *  @param password
    */
-  score(password: string): number {
-    const result = this._checkPassword(password);
+  score(password: string, language?: string): number {
+    const result = this._checkPassword(password, language);
     return result.score;
   }
 
@@ -37,11 +46,14 @@ export class MskPasswordStrengthMeterService {
    *
    * @param password
    */
-  scoreWithFeedback(password: string): {
+  scoreWithFeedback(
+    password: string,
+    language?: string
+  ): {
     score: number;
     feedback: { suggestions: string[]; warning: string };
   } {
-    const result = this._checkPassword(password);
+    const result = this._checkPassword(password, language);
     return { score: result.score, feedback: result.feedback };
   }
 
@@ -55,26 +67,21 @@ export class MskPasswordStrengthMeterService {
    * @param password
    * @private
    */
-  private _checkPassword(password: string): ZxcvbnResult {
+  private _checkPassword(
+    password: string,
+    language: string = 'en'
+  ): ZxcvbnResult {
     // Set option
-    this._setOption();
-    // Return result check password
-    return zxcvbn(password);
-  }
-
-  /**
-   * Set option to check password
-   *
-   * @private
-   */
-  private _setOption(): void {
     zxcvbnOptions.setOptions({
-      translations: zxcvbnEnPackage.translations,
-      graphs: zxcvbnCommonPackage.adjacencyGraphs,
+      translations: Locale[language as LOCALE_TYPE],
       dictionary: {
         ...zxcvbnCommonPackage.dictionary,
         ...zxcvbnEnPackage.dictionary,
       },
     });
+    // Add min length matcher
+    zxcvbnOptions.addMatcher('minLength', minLengthMatcher);
+    // Return result check password
+    return zxcvbn(password);
   }
 }

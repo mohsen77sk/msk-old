@@ -108,7 +108,7 @@ export class MskLoadingBarService {
    * @param status
    * @param url
    */
-  _setLoadingStatus(status: boolean, url: string): void {
+  setLoadingStatus(status: boolean, url: string): void {
     // Return if the url was not provided
     if (!url) {
       console.error('The request URL must be provided!');

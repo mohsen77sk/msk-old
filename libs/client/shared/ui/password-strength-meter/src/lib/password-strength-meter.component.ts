@@ -15,6 +15,7 @@ import { MskPasswordStrengthMeterService } from './password-strength-meter.servi
   styleUrls: ['./password-strength-meter.component.scss'],
 })
 export class MskPasswordStrengthMeterComponent implements OnChanges {
+  @Input() language!: string;
   @Input() password!: string;
   @Input() enableFeedback = false;
   @Input() colors: string[] = [];
@@ -90,13 +91,15 @@ export class MskPasswordStrengthMeterComponent implements OnChanges {
     } else {
       if (this.enableFeedback) {
         const result = this._mskPasswordStrengthMeterService.scoreWithFeedback(
-          this.password
+          this.password,
+          this.language
         );
         this.passwordStrength = result.score;
         this.feedback = result.feedback;
       } else {
         this.passwordStrength = this._mskPasswordStrengthMeterService.score(
-          this.password
+          this.password,
+          this.language
         );
         this.feedback = null;
       }

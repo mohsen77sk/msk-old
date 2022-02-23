@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
+import { MskConfigService } from '@msk/client/shared/services/config';
 import { AlertType } from '@msk/client/shared/ui/alert';
 import { MskValidators } from '@msk/client/shared/validators';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'msk-reset-password',
@@ -20,11 +22,17 @@ export class ResetPasswordComponent implements OnInit {
     type: 'success',
     message: '',
   };
+  layoutLanguage!: any;
+
+  private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   /**
    * Constructor
    */
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _mskConfigService: MskConfigService
+  ) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks
@@ -44,6 +52,14 @@ export class ResetPasswordComponent implements OnInit {
         validators: MskValidators.mustMatch('password', 'passwordConfirm'),
       }
     );
+
+    // Subscribe to config changes
+    this._mskConfigService.config$
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((config: any) => {
+        // Store the layoutLanguage
+        this.layoutLanguage = config.language;
+      });
   }
 
   // -----------------------------------------------------------------------------------------------------

@@ -38,12 +38,12 @@ export class MskLoadingBarInterceptor implements HttpInterceptor {
     }
 
     // Set the loading status to true
-    this._mskLoadingBarService._setLoadingStatus(true, req.url);
+    this._mskLoadingBarService.setLoadingStatus(true, req.url);
 
     return next.handle(req).pipe(
       finalize(() => {
         // Set the status to false if there are any errors or the request is completed
-        this._mskLoadingBarService._setLoadingStatus(false, req.url);
+        this._mskLoadingBarService.setLoadingStatus(false, req.url);
       })
     );
   }
