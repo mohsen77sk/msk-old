@@ -23,6 +23,7 @@ import { Subject, takeUntil } from 'rxjs';
 @Component({
   selector: 'messages',
   templateUrl: './messages.component.html',
+  styleUrls: ['./messages.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'messages',
