@@ -86,7 +86,7 @@ const config = {
         'spin-slow': 'spin 3s linear infinite',
       },
       colors: {
-        gray: colors.gray,
+        gray: colors.zinc,
       },
       flex: {
         0: '0 0 auto',
@@ -225,7 +225,7 @@ const config = {
             },
             pre: {
               color: theme('colors.white'),
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.zinc.800'),
             },
             thead: {
               color: 'var(--color-text-default)',

@@ -5,6 +5,10 @@
 /* ----------------------------------------------------------------------------------------------------- */
 /*  @ Overlay
 /* ----------------------------------------------------------------------------------------------------- */
+.msk-backdrop-none {
+  @apply bg-transparent #{!important};
+}
+
 .msk-backdrop-on-mobile {
   @apply bg-black bg-opacity-60 sm:bg-transparent #{!important};
 }
