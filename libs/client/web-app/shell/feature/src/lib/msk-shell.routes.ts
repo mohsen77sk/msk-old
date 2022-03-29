@@ -1,5 +1,7 @@
 import { Route } from '@angular/router';
 
+import { AuthGuard } from '@msk/client/web-app/shell/core/auth';
+import { NoAuthGuard } from '@msk/client/web-app/shell/core/auth';
 import { MskLayoutComponent } from '@msk/client/web-app/shell/ui/layout';
 
 import { InitialDataResolver } from './msk-shell.resolvers';
@@ -7,6 +9,17 @@ import { InitialDataResolver } from './msk-shell.resolvers';
 export const mskShellRoutes: Route[] = [
   // Redirect empty path to '/dashboard'
   { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+
+  // Redirect signed in user to the '/dashboards/project'
+  //
+  // After the user signs in, the sign in page will redirect the user to the 'signed-in-redirect'
+  // path. Below is another redirection for that path to redirect the user to the desired
+  // location. This is a small convenience to keep all main routes together here on this file.
+  {
+    path: 'signed-in-redirect',
+    pathMatch: 'full',
+    redirectTo: 'dashboard',
+  },
 
   // Landing routes
   {
@@ -27,6 +40,8 @@ export const mskShellRoutes: Route[] = [
   // Auth routes for guests
   {
     path: '',
+    canActivate: [NoAuthGuard],
+    canActivateChild: [NoAuthGuard],
     component: MskLayoutComponent,
     data: {
       layoutType: 'empty',
@@ -59,6 +74,8 @@ export const mskShellRoutes: Route[] = [
   // Auth routes for authenticated users
   {
     path: '',
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     component: MskLayoutComponent,
     data: {
       layoutType: 'empty',
@@ -77,6 +94,8 @@ export const mskShellRoutes: Route[] = [
   // Admin routes
   {
     path: '',
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     component: MskLayoutComponent,
     resolve: {
       initialData: InitialDataResolver,
@@ -85,9 +104,10 @@ export const mskShellRoutes: Route[] = [
       // Dashboards
       {
         path: 'dashboard',
-        loadChildren: async () =>
-          (await import('@msk/client/web-app/admin/dashboard/feature'))
-            .DashboardModule,
+        loadChildren: () =>
+          import('@msk/client/web-app/admin/dashboard/feature').then(
+            (m) => m.DashboardModule
+          ),
       },
 
       // Apps

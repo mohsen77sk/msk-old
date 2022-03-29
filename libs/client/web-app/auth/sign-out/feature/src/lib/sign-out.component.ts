@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '@msk/client/web-app/shell/core/auth';
 import { Subject, timer, finalize, takeUntil, takeWhile, tap } from 'rxjs';
 
 @Component({
@@ -16,7 +17,7 @@ export class SignOutComponent implements OnInit, OnDestroy {
   /**
    * Constructor
    */
-  constructor(private _router: Router) {}
+  constructor(private _authService: AuthService, private _router: Router) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks
@@ -26,6 +27,9 @@ export class SignOutComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+    // Sign out
+    this._authService.signOut();
+
     // Redirect after the countdown
     timer(1000, 1000)
       .pipe(

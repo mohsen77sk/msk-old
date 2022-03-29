@@ -6,6 +6,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 import { mskShellRoutes } from './msk-shell.routes';
 
+import { AuthCoreModule } from '@msk/client/web-app/shell/core/auth';
 import { DateCoreModule } from '@msk/client/web-app/shell/core/date';
 import { IconsCoreModule } from '@msk/client/web-app/shell/core/icons';
 import { MessageCoreModule } from '@msk/client/web-app/shell/core/message';
@@ -42,6 +43,7 @@ const routerConfig: ExtraOptions = {
     MskLayoutModule,
 
     // Core module of your application
+    AuthCoreModule,
     DateCoreModule,
     IconsCoreModule,
     MessageCoreModule,

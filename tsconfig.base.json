@@ -109,6 +109,9 @@
       "@msk/client/web-app/shared/app-config": [
         "libs/client/web-app/shared/app-config/src/index.ts"
       ],
+      "@msk/client/web-app/shell/core/auth": [
+        "libs/client/web-app/shell/core/auth/src/index.ts"
+      ],
       "@msk/client/web-app/shell/core/date": [
         "libs/client/web-app/shell/core/date/src/index.ts"
       ],
