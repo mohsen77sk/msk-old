@@ -21,7 +21,7 @@ import {
 } from '@angular/animations';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
-import { DrawerMode, DrawerPosition } from './drawer.types';
+import { MskDrawerMode, MskDrawerPosition } from './drawer.types';
 import { MskDrawerService } from './drawer.service';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
 
@@ -40,19 +40,19 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
   /* eslint-enable @typescript-eslint/naming-convention */
 
   @Input() fixed = false;
-  @Input() mode: DrawerMode = 'side';
+  @Input() mode: MskDrawerMode = 'side';
   @Input() name: string = this._utilsService.randomId();
   @Input() opened = false;
-  @Input() position: DrawerPosition = 'left';
+  @Input() position: MskDrawerPosition = 'left';
   @Input() transparentOverlay = false;
   @Output()
   readonly fixedChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output()
-  readonly modeChanged: EventEmitter<DrawerMode> = new EventEmitter<DrawerMode>();
+  readonly modeChanged: EventEmitter<MskDrawerMode> = new EventEmitter<MskDrawerMode>();
   @Output()
   readonly openedChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output()
-  readonly positionChanged: EventEmitter<DrawerPosition> = new EventEmitter<DrawerPosition>();
+  readonly positionChanged: EventEmitter<MskDrawerPosition> = new EventEmitter<MskDrawerPosition>();
 
   private _animationsEnabled = false;
   private _hovered = false;

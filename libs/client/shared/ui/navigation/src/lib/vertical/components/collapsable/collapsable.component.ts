@@ -13,7 +13,7 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskVerticalNavigationComponent } from '@msk/client/shared/ui/navigation';
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 import { Subject, filter, takeUntil } from 'rxjs';
 
@@ -31,7 +31,7 @@ export class MskVerticalNavigationCollapsableItemComponent
   /* eslint-enable @typescript-eslint/naming-convention */
 
   @Input() autoCollapse!: boolean;
-  @Input() item!: NavigationItem;
+  @Input() item!: MskNavigationItem;
   @Input() name!: string;
 
   isCollapsed = true;
@@ -263,7 +263,10 @@ export class MskVerticalNavigationCollapsableItemComponent
    * @param currentUrl
    * @private
    */
-  private _hasActiveChild(item: NavigationItem, currentUrl: string): boolean {
+  private _hasActiveChild(
+    item: MskNavigationItem,
+    currentUrl: string
+  ): boolean {
     const children = item.children;
 
     if (!children) {
@@ -297,7 +300,10 @@ export class MskVerticalNavigationCollapsableItemComponent
    * @param item
    * @private
    */
-  private _isChildrenOf(parent: NavigationItem, item: NavigationItem): boolean {
+  private _isChildrenOf(
+    parent: MskNavigationItem,
+    item: MskNavigationItem
+  ): boolean {
     const children = parent.children;
 
     if (!children) {

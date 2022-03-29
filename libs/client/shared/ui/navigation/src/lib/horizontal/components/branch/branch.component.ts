@@ -12,7 +12,7 @@ import { MatMenu } from '@angular/material/menu';
 
 import { MskHorizontalNavigationComponent } from '@msk/client/shared/ui/navigation';
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 import { Subject, takeUntil } from 'rxjs';
 
@@ -29,7 +29,7 @@ export class MskHorizontalNavigationBranchItemComponent
   /* eslint-enable @typescript-eslint/naming-convention */
 
   @Input() child = false;
-  @Input() item!: NavigationItem;
+  @Input() item!: MskNavigationItem;
   @Input() name!: string;
   @ViewChild('matMenu', { static: true }) matMenu!: MatMenu;
 

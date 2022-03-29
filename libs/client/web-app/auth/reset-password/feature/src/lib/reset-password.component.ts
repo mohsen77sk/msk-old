@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskConfigService } from '@msk/client/shared/services/config';
-import { AlertType } from '@msk/client/shared/ui/alert';
+import { MskAlertType } from '@msk/client/shared/ui/alert';
 import { MskValidators } from '@msk/client/shared/validators';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -18,7 +18,7 @@ export class ResetPasswordComponent implements OnInit {
   resetPasswordForm!: FormGroup;
 
   showAlert = false;
-  alert: { type: AlertType; message: string } = {
+  alert: { type: MskAlertType; message: string } = {
     type: 'success',
     message: '',
   };

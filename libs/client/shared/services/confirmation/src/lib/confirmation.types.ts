@@ -1,4 +1,4 @@
-export interface ConfirmationConfig {
+export interface MskConfirmationConfig {
   title?: string;
   message?: string;
   icon?: {

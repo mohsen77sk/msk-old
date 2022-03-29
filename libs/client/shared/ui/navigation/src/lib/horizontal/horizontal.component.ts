@@ -12,7 +12,7 @@ import {
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
 import { MskNavigationService } from '../navigation.service';
-import { NavigationItem } from '../navigation.types';
+import { MskNavigationItem } from '../navigation.types';
 
 import { ReplaySubject, Subject } from 'rxjs';
 
@@ -29,7 +29,7 @@ export class MskHorizontalNavigationComponent
   implements OnChanges, OnInit, OnDestroy
 {
   @Input() name: string = this._mskUtilsService.randomId();
-  @Input() navigation!: NavigationItem[];
+  @Input() navigation!: MskNavigationItem[];
 
   onRefreshed: ReplaySubject<boolean> = new ReplaySubject<boolean>(1);
   private _unsubscribeAll: Subject<any> = new Subject<any>();

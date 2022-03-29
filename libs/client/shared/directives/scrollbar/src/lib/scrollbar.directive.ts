@@ -14,7 +14,7 @@ import { fromEvent, Subject, debounceTime, takeUntil } from 'rxjs';
 import { merge } from 'lodash-es';
 
 import PerfectScrollbar from 'perfect-scrollbar';
-import { ScrollbarGeometry, ScrollbarPosition } from './scrollbar.types';
+import { MskScrollbarGeometry, MskScrollbarPosition } from './scrollbar.types';
 
 /**
  * Wrapper directive for the Perfect Scrollbar: https://github.com/mdbootstrap/perfect-scrollbar
@@ -175,8 +175,8 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    *
    * @param prefix
    */
-  geometry(prefix: string = 'scroll'): ScrollbarGeometry {
-    return new ScrollbarGeometry(
+  geometry(prefix: string = 'scroll'): MskScrollbarGeometry {
+    return new MskScrollbarGeometry(
       this._elementRef.nativeElement[prefix + 'Left'],
       this._elementRef.nativeElement[prefix + 'Top'],
       this._elementRef.nativeElement[prefix + 'Width'],
@@ -189,16 +189,16 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    *
    * @param absolute
    */
-  position(absolute: boolean = false): ScrollbarPosition {
+  position(absolute: boolean = false): MskScrollbarPosition {
     let scrollbarPosition;
 
     if (!absolute && this._ps) {
-      scrollbarPosition = new ScrollbarPosition(
+      scrollbarPosition = new MskScrollbarPosition(
         this._ps.reach.x || 0,
         this._ps.reach.y || 0
       );
     } else {
-      scrollbarPosition = new ScrollbarPosition(
+      scrollbarPosition = new MskScrollbarPosition(
         this._elementRef.nativeElement.scrollLeft,
         this._elementRef.nativeElement.scrollTop
       );

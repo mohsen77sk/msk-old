@@ -5,4 +5,4 @@ import { MskScrollResetDirective } from './scroll-reset.directive';
   declarations: [MskScrollResetDirective],
   exports: [MskScrollResetDirective],
 })
-export class ScrollResetModule {}
+export class MskScrollResetModule {}

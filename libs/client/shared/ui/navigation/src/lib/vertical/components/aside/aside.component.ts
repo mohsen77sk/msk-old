@@ -13,7 +13,7 @@ import { BooleanInput } from '@angular/cdk/coercion';
 
 import { MskVerticalNavigationComponent } from '@msk/client/shared/ui/navigation';
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 import { Subject, filter, takeUntil } from 'rxjs';
 
@@ -32,7 +32,7 @@ export class MskVerticalNavigationAsideItemComponent
 
   @Input() activeItemId!: string;
   @Input() autoCollapse!: boolean;
-  @Input() item!: NavigationItem;
+  @Input() item!: MskNavigationItem;
   @Input() name!: string;
   @Input() skipChildren!: boolean;
 
@@ -134,7 +134,10 @@ export class MskVerticalNavigationAsideItemComponent
    * @param currentUrl
    * @private
    */
-  private _hasActiveChild(item: NavigationItem, currentUrl: string): boolean {
+  private _hasActiveChild(
+    item: MskNavigationItem,
+    currentUrl: string
+  ): boolean {
     const children = item.children;
 
     if (!children) {

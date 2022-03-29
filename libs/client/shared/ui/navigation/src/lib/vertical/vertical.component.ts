@@ -36,10 +36,10 @@ import { MskNavigationService } from '../navigation.service';
 import { MskScrollbarDirective } from '@msk/client/shared/directives/scrollbar';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
 import {
-  NavigationItem,
-  VerticalNavigationAppearance,
-  VerticalNavigationMode,
-  VerticalNavigationPosition,
+  MskNavigationItem,
+  MskVerticalNavigationAppearance,
+  MskVerticalNavigationMode,
+  MskVerticalNavigationPosition,
 } from '../navigation.types';
 
 import {
@@ -70,30 +70,30 @@ export class MskVerticalNavigationComponent
   static ngAcceptInputType_transparentOverlay: BooleanInput;
   /* eslint-enable @typescript-eslint/naming-convention */
 
-  @Input() appearance: VerticalNavigationAppearance = 'default';
+  @Input() appearance: MskVerticalNavigationAppearance = 'default';
   @Input() autoCollapse = true;
   @Input() inner = false;
-  @Input() mode: VerticalNavigationMode = 'side';
+  @Input() mode: MskVerticalNavigationMode = 'side';
   @Input() name: string = this._mskUtilsService.randomId();
-  @Input() navigation!: NavigationItem[];
+  @Input() navigation!: MskNavigationItem[];
   @Input() opened = true;
-  @Input() position: VerticalNavigationPosition = 'start';
+  @Input() position: MskVerticalNavigationPosition = 'start';
   @Input() transparentOverlay = false;
   @Output()
-  readonly appearanceChanged: EventEmitter<VerticalNavigationAppearance> = new EventEmitter<VerticalNavigationAppearance>();
-  @Output() readonly modeChanged: EventEmitter<VerticalNavigationMode> =
-    new EventEmitter<VerticalNavigationMode>();
+  readonly appearanceChanged: EventEmitter<MskVerticalNavigationAppearance> = new EventEmitter<MskVerticalNavigationAppearance>();
+  @Output() readonly modeChanged: EventEmitter<MskVerticalNavigationMode> =
+    new EventEmitter<MskVerticalNavigationMode>();
   @Output() readonly openedChanged: EventEmitter<boolean> =
     new EventEmitter<boolean>();
   @Output()
-  readonly positionChanged: EventEmitter<VerticalNavigationPosition> = new EventEmitter<VerticalNavigationPosition>();
+  readonly positionChanged: EventEmitter<MskVerticalNavigationPosition> = new EventEmitter<MskVerticalNavigationPosition>();
   @ViewChild('navigationContent') private _navigationContentEl!: ElementRef;
 
   activeAsideItemId: string | null = null;
-  onCollapsableItemCollapsed: ReplaySubject<NavigationItem> =
-    new ReplaySubject<NavigationItem>(1);
-  onCollapsableItemExpanded: ReplaySubject<NavigationItem> =
-    new ReplaySubject<NavigationItem>(1);
+  onCollapsableItemCollapsed: ReplaySubject<MskNavigationItem> =
+    new ReplaySubject<MskNavigationItem>(1);
+  onCollapsableItemExpanded: ReplaySubject<MskNavigationItem> =
+    new ReplaySubject<MskNavigationItem>(1);
   onRefreshed: ReplaySubject<boolean> = new ReplaySubject<boolean>(1);
   private _animationsEnabled = false;
   private _asideOverlay: HTMLElement | undefined;
@@ -469,7 +469,7 @@ export class MskVerticalNavigationComponent
    *
    * @param item
    */
-  openAside(item: NavigationItem): void {
+  openAside(item: MskNavigationItem): void {
     // Return if the item is disabled
     if (item.disabled || !item.id) {
       return;
@@ -504,7 +504,7 @@ export class MskVerticalNavigationComponent
    *
    * @param item
    */
-  toggleAside(item: NavigationItem): void {
+  toggleAside(item: MskNavigationItem): void {
     // Toggle
     if (this.activeAsideItemId === item.id) {
       this.closeAside();

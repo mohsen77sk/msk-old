@@ -1,23 +1,23 @@
-import { LayoutScreens, LayoutThemes } from '..';
+import { MskLayoutScreens, MskLayoutThemes } from '..';
 import {
-  LayoutDirection,
-  LayoutScheme,
-  LayoutTheme,
-  LayoutType,
+  MskLayoutDirection,
+  MskLayoutScheme,
+  MskLayoutTheme,
+  MskLayoutType,
 } from './app-layout.types';
 
 /**
  * LayoutConfig interface. Update this interface to strictly type your config
  * object.
  */
-export interface LayoutConfig {
+export interface MskLayoutConfig {
   language: string;
-  direction: LayoutDirection;
-  screens: LayoutScreens;
-  scheme: LayoutScheme;
-  themes: LayoutThemes;
-  theme: LayoutTheme;
-  type: LayoutType;
+  direction: MskLayoutDirection;
+  screens: MskLayoutScreens;
+  scheme: MskLayoutScheme;
+  themes: MskLayoutThemes;
+  theme: MskLayoutTheme;
+  type: MskLayoutType;
 }
 
 /**
@@ -28,7 +28,7 @@ export interface LayoutConfig {
  * object to set the defaults. To access, update and reset the config, use
  * MskConfigService and its methods.
  */
-export const layoutConfig: LayoutConfig = {
+export const layoutConfig: MskLayoutConfig = {
   language: 'en',
   direction: 'ltr',
   type: 'classic',

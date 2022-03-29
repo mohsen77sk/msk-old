@@ -9,7 +9,7 @@ import {
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 import { mskAnimations } from '@msk/client/shared/animations';
-import { CardFace } from './card.types';
+import { MskCardFace } from './card.types';
 
 @Component({
   selector: 'msk-card',
@@ -26,7 +26,7 @@ export class MskCardComponent implements OnChanges {
   /* eslint-enable @typescript-eslint/naming-convention */
 
   @Input() expanded = false;
-  @Input() face: CardFace = 'front';
+  @Input() face: MskCardFace = 'front';
   @Input() flippable = false;
 
   /**

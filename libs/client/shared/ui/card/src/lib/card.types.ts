@@ -1,1 +1,1 @@
-export type CardFace = 'front' | 'back';
+export type MskCardFace = 'front' | 'back';

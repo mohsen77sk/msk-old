@@ -1,6 +1,6 @@
-export type AlertAppearance = 'border' | 'fill' | 'outline' | 'soft';
+export type MskAlertAppearance = 'border' | 'fill' | 'outline' | 'soft';
 
-export type AlertType =
+export type MskAlertType =
   | 'primary'
   | 'accent'
   | 'warn'

@@ -1,3 +1,3 @@
-export type DrawerMode = 'over' | 'side';
+export type MskDrawerMode = 'over' | 'side';
 
-export type DrawerPosition = 'left' | 'right';
+export type MskDrawerPosition = 'left' | 'right';

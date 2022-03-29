@@ -16,7 +16,7 @@ import { Subject, filter, takeUntil } from 'rxjs';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
 import { mskAnimations } from '@msk/client/shared/animations';
-import { AlertAppearance, AlertType } from './alert.types';
+import { MskAlertAppearance, MskAlertType } from './alert.types';
 import { MskAlertService } from './alert.service';
 
 @Component({
@@ -35,12 +35,12 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
   static ngAcceptInputType_showIcon: BooleanInput;
   /* eslint-enable @typescript-eslint/naming-convention */
 
-  @Input() appearance: AlertAppearance = 'soft';
+  @Input() appearance: MskAlertAppearance = 'soft';
   @Input() dismissed = false;
   @Input() dismissible = false;
   @Input() name: string = this._mskUtilsService.randomId();
   @Input() showIcon = true;
-  @Input() type: AlertType = 'primary';
+  @Input() type: MskAlertType = 'primary';
   @Output() readonly dismissedChanged: EventEmitter<boolean> =
     new EventEmitter<boolean>();
 

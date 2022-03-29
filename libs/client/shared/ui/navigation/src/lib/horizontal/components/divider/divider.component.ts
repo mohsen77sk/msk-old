@@ -9,7 +9,7 @@ import {
 
 import { MskHorizontalNavigationComponent } from '@msk/client/shared/ui/navigation';
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 import { Subject, takeUntil } from 'rxjs';
 
@@ -21,7 +21,7 @@ import { Subject, takeUntil } from 'rxjs';
 export class MskHorizontalNavigationDividerItemComponent
   implements OnInit, OnDestroy
 {
-  @Input() item!: NavigationItem;
+  @Input() item!: MskNavigationItem;
   @Input() name!: string;
 
   private _mskHorizontalNavigationComponent!: MskHorizontalNavigationComponent;

@@ -8,7 +8,7 @@ import {
   TemplateRef,
   ViewEncapsulation,
 } from '@angular/core';
-import { FSDocument, FSDocumentElement } from './fullscreen.types';
+import { MskFSDocument, MskFSDocumentElement } from './fullscreen.types';
 
 @Component({
   selector: 'msk-fullscreen',
@@ -21,15 +21,15 @@ import { FSDocument, FSDocumentElement } from './fullscreen.types';
 export class MskFullscreenComponent implements OnInit {
   @Input() iconTpl!: TemplateRef<any>;
   @Input() tooltip!: string;
-  private _fsDoc!: FSDocument;
-  private _fsDocEl!: FSDocumentElement;
+  private _fsDoc!: MskFSDocument;
+  private _fsDocEl!: MskFSDocumentElement;
   private _isFullscreen = false;
 
   /**
    * Constructor
    */
   constructor(@Inject(DOCUMENT) private _document: Document) {
-    this._fsDoc = _document as FSDocument;
+    this._fsDoc = _document as MskFSDocument;
   }
 
   // -----------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ export class MskFullscreenComponent implements OnInit {
    * On init
    */
   ngOnInit(): void {
-    this._fsDocEl = document.documentElement as FSDocumentElement;
+    this._fsDocEl = document.documentElement as MskFSDocumentElement;
   }
 
   // -----------------------------------------------------------------------------------------------------

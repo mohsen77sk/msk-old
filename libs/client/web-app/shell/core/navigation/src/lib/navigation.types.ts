@@ -1,8 +1,8 @@
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 export interface Navigation {
-  default: NavigationItem[];
-  compact: NavigationItem[];
-  futuristic: NavigationItem[];
-  horizontal: NavigationItem[];
+  default: MskNavigationItem[];
+  compact: MskNavigationItem[];
+  futuristic: MskNavigationItem[];
+  horizontal: MskNavigationItem[];
 }

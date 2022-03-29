@@ -10,7 +10,7 @@ import { BooleanInput } from '@angular/cdk/coercion';
 
 import { MskVerticalNavigationComponent } from '@msk/client/shared/ui/navigation';
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 import { Subject, takeUntil } from 'rxjs';
 
@@ -27,7 +27,7 @@ export class MskVerticalNavigationGroupItemComponent
   /* eslint-enable @typescript-eslint/naming-convention */
 
   @Input() autoCollapse!: boolean;
-  @Input() item!: NavigationItem;
+  @Input() item!: MskNavigationItem;
   @Input() name!: string;
 
   private _mskVerticalNavigationComponent!: MskVerticalNavigationComponent;

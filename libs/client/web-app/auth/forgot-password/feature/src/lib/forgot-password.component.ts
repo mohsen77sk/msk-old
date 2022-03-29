@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
-import { AlertType } from '@msk/client/shared/ui/alert';
+import { MskAlertType } from '@msk/client/shared/ui/alert';
 
 @Component({
   selector: 'msk-forgot-password',
@@ -16,7 +16,7 @@ export class ForgotPasswordComponent implements OnInit {
   forgotPasswordForm!: FormGroup;
 
   showAlert = false;
-  alert: { type: AlertType; message: string } = {
+  alert: { type: MskAlertType; message: string } = {
     type: 'success',
     message: '',
   };

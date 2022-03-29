@@ -1,11 +1,11 @@
 import { IsActiveMatchOptions } from '@angular/router';
 
-export interface NavigationItem {
+export interface MskNavigationItem {
   id?: string;
   title?: string;
   subtitle?: string;
   type: 'aside' | 'basic' | 'collapsable' | 'divider' | 'group' | 'spacer';
-  hidden?: (item: NavigationItem) => boolean;
+  hidden?: (item: MskNavigationItem) => boolean;
   active?: boolean;
   disabled?: boolean;
   tooltip?: string;
@@ -14,7 +14,7 @@ export interface NavigationItem {
   target?: '_blank' | '_self' | '_parent' | '_top' | string;
   exactMatch?: boolean;
   isActiveMatchOptions?: IsActiveMatchOptions;
-  function?: (item: NavigationItem) => void;
+  function?: (item: MskNavigationItem) => void;
   classes?: {
     title?: string;
     subtitle?: string;
@@ -26,16 +26,16 @@ export interface NavigationItem {
     title?: string;
     classes?: string;
   };
-  children?: NavigationItem[];
+  children?: MskNavigationItem[];
   meta?: any;
 }
 
-export type VerticalNavigationAppearance =
+export type MskVerticalNavigationAppearance =
   | 'default'
   | 'compact'
   | 'dense'
   | 'thin';
 
-export type VerticalNavigationMode = 'over' | 'side';
+export type MskVerticalNavigationMode = 'over' | 'side';
 
-export type VerticalNavigationPosition = 'start' | 'end';
+export type MskVerticalNavigationPosition = 'start' | 'end';

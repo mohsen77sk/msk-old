@@ -11,7 +11,7 @@ import { IsActiveMatchOptions } from '@angular/router';
 import { MskVerticalNavigationComponent } from '@msk/client/shared/ui/navigation';
 import { MskNavigationService } from '@msk/client/shared/ui/navigation';
 import { MskUtilsService } from '@msk/client/shared/services/utils';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 import { Subject, takeUntil } from 'rxjs';
 
@@ -23,7 +23,7 @@ import { Subject, takeUntil } from 'rxjs';
 export class MskVerticalNavigationBasicItemComponent
   implements OnInit, OnDestroy
 {
-  @Input() item!: NavigationItem;
+  @Input() item!: MskNavigationItem;
   @Input() name!: string;
 
   isActiveMatchOptions: IsActiveMatchOptions;

@@ -3,11 +3,11 @@ import { DOCUMENT } from '@angular/common';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { merge } from 'lodash-es';
 import { MskConfirmationDialogComponent } from './dialog/dialog.component';
-import { ConfirmationConfig } from './confirmation.types';
+import { MskConfirmationConfig } from './confirmation.types';
 
 @Injectable()
 export class MskConfirmationService {
-  private _defaultConfig: ConfirmationConfig = {
+  private _defaultConfig: MskConfirmationConfig = {
     title: 'Confirm action',
     message: 'Are you sure you want to confirm this action?',
     icon: {
@@ -42,7 +42,7 @@ export class MskConfirmationService {
   // -----------------------------------------------------------------------------------------------------
 
   open(
-    config: ConfirmationConfig = {}
+    config: MskConfirmationConfig = {}
   ): MatDialogRef<MskConfirmationDialogComponent> {
     // Merge the user config with the default config
     const userConfig = merge({}, this._defaultConfig, config);

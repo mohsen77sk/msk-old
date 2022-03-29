@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { NavigationItem } from '@msk/client/shared/ui/navigation';
+import { MskNavigationItem } from '@msk/client/shared/ui/navigation';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MskNavigationService {
   private _componentRegistry: Map<string, any> = new Map<string, any>();
-  private _navigationStore: Map<string, NavigationItem[]> = new Map<
+  private _navigationStore: Map<string, MskNavigationItem[]> = new Map<
     string,
     any
   >();
@@ -49,7 +49,7 @@ export class MskNavigationService {
    * @param key
    * @param navigation
    */
-  storeNavigation(key: string, navigation: NavigationItem[]): void {
+  storeNavigation(key: string, navigation: MskNavigationItem[]): void {
     // Add to the store
     this._navigationStore.set(key, navigation);
   }
@@ -59,7 +59,7 @@ export class MskNavigationService {
    *
    * @param key
    */
-  getNavigation(key: string): NavigationItem[] {
+  getNavigation(key: string): MskNavigationItem[] {
     return this._navigationStore.get(key) ?? [];
   }
 
@@ -88,9 +88,9 @@ export class MskNavigationService {
    * @param flatNavigation
    */
   getFlatNavigation(
-    navigation: NavigationItem[],
-    flatNavigation: NavigationItem[] = []
-  ): NavigationItem[] {
+    navigation: MskNavigationItem[],
+    flatNavigation: MskNavigationItem[] = []
+  ): MskNavigationItem[] {
     for (const item of navigation) {
       if (item.type === 'basic') {
         flatNavigation.push(item);
@@ -118,7 +118,10 @@ export class MskNavigationService {
    * @param id
    * @param navigation
    */
-  getItem(id: string, navigation: NavigationItem[]): NavigationItem | null {
+  getItem(
+    id: string,
+    navigation: MskNavigationItem[]
+  ): MskNavigationItem | null {
     for (const item of navigation) {
       if (item.id === id) {
         return item;
@@ -146,9 +149,9 @@ export class MskNavigationService {
    */
   getItemParent(
     id: string,
-    navigation: NavigationItem[],
-    parent: NavigationItem[] | NavigationItem
-  ): NavigationItem[] | NavigationItem | null {
+    navigation: MskNavigationItem[],
+    parent: MskNavigationItem[] | MskNavigationItem
+  ): MskNavigationItem[] | MskNavigationItem | null {
     for (const item of navigation) {
       if (item.id === id) {
         return parent;

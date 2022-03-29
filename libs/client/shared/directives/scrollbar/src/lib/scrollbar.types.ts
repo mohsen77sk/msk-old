@@ -1,4 +1,4 @@
-export class ScrollbarGeometry {
+export class MskScrollbarGeometry {
   public x: number;
   public y: number;
 
@@ -13,7 +13,7 @@ export class ScrollbarGeometry {
   }
 }
 
-export class ScrollbarPosition {
+export class MskScrollbarPosition {
   public x: number | 'start' | 'end';
   public y: number | 'start' | 'end';
 
