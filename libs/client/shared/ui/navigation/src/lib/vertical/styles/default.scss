@@ -212,6 +212,9 @@ msk-vertical-navigation {
     flex-direction: column;
     flex: 1 0 auto;
     user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 
     .msk-vertical-navigation-item-wrapper {
       .msk-vertical-navigation-item {
@@ -582,7 +585,7 @@ msk-vertical-navigation-collapsable-item {
       &:not(.msk-vertical-navigation-item-disabled) {
         &.msk-vertical-navigation-item-active,
         &.msk-vertical-navigation-item-active-forced {
-          @apply bg-gray-800 bg-opacity-5 dark:bg-white dark:bg-opacity-12;
+          @apply dark:bg-opacity-12 bg-gray-800 bg-opacity-5 dark:bg-white;
 
           .msk-vertical-navigation-item-icon {
             @apply opacity-100;
@@ -601,7 +604,7 @@ msk-vertical-navigation-collapsable-item {
       /* Hover state */
       &:not(.msk-vertical-navigation-item-active-forced):not(.msk-vertical-navigation-item-active):not(.msk-vertical-navigation-item-disabled) {
         &:hover {
-          @apply bg-gray-800 bg-opacity-5 dark:bg-white dark:bg-opacity-12;
+          @apply dark:bg-opacity-12 bg-gray-800 bg-opacity-5 dark:bg-white;
 
           .msk-vertical-navigation-item-icon {
             @apply opacity-100;
@@ -650,7 +653,7 @@ msk-vertical-navigation-group-item {
     .msk-vertical-navigation-item {
       .msk-vertical-navigation-item-title-wrapper {
         .msk-vertical-navigation-item-title {
-          @apply text-primary-600 opacity-100 dark:text-primary-400;
+          @apply text-primary-600 dark:text-primary-400 opacity-100;
         }
       }
     }
