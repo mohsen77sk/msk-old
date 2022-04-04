@@ -10,7 +10,7 @@
   "forgot-password": "Forgot password?",
   "forgot-password-description": "Fill the form to reset your password",
   "remember-me": "Remember me",
-  "email-address": "Email address",
+  "username": "Username",
   "password": "Password",
   "password-confirm": "Password (Confirm)",
   "send-reset-link": "Send reset link",

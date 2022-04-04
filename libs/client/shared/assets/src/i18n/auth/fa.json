@@ -10,7 +10,7 @@
   "forgot-password": "رمز عبور را فراموش کرده اید؟",
   "forgot-password-description": "فرم را برای بازنشانی رمز عبور خود پر کنید",
   "remember-me": "مرا به خاطر بسپار",
-  "email-address": "آدرس ایمیل",
+  "username": "نام کاربری",
   "password": "رمز عبور",
   "password-confirm": "رمز عبور (تایید)",
   "send-reset-link": "ارسال لینک ریست",
