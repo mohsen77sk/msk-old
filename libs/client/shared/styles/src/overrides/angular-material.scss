@@ -523,6 +523,10 @@
         > .mat-datepicker-toggle {
           margin-right: -8px;
         }
+
+        > div {
+          margin: 0 -10px 0 4px;
+        }
       }
 
       .mat-form-field-prefix,
@@ -1028,6 +1032,10 @@
 
           > .mat-datepicker-toggle {
             margin-left: -8px !important;
+          }
+
+          > div {
+            margin: 0 4px 0 -10px;
           }
         }
 
