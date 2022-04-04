@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   HttpErrorResponse,
   HttpEvent,
@@ -15,7 +16,7 @@ export class AuthInterceptor implements HttpInterceptor {
   /**
    * Constructor
    */
-  constructor(private _authService: AuthService) {}
+  constructor(private _router: Router, private _authService: AuthService) {}
 
   /**
    * Intercept
@@ -60,6 +61,12 @@ export class AuthInterceptor implements HttpInterceptor {
 
           // Reload the app
           location.reload();
+        }
+
+        // Catch "503 Service Unavailable" responses
+        if (error instanceof HttpErrorResponse && error.status === 503) {
+          // Navigate to maintenance
+          this._router.navigate(['/maintenance']);
         }
 
         return throwError(() => error);
