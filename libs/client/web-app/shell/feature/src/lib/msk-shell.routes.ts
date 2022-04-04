@@ -115,21 +115,38 @@ export const mskShellRoutes: Route[] = [
         path: 'apps',
         children: [],
       },
+    ],
+  },
 
-      // errors & Catch all
+  // Error routes & Catch all
+  {
+    path: '',
+    component: MskLayoutComponent,
+    data: {
+      layoutType: 'empty',
+    },
+    children: [
       {
         path: 'internal-server-error',
         pathMatch: 'full',
         loadChildren: () =>
           import(
-            '@msk/client/web-app/admin/error/internal-server-error/feature'
+            '@msk/client/web-app/error/internal-server-error/feature'
           ).then((m) => m.InternalServerErrorModule),
+      },
+      {
+        path: 'maintenance',
+        pathMatch: 'full',
+        loadChildren: () =>
+          import('@msk/client/web-app/error/maintenance/feature').then(
+            (m) => m.MaintenanceModule
+          ),
       },
       {
         path: 'not-found',
         pathMatch: 'full',
         loadChildren: () =>
-          import('@msk/client/web-app/admin/error/not-found/feature').then(
+          import('@msk/client/web-app/error/not-found/feature').then(
             (m) => m.NotFoundModule
           ),
       },

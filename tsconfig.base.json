@@ -85,11 +85,14 @@
       "@msk/client/web-app/admin/dashboard/feature": [
         "libs/client/web-app/admin/dashboard/feature/src/index.ts"
       ],
-      "@msk/client/web-app/admin/error/internal-server-error/feature": [
-        "libs/client/web-app/admin/error/internal-server-error/feature/src/index.ts"
+      "@msk/client/web-app/error/internal-server-error/feature": [
+        "libs/client/web-app/error/internal-server-error/feature/src/index.ts"
       ],
-      "@msk/client/web-app/admin/error/not-found/feature": [
-        "libs/client/web-app/admin/error/not-found/feature/src/index.ts"
+      "@msk/client/web-app/error/maintenance/feature": [
+        "libs/client/web-app/error/maintenance/feature/src/index.ts"
+      ],
+      "@msk/client/web-app/error/not-found/feature": [
+        "libs/client/web-app/error/not-found/feature/src/index.ts"
       ],
       "@msk/client/web-app/auth/forgot-password/feature": [
         "libs/client/web-app/auth/forgot-password/feature/src/index.ts"

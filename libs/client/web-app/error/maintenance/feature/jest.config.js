@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'client-web-app-admin-error-internal-server-error-feature',
-  preset: '../../../../../../../jest.preset.js',
+  displayName: 'client-web-app-error-maintenance-feature',
+  preset: '../../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../../../../coverage/libs/client/web-app/admin/error/internal-server-error/feature',
+    '../../../../../../coverage/libs/client/web-app/error/maintenance/feature',
   transform: {
     '^.+.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
