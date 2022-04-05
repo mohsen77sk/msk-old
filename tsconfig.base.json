@@ -31,6 +31,9 @@
       "@msk/client/shared/directives/spinner": [
         "libs/client/shared/directives/spinner/src/index.ts"
       ],
+      "@msk/client/shared/directives/virtual-keyboard": [
+        "libs/client/shared/directives/virtual-keyboard/src/index.ts"
+      ],
       "@msk/client/shared/pipes/date-time": [
         "libs/client/shared/pipes/date-time/src/index.ts"
       ],
@@ -76,23 +79,11 @@
       "@msk/client/shared/ui/password-strength-meter": [
         "libs/client/shared/ui/password-strength-meter/src/index.ts"
       ],
-      "@msk/client/shared/ui/virtual-keyboard": [
-        "libs/client/shared/ui/virtual-keyboard/src/index.ts"
-      ],
       "@msk/client/shared/validators": [
         "libs/client/shared/validators/src/index.ts"
       ],
       "@msk/client/web-app/admin/dashboard/feature": [
         "libs/client/web-app/admin/dashboard/feature/src/index.ts"
-      ],
-      "@msk/client/web-app/error/internal-server-error/feature": [
-        "libs/client/web-app/error/internal-server-error/feature/src/index.ts"
-      ],
-      "@msk/client/web-app/error/maintenance/feature": [
-        "libs/client/web-app/error/maintenance/feature/src/index.ts"
-      ],
-      "@msk/client/web-app/error/not-found/feature": [
-        "libs/client/web-app/error/not-found/feature/src/index.ts"
       ],
       "@msk/client/web-app/auth/forgot-password/feature": [
         "libs/client/web-app/auth/forgot-password/feature/src/index.ts"
@@ -105,6 +96,15 @@
       ],
       "@msk/client/web-app/auth/sign-out/feature": [
         "libs/client/web-app/auth/sign-out/feature/src/index.ts"
+      ],
+      "@msk/client/web-app/error/internal-server-error/feature": [
+        "libs/client/web-app/error/internal-server-error/feature/src/index.ts"
+      ],
+      "@msk/client/web-app/error/maintenance/feature": [
+        "libs/client/web-app/error/maintenance/feature/src/index.ts"
+      ],
+      "@msk/client/web-app/error/not-found/feature": [
+        "libs/client/web-app/error/not-found/feature/src/index.ts"
       ],
       "@msk/client/web-app/landing/home/feature": [
         "libs/client/web-app/landing/home/feature/src/index.ts"

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'client-shared-ui-virtual-keyboard',
+  displayName: 'client-shared-directives-virtual-keyboard',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory:
-    '../../../../../coverage/libs/client/shared/ui/virtual-keyboard',
+    '../../../../../coverage/libs/client/shared/directives/virtual-keyboard',
   transform: {
     '^.+.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

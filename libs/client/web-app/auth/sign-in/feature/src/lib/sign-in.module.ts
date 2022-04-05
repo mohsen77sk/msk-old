@@ -11,8 +11,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MskAlertModule } from '@msk/client/shared/ui/alert';
-import { MskVirtualKeyboardModule } from '@msk/client/shared/ui/virtual-keyboard';
 import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
+import { MskVirtualKeyboardModule } from '@msk/client/shared/directives/virtual-keyboard';
 
 import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
 

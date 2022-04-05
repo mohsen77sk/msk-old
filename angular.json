@@ -105,6 +105,34 @@
       },
       "tags": []
     },
+    "client-shared-directives-virtual-keyboard": {
+      "projectType": "library",
+      "root": "libs/client/shared/directives/virtual-keyboard",
+      "sourceRoot": "libs/client/shared/directives/virtual-keyboard/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/client/shared/directives/virtual-keyboard"
+          ],
+          "options": {
+            "jestConfig": "libs/client/shared/directives/virtual-keyboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/directives/virtual-keyboard/src/**/*.ts",
+              "libs/client/shared/directives/virtual-keyboard/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-pipes-date-time": {
       "projectType": "library",
       "root": "libs/client/shared/pipes/date-time",
@@ -489,32 +517,6 @@
             "lintFilePatterns": [
               "libs/client/shared/ui/password-strength-meter/src/**/*.ts",
               "libs/client/shared/ui/password-strength-meter/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
-    "client-shared-ui-virtual-keyboard": {
-      "projectType": "library",
-      "root": "libs/client/shared/ui/virtual-keyboard",
-      "sourceRoot": "libs/client/shared/ui/virtual-keyboard/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/virtual-keyboard"],
-          "options": {
-            "jestConfig": "libs/client/shared/ui/virtual-keyboard/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/shared/ui/virtual-keyboard/src/**/*.ts",
-              "libs/client/shared/ui/virtual-keyboard/src/**/*.html"
             ]
           }
         }
