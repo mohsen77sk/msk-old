@@ -15,8 +15,11 @@ import { MskVirtualKeyboardComponent } from './virtual-keyboard.component';
 
 @Directive({
   selector: 'input[mskVirtualKeyboard], textarea[mskVirtualKeyboard]',
+  exportAs: 'mskVirtualKeyboard',
 })
 export class MskVirtualKeyboardDirective implements OnInit, OnDestroy {
+  isOpen = false;
+
   private _overlayRef!: OverlayRef;
   private _panelRef!: ComponentRef<MskVirtualKeyboardComponent>;
 
@@ -30,13 +33,31 @@ export class MskVirtualKeyboardDirective implements OnInit, OnDestroy {
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
-  // @ Decorated methods
+  // @ Lifecycle hooks
   // -----------------------------------------------------------------------------------------------------
 
   /**
-   * On focus
+   * On init
    */
-  @HostListener('focus')
+  ngOnInit(): void {}
+
+  /**
+   * On destroy
+   */
+  ngOnDestroy(): void {
+    // Dispose the overlay
+    if (this._overlayRef) {
+      this._overlayRef.dispose();
+    }
+  }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Public methods
+  // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * Open keyboard panel
+   */
   openPanel(): void {
     // return if panel is attached
     if (this._overlayRef?.hasAttached()) {
@@ -55,29 +76,29 @@ export class MskVirtualKeyboardDirective implements OnInit, OnDestroy {
     this._panelRef = this._overlayRef.attach(
       new ComponentPortal(MskVirtualKeyboardComponent)
     );
+    this._panelRef.instance.setActiveInput(this._elementRef.nativeElement);
+    this.isOpen = true;
 
     // Reference the input element
-    this._panelRef.instance.closePanel.subscribe(() =>
-      this._overlayRef.detach()
-    );
+    this._panelRef.instance.closePanel.subscribe(() => this.closePanel());
   }
 
-  // -----------------------------------------------------------------------------------------------------
-  // @ Lifecycle hooks
-  // -----------------------------------------------------------------------------------------------------
+  /**
+   * Close keyboard panel
+   */
+  closePanel(): void {
+    this._overlayRef.detach();
+    this.isOpen = false;
+  }
 
   /**
-   * On init
+   * Toggle keyboard panel
    */
-  ngOnInit(): void {}
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Dispose the overlay
-    if (this._overlayRef) {
-      this._overlayRef.dispose();
+  togglePanel(): void {
+    if (this.isOpen) {
+      this.closePanel();
+    } else {
+      this.openPanel();
     }
   }
 

@@ -24,7 +24,7 @@ export class MskVirtualKeyboardComponent implements OnInit {
   layoutName = 'default';
   layout!: KeyboardLayout;
   display!: KeyboardDisplay;
-  debug = true;
+  debug = false;
 
   @Output() closePanel = new EventEmitter<void>();
 
@@ -105,6 +105,52 @@ export class MskVirtualKeyboardComponent implements OnInit {
   // -----------------------------------------------------------------------------------------------------
   // @ Public methods
   // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * Set active input
+   *
+   * @param input Input native element
+   */
+  setActiveInput(input: HTMLInputElement | HTMLTextAreaElement): void {
+    this._activeInputElement = input;
+
+    /**
+     * Tracking keyboard layout
+     */
+    const inputMode = this._activeInputElement?.inputMode;
+    if (
+      inputMode &&
+      ['text', 'search', 'email', 'url', 'numeric', 'decimal', 'tel'].some(
+        (i) => i === inputMode
+      )
+    ) {
+      this.layoutMode = inputMode;
+      this.layoutName = 'default';
+    } else {
+      this.layoutMode = 'text';
+      this.layoutName = 'default';
+    }
+
+    if (this.debug) {
+      console.log('Layout:', `${this.layoutMode}_${this.layoutName}`);
+    }
+
+    /**
+     * we must ensure caretPosition doesn't persist once reactivated.
+     */
+    this._setCaretPosition(
+      this._activeInputElement.selectionStart,
+      this._activeInputElement.selectionEnd
+    );
+
+    if (this.debug) {
+      console.log(
+        'Caret start at:',
+        this._caretPosition,
+        this._caretPositionEnd
+      );
+    }
+  }
 
   /**
    * Check whether the button is a standard button
@@ -495,6 +541,10 @@ export class MskVirtualKeyboardComponent implements OnInit {
 
     // And set focus to input
     this._activeInputElement?.focus();
+    this._activeInputElement?.setSelectionRange(
+      this._caretPosition,
+      this._caretPositionEnd
+    );
   }
 
   /**
@@ -520,53 +570,7 @@ export class MskVirtualKeyboardComponent implements OnInit {
       event.target === this._elementRef.nativeElement ||
       (event.target && this._elementRef.nativeElement.contains(event.target));
 
-    // Handel focus input
-    if (isTextInput && !this._activeInputElement) {
-      /**
-       * Tracking current input
-       */
-      this._activeInputElement = event.target;
-
-      /**
-       * Tracking keyboard layout
-       */
-      const inputMode = this._activeInputElement?.inputMode;
-      if (
-        inputMode &&
-        ['text', 'search', 'email', 'url', 'numeric', 'decimal', 'tel'].some(
-          (i) => i === inputMode
-        )
-      ) {
-        this.layoutMode = inputMode;
-        this.layoutName = 'default';
-      } else {
-        this.layoutMode = 'text';
-        this.layoutName = 'default';
-      }
-
-      if (this.debug) {
-        console.log('Layout:', `${this.layoutMode}_${this.layoutName}`);
-      }
-
-      /**
-       * Tracks current cursor position
-       * As keys are pressed, text will be added/removed at that position within the input.
-       */
-      this._setCaretPosition(
-        event.target.selectionStart,
-        event.target.selectionEnd
-      );
-
-      if (this.debug) {
-        console.log(
-          'Caret at:',
-          this._caretPosition,
-          this._caretPositionEnd,
-          event && event.target.tagName.toLowerCase(),
-          event
-        );
-      }
-    } else if (this._activeInputElement === event.target) {
+    if (isTextInput && this._activeInputElement == event.target) {
       /**
        * Tracks current cursor position
        * As keys are pressed, text will be added/removed at that position within the input.
@@ -593,14 +597,9 @@ export class MskVirtualKeyboardComponent implements OnInit {
         this.handleButtonMouseUp('');
       }
       return;
-    } else if (!isKeyboard) {
+    } else if (!isKeyboard && event?.type !== 'selectionchange') {
       /**
-       * Resetting activeInputElement
-       */
-      this._activeInputElement = null;
-
-      /**
-       * If we toggled off disableCaretPositioning, we must ensure caretPosition doesn't persist once reactivated.
+       * we must ensure caretPosition doesn't persist once reactivated.
        */
       this._setCaretPosition(null);
 

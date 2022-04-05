@@ -11,6 +11,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MskAlertModule } from '@msk/client/shared/ui/alert';
+import { MskVirtualKeyboardModule } from '@msk/client/shared/ui/virtual-keyboard';
 import { MskPasswordStrengthMeterModule } from '@msk/client/shared/ui/password-strength-meter';
 import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
 
@@ -38,6 +39,7 @@ const routes: Routes = [
     MatCheckboxModule,
     MatFormFieldModule,
     MskAlertModule,
+    MskVirtualKeyboardModule,
     MskPasswordStrengthMeterModule,
     MskSpinnerModule,
     TranslocoModule,

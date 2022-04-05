@@ -11,6 +11,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MskAlertModule } from '@msk/client/shared/ui/alert';
+import { MskVirtualKeyboardModule } from '@msk/client/shared/ui/virtual-keyboard';
 import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
 
 import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
@@ -37,6 +38,7 @@ const routes: Routes = [
     MatCheckboxModule,
     MatFormFieldModule,
     MskAlertModule,
+    MskVirtualKeyboardModule,
     MskSpinnerModule,
     TranslocoModule,
   ],
