@@ -60,9 +60,9 @@ msk-vertical-navigation {
         msk-vertical-navigation-group-item {
           .msk-vertical-navigation-item-wrapper {
             .msk-vertical-navigation-item {
-              width: $msk-vertical-navigation-width - 24px;
-              min-width: $msk-vertical-navigation-width - 24px;
-              max-width: $msk-vertical-navigation-width - 24px;
+              width: $msk-vertical-navigation-dense-width - 24px;
+              min-width: $msk-vertical-navigation-dense-width - 24px;
+              max-width: $msk-vertical-navigation-dense-width - 24px;
 
               .msk-vertical-navigation-item-arrow,
               .msk-vertical-navigation-item-badge,
@@ -135,6 +135,10 @@ msk-vertical-navigation {
         .msk-vertical-navigation-content {
           .msk-vertical-navigation-item-wrapper {
             .msk-vertical-navigation-item {
+              width: $msk-vertical-navigation-width - 24px;
+              min-width: $msk-vertical-navigation-width - 24px;
+              max-width: $msk-vertical-navigation-width - 24px;
+
               .msk-vertical-navigation-item-arrow,
               .msk-vertical-navigation-item-badge,
               .msk-vertical-navigation-item-title-wrapper {
