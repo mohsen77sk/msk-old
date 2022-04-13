@@ -19,5 +19,14 @@
     "required": "This is required",
     "email": "Please enter a valid email address",
     "passwords-must-match": "Passwords must match"
+  },
+  "paginator": {
+    "items_per_page_label": "Items per page:",
+    "next_page_label": "Next page",
+    "previous_page_label": "Previous page",
+    "first_page_label": "First page",
+    "last_page_label": "Last page",
+    "range_page_label_1": "0 of {{length}}",
+    "range_page_label_2": "{{startIndex}} - {{endIndex}} of {{length}}"
   }
 }

@@ -13,6 +13,7 @@ import { MessageCoreModule } from '@msk/client/web-app/shell/core/message';
 import { TranslocoCoreModule } from '@msk/client/web-app/shell/core/transloco';
 import { NavigationCoreModule } from '@msk/client/web-app/shell/core/navigation';
 import { NotificationCoreModule } from '@msk/client/web-app/shell/core/notification';
+import { MaterialIntlCoreModule } from '@msk/client/web-app/shell/core/material-intl';
 import { UserCoreModule } from '@msk/client/web-app/shell/core/user';
 import {
   MskLayoutModule,
@@ -50,6 +51,7 @@ const routerConfig: ExtraOptions = {
     TranslocoCoreModule,
     NavigationCoreModule,
     NotificationCoreModule,
+    MaterialIntlCoreModule,
     UserCoreModule,
 
     RouterModule.forRoot(mskShellRoutes, routerConfig),
