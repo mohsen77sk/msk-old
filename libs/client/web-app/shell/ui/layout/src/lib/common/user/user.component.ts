@@ -28,7 +28,7 @@ export class UserComponent implements OnInit, OnDestroy {
   /* eslint-enable @typescript-eslint/naming-convention */
 
   @Input() showAvatar = true;
-  user: any;
+  user!: User;
 
   layoutDirection!: any;
 

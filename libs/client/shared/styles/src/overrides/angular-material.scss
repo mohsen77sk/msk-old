@@ -129,6 +129,33 @@
   max-height: 56px;
 }
 
+/* Button width icon */
+.mat-button,
+.mat-flat-button,
+.mat-raised-button,
+.mat-stroked-button {
+  .mat-button-wrapper {
+    .mat-icon {
+      margin-left: -.25rem;
+      margin-right: .5rem;
+    }
+  }
+}
+
+[dir='rtl'] {
+  .mat-button,
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-stroked-button {
+    .mat-button-wrapper {
+      .mat-icon {
+        margin-right: -.25rem;
+        margin-left: .5rem;
+      }
+    }
+  }
+}
+
 /* Rounded design */
 .mat-button,
 .mat-flat-button,
