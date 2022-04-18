@@ -10,7 +10,7 @@ import {
   Renderer2,
   ViewContainerRef,
 } from '@angular/core';
-import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { MskSpinnerComponent } from './spinner.component';
 
 @Directive({
   selector: '[mskSpinner]',
@@ -48,8 +48,8 @@ export class MskSpinnerDirective implements OnInit {
   @HostBinding('class.relative') isSpinnerExist = false;
 
   private _shouldShow = false;
-  private _spinner!: ComponentRef<MatProgressSpinner>;
-  private _componentFactory!: ComponentFactory<MatProgressSpinner>;
+  private _spinner!: ComponentRef<MskSpinnerComponent>;
+  private _componentFactory!: ComponentFactory<MskSpinnerComponent>;
 
   /**
    * Constructor
@@ -70,7 +70,9 @@ export class MskSpinnerDirective implements OnInit {
    */
   ngOnInit() {
     this._componentFactory =
-      this.componentFactoryResolver.resolveComponentFactory(MatProgressSpinner);
+      this.componentFactoryResolver.resolveComponentFactory(
+        MskSpinnerComponent
+      );
     if (this._shouldShow) {
       this.show();
     }
@@ -95,21 +97,15 @@ export class MskSpinnerDirective implements OnInit {
    */
   show() {
     if (!this.isSpinnerExist) {
-      this._spinner = this.directiveView.createComponent<MatProgressSpinner>(
+      this._spinner = this.directiveView.createComponent<MskSpinnerComponent>(
         this._componentFactory
       );
       this._setInstanceInputs(this._spinner.instance);
       this._spinner.changeDetectorRef.detectChanges();
-      // Create container element
-      const container = this.renderer.createElement('msk-spinner');
-      this._setContainerStyle(container);
-      // Append spinner to container
       this.renderer.appendChild(
-        container,
+        this.directiveElement.nativeElement,
         this._spinner.location.nativeElement
       );
-      // Append container to host element
-      this.renderer.appendChild(this.directiveElement.nativeElement, container);
       this.isSpinnerExist = true;
     }
   }
@@ -124,34 +120,8 @@ export class MskSpinnerDirective implements OnInit {
    * @param instance
    * @private
    */
-  private _setInstanceInputs(instance: MatProgressSpinner) {
-    instance.mode = 'indeterminate';
+  private _setInstanceInputs(instance: MskSpinnerComponent) {
     typeof this.color !== 'undefined' && (instance.color = this.color);
     typeof this.diameter !== 'undefined' && (instance.diameter = this.diameter);
-  }
-
-  /**
-   * Set container style
-   *
-   * @param container
-   * @private
-   */
-  private _setContainerStyle(container: unknown) {
-    this.renderer.setStyle(container, 'position', 'absolute');
-    this.renderer.setStyle(container, 'top', 0);
-    this.renderer.setStyle(container, 'left', 0);
-    this.renderer.setStyle(container, 'right', 0);
-    this.renderer.setStyle(container, 'bottom', 0);
-    this.renderer.setStyle(container, 'display', 'flex');
-    this.renderer.setStyle(container, 'align-items', 'center');
-    this.renderer.setStyle(container, 'justify-content', 'center');
-    this.renderer.setStyle(container, 'border-radius', 'inherit');
-    this.renderer.setStyle(container, 'overflow', 'hidden');
-    this.renderer.setStyle(container, 'z-index', '9999');
-    this.renderer.setStyle(
-      container,
-      'background-color',
-      'var(--color-bg-hover)'
-    );
   }
 }
