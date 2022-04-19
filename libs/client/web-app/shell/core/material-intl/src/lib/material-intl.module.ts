@@ -8,8 +8,7 @@ import { PaginatorIntl } from './material-paginator-intl';
     {
       provide: MatPaginatorIntl,
       deps: [TranslocoService],
-      useFactory: (translocoService: TranslocoService): any =>
-        new PaginatorIntl(translocoService).getPaginatorIntl(),
+      useClass: PaginatorIntl,
     },
   ],
 })
