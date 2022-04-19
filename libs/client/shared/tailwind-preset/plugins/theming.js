@@ -118,7 +118,7 @@ const theming = plugin.withOptions(
         _.map(options.themes, (theme, themeName) => [
           themeName === 'default'
             ? 'body, .theme-default'
-            : `body.theme-${e(themeName)}`,
+            : `.theme-${e(themeName)}`,
           _.fromPairs(
             _.flatten(
               _.map(
