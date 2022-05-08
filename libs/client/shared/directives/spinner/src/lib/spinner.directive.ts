@@ -102,10 +102,23 @@ export class MskSpinnerDirective implements OnInit {
       );
       this._setInstanceInputs(this._spinner.instance);
       this._spinner.changeDetectorRef.detectChanges();
-      this.renderer.appendChild(
-        this.directiveElement.nativeElement,
-        this._spinner.location.nativeElement
-      );
+      switch (this.directiveElement.nativeElement.tagName) {
+        case 'MAT-SELECT':
+          this.renderer.appendChild(
+            // render in mat-form-field-flex
+            this.directiveElement.nativeElement.parentElement?.parentElement,
+            this._spinner.location.nativeElement
+          );
+          break;
+
+        default:
+          this.renderer.appendChild(
+            // render in root element
+            this.directiveElement.nativeElement,
+            this._spinner.location.nativeElement
+          );
+          break;
+      }
       this.isSpinnerExist = true;
     }
   }
