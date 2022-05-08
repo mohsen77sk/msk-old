@@ -416,7 +416,7 @@
   }
 
   .mat-dialog-container > * {
-    @apply max-w-240 md:min-w-160 -m-6 flex max-h-screen flex-col;
+    @apply max-w-240 md:min-w-160 sm:min-w-120 -m-6 flex max-h-screen flex-col;
   }
 
   .dialog-header {
