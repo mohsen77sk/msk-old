@@ -96,7 +96,7 @@
           <!-- Icon -->
           <ng-container *ngIf="notification.icon && !notification.image">
             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700">
-              <mat-icon class="mat-icon-rtl-mirror icon-size-5" fontSet="mat_solid">
+              <mat-icon class="mat-icon-rtl-mirror icon-size-5">
                 {{ notification.icon }}
               </mat-icon>
             </div>
@@ -127,7 +127,7 @@
       <ng-container *ngIf="!notifications || !notifications.length">
         <div class="flex flex-auto flex-col items-center justify-center py-12 px-8 sm:justify-start">
           <div class="flex h-14 w-14 flex-0 items-center justify-center rounded-full bg-primary-100">
-            <mat-icon class="mat-icon-rtl-mirror text-primary-500-700">
+            <mat-icon class="mat-icon-rtl-mirror text-primary-500">
               notifications
             </mat-icon>
           </div>
