@@ -28,7 +28,7 @@ msk-alert {
 
         &:not(:empty) {
           display: flex;
-          margin-right: 12px;
+          @apply mr-3 rtl:ml-3;
         }
       }
 
@@ -91,7 +91,7 @@ msk-alert {
     .msk-alert-dismiss-button {
       position: absolute;
       top: 10px;
-      right: 10px;
+      @apply right-2.5 rtl:left-2.5;
       width: 32px !important;
       min-width: 32px !important;
       height: 32px !important;
@@ -108,7 +108,7 @@ msk-alert {
   &.msk-alert-dismissible {
     .msk-alert-container {
       .msk-alert-content {
-        margin-right: 32px;
+        @apply mr-8 rtl:ml-8;
       }
     }
   }
@@ -131,7 +131,7 @@ msk-alert {
 
       .msk-alert-border {
         position: absolute;
-        left: 0;
+        @apply left-0 rtl:right-0;
         top: 0;
         bottom: 0;
         width: 4px;
@@ -627,7 +627,7 @@ msk-alert {
     /* Primary */
     &.msk-alert-type-primary {
       .msk-alert-container {
-        @apply bg-primary-50 ring-1 ring-inset ring-primary-400;
+        @apply bg-primary-50 ring-primary-400 ring-1 ring-inset;
 
         .msk-alert-icon {
           @apply text-primary-600;
@@ -668,7 +668,7 @@ msk-alert {
     /* Accent */
     &.msk-alert-type-accent {
       .msk-alert-container {
-        @apply bg-accent-100 ring-1 ring-inset ring-accent-400;
+        @apply bg-accent-100 ring-accent-400 ring-1 ring-inset;
 
         .msk-alert-icon {
           @apply text-accent-600;
@@ -709,7 +709,7 @@ msk-alert {
     /* Warn */
     &.msk-alert-type-warn {
       .msk-alert-container {
-        @apply bg-warn-50 ring-1 ring-inset ring-warn-400;
+        @apply bg-warn-50 ring-warn-400 ring-1 ring-inset;
 
         .msk-alert-icon {
           @apply text-warn-600;
