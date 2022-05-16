@@ -28,7 +28,7 @@ msk-alert {
 
         &:not(:empty) {
           display: flex;
-          @apply mr-3 rtl:ml-3;
+          @apply ltr:mr-3 rtl:ml-3;
         }
       }
 
@@ -91,7 +91,7 @@ msk-alert {
     .msk-alert-dismiss-button {
       position: absolute;
       top: 10px;
-      @apply right-2.5 rtl:left-2.5;
+      @apply ltr:right-2.5 rtl:left-2.5;
       width: 32px !important;
       min-width: 32px !important;
       height: 32px !important;
@@ -108,7 +108,7 @@ msk-alert {
   &.msk-alert-dismissible {
     .msk-alert-container {
       .msk-alert-content {
-        @apply mr-8 rtl:ml-8;
+        @apply ltr:mr-8 rtl:ml-8;
       }
     }
   }
@@ -131,7 +131,7 @@ msk-alert {
 
       .msk-alert-border {
         position: absolute;
-        @apply left-0 rtl:right-0;
+        @apply ltr:left-0 rtl:right-0;
         top: 0;
         bottom: 0;
         width: 4px;
