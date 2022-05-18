@@ -12,6 +12,7 @@ import {
 } from '@msk/client/web-app/shell/core/navigation';
 import { User, UserService } from '@msk/client/web-app/shell/core/user';
 
+import { cloneDeep } from 'lodash-es';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -49,7 +50,7 @@ export class FuturisticLayoutComponent implements OnInit, OnDestroy {
     this._navigationService.navigation$
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe((navigation: Navigation) => {
-        this.navigation = navigation;
+        this.navigation = cloneDeep(navigation);
       });
 
     // Subscribe to the user service

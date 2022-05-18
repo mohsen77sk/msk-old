@@ -11,6 +11,7 @@ import {
   NavigationService,
 } from '@msk/client/web-app/shell/core/navigation';
 
+import { cloneDeep } from 'lodash-es';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -46,7 +47,10 @@ export class CompactLayoutComponent implements OnInit, OnDestroy {
     this._navigationService.navigation$
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe((navigation: Navigation) => {
-        this.navigation = navigation;
+        this.navigation = cloneDeep(navigation);
+        this.navigation.forEach((item) =>
+          item.type == 'group' ? (item.type = 'aside') : null
+        );
       });
 
     // Subscribe to media changes

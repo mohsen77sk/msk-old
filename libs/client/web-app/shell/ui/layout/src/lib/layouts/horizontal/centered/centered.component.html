@@ -2,7 +2,7 @@
 <msk-loading-bar></msk-loading-bar>
 
 <div
-  class="flex w-full flex-auto justify-center bg-gray-200 dark:bg-card sm:p-4 md:p-8"
+  class="dark:bg-card flex w-full flex-auto justify-center bg-gray-200 sm:p-4 md:p-8"
 >
   <!-- Navigation -->
   <ng-container *ngIf="isScreenSmall">
@@ -10,7 +10,7 @@
       class="dark bg-gray-900 print:hidden"
       [mode]="'over'"
       [name]="'mainNavigation'"
-      [navigation]="navigation.default"
+      [navigation]="navigation"
       [opened]="false"
     >
       <!-- Navigation header hook -->
@@ -26,11 +26,11 @@
 
   <!-- Wrapper -->
   <div
-    class="flex min-w-0 max-w-360 flex-auto flex-col items-center overflow-hidden shadow-2xl dark:shadow-none sm:rounded-xl"
+    class="max-w-360 flex min-w-0 flex-auto flex-col items-center overflow-hidden shadow-2xl dark:shadow-none sm:rounded-xl"
   >
     <!-- Header -->
     <div
-      class="bg-card relative z-49 flex h-16 w-full flex-0 items-center justify-between border-b px-4 dark:bg-default print:hidden sm:h-20 md:px-6"
+      class="bg-card z-49 flex-0 dark:bg-default relative flex h-16 w-full items-center justify-between border-b px-4 print:hidden sm:h-20 md:px-6"
     >
       <div class="flex" *ngIf="!isScreenSmall">
         <!-- Logo -->
@@ -54,7 +54,7 @@
         <msk-horizontal-navigation
           class="mx-2 flex-1"
           [name]="'mainNavigation'"
-          [navigation]="navigation.horizontal"
+          [navigation]="navigation"
           [dir]="layoutDirection"
         ></msk-horizontal-navigation>
       </div>
