@@ -683,6 +683,34 @@
       },
       "tags": []
     },
+    "client-web-app-auth-two-step-verification-feature": {
+      "projectType": "library",
+      "root": "libs/client/web-app/auth/two-step-verification/feature",
+      "sourceRoot": "libs/client/web-app/auth/two-step-verification/feature/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/client/web-app/auth/two-step-verification/feature"
+          ],
+          "options": {
+            "jestConfig": "libs/client/web-app/auth/two-step-verification/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/web-app/auth/two-step-verification/feature/src/**/*.ts",
+              "libs/client/web-app/auth/two-step-verification/feature/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-web-app-error-internal-server-error-feature": {
       "projectType": "library",
       "root": "libs/client/web-app/error/internal-server-error/feature",

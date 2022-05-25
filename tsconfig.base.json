@@ -92,6 +92,9 @@
       "@msk/client/web-app/auth/sign-out/feature": [
         "libs/client/web-app/auth/sign-out/feature/src/index.ts"
       ],
+      "@msk/client/web-app/auth/two-step-verification/feature": [
+        "libs/client/web-app/auth/two-step-verification/feature/src/index.ts"
+      ],
       "@msk/client/web-app/error/internal-server-error/feature": [
         "libs/client/web-app/error/internal-server-error/feature/src/index.ts"
       ],

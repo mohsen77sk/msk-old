@@ -1,0 +1,100 @@
+<div
+  class="flex min-w-0 flex-auto flex-col items-center sm:justify-center md:p-8"
+>
+  <div
+    class="sm:bg-card flex overflow-hidden sm:rounded-2xl sm:shadow md:w-full md:max-w-6xl"
+  >
+    <div class="w-full py-8 px-4 sm:w-auto sm:p-12 md:p-16">
+      <div class="max-w-80 mx-auto w-full sm:mx-0 sm:w-80">
+        <!-- Logo -->
+        <div class="w-12">
+          <img src="assets/images/logo/logo.svg" alt="logo" />
+        </div>
+
+        <!-- Title -->
+        <div class="mt-8 text-4xl font-extrabold leading-tight tracking-tight">
+          <ng-container *transloco="let t">
+            {{ t('auth.two-step-verification') }}
+          </ng-container>
+        </div>
+        <div class="mt-0.5 flex items-baseline font-medium">
+          <div>
+            <ng-container *transloco="let t">
+              {{ t('auth.enter-the-code-sent-to-you') }}
+            </ng-container>
+          </div>
+        </div>
+
+        <!-- Alert -->
+        <msk-alert
+          class="mt-8 -mb-4"
+          *ngIf="showAlert"
+          [appearance]="'outline'"
+          [showIcon]="false"
+          [type]="alert.type"
+          [@shake]="alert.type === 'error'"
+        >
+          {{ alert.message }}
+        </msk-alert>
+
+        <!-- Sign in form -->
+        <form class="mt-8" [formGroup]="towStepForm" #towStepNgForm="ngForm">
+          <!-- Code field -->
+          <mat-form-field class="w-full">
+            <mat-label>
+              <ng-container *transloco="let t">
+                {{ t('auth.code') }}
+              </ng-container>
+            </mat-label>
+            <input id="code" matInput formControlName="code" />
+            <mat-error>
+              <ng-container *transloco="let t; read: 'error-validation'">
+                {{ t('required') }}
+              </ng-container>
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Submit button -->
+          <button
+            class="msk-mat-button-large mt-6 w-full"
+            mat-flat-button
+            [color]="'primary'"
+            [disabled]="towStepForm.disabled"
+            (click)="verification()"
+            [mskSpinner]="towStepForm.disabled"
+          >
+            <span *ngIf="!towStepForm.disabled">
+              <ng-container *transloco="let t">
+                {{ t('auth.sign-in') }}
+              </ng-container>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      class="relative hidden h-full flex-auto items-center justify-center overflow-hidden bg-gray-800 p-16 ltr:dark:border-l rtl:dark:border-r md:flex lg:px-28"
+    >
+      <!-- Rings -->
+      <!-- prettier-ignore -->
+      <svg class="absolute inset-0 pointer-events-none" viewBox="0 0 960 540" width="100%" height="100%" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
+          <circle r="234" cx="196" cy="23"></circle>
+          <circle r="234" cx="790" cy="491"></circle>
+        </g>
+      </svg>
+      <!-- Dots -->
+      <!-- prettier-ignore -->
+      <svg class="absolute -top-16 -right-16 text-gray-700" viewBox="0 0 220 192" width="220" height="192" fill="none">
+        <defs>
+          <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
+          </pattern>
+        </defs>
+        <rect width="220" height="192" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
+      </svg>
+      <!-- Content -->
+      <div class="relative z-10 w-full max-w-2xl"></div>
+    </div>
+  </div>
+</div>

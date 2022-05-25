@@ -68,6 +68,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.AuthResetPasswordModule
           ),
       },
+      {
+        path: 'two-step-verification',
+        loadChildren: () =>
+          import('@msk/client/web-app/auth/two-step-verification/feature').then(
+            (m) => m.AuthTwoStepVerificationModule
+          ),
+      },
     ],
   },
 
