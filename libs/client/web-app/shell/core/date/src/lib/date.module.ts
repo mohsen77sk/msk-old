@@ -7,15 +7,15 @@ import {
 import { MskDateFnsAdapter } from './date-fns-adapter';
 import { MSK_DATE_FNS_FORMATS } from './date-fns-formats';
 
-import { MskConfigService } from '@msk/client/shared/services/config';
+import { TranslocoService } from '@ngneat/transloco';
 
 @NgModule({
   providers: [
     {
       provide: MAT_DATE_LOCALE,
-      deps: [MskConfigService],
-      useFactory: (mskConfigService: MskConfigService): any => {
-        return mskConfigService.config.language;
+      deps: [TranslocoService],
+      useFactory: (translocoService: TranslocoService): any => {
+        return translocoService.getActiveLang();
       },
     },
     {
