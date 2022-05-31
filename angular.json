@@ -27,6 +27,32 @@
       },
       "tags": []
     },
+    "client-shared-app-config": {
+      "projectType": "library",
+      "root": "libs/client/shared/app-config",
+      "sourceRoot": "libs/client/shared/app-config/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/app-config"],
+          "options": {
+            "jestConfig": "libs/client/shared/app-config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/app-config/src/**/*.ts",
+              "libs/client/shared/app-config/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-directives-scroll-reset": {
       "projectType": "library",
       "root": "libs/client/shared/directives/scroll-reset",
@@ -811,32 +837,6 @@
             "lintFilePatterns": [
               "libs/client/web-app/landing/home/feature/src/**/*.ts",
               "libs/client/web-app/landing/home/feature/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
-    "client-web-app-shared-app-config": {
-      "projectType": "library",
-      "root": "libs/client/web-app/shared/app-config",
-      "sourceRoot": "libs/client/web-app/shared/app-config/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shared/app-config"],
-          "options": {
-            "jestConfig": "libs/client/web-app/shared/app-config/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/web-app/shared/app-config/src/**/*.ts",
-              "libs/client/web-app/shared/app-config/src/**/*.html"
             ]
           }
         }

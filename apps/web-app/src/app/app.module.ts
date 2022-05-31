@@ -6,7 +6,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { RouterModule } from '@angular/router';
 
 import { MskWebShellModule } from '@msk/client/web-app/shell/feature';
-import { GetAppConfigProvider } from '@msk/client/web-app/shared/app-config';
+import { GetAppConfigProvider } from '@msk/client/shared/app-config';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';

@@ -11,13 +11,19 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@msk/client/shared/animations": [
         "libs/client/shared/animations/src/index.ts"
+      ],
+      "@msk/client/shared/app-config": [
+        "libs/client/shared/app-config/src/index.ts"
       ],
       "@msk/client/shared/directives/scroll-reset": [
         "libs/client/shared/directives/scroll-reset/src/index.ts"
@@ -58,7 +64,9 @@
       "@msk/client/shared/ui/alert": [
         "libs/client/shared/ui/alert/src/index.ts"
       ],
-      "@msk/client/shared/ui/card": ["libs/client/shared/ui/card/src/index.ts"],
+      "@msk/client/shared/ui/card": [
+        "libs/client/shared/ui/card/src/index.ts"
+      ],
       "@msk/client/shared/ui/drawer": [
         "libs/client/shared/ui/drawer/src/index.ts"
       ],
@@ -107,9 +115,6 @@
       "@msk/client/web-app/landing/home/feature": [
         "libs/client/web-app/landing/home/feature/src/index.ts"
       ],
-      "@msk/client/web-app/shared/app-config": [
-        "libs/client/web-app/shared/app-config/src/index.ts"
-      ],
       "@msk/client/web-app/shell/core/auth": [
         "libs/client/web-app/shell/core/auth/src/index.ts"
       ],
@@ -145,5 +150,8 @@
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

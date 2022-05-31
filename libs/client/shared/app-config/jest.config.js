@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'client-web-app-shared-app-config',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'client-shared-app-config',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,8 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory:
-    '../../../../../coverage/libs/client/web-app/shared/app-config',
+  coverageDirectory: '../../../../coverage/libs/client/shared/app-config',
   transform: {
     '^.+.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
