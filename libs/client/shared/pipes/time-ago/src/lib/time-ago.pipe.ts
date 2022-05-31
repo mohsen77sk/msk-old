@@ -2,7 +2,7 @@ import { Pipe, ChangeDetectorRef, PipeTransform } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { Observable, timer, distinctUntilChanged, map } from 'rxjs';
 
-import { MskConfigService } from '@msk/client/shared/services/config';
+import { TranslocoService } from '@ngneat/transloco';
 
 import { parseISO, formatDistanceToNow } from 'date-fns';
 import locale_enUS from 'date-fns/locale/en-US';
@@ -26,7 +26,7 @@ export class MskTimeAgoPipe extends AsyncPipe implements PipeTransform {
    */
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
-    private _mskConfigService: MskConfigService
+    private _translocoService: TranslocoService
   ) {
     super(_changeDetectorRef);
 
@@ -35,7 +35,7 @@ export class MskTimeAgoPipe extends AsyncPipe implements PipeTransform {
         formatDistanceToNow(this._time ?? 0, {
           addSuffix: true,
           includeSeconds: true,
-          locale: locale[_mskConfigService.config.language],
+          locale: locale[_translocoService.getActiveLang()],
         })
       ),
       distinctUntilChanged()

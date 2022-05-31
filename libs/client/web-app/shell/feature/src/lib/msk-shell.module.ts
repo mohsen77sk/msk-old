@@ -6,14 +6,15 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 import { mskShellRoutes } from './msk-shell.routes';
 
+import { MskIconsModule } from '@msk/client/shared/utils/icons';
+import { MskTranslocoModule } from '@msk/client/shared/utils/transloco';
+import { MskMaterialIntlModule } from '@msk/client/shared/utils/material-intl';
+import { MskDateModule } from '@msk/client/shared/utils/date';
+
 import { AuthCoreModule } from '@msk/client/web-app/shell/core/auth';
-import { DateCoreModule } from '@msk/client/web-app/shell/core/date';
-import { IconsCoreModule } from '@msk/client/web-app/shell/core/icons';
 import { MessageCoreModule } from '@msk/client/web-app/shell/core/message';
-import { TranslocoCoreModule } from '@msk/client/web-app/shell/core/transloco';
 import { NavigationCoreModule } from '@msk/client/web-app/shell/core/navigation';
 import { NotificationCoreModule } from '@msk/client/web-app/shell/core/notification';
-import { MaterialIntlCoreModule } from '@msk/client/web-app/shell/core/material-intl';
 import { UserCoreModule } from '@msk/client/web-app/shell/core/user';
 import {
   MskLayoutModule,
@@ -40,18 +41,20 @@ const routerConfig: ExtraOptions = {
     MskSplashScreenModule,
     MskUtilsModule,
 
+    // Utils
+    MskIconsModule,
+    MskTranslocoModule,
+    MskMaterialIntlModule,
+    MskDateModule,
+
     // Layout module of your application
     MskLayoutModule,
 
     // Core module of your application
     AuthCoreModule,
-    DateCoreModule,
-    IconsCoreModule,
     MessageCoreModule,
-    TranslocoCoreModule,
     NavigationCoreModule,
     NotificationCoreModule,
-    MaterialIntlCoreModule,
     UserCoreModule,
 
     RouterModule.forRoot(mskShellRoutes, routerConfig),

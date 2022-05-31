@@ -549,6 +549,110 @@
       },
       "tags": []
     },
+    "client-shared-utils-date": {
+      "projectType": "library",
+      "root": "libs/client/shared/utils/date",
+      "sourceRoot": "libs/client/shared/utils/date/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/utils/date"],
+          "options": {
+            "jestConfig": "libs/client/shared/utils/date/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/utils/date/src/**/*.ts",
+              "libs/client/shared/utils/date/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-shared-utils-icons": {
+      "projectType": "library",
+      "root": "libs/client/shared/utils/icons",
+      "sourceRoot": "libs/client/shared/utils/icons/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/utils/icons"],
+          "options": {
+            "jestConfig": "libs/client/shared/utils/icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/utils/icons/src/**/*.ts",
+              "libs/client/shared/utils/icons/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-shared-utils-material-intl": {
+      "projectType": "library",
+      "root": "libs/client/shared/utils/material-intl",
+      "sourceRoot": "libs/client/shared/utils/material-intl/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/utils/material-intl"],
+          "options": {
+            "jestConfig": "libs/client/shared/utils/material-intl/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/utils/material-intl/src/**/*.ts",
+              "libs/client/shared/utils/material-intl/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "client-shared-utils-transloco": {
+      "projectType": "library",
+      "root": "libs/client/shared/utils/transloco",
+      "sourceRoot": "libs/client/shared/utils/transloco/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/utils/transloco"],
+          "options": {
+            "jestConfig": "libs/client/shared/utils/transloco/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/utils/transloco/src/**/*.ts",
+              "libs/client/shared/utils/transloco/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-validators": {
       "projectType": "library",
       "root": "libs/client/shared/validators",
@@ -869,84 +973,6 @@
       },
       "tags": []
     },
-    "client-web-app-shell-core-date": {
-      "projectType": "library",
-      "root": "libs/client/web-app/shell/core/date",
-      "sourceRoot": "libs/client/web-app/shell/core/date/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/date"],
-          "options": {
-            "jestConfig": "libs/client/web-app/shell/core/date/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/web-app/shell/core/date/src/**/*.ts",
-              "libs/client/web-app/shell/core/date/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
-    "client-web-app-shell-core-icons": {
-      "projectType": "library",
-      "root": "libs/client/web-app/shell/core/icons",
-      "sourceRoot": "libs/client/web-app/shell/core/icons/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/icons"],
-          "options": {
-            "jestConfig": "libs/client/web-app/shell/core/icons/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/web-app/shell/core/icons/src/**/*.ts",
-              "libs/client/web-app/shell/core/icons/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
-    "client-web-app-shell-core-material-intl": {
-      "projectType": "library",
-      "root": "libs/client/web-app/shell/core/material-intl",
-      "sourceRoot": "libs/client/web-app/shell/core/material-intl/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/material-intl"],
-          "options": {
-            "jestConfig": "libs/client/web-app/shell/core/material-intl/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/web-app/shell/core/material-intl/src/**/*.ts",
-              "libs/client/web-app/shell/core/material-intl/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
     "client-web-app-shell-core-message": {
       "projectType": "library",
       "root": "libs/client/web-app/shell/core/message",
@@ -1019,32 +1045,6 @@
             "lintFilePatterns": [
               "libs/client/web-app/shell/core/notification/src/**/*.ts",
               "libs/client/web-app/shell/core/notification/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
-    "client-web-app-shell-core-transloco": {
-      "projectType": "library",
-      "root": "libs/client/web-app/shell/core/transloco",
-      "sourceRoot": "libs/client/web-app/shell/core/transloco/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/transloco"],
-          "options": {
-            "jestConfig": "libs/client/web-app/shell/core/transloco/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/web-app/shell/core/transloco/src/**/*.ts",
-              "libs/client/web-app/shell/core/transloco/src/**/*.html"
             ]
           }
         }

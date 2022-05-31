@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { MskConfigService } from '@msk/client/shared/services/config';
+import { TranslocoService } from '@ngneat/transloco';
 
 import { format as gregorianFormat } from 'date-fns';
 import { format as jalaliFormat } from 'date-fns-jalali';
@@ -25,13 +25,13 @@ export class MskDateTimePipe implements PipeTransform {
   /**
    * Constructor
    */
-  constructor(private _mskConfigService: MskConfigService) {}
+  constructor(private _translocoService: TranslocoService) {}
 
   /**
    * Getter for language
    */
   get language(): 'en' | 'fa' {
-    return this._mskConfigService.config.language;
+    return this._translocoService.getActiveLang() as 'en' | 'fa';
   }
 
   /**

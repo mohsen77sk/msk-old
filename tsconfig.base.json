@@ -82,6 +82,18 @@
       "@msk/client/shared/ui/password-strength-meter": [
         "libs/client/shared/ui/password-strength-meter/src/index.ts"
       ],
+      "@msk/client/shared/utils/date": [
+        "libs/client/shared/utils/date/src/index.ts"
+      ],
+      "@msk/client/shared/utils/icons": [
+        "libs/client/shared/utils/icons/src/index.ts"
+      ],
+      "@msk/client/shared/utils/material-intl": [
+        "libs/client/shared/utils/material-intl/src/index.ts"
+      ],
+      "@msk/client/shared/utils/transloco": [
+        "libs/client/shared/utils/transloco/src/index.ts"
+      ],
       "@msk/client/shared/validators": [
         "libs/client/shared/validators/src/index.ts"
       ],
@@ -118,15 +130,6 @@
       "@msk/client/web-app/shell/core/auth": [
         "libs/client/web-app/shell/core/auth/src/index.ts"
       ],
-      "@msk/client/web-app/shell/core/date": [
-        "libs/client/web-app/shell/core/date/src/index.ts"
-      ],
-      "@msk/client/web-app/shell/core/icons": [
-        "libs/client/web-app/shell/core/icons/src/index.ts"
-      ],
-      "@msk/client/web-app/shell/core/material-intl": [
-        "libs/client/web-app/shell/core/material-intl/src/index.ts"
-      ],
       "@msk/client/web-app/shell/core/message": [
         "libs/client/web-app/shell/core/message/src/index.ts"
       ],
@@ -135,9 +138,6 @@
       ],
       "@msk/client/web-app/shell/core/notification": [
         "libs/client/web-app/shell/core/notification/src/index.ts"
-      ],
-      "@msk/client/web-app/shell/core/transloco": [
-        "libs/client/web-app/shell/core/transloco/src/index.ts"
       ],
       "@msk/client/web-app/shell/core/user": [
         "libs/client/web-app/shell/core/user/src/index.ts"
