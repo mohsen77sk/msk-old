@@ -1160,6 +1160,11 @@
                 "glob": "**/*",
                 "input": "libs/client/shared/assets/src",
                 "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/client/web-app/assets/src",
+                "output": "assets"
               }
             ],
             "styles": ["apps/web-app/src/styles.scss"],

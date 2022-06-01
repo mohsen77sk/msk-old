@@ -13,21 +13,21 @@
         class="mt-8 text-center text-3xl font-extrabold leading-tight tracking-tight"
       >
         <ng-container *transloco="let t">
-          {{ t('auth.sign-out-title') }}
+          {{ t('signOut.sign-out-title') }}
         </ng-container>
       </div>
       <div class="mt-1 flex justify-center font-medium">
         <!-- Redirect countdown -->
         <ng-container *ngIf="countdown > 0">
           <ng-container *transloco="let t">
-            {{ t('auth.redirecting-in-seconds', { seconds: countdown }) }}
+            {{ t('signOut.redirecting-in-seconds', { seconds: countdown }) }}
           </ng-container>
         </ng-container>
 
         <!-- Redirect message -->
         <ng-container *ngIf="countdown === 0">
           <ng-container *transloco="let t">
-            {{ t('auth.you-are-now-being-redirected') }}
+            {{ t('signOut.you-are-now-being-redirected') }}
           </ng-container>
         </ng-container>
       </div>
@@ -35,12 +35,12 @@
       <!-- Form footer -->
       <div class="text-secondary text-md mt-8 text-center font-medium">
         <ng-container *transloco="let t">
-          <span>{{ t('auth.go-to') }}</span>
+          <span>{{ t('signOut.go-to') }}</span>
           <a
             class="text-primary-500 ml-1 hover:underline"
             [routerLink]="['/sign-in']"
           >
-            {{ t('auth.sign-in') }}
+            {{ t('signOut.sign-in') }}
           </a>
         </ng-container>
       </div>

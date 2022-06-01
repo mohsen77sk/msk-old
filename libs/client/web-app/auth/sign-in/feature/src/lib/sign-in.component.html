@@ -14,13 +14,13 @@
         <!-- Title -->
         <div class="mt-8 text-4xl font-extrabold leading-tight tracking-tight">
           <ng-container *transloco="let t">
-            {{ t('auth.sign-in') }}
+            {{ t('signIn.sign-in') }}
           </ng-container>
         </div>
         <div class="mt-0.5 flex items-baseline font-medium">
           <div>
             <ng-container *transloco="let t">
-              {{ t('auth.do-not-have-an-account') }}
+              {{ t('signIn.do-not-have-an-account') }}
             </ng-container>
           </div>
           <a
@@ -28,7 +28,7 @@
             [routerLink]="['/sign-up']"
           >
             <ng-container *transloco="let t">
-              {{ t('auth.sign-up') }}
+              {{ t('signIn.sign-up') }}
             </ng-container>
           </a>
         </div>
@@ -51,7 +51,7 @@
           <mat-form-field class="w-full">
             <mat-label>
               <ng-container *transloco="let t">
-                {{ t('auth.username') }}
+                {{ t('signIn.username') }}
               </ng-container>
             </mat-label>
             <input id="username" matInput formControlName="username" />
@@ -66,7 +66,7 @@
           <mat-form-field class="w-full">
             <mat-label>
               <ng-container *transloco="let t">
-                {{ t('auth.password') }}
+                {{ t('signIn.password') }}
               </ng-container>
             </mat-label>
             <input
@@ -122,7 +122,7 @@
           <div class="mt-1.5 inline-flex w-full items-end justify-between">
             <mat-checkbox color="primary" formControlName="rememberMe">
               <ng-container *transloco="let t">
-                {{ t('auth.remember-me') }}
+                {{ t('signIn.remember-me') }}
               </ng-container>
             </mat-checkbox>
             <a
@@ -130,7 +130,7 @@
               [routerLink]="['/forgot-password']"
             >
               <ng-container *transloco="let t">
-                {{ t('auth.forgot-password') }}
+                {{ t('signIn.forgot-password') }}
               </ng-container>
             </a>
           </div>
@@ -146,7 +146,7 @@
           >
             <span *ngIf="!signInForm.disabled">
               <ng-container *transloco="let t">
-                {{ t('auth.sign-in') }}
+                {{ t('signIn.sign-in') }}
               </ng-container>
             </span>
           </button>

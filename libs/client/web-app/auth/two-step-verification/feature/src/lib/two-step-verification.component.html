@@ -14,13 +14,13 @@
         <!-- Title -->
         <div class="mt-8 text-4xl font-extrabold leading-tight tracking-tight">
           <ng-container *transloco="let t">
-            {{ t('auth.two-step-verification') }}
+            {{ t('towStep.two-step-verification') }}
           </ng-container>
         </div>
         <div class="mt-0.5 flex items-baseline font-medium">
           <div>
             <ng-container *transloco="let t">
-              {{ t('auth.enter-the-code-sent-to-you') }}
+              {{ t('towStep.enter-the-code-sent-to-you') }}
             </ng-container>
           </div>
         </div>
@@ -43,7 +43,7 @@
           <mat-form-field class="w-full">
             <mat-label>
               <ng-container *transloco="let t">
-                {{ t('auth.code') }}
+                {{ t('towStep.code') }}
               </ng-container>
             </mat-label>
             <input id="code" matInput formControlName="code" />
@@ -65,7 +65,7 @@
           >
             <span *ngIf="!towStepForm.disabled">
               <ng-container *transloco="let t">
-                {{ t('auth.sign-in') }}
+                {{ t('towStep.sign-in') }}
               </ng-container>
             </span>
           </button>

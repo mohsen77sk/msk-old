@@ -1,9 +1,0 @@
-{
-  "title-404": "Ooops... 404!",
-  "description-404": "The page you requested could not be found",
-  "title-500": "Something went wrong!",
-  "description-500": "Server Error 500. Our staff has been notified, thank you for your understanding.",
-  "title-503": "We are under scheduled maintenance.",
-  "description-503": "Sorry for the inconvenience, we will be back shortly!",
-  "back-to-dashboard": "Back to Dashboard"
-}

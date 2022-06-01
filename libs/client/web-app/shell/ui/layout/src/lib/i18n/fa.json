@@ -1,0 +1,18 @@
+{
+  "signed-in-as": "وارد شده با",
+  "profile": "مشخصات",
+  "settings": "تنظیمات",
+  "sign-out": "خروج از سیستم",
+  "languages": "زبان سیستم",
+  "messages": "پیام ها",
+  "no-messages": "بدون پیام",
+  "description-messages": "وقتی پیامی داشته باشید، آنها در اینجا ظاهر می شوند.",
+  "notifications": "اطلاعیه",
+  "no-notifications": "بدون اطلاعیه",
+  "description-notifications": "وقتی نوتیفیکیشن داشته باشید، آنها در اینجا ظاهر می شوند.",
+  "mark-all-as-read": "همه را به عنوان خوانده شده علامت بزن",
+  "mark-as-read": "به عنوان خوانده شده علامت بزن",
+  "mark-as-unread": "به عنوان خوانده نشده علامت بزن",
+  "toggle-fullscreen": "تغییر حالت تمام صفحه",
+  "remove": "برداشتن"
+}

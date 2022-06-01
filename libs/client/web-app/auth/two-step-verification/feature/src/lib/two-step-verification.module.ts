@@ -15,6 +15,7 @@ import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
 import { MskVirtualKeyboardModule } from '@msk/client/shared/directives/virtual-keyboard';
 
 import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import { scopeLoader } from 'scoped-translations';
 
 import { TwoStepVerificationComponent } from './two-step-verification.component';
 
@@ -42,7 +43,17 @@ const routes: Routes = [
     MskSpinnerModule,
     TranslocoModule,
   ],
-  providers: [{ provide: TRANSLOCO_SCOPE, useValue: 'auth' }],
+  providers: [
+    {
+      provide: TRANSLOCO_SCOPE,
+      useValue: {
+        scope: 'towStep',
+        loader: scopeLoader(
+          (lang: string, root: string) => import(`./${root}/${lang}.json`)
+        ),
+      },
+    },
+  ],
   declarations: [TwoStepVerificationComponent],
 })
 export class AuthTwoStepVerificationModule {}

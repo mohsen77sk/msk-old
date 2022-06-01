@@ -9,6 +9,7 @@ import {
 } from '@ngneat/transloco';
 import { TranslocoHttpLoader } from './transloco.http-loader';
 import { MskConfigService } from '@msk/client/shared/services/config';
+import { availableLangs } from 'scoped-translations';
 
 @NgModule({
   providers: [
@@ -17,16 +18,7 @@ import { MskConfigService } from '@msk/client/shared/services/config';
       provide: TRANSLOCO_CONFIG,
       deps: [MskConfigService],
       useFactory: (mskConfigService: MskConfigService): TranslocoConfig => ({
-        availableLangs: [
-          {
-            id: 'en',
-            label: 'English',
-          },
-          {
-            id: 'fa',
-            label: 'فارسی',
-          },
-        ],
+        availableLangs: availableLangs,
         defaultLang: mskConfigService.config.language,
         fallbackLang: mskConfigService.config.language,
         reRenderOnLangChange: true,

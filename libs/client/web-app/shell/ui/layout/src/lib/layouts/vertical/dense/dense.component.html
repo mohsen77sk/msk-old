@@ -40,12 +40,18 @@
       </button>
     </div>
     <!-- Components -->
-    <div class="flex items-center px-2">
-      <languages class="mx-0.5 md:mx-1"></languages>
-      <msk-fullscreen class="mx-0.5 hidden md:mx-1 md:block"></msk-fullscreen>
-      <notifications class="mx-0.5 md:mx-1"></notifications>
-      <messages class="mx-0.5 md:mx-1"></messages>
-      <user class="mx-0.5 md:mx-1"></user>
+    <div
+      class="flex items-center space-x-0.5 px-2 rtl:space-x-reverse md:space-x-1"
+    >
+      <languages></languages>
+      <msk-fullscreen
+        class="hidden md:block"
+        *transloco="let t"
+        [tooltip]="t('layout.toggle-fullscreen')"
+      ></msk-fullscreen>
+      <notifications></notifications>
+      <messages></messages>
+      <user></user>
     </div>
   </div>
 

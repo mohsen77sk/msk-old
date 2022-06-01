@@ -14,6 +14,7 @@ import { MskAlertModule } from '@msk/client/shared/ui/alert';
 import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
 
 import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import { scopeLoader } from 'scoped-translations';
 
 import { ForgotPasswordComponent } from './forgot-password.component';
 
@@ -40,7 +41,17 @@ const routes: Routes = [
     MskSpinnerModule,
     TranslocoModule,
   ],
-  providers: [{ provide: TRANSLOCO_SCOPE, useValue: 'auth' }],
+  providers: [
+    {
+      provide: TRANSLOCO_SCOPE,
+      useValue: {
+        scope: 'forgotPassword',
+        loader: scopeLoader(
+          (lang: string, root: string) => import(`./${root}/${lang}.json`)
+        ),
+      },
+    },
+  ],
   declarations: [ForgotPasswordComponent],
 })
 export class AuthForgotPasswordModule {}

@@ -1,9 +1,18 @@
 <!-- Messages toggle -->
-<button mat-icon-button (click)="openPanel()" #messagesOrigin>
+<button
+  mat-icon-button
+  *transloco="let t"
+  [matTooltip]="t('layout.messages')"
+  (click)="openPanel()"
+  #messagesOrigin
+>
   <ng-container *ngIf="unreadCount > 0">
-    <span class="absolute top-0 right-0 left-0 z-10 flex h-3 items-center justify-center">
+    <span
+      class="absolute top-0 right-0 left-0 z-10 flex h-3 items-center justify-center"
+    >
       <span
-        class="ml-4 mt-2.5 flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full bg-indigo-600 px-1 text-xs font-medium text-indigo-50">
+        class="min-w-4 ml-4 mt-2.5 flex h-4 shrink-0 items-center justify-center rounded-full bg-indigo-600 px-1 text-xs font-medium text-indigo-50"
+      >
         {{ unreadCount }}
       </span>
     </span>
@@ -14,36 +23,49 @@
 <!-- Messages panel -->
 <ng-template #messagesPanel>
   <div
-    class="fixed inset-0 flex flex-col overflow-hidden shadow-lg sm:static sm:inset-auto sm:w-90 sm:min-w-90 sm:rounded-2xl">
+    class="sm:w-90 sm:min-w-90 fixed inset-0 flex flex-col overflow-hidden shadow-lg sm:static sm:inset-auto sm:rounded-2xl"
+  >
     <!-- Header -->
-    <div class="flex shrink-0 items-center bg-primary py-3 px-6 text-on-primary">
+    <div
+      class="bg-primary text-on-primary flex shrink-0 items-center py-3 px-6"
+    >
       <div class="-mx-1 sm:hidden">
         <button mat-icon-button (click)="closePanel()">
-          <mat-icon class="mat-icon-rtl-mirror text-current icon-size-5">
+          <mat-icon class="mat-icon-rtl-mirror icon-size-5 text-current">
             close
           </mat-icon>
         </button>
       </div>
       <div class="mx-3 text-lg font-medium leading-10 sm:mx-1">
         <ng-container *transloco="let t">
-          {{ t('messages') }}
+          {{ t('layout.messages') }}
         </ng-container>
       </div>
       <div class="flex-1"></div>
-      <button class="-mx-1" mat-icon-button *transloco="let t" [matTooltip]="t('mark-all-as-read')"
-        [disabled]="unreadCount === 0" (click)="markAllAsRead()">
-        <mat-icon class="mat-icon-rtl-mirror text-current icon-size-5">
+      <button
+        class="-mx-1"
+        mat-icon-button
+        *transloco="let t"
+        [matTooltip]="t('layout.mark-all-as-read')"
+        [disabled]="unreadCount === 0"
+        (click)="markAllAsRead()"
+      >
+        <mat-icon class="mat-icon-rtl-mirror icon-size-5 text-current">
           drafts
         </mat-icon>
       </button>
     </div>
 
     <!-- Content -->
-    <div class="bg-card relative flex flex-auto flex-col divide-y overflow-y-auto sm:max-h-120">
+    <div
+      class="bg-card sm:max-h-120 relative flex flex-auto flex-col divide-y overflow-y-auto"
+    >
       <!-- Messages -->
       <ng-container *ngFor="let message of messages; trackBy: trackByFn">
-        <div class="group flex py-4 px-6 hover:bg-gray-50 dark:hover:bg-black dark:hover:bg-opacity-5"
-          [ngClass]="{ unread: !message.read }">
+        <div
+          class="group flex py-4 px-6 hover:bg-gray-50 dark:hover:bg-black dark:hover:bg-opacity-5"
+          [ngClass]="{ unread: !message.read }"
+        >
           <!-- Message with a link -->
           <ng-container *ngIf="message.link">
             <!-- Normal links -->
@@ -55,7 +77,10 @@
             </ng-container>
             <!-- Router links -->
             <ng-container *ngIf="message.useRouter">
-              <a class="flex flex-auto cursor-pointer" [routerLink]="message.link">
+              <a
+                class="flex flex-auto cursor-pointer"
+                [routerLink]="message.link"
+              >
                 <ng-container *ngTemplateOutlet="messageContent">
                 </ng-container>
               </a>
@@ -72,17 +97,36 @@
           <!-- Actions -->
           <div class="relative flex flex-col">
             <!-- Indicator -->
-            <button type="button" class="h-6 min-h-6 w-6" mat-icon-button (click)="toggleRead(message)"
-              *transloco="let t" [matTooltip]="t(message.read ? 'mark-as-unread' : 'mark-as-read')">
-              <span class="h-2 w-2 rounded-full" [ngClass]="{
+            <button
+              type="button"
+              class="min-h-6 h-6 w-6"
+              mat-icon-button
+              (click)="toggleRead(message)"
+              *transloco="let t"
+              [matTooltip]="
+                t(
+                  message.read ? 'layout.mark-as-unread' : 'layout.mark-as-read'
+                )
+              "
+            >
+              <span
+                class="h-2 w-2 rounded-full"
+                [ngClass]="{
                   'bg-gray-400 dark:bg-gray-500 sm:opacity-0 sm:group-hover:opacity-100':
                     message.read,
                   'bg-primary': !message.read
-                }"></span>
+                }"
+              ></span>
             </button>
             <!-- Remove -->
-            <button type="button" class="h-6 min-h-6 w-6 sm:opacity-0 sm:group-hover:opacity-100" mat-icon-button
-              (click)="delete(message)" *transloco="let t" [matTooltip]="t('remove')">
+            <button
+              type="button"
+              class="min-h-6 h-6 w-6 sm:opacity-0 sm:group-hover:opacity-100"
+              mat-icon-button
+              (click)="delete(message)"
+              *transloco="let t"
+              [matTooltip]="t('layout.remove')"
+            >
               <mat-icon class="mat-icon-rtl-mirror icon-size-4">close</mat-icon>
             </button>
           </div>
@@ -92,7 +136,9 @@
         <ng-template #messageContent>
           <!-- Icon -->
           <ng-container *ngIf="message.icon && !message.image">
-            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700">
+            <div
+              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
+            >
               <mat-icon class="mat-icon-rtl-mirror icon-size-5">
                 {{ message.icon }}
               </mat-icon>
@@ -101,14 +147,20 @@
 
           <!-- Image -->
           <ng-container *ngIf="message.image">
-            <img class="h-8 w-8 shrink-0 overflow-hidden rounded-full object-cover object-center" [src]="message.image"
-              alt="Message image" />
+            <img
+              class="h-8 w-8 shrink-0 overflow-hidden rounded-full object-cover object-center"
+              [src]="message.image"
+              alt="Message image"
+            />
           </ng-container>
 
           <!-- Title, description & time -->
           <div class="mx-4 flex flex-auto flex-col">
             <ng-container *ngIf="message.title">
-              <div class="font-semibold line-clamp-1" [innerHTML]="message.title"></div>
+              <div
+                class="line-clamp-1 font-semibold"
+                [innerHTML]="message.title"
+              ></div>
             </ng-container>
             <ng-container *ngIf="message.description">
               <div class="line-clamp-2" [innerHTML]="message.description"></div>
@@ -122,20 +174,24 @@
 
       <!-- No messages -->
       <ng-container *ngIf="!messages || !messages.length">
-        <div class="flex flex-auto flex-col items-center justify-center py-12 px-8 sm:justify-start">
-          <div class="flex h-14 w-14 flex-0 items-center justify-center rounded-full bg-primary-100">
+        <div
+          class="flex flex-auto flex-col items-center justify-center py-12 px-8 sm:justify-start"
+        >
+          <div
+            class="flex-0 bg-primary-100 flex h-14 w-14 items-center justify-center rounded-full"
+          >
             <mat-icon class="mat-icon-rtl-mirror text-primary-500">
               inbox
             </mat-icon>
           </div>
           <div class="mt-5 text-2xl font-semibold tracking-tight">
             <ng-container *transloco="let t">
-              {{ t('no-messages') }}
+              {{ t('layout.no-messages') }}
             </ng-container>
           </div>
-          <div class="text-secondary mt-1 w-full max-w-60 text-center text-md">
+          <div class="text-secondary max-w-60 text-md mt-1 w-full text-center">
             <ng-container *transloco="let t">
-              {{ t('description-messages') }}
+              {{ t('layout.description-messages') }}
             </ng-container>
           </div>
         </div>
