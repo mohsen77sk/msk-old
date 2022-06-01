@@ -77,7 +77,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
     if ('mskScrollbar' in changes) {
       // Interpret empty string as 'true'
       this.mskScrollbar = coerceBooleanProperty(
-        changes.mskScrollbar.currentValue
+        changes['mskScrollbar'].currentValue
       );
 
       // If enabled, init the directive
@@ -96,7 +96,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
       this._options = merge(
         {},
         this._options,
-        changes.mskScrollbarOptions.currentValue
+        changes['mskScrollbarOptions'].currentValue
       );
 
       // Return if not initialized

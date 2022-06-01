@@ -32,7 +32,7 @@ export class MskValidators {
 
       // Delete the mustMatch error to reset the error on the matching control
       if (matchingControl.hasError('mustMatch')) {
-        delete matchingControl.errors?.mustMatch;
+        delete matchingControl.errors?.['mustMatch'];
         matchingControl.updateValueAndValidity();
       }
 

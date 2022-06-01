@@ -231,10 +231,10 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
       if (
         path.routeConfig &&
         path.routeConfig.data &&
-        path.routeConfig.data.layoutType
+        path.routeConfig.data['layoutType']
       ) {
         // Set the layout
-        this.layoutType = path.routeConfig.data.layoutType;
+        this.layoutType = path.routeConfig.data['layoutType'];
       }
     });
   }
