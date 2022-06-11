@@ -14,12 +14,12 @@ import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
 
 import {
-  MskLayoutType,
-  MskLayoutScheme,
-  MskLayoutTheme,
-  MskLayoutDirection,
+  LayoutType,
+  LayoutScheme,
+  LayoutTheme,
+  LayoutDirection,
 } from './app-layout.types';
-import { MskLayoutConfig } from './layout.config';
+import { LayoutConfig } from './layout.config';
 
 import { combineLatest, Subject, filter, map, takeUntil } from 'rxjs';
 
@@ -29,13 +29,13 @@ import { combineLatest, Subject, filter, map, takeUntil } from 'rxjs';
   styleUrls: ['./app-layout.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class MskLayoutComponent implements OnInit, OnDestroy {
+export class LayoutComponent implements OnInit, OnDestroy {
   //
-  layoutConfig!: MskLayoutConfig;
-  layoutDirection!: MskLayoutDirection;
-  layoutScheme!: MskLayoutScheme;
-  layoutTheme!: MskLayoutTheme;
-  layoutType!: MskLayoutType;
+  layoutConfig!: LayoutConfig;
+  layoutDirection!: LayoutDirection;
+  layoutScheme!: LayoutScheme;
+  layoutTheme!: LayoutTheme;
+  layoutType!: LayoutType;
 
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
@@ -99,7 +99,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
     // Subscribe to config changes
     this._mskConfigService.config$
       .pipe(takeUntil(this._unsubscribeAll))
-      .subscribe((config: MskLayoutConfig) => {
+      .subscribe((config: LayoutConfig) => {
         // Store the layoutConfig
         this.layoutConfig = config;
 
@@ -158,7 +158,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
    *
    * @param scheme
    */
-  setLayoutScheme(scheme: MskLayoutScheme): void {
+  setLayoutScheme(scheme: LayoutScheme): void {
     this._mskConfigService.config = { scheme };
   }
 
@@ -167,7 +167,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
    *
    * @param theme
    */
-  setLayoutTheme(theme: MskLayoutTheme): void {
+  setLayoutTheme(theme: LayoutTheme): void {
     this._mskConfigService.config = { theme };
   }
 
@@ -176,7 +176,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
    *
    * @param direction
    */
-  setLayoutDirection(direction: MskLayoutDirection): void {
+  setLayoutDirection(direction: LayoutDirection): void {
     this._mskConfigService.config = { direction };
   }
 
@@ -201,7 +201,7 @@ export class MskLayoutComponent implements OnInit, OnDestroy {
     // set the layoutType and save the layoutType to the layoutConfig
     const layoutFromQueryParam = route.snapshot.queryParamMap.get(
       'layoutType'
-    ) as MskLayoutType;
+    ) as LayoutType;
     if (layoutFromQueryParam) {
       this.layoutType = layoutFromQueryParam;
       if (this.layoutConfig) {

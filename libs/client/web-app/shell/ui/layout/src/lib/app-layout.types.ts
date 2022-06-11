@@ -1,9 +1,9 @@
-export type MskLayoutDirection = 'ltr' | 'rtl';
-export type MskLayoutScheme = 'auto' | 'dark' | 'light';
-export type MskLayoutScreens = { [key: string]: string };
-export type MskLayoutTheme = 'theme-default' | string;
-export type MskLayoutThemes = { id: string; name: string }[];
-export type MskLayoutType =
+export type LayoutDirection = 'ltr' | 'rtl';
+export type LayoutScheme = 'auto' | 'dark' | 'light';
+export type LayoutScreens = { [key: string]: string };
+export type LayoutTheme = 'theme-default' | string;
+export type LayoutThemes = { id: string; name: string }[];
+export type LayoutType =
   | 'empty'
   // Horizontal
   | 'centered'

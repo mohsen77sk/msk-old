@@ -17,7 +17,7 @@ import { NavigationCoreModule } from '@msk/client/web-app/shell/core/navigation'
 import { NotificationCoreModule } from '@msk/client/web-app/shell/core/notification';
 import { UserCoreModule } from '@msk/client/web-app/shell/core/user';
 import {
-  MskLayoutModule,
+  LayoutModule,
   layoutConfig,
 } from '@msk/client/web-app/shell/ui/layout';
 
@@ -48,7 +48,7 @@ const routerConfig: ExtraOptions = {
     MskDateModule,
 
     // Layout module of your application
-    MskLayoutModule,
+    LayoutModule,
 
     // Core module of your application
     AuthCoreModule,

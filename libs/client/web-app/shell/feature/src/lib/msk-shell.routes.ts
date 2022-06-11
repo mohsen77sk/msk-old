@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 import { AuthGuard } from '@msk/client/web-app/shell/core/auth';
 import { NoAuthGuard } from '@msk/client/web-app/shell/core/auth';
-import { MskLayoutComponent } from '@msk/client/web-app/shell/ui/layout';
+import { LayoutComponent } from '@msk/client/web-app/shell/ui/layout';
 
 import { InitialDataResolver } from './msk-shell.resolvers';
 
@@ -24,7 +24,7 @@ export const mskShellRoutes: Route[] = [
   // Landing routes
   {
     path: '',
-    component: MskLayoutComponent,
+    component: LayoutComponent,
     data: {
       layoutType: 'empty',
     },
@@ -42,7 +42,7 @@ export const mskShellRoutes: Route[] = [
     path: '',
     canActivate: [NoAuthGuard],
     canActivateChild: [NoAuthGuard],
-    component: MskLayoutComponent,
+    component: LayoutComponent,
     data: {
       layoutType: 'empty',
     },
@@ -83,7 +83,7 @@ export const mskShellRoutes: Route[] = [
     path: '',
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
-    component: MskLayoutComponent,
+    component: LayoutComponent,
     data: {
       layoutType: 'empty',
     },
@@ -103,7 +103,7 @@ export const mskShellRoutes: Route[] = [
     path: '',
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
-    component: MskLayoutComponent,
+    component: LayoutComponent,
     resolve: {
       initialData: InitialDataResolver,
     },
@@ -128,7 +128,7 @@ export const mskShellRoutes: Route[] = [
   // Error routes & Catch all
   {
     path: '',
-    component: MskLayoutComponent,
+    component: LayoutComponent,
     data: {
       layoutType: 'empty',
     },

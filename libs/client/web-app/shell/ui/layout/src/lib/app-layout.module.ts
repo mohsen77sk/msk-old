@@ -13,7 +13,7 @@ import { EnterpriseLayoutModule } from './layouts/horizontal/enterprise';
 import { MaterialLayoutModule } from './layouts/horizontal/material';
 import { ModernLayoutModule } from './layouts/horizontal/modern';
 
-import { MskLayoutComponent } from './app-layout.component';
+import { LayoutComponent } from './app-layout.component';
 
 const layoutModules = [
   // Empty
@@ -35,8 +35,8 @@ const layoutModules = [
 ];
 
 @NgModule({
-  declarations: [MskLayoutComponent],
+  declarations: [LayoutComponent],
   imports: [CommonModule, ...layoutModules],
-  exports: [MskLayoutComponent, ...layoutModules],
+  exports: [LayoutComponent, ...layoutModules],
 })
-export class MskLayoutModule {}
+export class LayoutModule {}
