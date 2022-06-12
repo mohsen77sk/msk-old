@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskAlertType } from '@msk/client/shared/ui/alert';
@@ -15,7 +15,7 @@ import { Subject, takeUntil } from 'rxjs';
 export class ResetPasswordComponent implements OnInit {
   @ViewChild('resetPasswordNgForm') resetPasswordNgForm!: NgForm;
 
-  resetPasswordForm!: FormGroup;
+  resetPasswordForm!: UntypedFormGroup;
 
   showAlert = false;
   alert: { type: MskAlertType; message: string } = {
@@ -30,7 +30,7 @@ export class ResetPasswordComponent implements OnInit {
    * Constructor
    */
   constructor(
-    private _formBuilder: FormBuilder,
+    private _formBuilder: UntypedFormBuilder,
     private _mskConfigService: MskConfigService
   ) {}
 

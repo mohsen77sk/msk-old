@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskAlertType } from '@msk/client/shared/ui/alert';
 
@@ -13,7 +13,7 @@ import { MskAlertType } from '@msk/client/shared/ui/alert';
 export class SignInComponent implements OnInit {
   @ViewChild('signInNgForm') signInNgForm!: NgForm;
 
-  signInForm!: FormGroup;
+  signInForm!: UntypedFormGroup;
 
   showAlert = false;
   alert: { type: MskAlertType; message: string } = {
@@ -24,7 +24,7 @@ export class SignInComponent implements OnInit {
   /**
    * Constructor
    */
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: UntypedFormBuilder) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks
