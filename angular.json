@@ -109,6 +109,32 @@
       },
       "tags": []
     },
+    "client-shared-directives-select-search": {
+      "projectType": "library",
+      "root": "libs/client/shared/directives/select-search",
+      "sourceRoot": "libs/client/shared/directives/select-search/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/directives/select-search"],
+          "options": {
+            "jestConfig": "libs/client/shared/directives/select-search/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/directives/select-search/**/*.ts",
+              "libs/client/shared/directives/select-search/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-directives-spinner": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
       "projectType": "library",

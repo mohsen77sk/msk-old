@@ -31,6 +31,9 @@
       "@msk/client/shared/directives/scrollbar": [
         "libs/client/shared/directives/scrollbar/src/index.ts"
       ],
+      "@msk/client/shared/directives/select-search": [
+        "libs/client/shared/directives/select-search/src/index.ts"
+      ],
       "@msk/client/shared/directives/spinner": [
         "libs/client/shared/directives/spinner/src/index.ts"
       ],
