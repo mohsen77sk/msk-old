@@ -38,6 +38,12 @@
       <span>{{ t('layout.settings') }}</span>
     </ng-container>
   </button>
+  <button mat-menu-item (click)="openLayoutSetting()">
+    <mat-icon class="mat-icon-rtl-mirror"> settings_suggest </mat-icon>
+    <ng-container *transloco="let t">
+      <span>{{ t('layout.layout-settings') }}</span>
+    </ng-container>
+  </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item (click)="signOut()">
     <mat-icon class="mat-icon-rtl-mirror"> logout </mat-icon>

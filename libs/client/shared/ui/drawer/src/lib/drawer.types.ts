@@ -1,3 +1,3 @@
 export type MskDrawerMode = 'over' | 'side';
 
-export type MskDrawerPosition = 'left' | 'right';
+export type MskDrawerPosition = 'start' | 'end';

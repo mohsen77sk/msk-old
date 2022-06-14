@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 
 import { User, UserService } from '@msk/client/web-app/shell/core/user';
 import { MskConfigService } from '@msk/client/shared/services/config';
+import { MskDrawerService } from '@msk/client/shared/ui/drawer';
 
 import { Subject, takeUntil } from 'rxjs';
 
@@ -41,6 +42,7 @@ export class UserComponent implements OnInit, OnDestroy {
     private _router: Router,
     private _userService: UserService,
     private _mskConfigService: MskConfigService,
+    private _mskDrawerService: MskDrawerService,
     private _changeDetectorRef: ChangeDetectorRef
   ) {}
 
@@ -87,5 +89,20 @@ export class UserComponent implements OnInit, OnDestroy {
    */
   signOut(): void {
     this._router.navigate(['/sign-out']);
+  }
+
+  /**
+   * Open layout settings
+   */
+  openLayoutSetting(): void {
+    // Get the layoutSettings
+    const layoutSettings = this._mskDrawerService.getComponent(
+      'layoutSettingsDrawer'
+    );
+
+    if (layoutSettings) {
+      // Toggle the opened status
+      layoutSettings.open();
+    }
   }
 }

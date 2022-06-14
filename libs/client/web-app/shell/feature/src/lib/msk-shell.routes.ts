@@ -40,8 +40,8 @@ export const mskShellRoutes: Route[] = [
   // Auth routes for guests
   {
     path: '',
-    canActivate: [NoAuthGuard],
-    canActivateChild: [NoAuthGuard],
+    // canActivate: [NoAuthGuard],
+    // canActivateChild: [NoAuthGuard],
     component: LayoutComponent,
     data: {
       layoutType: 'empty',
@@ -81,8 +81,8 @@ export const mskShellRoutes: Route[] = [
   // Auth routes for authenticated users
   {
     path: '',
-    canActivate: [AuthGuard],
-    canActivateChild: [AuthGuard],
+    // canActivate: [AuthGuard],
+    // canActivateChild: [AuthGuard],
     component: LayoutComponent,
     data: {
       layoutType: 'empty',
@@ -101,8 +101,8 @@ export const mskShellRoutes: Route[] = [
   // Admin routes
   {
     path: '',
-    canActivate: [AuthGuard],
-    canActivateChild: [AuthGuard],
+    // canActivate: [AuthGuard],
+    // canActivateChild: [AuthGuard],
     component: LayoutComponent,
     resolve: {
       initialData: InitialDataResolver,

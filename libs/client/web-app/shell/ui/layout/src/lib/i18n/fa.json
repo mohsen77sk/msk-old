@@ -2,6 +2,7 @@
   "signed-in-as": "وارد شده با",
   "profile": "مشخصات",
   "settings": "تنظیمات",
+  "layout-settings": "تنظیمات نمایه",
   "sign-out": "خروج از سیستم",
   "languages": "زبان سیستم",
   "messages": "پیام ها",
@@ -14,5 +15,34 @@
   "mark-as-read": "به عنوان خوانده شده علامت بزن",
   "mark-as-unread": "به عنوان خوانده نشده علامت بزن",
   "toggle-fullscreen": "تغییر حالت تمام صفحه",
-  "remove": "برداشتن"
+  "remove": "برداشتن",
+  "setting": {
+    "theme": "قالب",
+    "scheme": "حالت",
+    "layout": "چیدمان"
+  },
+  "theme": {
+    "default": "پیش فرض",
+    "teal": "سبز آبی",
+    "purple": "بنفش",
+    "amber": "کهربایی"
+  },
+  "scheme": {
+    "auto": "خودکار",
+    "dark": "تاریک",
+    "light": "روشن"
+  },
+  "layout": {
+    "empty": "خالی",
+    "classic": "کلاسیک",
+    "classy": "ارشد",
+    "compact": "جمع و جور",
+    "dense": "متراکم",
+    "futuristic": "آینده نگر",
+    "thin": "لاغر",
+    "centered": "متمرکز شده",
+    "enterprise": "شرکتی",
+    "material": "متریال",
+    "modern": "نوین"
+  }
 }

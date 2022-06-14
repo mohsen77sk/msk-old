@@ -13,6 +13,8 @@ import { EnterpriseLayoutModule } from './layouts/horizontal/enterprise';
 import { MaterialLayoutModule } from './layouts/horizontal/material';
 import { ModernLayoutModule } from './layouts/horizontal/modern';
 
+import { LayoutSettingsModule } from './common/settings/settings.module';
+
 import { LayoutComponent } from './app-layout.component';
 
 const layoutModules = [
@@ -36,7 +38,7 @@ const layoutModules = [
 
 @NgModule({
   declarations: [LayoutComponent],
-  imports: [CommonModule, ...layoutModules],
+  imports: [CommonModule, LayoutSettingsModule, ...layoutModules],
   exports: [LayoutComponent, ...layoutModules],
 })
 export class LayoutModule {}

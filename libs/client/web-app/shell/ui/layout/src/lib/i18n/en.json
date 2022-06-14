@@ -2,6 +2,7 @@
   "signed-in-as": "Signed in as",
   "profile": "Profile",
   "settings": "Settings",
+  "layout-settings": "Layout settings",
   "sign-out": "Sign out",
   "languages": "Languages",
   "messages": "Messages",
@@ -14,5 +15,34 @@
   "mark-as-read": "Mark as read",
   "mark-as-unread": "Mark as unread",
   "toggle-fullscreen": "Toggle Fullscreen",
-  "remove": "Remove"
+  "remove": "Remove",
+  "setting": {
+    "theme": "Theme",
+    "scheme": "Scheme",
+    "layout": "Layout"
+  },
+  "theme": {
+    "default": "Default",
+    "teal": "Teal",
+    "purple": "Purple",
+    "amber": "Amber"
+  },
+  "scheme": {
+    "auto": "Auto",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "layout": {
+    "empty": "Empty",
+    "classic": "Classic",
+    "classy": "Classy",
+    "compact": "Compact",
+    "dense": "Dense",
+    "futuristic": "Futuristic",
+    "thin": "Thin",
+    "centered": "Centered",
+    "enterprise": "Enterprise",
+    "material": "Material",
+    "modern": "Modern"
+  }
 }
