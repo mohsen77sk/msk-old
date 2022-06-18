@@ -2,7 +2,6 @@ import {
   Directive,
   HostListener,
   Input,
-  OnInit,
   Output,
   Renderer2,
 } from '@angular/core';
@@ -13,12 +12,23 @@ import { ReplaySubject } from 'rxjs';
   selector: '[mskSelectSearch]',
   exportAs: 'mskSelectSearch',
 })
-export class MskSelectSearchDirective implements OnInit {
-  @Input() list: any[] = [];
+export class MskSelectSearchDirective {
+  @Input()
+  set searchList(val: any) {
+    this._list = val;
+    // Set filter list
+    this.filteredList.next(this._list ? this._list.slice() : []);
+    // If showing search, Disable OptionCentering in mat-select
+    if (this.showSearch) {
+      this._matSelect.disableOptionCentering = true;
+    }
+  }
   @Input() searchItems: string | string[] | undefined;
   @Input() searchPlaceholder = 'search ...';
 
   @Output() filteredList: ReplaySubject<any[]> = new ReplaySubject<any[]>(1);
+
+  private _list!: any[];
 
   /**
    * Constructor
@@ -33,7 +43,7 @@ export class MskSelectSearchDirective implements OnInit {
    * Getter showSearch
    */
   get showSearch(): boolean {
-    return this.list.length > 5;
+    return this._list && this._list.length > 5;
   }
 
   // -----------------------------------------------------------------------------------------------------
@@ -51,7 +61,7 @@ export class MskSelectSearchDirective implements OnInit {
 
     // If close panel, reset filter list
     if (!isOpened) {
-      this.filteredList.next(this.list.slice());
+      this.filteredList.next(this._list.slice());
       return;
     }
 
@@ -64,7 +74,7 @@ export class MskSelectSearchDirective implements OnInit {
       const search = input.value ? input.value.toLowerCase() : '';
       // Send filtered list
       this.filteredList.next(
-        this.list.filter((item) => {
+        this._list.filter((item) => {
           // If array is string
           if (this.searchItems == undefined) {
             return this._includes(item, search);
@@ -91,9 +101,9 @@ export class MskSelectSearchDirective implements OnInit {
     const matOption = this._renderer.createElement('mat-option');
     this._renderer.setAttribute(matOption, 'role', 'option');
     this._renderer.addClass(matOption, 'mat-option');
+    this._renderer.addClass(matOption, 'z-999');
     this._renderer.addClass(matOption, 'top-0');
     this._renderer.addClass(matOption, 'sticky');
-    this._renderer.addClass(matOption, 'z-9999');
     this._renderer.addClass(matOption, 'border-b');
     this._renderer.setStyle(matOption, 'background', 'inherit');
 
@@ -112,23 +122,7 @@ export class MskSelectSearchDirective implements OnInit {
   }
 
   // -----------------------------------------------------------------------------------------------------
-  // @ Lifecycle hooks
-  // -----------------------------------------------------------------------------------------------------
-
-  /**
-   * On init
-   */
-  ngOnInit(): void {
-    // If showing search, Disable OptionCentering in mat-select
-    if (this.showSearch) {
-      this._matSelect.disableOptionCentering = true;
-    }
-    // Set filter list
-    this.filteredList.next(this.list.slice());
-  }
-
-  // -----------------------------------------------------------------------------------------------------
-  // @ Public methods
+  // @ Private methods
   // -----------------------------------------------------------------------------------------------------
 
   /**
