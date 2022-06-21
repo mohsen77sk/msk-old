@@ -188,10 +188,10 @@ export class MskSelectSearchDirective {
           });
         }
       }
-      this._previousSelectedValues = selectedValues;
+      this._previousSelectedValues = updatedSelectedValues;
 
       if (restoreSelectedValues) {
-        this._matSelect._onChange(selectedValues);
+        this._matSelect._onChange(updatedSelectedValues);
       }
     });
   }
