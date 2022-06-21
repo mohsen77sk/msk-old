@@ -29,6 +29,7 @@ export class MskSelectSearchDirective {
   @Output() filteredList: ReplaySubject<any[]> = new ReplaySubject<any[]>(1);
 
   private _list!: any[];
+  private _previousSelectedValues!: any[];
 
   /**
    * Constructor
@@ -64,6 +65,9 @@ export class MskSelectSearchDirective {
       this.filteredList.next(this._list.slice());
       return;
     }
+
+    // Handling <mat-select [multiple]="true"
+    this._initMultipleHandling();
 
     // Create search input
     const input = this._renderer.createElement('input');
@@ -134,5 +138,61 @@ export class MskSelectSearchDirective {
    */
   private _includes(item: string, value: string): boolean {
     return item.toString().toLowerCase().includes(value);
+  }
+
+  /**
+   * Initializes handling <mat-select [multiple]="true">
+   * Note: to improve this code, mat-select should be extended to allow disabling resetting the selection while filtering.
+   *
+   * @private
+   */
+  private _initMultipleHandling(): void {
+    // if <mat-select [multiple]="true">
+    // store previously selected values and restore them when they are deselected
+    // because the option is not available while we are currently filtering
+    this._previousSelectedValues = this._matSelect.ngControl.value;
+
+    this._matSelect.ngControl.valueChanges?.subscribe((selectedValues) => {
+      let restoreSelectedValues = false;
+      const updatedSelectedValues =
+        selectedValues && Array.isArray(selectedValues)
+          ? [...selectedValues]
+          : [];
+
+      if (this._matSelect.multiple) {
+        if (
+          this._previousSelectedValues &&
+          Array.isArray(this._previousSelectedValues)
+        ) {
+          if (!selectedValues || !Array.isArray(selectedValues)) {
+            selectedValues = [];
+          }
+          const optionValues = this._matSelect.options.map(
+            (option) => option.value
+          );
+
+          this._previousSelectedValues.forEach((previousValue) => {
+            if (
+              !updatedSelectedValues.some((v) =>
+                this._matSelect.compareWith(v, previousValue)
+              ) &&
+              !optionValues.some((v) =>
+                this._matSelect.compareWith(v, previousValue)
+              )
+            ) {
+              // if a value that was selected before is deselected and not found in the options, it was deselected
+              // due to the filtering, so we restore it.
+              updatedSelectedValues.push(previousValue);
+              restoreSelectedValues = true;
+            }
+          });
+        }
+      }
+      this._previousSelectedValues = selectedValues;
+
+      if (restoreSelectedValues) {
+        this._matSelect._onChange(selectedValues);
+      }
+    });
   }
 }
