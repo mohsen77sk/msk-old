@@ -1,6 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
-
-import { TranslocoService } from '@ngneat/transloco';
+import { Inject, LOCALE_ID, Pipe, PipeTransform } from '@angular/core';
 
 import { format as gregorianFormat } from 'date-fns';
 import { format as jalaliFormat } from 'date-fns-jalali';
@@ -25,13 +23,13 @@ export class MskDateTimePipe implements PipeTransform {
   /**
    * Constructor
    */
-  constructor(private _translocoService: TranslocoService) {}
+  constructor(@Inject(LOCALE_ID) private _locale: string) {}
 
   /**
-   * Getter for language
+   * Getter for locale
    */
-  get language(): 'en' | 'fa' {
-    return this._translocoService.getActiveLang() as 'en' | 'fa';
+  get locale(): 'en' | 'fa' {
+    return this._locale.valueOf() as 'en' | 'fa';
   }
 
   /**
@@ -75,8 +73,8 @@ export class MskDateTimePipe implements PipeTransform {
   }
 
   private _formatDate(value: any, format: string): string {
-    return localeFormat[this.language](new Date(value), format, {
-      locale: locale[this.language],
+    return localeFormat[this.locale](new Date(value), format, {
+      locale: locale[this.locale],
     });
   }
 }
