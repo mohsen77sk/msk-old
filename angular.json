@@ -191,6 +191,32 @@
       },
       "tags": []
     },
+    "client-shared-pipes-currency": {
+      "projectType": "library",
+      "root": "libs/client/shared/pipes/currency",
+      "sourceRoot": "libs/client/shared/pipes/currency/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/pipes/currency"],
+          "options": {
+            "jestConfig": "libs/client/shared/pipes/currency/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/pipes/currency/**/*.ts",
+              "libs/client/shared/pipes/currency/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-pipes-date-time": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
       "projectType": "library",

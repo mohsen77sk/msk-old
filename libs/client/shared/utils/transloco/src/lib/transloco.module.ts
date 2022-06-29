@@ -1,4 +1,5 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import {
   Translation,
   TRANSLOCO_CONFIG,
@@ -10,7 +11,12 @@ import {
 import { TranslocoHttpLoader } from './transloco.http-loader';
 import { MskConfigService } from '@msk/client/shared/services/config';
 import { availableLangs } from 'scoped-translations';
+import { LocaleProvider } from './locale.provider';
 
+import localeEn from '@angular/common/locales/en';
+import localeFa from '@angular/common/locales/fa';
+registerLocaleData(localeEn, 'en');
+registerLocaleData(localeFa, 'fa');
 @NgModule({
   providers: [
     {
@@ -43,6 +49,7 @@ import { availableLangs } from 'scoped-translations';
         },
       multi: true,
     },
+    LocaleProvider,
   ],
   exports: [TranslocoModule],
 })
