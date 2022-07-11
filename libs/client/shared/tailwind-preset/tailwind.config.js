@@ -56,7 +56,7 @@ const config = {
   important: true,
   theme: {
     fontFamily: {
-      sans: ['IRANSans', ...defaultTheme.fontFamily.sans],
+      sans: ['IRANSansX', ...defaultTheme.fontFamily.sans],
     },
     fontSize: {
       xs: '0.625rem',
