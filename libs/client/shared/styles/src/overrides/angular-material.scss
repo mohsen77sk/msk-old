@@ -1419,6 +1419,11 @@
     padding: 8px 16px;
     justify-content: space-between;
 
+    /* Handset landscape */
+    @media (max-width: 959.98px) and (orientation: landscape) {
+      padding: 4px 8px;
+    }
+
     @screen sm {
       justify-content: normal;
     }
