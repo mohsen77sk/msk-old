@@ -352,6 +352,32 @@
       },
       "tags": []
     },
+    "client-shared-services-excel": {
+      "projectType": "library",
+      "root": "libs/client/shared/services/excel",
+      "sourceRoot": "libs/client/shared/services/excel/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client/shared/services/excel"],
+          "options": {
+            "jestConfig": "libs/client/shared/services/excel/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/services/excel/**/*.ts",
+              "libs/client/shared/services/excel/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-services-media-watcher": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
       "projectType": "library",

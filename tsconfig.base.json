@@ -58,6 +58,9 @@
       "@msk/client/shared/services/confirmation": [
         "libs/client/shared/services/confirmation/src/index.ts"
       ],
+      "@msk/client/shared/services/excel": [
+        "libs/client/shared/services/excel/src/index.ts"
+      ],
       "@msk/client/shared/services/media-watcher": [
         "libs/client/shared/services/media-watcher/src/index.ts"
       ],
