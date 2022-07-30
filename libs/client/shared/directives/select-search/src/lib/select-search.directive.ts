@@ -9,7 +9,7 @@ import { MatSelect } from '@angular/material/select';
 import { ReplaySubject } from 'rxjs';
 
 @Directive({
-  selector: '[mskSelectSearch]',
+  selector: 'mat-select[mskSelectSearch]',
   exportAs: 'mskSelectSearch',
 })
 export class MskSelectSearchDirective {
@@ -66,7 +66,7 @@ export class MskSelectSearchDirective {
       return;
     }
 
-    // Handling <mat-select [multiple]="true"
+    // Handling <mat-select [multiple]="true">
     this._initMultipleHandling();
 
     // Create search input
@@ -79,7 +79,7 @@ export class MskSelectSearchDirective {
       // Send filtered list
       this.filteredList.next(
         this._list.filter((item) => {
-          // If array is string
+          // If search in array
           if (this.searchItems == undefined) {
             return this._includes(item, search);
           }
