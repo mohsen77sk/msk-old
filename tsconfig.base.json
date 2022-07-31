@@ -11,10 +11,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -36,9 +33,6 @@
       ],
       "@msk/client/shared/directives/spinner": [
         "libs/client/shared/directives/spinner/src/index.ts"
-      ],
-      "@msk/client/shared/directives/virtual-keyboard": [
-        "libs/client/shared/directives/virtual-keyboard/src/index.ts"
       ],
       "@msk/client/shared/pipes/currency": [
         "libs/client/shared/pipes/currency/src/index.ts"
@@ -73,9 +67,7 @@
       "@msk/client/shared/ui/alert": [
         "libs/client/shared/ui/alert/src/index.ts"
       ],
-      "@msk/client/shared/ui/card": [
-        "libs/client/shared/ui/card/src/index.ts"
-      ],
+      "@msk/client/shared/ui/card": ["libs/client/shared/ui/card/src/index.ts"],
       "@msk/client/shared/ui/drawer": [
         "libs/client/shared/ui/drawer/src/index.ts"
       ],
@@ -159,8 +151,5 @@
       ]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

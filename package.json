@@ -32,6 +32,7 @@
     "date-fns-jalali": "^2.28.0-1",
     "file-saver": "^2.0.5",
     "lodash-es": "^4.17.21",
+    "ngx-touch-keyboard": "^2.0.1",
     "perfect-scrollbar": "^1.5.5",
     "rxjs": "7.5.4",
     "tslib": "^2.0.0",

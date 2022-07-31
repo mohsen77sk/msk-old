@@ -162,35 +162,6 @@
       },
       "tags": []
     },
-    "client-shared-directives-virtual-keyboard": {
-      "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-      "projectType": "library",
-      "root": "libs/client/shared/directives/virtual-keyboard",
-      "sourceRoot": "libs/client/shared/directives/virtual-keyboard/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/client/shared/directives/virtual-keyboard"
-          ],
-          "options": {
-            "jestConfig": "libs/client/shared/directives/virtual-keyboard/jest.config.ts",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/shared/directives/virtual-keyboard/src/**/*.ts",
-              "libs/client/shared/directives/virtual-keyboard/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
     "client-shared-pipes-currency": {
       "projectType": "library",
       "root": "libs/client/shared/pipes/currency",
