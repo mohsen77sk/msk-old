@@ -619,33 +619,6 @@
       },
       "tags": []
     },
-    "client-shared-utils-date": {
-      "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-      "projectType": "library",
-      "root": "libs/client/shared/utils/date",
-      "sourceRoot": "libs/client/shared/utils/date/src",
-      "prefix": "msk",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/utils/date"],
-          "options": {
-            "jestConfig": "libs/client/shared/utils/date/jest.config.ts",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/client/shared/utils/date/src/**/*.ts",
-              "libs/client/shared/utils/date/src/**/*.html"
-            ]
-          }
-        }
-      },
-      "tags": []
-    },
     "client-shared-utils-icons": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
       "projectType": "library",

@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 
-import { MATERIAL_SANITY_CHECKS } from '@angular/material/core';
+import {
+  MATERIAL_SANITY_CHECKS,
+  MAT_DATE_LOCALE,
+} from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { TranslocoService } from '@ngneat/transloco';
 
 import { mskShellRoutes } from './msk-shell.routes';
 
 import { MskIconsModule } from '@msk/client/shared/utils/icons';
 import { MskTranslocoModule } from '@msk/client/shared/utils/transloco';
 import { MskMaterialIntlModule } from '@msk/client/shared/utils/material-intl';
-import { MskDateModule } from '@msk/client/shared/utils/date';
+
+import { enUS } from 'date-fns/esm/locale';
+import { faIR } from 'date-fns-jalali/esm/locale';
+import { NgxMatDateFnsModule } from 'ngx-material-date-fns-adapter';
 
 import { AuthCoreModule } from '@msk/client/web-app/shell/core/auth';
 import { MessageCoreModule } from '@msk/client/web-app/shell/core/message';
@@ -26,6 +33,11 @@ import { MskConfirmationModule } from '@msk/client/shared/services/confirmation'
 import { MskMediaWatcherModule } from '@msk/client/shared/services/media-watcher';
 import { MskSplashScreenModule } from '@msk/client/shared/services/splash-screen';
 import { MskUtilsModule } from '@msk/client/shared/services/utils';
+
+const locale = {
+  en: enUS,
+  fa: faIR,
+};
 
 const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -45,7 +57,7 @@ const routerConfig: ExtraOptions = {
     MskIconsModule,
     MskTranslocoModule,
     MskMaterialIntlModule,
-    MskDateModule,
+    NgxMatDateFnsModule,
 
     // Layout module of your application
     LayoutModule,
@@ -74,6 +86,13 @@ const routerConfig: ExtraOptions = {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: {
         appearance: 'fill',
+      },
+    },
+    {
+      provide: MAT_DATE_LOCALE,
+      deps: [TranslocoService],
+      useFactory: (translocoService: TranslocoService): any => {
+        return locale[translocoService.getActiveLang() as 'en' | 'fa'];
       },
     },
   ],

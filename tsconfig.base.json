@@ -83,9 +83,6 @@
       "@msk/client/shared/ui/password-strength-meter": [
         "libs/client/shared/ui/password-strength-meter/src/index.ts"
       ],
-      "@msk/client/shared/utils/date": [
-        "libs/client/shared/utils/date/src/index.ts"
-      ],
       "@msk/client/shared/utils/icons": [
         "libs/client/shared/utils/icons/src/index.ts"
       ],

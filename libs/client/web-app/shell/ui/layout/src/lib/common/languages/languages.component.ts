@@ -9,6 +9,14 @@ import { DateAdapter } from '@angular/material/core';
 import { TranslocoService } from '@ngneat/transloco';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
+import { enUS } from 'date-fns/esm/locale';
+import { faIR } from 'date-fns-jalali/esm/locale';
+
+const locale = {
+  en: enUS,
+  fa: faIR,
+};
+
 @Component({
   selector: 'languages',
   templateUrl: './languages.component.html',
@@ -77,7 +85,7 @@ export class LanguagesComponent implements OnInit {
    */
   setActiveLang(lang: string): void {
     // Set the active locale
-    this._dateAdapter.setLocale(lang);
+    this._dateAdapter.setLocale(locale[lang as 'en' | 'fa']);
     // Set the active lang
     this._translocoService.setActiveLang(lang);
     // Set the active lang & direction in config

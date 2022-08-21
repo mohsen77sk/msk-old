@@ -3,12 +3,12 @@ import { Inject, LOCALE_ID, Pipe, PipeTransform } from '@angular/core';
 import { format as gregorianFormat } from 'date-fns';
 import { format as jalaliFormat } from 'date-fns-jalali';
 
-import locale_enUS from 'date-fns/locale/en-US';
-import locale_faIR from 'date-fns-jalali/locale/fa-IR';
+import { enUS } from 'date-fns/esm/locale';
+import { faIR } from 'date-fns-jalali/esm/locale';
 
 const locale = {
-  en: locale_enUS,
-  fa: locale_faIR,
+  en: enUS,
+  fa: faIR,
 };
 const localeFormat = {
   en: gregorianFormat,
