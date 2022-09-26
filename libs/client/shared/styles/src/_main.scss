@@ -1,6 +1,6 @@
 /* Components */
-@import 'components/input';
+@use 'components/input';
 
 /* Overrides */
-@import 'overrides/angular-material';
-@import 'overrides/perfect-scrollbar';
+@use 'overrides/angular-material';
+@use 'overrides/perfect-scrollbar';
