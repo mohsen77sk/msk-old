@@ -12,6 +12,7 @@ import { DOCUMENT } from '@angular/common';
 
 import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
+import { MskPlatformService } from '@msk/client/shared/services/platform';
 
 import {
   LayoutType,
@@ -48,7 +49,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
     private _router: Router,
     @Inject(DOCUMENT) private _document: any,
     private _mskConfigService: MskConfigService,
-    private _mskMediaWatcherService: MskMediaWatcherService
+    private _mskMediaWatcherService: MskMediaWatcherService,
+    private _mskPlatformService: MskPlatformService
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -118,6 +120,12 @@ export class LayoutComponent implements OnInit, OnDestroy {
         // Update the layout type
         this._updateLayoutType();
       });
+
+    // Set the OS name
+    this._renderer2.addClass(
+      this._document.body,
+      this._mskPlatformService.osName
+    );
   }
 
   /**

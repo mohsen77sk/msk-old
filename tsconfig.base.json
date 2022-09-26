@@ -11,7 +11,10 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -58,6 +61,9 @@
       "@msk/client/shared/services/media-watcher": [
         "libs/client/shared/services/media-watcher/src/index.ts"
       ],
+      "@msk/client/shared/services/platform": [
+        "libs/client/shared/services/platform/src/index.ts"
+      ],
       "@msk/client/shared/services/splash-screen": [
         "libs/client/shared/services/splash-screen/src/index.ts"
       ],
@@ -67,7 +73,9 @@
       "@msk/client/shared/ui/alert": [
         "libs/client/shared/ui/alert/src/index.ts"
       ],
-      "@msk/client/shared/ui/card": ["libs/client/shared/ui/card/src/index.ts"],
+      "@msk/client/shared/ui/card": [
+        "libs/client/shared/ui/card/src/index.ts"
+      ],
       "@msk/client/shared/ui/drawer": [
         "libs/client/shared/ui/drawer/src/index.ts"
       ],
@@ -148,5 +156,8 @@
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
