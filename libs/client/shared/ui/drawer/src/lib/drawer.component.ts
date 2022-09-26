@@ -54,6 +54,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
   @Output()
   readonly positionChanged: EventEmitter<MskDrawerPosition> = new EventEmitter<MskDrawerPosition>();
 
+  private readonly _handleOverlayClick: any;
   private _animationsEnabled = false;
   private _hovered = false;
   private _overlay: HTMLElement | undefined;
@@ -68,7 +69,11 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     private _renderer2: Renderer2,
     private _drawerService: MskDrawerService,
     private _utilsService: MskUtilsService
-  ) {}
+  ) {
+    this._handleOverlayClick = (): void => {
+      this.close();
+    };
+  }
 
   // -----------------------------------------------------------------------------------------------------
   // @ Accessors
@@ -336,7 +341,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
       this._overlay
     );
 
-    // Create the enter animation and attach it to the player
+    // Create enter animation and attach it to the player
     this._player = this._animationBuilder
       .build([
         style({ opacity: 0 }),
@@ -347,20 +352,11 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
       ])
       .create(this._overlay);
 
-    // Once the animation is done...
-    this._player.onDone(() => {
-      // Destroy the player
-      this._player?.destroy();
-      this._player = undefined;
-    });
-
     // Play the animation
     this._player.play();
 
     // Add an event listener to the overlay
-    this._overlay.addEventListener('click', () => {
-      this.close();
-    });
+    this._overlay.addEventListener('click', this._handleOverlayClick);
   }
 
   /**
@@ -388,13 +384,12 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
 
     // Once the animation is done...
     this._player.onDone(() => {
-      // Destroy the player
-      this._player?.destroy();
-      this._player = undefined;
-
-      // If the backdrop still exists...
+      // If the overlay still exists...
       if (this._overlay) {
-        // Remove the backdrop
+        // Remove the event listener
+        this._overlay.removeEventListener('click', this._handleOverlayClick);
+
+        // Remove the overlay
         this._overlay.parentNode?.removeChild(this._overlay);
         this._overlay = undefined;
       }
