@@ -14,6 +14,10 @@
         'msk-horizontal-navigation-item-active-forced': item.active
       }"
       [routerLink]="[item.link]"
+      [fragment]="item.fragment ?? undefined"
+      [preserveFragment]="item.preserveFragment ?? false"
+      [queryParams]="item.queryParams ?? null"
+      [queryParamsHandling]="item.queryParamsHandling ?? null"
       [routerLinkActive]="'msk-horizontal-navigation-item-active'"
       [routerLinkActiveOptions]="isActiveMatchOptions"
       [matTooltip]="item.tooltip || ''"
@@ -60,6 +64,10 @@
         'msk-horizontal-navigation-item-active-forced': item.active
       }"
       [routerLink]="[item.link]"
+      [fragment]="item.fragment ?? undefined"
+      [preserveFragment]="item.preserveFragment ?? false"
+      [queryParams]="item.queryParams ?? null"
+      [queryParamsHandling]="item.queryParamsHandling ?? null"
       [routerLinkActive]="'msk-horizontal-navigation-item-active'"
       [routerLinkActiveOptions]="isActiveMatchOptions"
       [matTooltip]="item.tooltip || ''"
@@ -101,9 +109,7 @@
   <!-- Item is disabled -->
   <ng-container *ngIf="item.disabled">
     <div
-      class="
-        msk-horizontal-navigation-item msk-horizontal-navigation-item-disabled
-      "
+      class="msk-horizontal-navigation-item msk-horizontal-navigation-item-disabled"
     >
       <ng-container *ngTemplateOutlet="itemTemplate"></ng-container>
     </div>

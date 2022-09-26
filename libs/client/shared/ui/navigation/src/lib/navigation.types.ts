@@ -1,4 +1,8 @@
-import { IsActiveMatchOptions } from '@angular/router';
+import {
+  IsActiveMatchOptions,
+  Params,
+  QueryParamsHandling,
+} from '@angular/router';
 
 export interface MskNavigationItem {
   id?: string;
@@ -10,6 +14,10 @@ export interface MskNavigationItem {
   disabled?: boolean;
   tooltip?: string;
   link?: string;
+  fragment?: string;
+  preserveFragment?: boolean;
+  queryParams?: Params | null;
+  queryParamsHandling?: QueryParamsHandling | null;
   externalLink?: boolean;
   target?: '_blank' | '_self' | '_parent' | '_top' | string;
   exactMatch?: boolean;
