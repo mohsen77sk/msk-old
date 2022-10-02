@@ -24,7 +24,7 @@
     "@angular/service-worker": "14.2.3",
     "@ngneat/transloco": "^4.1.1",
     "@nrwl/angular": "14.7.13",
-    "@zxcvbn-ts/core": "^2.0.1",
+    "@zxcvbn-ts/core": "^2.0.5",
     "@zxcvbn-ts/language-common": "^2.0.1",
     "@zxcvbn-ts/language-en": "^2.0.1",
     "date-fns": "^2.29.3",
