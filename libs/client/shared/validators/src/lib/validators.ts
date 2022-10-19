@@ -55,4 +55,46 @@ export class MskValidators {
       return errors;
     };
   }
+
+  /**
+   * Iban validator
+   *
+   * @param control
+   */
+  static IranianIBAN(control: AbstractControl): ValidationErrors | null {
+    // Return if control doesn't exist
+    if (!control) {
+      return null;
+    }
+
+    // Prepare the validation errors
+    const errors = { iranianIBAN: true };
+
+    // Return error if length of value is not 26
+    // Return error if value is not matching in pattern
+    if (control.value.length !== 26 || !/IR[0-9]{24}/.test(control.value)) {
+      // Return the errors
+      return errors;
+    }
+
+    let testString = control.value.substr(4);
+    const d1 = control.value.charCodeAt(0) - 65 + 10;
+    const d2 = control.value.charCodeAt(1) - 65 + 10;
+    testString += d1.toString() + d2.toString() + control.value.substr(2, 2);
+
+    // calculate module of iban to 97 if mod == 1 then iban is valid
+    return iso7064Mod97_10(testString) === 1 ? null : errors;
+  }
+}
+
+function iso7064Mod97_10(iban: string): number {
+  let remainder: string = iban;
+  let block: string;
+
+  while (remainder.length > 2) {
+    block = remainder.slice(0, 9);
+    remainder = (parseInt(block, 10) % 97) + remainder.slice(block.length);
+  }
+
+  return parseInt(remainder, 10) % 97;
 }
