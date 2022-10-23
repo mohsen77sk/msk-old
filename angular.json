@@ -10,7 +10,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/animations"],
+          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/animations"],
           "options": {
             "jestConfig": "libs/client/shared/animations/jest.config.ts",
             "passWithNoTests": true
@@ -26,7 +26,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-app-config": {
       "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -37,7 +37,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/app-config"],
+          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/app-config"],
           "options": {
             "jestConfig": "libs/client/shared/app-config/jest.config.ts",
             "passWithNoTests": true
@@ -53,7 +53,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-directives-scroll-reset": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -64,7 +64,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/directives/scroll-reset"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/directives/scroll-reset"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/directives/scroll-reset/jest.config.ts",
             "passWithNoTests": true
@@ -80,7 +82,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-directives-scrollbar": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -91,7 +93,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/directives/scrollbar"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/directives/scrollbar"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/directives/scrollbar/jest.config.ts",
             "passWithNoTests": true
@@ -107,7 +111,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-directives-select-search": {
       "projectType": "library",
@@ -117,7 +121,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/directives/select-search"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/directives/select-search"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/directives/select-search/jest.config.ts",
             "passWithNoTests": true
@@ -133,7 +139,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-directives-spinner": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -144,7 +150,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/directives/spinner"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/directives/spinner"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/directives/spinner/jest.config.ts",
             "passWithNoTests": true
@@ -160,7 +168,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-pipes-currency": {
       "projectType": "library",
@@ -170,7 +178,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/pipes/currency"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/pipes/currency"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/pipes/currency/jest.config.ts",
             "passWithNoTests": true
@@ -186,7 +196,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-pipes-date-time": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -197,7 +207,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/pipes/date-time"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/pipes/date-time"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/pipes/date-time/jest.config.ts",
             "passWithNoTests": true
@@ -213,7 +225,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-pipes-find-by-key": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -224,7 +236,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/pipes/find-by-key"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/pipes/find-by-key"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/pipes/find-by-key/jest.config.ts",
             "passWithNoTests": true
@@ -240,7 +254,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-pipes-time-ago": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -251,7 +265,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/pipes/time-ago"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/pipes/time-ago"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/pipes/time-ago/jest.config.ts",
             "passWithNoTests": true
@@ -267,7 +283,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-services-config": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -278,7 +294,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/config"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/config"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/config/jest.config.ts",
             "passWithNoTests": true
@@ -294,7 +312,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-services-confirmation": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -305,7 +323,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/confirmation"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/confirmation"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/confirmation/jest.config.ts",
             "passWithNoTests": true
@@ -321,7 +341,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-services-excel": {
       "projectType": "library",
@@ -331,7 +351,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/excel"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/excel"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/excel/jest.config.ts",
             "passWithNoTests": true
@@ -347,7 +369,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-services-media-watcher": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -358,7 +380,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/media-watcher"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/media-watcher"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/media-watcher/jest.config.ts",
             "passWithNoTests": true
@@ -374,7 +398,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-services-platform": {
       "projectType": "library",
@@ -384,7 +408,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/platform"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/platform"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/platform/jest.config.ts",
             "passWithNoTests": true
@@ -400,7 +426,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-services-splash-screen": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -411,7 +437,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/splash-screen"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/splash-screen"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/splash-screen/jest.config.ts",
             "passWithNoTests": true
@@ -427,7 +455,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-services-utils": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -438,7 +466,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/services/utils"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/services/utils"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/services/utils/jest.config.ts",
             "passWithNoTests": true
@@ -454,7 +484,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-ui-alert": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -465,7 +495,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/alert"],
+          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/alert"],
           "options": {
             "jestConfig": "libs/client/shared/ui/alert/jest.config.ts",
             "passWithNoTests": true
@@ -481,7 +511,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-ui-card": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -492,7 +522,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/card"],
+          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/card"],
           "options": {
             "jestConfig": "libs/client/shared/ui/card/jest.config.ts",
             "passWithNoTests": true
@@ -508,7 +538,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-ui-drawer": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -519,7 +549,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/drawer"],
+          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/drawer"],
           "options": {
             "jestConfig": "libs/client/shared/ui/drawer/jest.config.ts",
             "passWithNoTests": true
@@ -535,7 +565,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-ui-fullscreen": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -546,7 +576,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/fullscreen"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/fullscreen"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/fullscreen/jest.config.ts",
             "passWithNoTests": true
@@ -562,7 +594,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-ui-loading-bar": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -573,7 +605,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/loading-bar"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/loading-bar"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/loading-bar/jest.config.ts",
             "passWithNoTests": true
@@ -589,7 +623,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-ui-navigation": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -600,7 +634,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/navigation"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/navigation"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/navigation/jest.config.ts",
             "passWithNoTests": true
@@ -616,7 +652,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-ui-password-strength-meter": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -627,7 +663,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/ui/password-strength-meter"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/password-strength-meter"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/password-strength-meter/jest.config.ts",
             "passWithNoTests": true
@@ -643,7 +681,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:ui"]
     },
     "client-shared-utils-icons": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -654,7 +692,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/utils/icons"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/utils/icons"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/utils/icons/jest.config.ts",
             "passWithNoTests": true
@@ -670,7 +710,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-utils-material-intl": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -681,7 +721,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/utils/material-intl"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/utils/material-intl"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/utils/material-intl/jest.config.ts",
             "passWithNoTests": true
@@ -697,7 +739,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-utils-transloco": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -708,7 +750,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/utils/transloco"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/utils/transloco"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/utils/transloco/jest.config.ts",
             "passWithNoTests": true
@@ -724,7 +768,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-shared-validators": {
       "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -735,7 +779,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/shared/validators"],
+          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/validators"],
           "options": {
             "jestConfig": "libs/client/shared/validators/jest.config.ts",
             "passWithNoTests": true
@@ -751,7 +795,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-shared", "type:util"]
     },
     "client-web-app-admin-dashboard-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -762,7 +806,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/admin/dashboard/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/admin/dashboard/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/admin/dashboard/feature/jest.config.ts",
             "passWithNoTests": true
@@ -778,7 +824,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-auth-forgot-password-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -790,7 +836,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/client/web-app/auth/forgot-password/feature"
+            "{workspaceRoot}/coverage/libs/client/web-app/auth/forgot-password/feature"
           ],
           "options": {
             "jestConfig": "libs/client/web-app/auth/forgot-password/feature/jest.config.ts",
@@ -807,7 +853,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-auth-reset-password-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -819,7 +865,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/client/web-app/auth/reset-password/feature"
+            "{workspaceRoot}/coverage/libs/client/web-app/auth/reset-password/feature"
           ],
           "options": {
             "jestConfig": "libs/client/web-app/auth/reset-password/feature/jest.config.ts",
@@ -836,7 +882,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-auth-sign-in-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -847,7 +893,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/auth/sign-in/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/auth/sign-in/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/auth/sign-in/feature/jest.config.ts",
             "passWithNoTests": true
@@ -863,7 +911,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-auth-sign-out-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -874,7 +922,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/auth/sign-out/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/auth/sign-out/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/auth/sign-out/feature/jest.config.ts",
             "passWithNoTests": true
@@ -890,7 +940,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-auth-two-step-verification-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -902,7 +952,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/client/web-app/auth/two-step-verification/feature"
+            "{workspaceRoot}/coverage/libs/client/web-app/auth/two-step-verification/feature"
           ],
           "options": {
             "jestConfig": "libs/client/web-app/auth/two-step-verification/feature/jest.config.ts",
@@ -919,7 +969,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-error-internal-server-error-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -931,7 +981,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/client/web-app/error/internal-server-error/feature"
+            "{workspaceRoot}/coverage/libs/client/web-app/error/internal-server-error/feature"
           ],
           "options": {
             "jestConfig": "libs/client/web-app/error/internal-server-error/feature/jest.config.ts",
@@ -948,7 +998,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-error-maintenance-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -959,7 +1009,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/error/maintenance/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/error/maintenance/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/error/maintenance/feature/jest.config.ts",
             "passWithNoTests": true
@@ -975,7 +1027,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-error-not-found-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -986,7 +1038,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/error/not-found/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/error/not-found/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/error/not-found/feature/jest.config.ts",
             "passWithNoTests": true
@@ -1002,7 +1056,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-landing-home-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1013,7 +1067,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/landing/home/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/landing/home/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/landing/home/feature/jest.config.ts",
             "passWithNoTests": true
@@ -1029,7 +1085,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-shell-core-auth": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1040,7 +1096,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/auth"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/core/auth"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/core/auth/jest.config.ts",
             "passWithNoTests": true
@@ -1056,7 +1114,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:util"]
     },
     "client-web-app-shell-core-message": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1067,7 +1125,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/message"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/core/message"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/core/message/jest.config.ts",
             "passWithNoTests": true
@@ -1083,7 +1143,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:util"]
     },
     "client-web-app-shell-core-navigation": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1094,7 +1154,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/navigation"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/core/navigation"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/core/navigation/jest.config.ts",
             "passWithNoTests": true
@@ -1110,7 +1172,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:util"]
     },
     "client-web-app-shell-core-notification": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1121,7 +1183,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/notification"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/core/notification"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/core/notification/jest.config.ts",
             "passWithNoTests": true
@@ -1137,7 +1201,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:util"]
     },
     "client-web-app-shell-core-user": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1148,7 +1212,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/core/user"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/core/user"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/core/user/jest.config.ts",
             "passWithNoTests": true
@@ -1164,7 +1230,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:util"]
     },
     "client-web-app-shell-feature": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1175,7 +1241,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/feature"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/feature"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/feature/jest.config.ts",
             "passWithNoTests": true
@@ -1191,7 +1259,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:feature"]
     },
     "client-web-app-shell-ui-layout": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1202,7 +1270,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/client/web-app/shell/ui/layout"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/web-app/shell/ui/layout"
+          ],
           "options": {
             "jestConfig": "libs/client/web-app/shell/ui/layout/jest.config.ts",
             "passWithNoTests": true
@@ -1218,7 +1288,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["scope:client-web", "type:ui"]
     },
     "tailwind-preset": {
       "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1226,7 +1296,7 @@
       "root": "libs/client/shared/tailwind-preset",
       "sourceRoot": "libs/client/shared/tailwind-preset",
       "architect": {},
-      "tags": []
+      "tags": ["scope:client-shared"]
     },
     "web-app": {
       "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1338,14 +1408,14 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/web-app"],
+          "outputs": ["{workspaceRoot}/coverage/apps/web-app"],
           "options": {
             "jestConfig": "apps/web-app/jest.config.ts",
             "passWithNoTests": true
           }
         }
       },
-      "tags": []
+      "tags": ["scope:web-app"]
     },
     "web-app-e2e": {
       "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
