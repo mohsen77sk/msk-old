@@ -10,7 +10,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/animations"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/animations"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/animations/jest.config.ts",
             "passWithNoTests": true
@@ -26,7 +28,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-app-config": {
       "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -37,7 +42,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/app-config"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/app-config"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/app-config/jest.config.ts",
             "passWithNoTests": true
@@ -53,7 +60,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-directives-scroll-reset": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -82,7 +92,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-directives-scrollbar": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -111,7 +124,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-directives-select-search": {
       "projectType": "library",
@@ -139,7 +155,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-directives-spinner": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -168,7 +187,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-pipes-currency": {
       "projectType": "library",
@@ -196,7 +218,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-pipes-date-time": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -225,7 +250,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-pipes-find-by-key": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -254,7 +282,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-pipes-time-ago": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -283,7 +314,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-services-config": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -312,7 +346,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-services-confirmation": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -341,7 +378,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-services-excel": {
       "projectType": "library",
@@ -369,7 +409,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-services-media-watcher": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -398,7 +441,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-services-platform": {
       "projectType": "library",
@@ -426,7 +472,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-services-splash-screen": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -455,7 +504,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-services-utils": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -484,7 +536,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-ui-alert": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -495,7 +550,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/alert"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/alert"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/alert/jest.config.ts",
             "passWithNoTests": true
@@ -511,7 +568,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-ui-card": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -522,7 +582,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/card"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/card"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/card/jest.config.ts",
             "passWithNoTests": true
@@ -538,7 +600,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-ui-drawer": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -549,7 +614,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/drawer"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/ui/drawer"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/ui/drawer/jest.config.ts",
             "passWithNoTests": true
@@ -565,7 +632,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-ui-fullscreen": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -594,7 +664,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-ui-loading-bar": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -623,7 +696,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-ui-navigation": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -652,7 +728,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-ui-password-strength-meter": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -681,7 +760,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:ui"]
+      "tags": [
+        "scope:client-shared",
+        "type:ui"
+      ]
     },
     "client-shared-utils-icons": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -710,7 +792,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-utils-material-intl": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -739,7 +824,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-utils-transloco": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -768,7 +856,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-shared-validators": {
       "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -779,7 +870,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/libs/client/shared/validators"],
+          "outputs": [
+            "{workspaceRoot}/coverage/libs/client/shared/validators"
+          ],
           "options": {
             "jestConfig": "libs/client/shared/validators/jest.config.ts",
             "passWithNoTests": true
@@ -795,7 +888,10 @@
           }
         }
       },
-      "tags": ["scope:client-shared", "type:util"]
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
     },
     "client-web-app-admin-dashboard-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -824,7 +920,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-auth-forgot-password-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -853,7 +952,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-auth-reset-password-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -882,7 +984,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-auth-sign-in-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -911,7 +1016,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-auth-sign-out-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -940,7 +1048,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-auth-two-step-verification-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -969,7 +1080,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-error-internal-server-error-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -998,7 +1112,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-error-maintenance-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1027,7 +1144,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-error-not-found-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1056,7 +1176,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-landing-home-feature": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1085,7 +1208,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-shell-core-auth": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1114,7 +1240,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:util"]
+      "tags": [
+        "scope:client-web",
+        "type:util"
+      ]
     },
     "client-web-app-shell-core-message": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1143,7 +1272,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:util"]
+      "tags": [
+        "scope:client-web",
+        "type:util"
+      ]
     },
     "client-web-app-shell-core-navigation": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1172,7 +1304,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:util"]
+      "tags": [
+        "scope:client-web",
+        "type:util"
+      ]
     },
     "client-web-app-shell-core-notification": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1201,7 +1336,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:util"]
+      "tags": [
+        "scope:client-web",
+        "type:util"
+      ]
     },
     "client-web-app-shell-core-user": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1230,7 +1368,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:util"]
+      "tags": [
+        "scope:client-web",
+        "type:util"
+      ]
     },
     "client-web-app-shell-feature": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1259,7 +1400,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:feature"]
+      "tags": [
+        "scope:client-web",
+        "type:feature"
+      ]
     },
     "client-web-app-shell-ui-layout": {
       "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1288,7 +1432,10 @@
           }
         }
       },
-      "tags": ["scope:client-web", "type:ui"]
+      "tags": [
+        "scope:client-web",
+        "type:ui"
+      ]
     },
     "tailwind-preset": {
       "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1296,7 +1443,9 @@
       "root": "libs/client/shared/tailwind-preset",
       "sourceRoot": "libs/client/shared/tailwind-preset",
       "architect": {},
-      "tags": ["scope:client-shared"]
+      "tags": [
+        "scope:client-shared"
+      ]
     },
     "web-app": {
       "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1307,7 +1456,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/web-app",
             "index": "apps/web-app/src/index.html",
@@ -1330,9 +1481,13 @@
                 "output": "assets"
               }
             ],
-            "styles": ["apps/web-app/src/styles.scss"],
+            "styles": [
+              "apps/web-app/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/client/shared/styles/src"]
+              "includePaths": [
+                "libs/client/shared/styles/src"
+              ]
             },
             "scripts": [],
             "serviceWorker": true,
@@ -1408,14 +1563,18 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/apps/web-app"],
+          "outputs": [
+            "{workspaceRoot}/coverage/apps/web-app"
+          ],
           "options": {
             "jestConfig": "apps/web-app/jest.config.ts",
             "passWithNoTests": true
           }
         }
       },
-      "tags": ["scope:web-app"]
+      "tags": [
+        "scope:web-app"
+      ]
     },
     "web-app-e2e": {
       "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
@@ -1438,14 +1597,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/web-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/web-app-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["web-app"]
+      "implicitDependencies": [
+        "web-app"
+      ]
     }
   }
 }
