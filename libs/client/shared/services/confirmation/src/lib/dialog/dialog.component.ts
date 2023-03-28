@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MskConfirmationConfig } from '../confirmation.types';
 
@@ -8,7 +8,7 @@ import { MskConfirmationConfig } from '../confirmation.types';
   styleUrls: ['./dialog.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class MskConfirmationDialogComponent implements OnInit {
+export class MskConfirmationDialogComponent {
   /**
    * Constructor
    */
@@ -16,15 +16,6 @@ export class MskConfirmationDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: MskConfirmationConfig,
     public matDialogRef: MatDialogRef<MskConfirmationDialogComponent>
   ) {}
-
-  // -----------------------------------------------------------------------------------------------------
-  // @ Lifecycle hooks
-  // -----------------------------------------------------------------------------------------------------
-
-  /**
-   * On init
-   */
-  ngOnInit(): void {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Public methods
