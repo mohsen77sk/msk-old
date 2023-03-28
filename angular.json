@@ -477,6 +477,46 @@
         "type:util"
       ]
     },
+    "client-shared-services-service-worker": {
+      "projectType": "library",
+      "root": "libs/client/shared/services/service-worker",
+      "sourceRoot": "libs/client/shared/services/service-worker/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "{workspaceRoot}/coverage/{projectRoot}"
+          ],
+          "options": {
+            "jestConfig": "libs/client/shared/services/service-worker/jest.config.ts",
+            "passWithNoTests": true
+          },
+          "configurations": {
+            "ci": {
+              "ci": true,
+              "codeCoverage": true
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": [
+            "{options.outputFile}"
+          ],
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/services/service-worker/**/*.ts",
+              "libs/client/shared/services/service-worker/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": [
+        "scope:client-shared",
+        "type:util"
+      ]
+    },
     "client-shared-services-splash-screen": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
       "projectType": "library",
@@ -1612,5 +1652,6 @@
         "web-app"
       ]
     }
-  }
+  },
+  "defaultProject": "web-app"
 }
