@@ -8,9 +8,7 @@ import * as XLSX from 'xlsx';
 const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
 const EXCEL_EXTENSION = '.xlsx';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class MskExcelService {
   /**
    * Constructor
