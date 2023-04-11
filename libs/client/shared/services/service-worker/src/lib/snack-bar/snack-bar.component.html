@@ -1,18 +1,18 @@
-<div class="flex" *transloco="let t">
+<div class="flex" *transloco="let t; read: 'serviceWorker'">
   <div class="flex ltr:mr-3 rtl:ml-3">
     <mat-icon class="icon-size-5 text-inherit"> browser_updated </mat-icon>
   </div>
 
   <div class="flex flex-1 flex-col leading-5">
     <div class="font-semibold">
-      {{ t('serviceWorker.update-available') }}
+      {{ t('update-available') }}
     </div>
-    <small>{{ t('serviceWorker.update-available-message') }}</small>
+    <small>{{ t('update-available-message') }}</small>
   </div>
 
   <div class="top-2 ltr:ml-2 rtl:mr-2">
     <button class="rounded" mat-button color="primary" (click)="reload()">
-      {{ t('serviceWorker.update') }}
+      {{ t('update') }}
     </button>
   </div>
 </div>

@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 
-import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
-import { scopeLoader } from 'scoped-translations';
+import {
+  TranslocoModule,
+  TRANSLOCO_SCOPE,
+  TranslocoService,
+} from '@ngneat/transloco';
 
 import { MskInternetStatusService } from './internet-status.service';
 import { MskOfflineComponent } from './offline/offline.component';
+import { switchMap } from 'rxjs';
 
 @NgModule({
   declarations: [MskOfflineComponent],
@@ -12,12 +16,7 @@ import { MskOfflineComponent } from './offline/offline.component';
   providers: [
     {
       provide: TRANSLOCO_SCOPE,
-      useValue: {
-        scope: 'internetStatus',
-        loader: scopeLoader(
-          (lang: string, root: string) => import(`${root}/${lang}.json`)
-        ),
-      },
+      useValue: 'internetStatus',
     },
     MskInternetStatusService,
   ],
@@ -26,5 +25,14 @@ export class MskInternetStatusModule {
   /**
    * Constructor
    */
-  constructor(private _mskInternetStatusService: MskInternetStatusService) {}
+  constructor(
+    private _mskInternetStatusService: MskInternetStatusService,
+    private _translocoService: TranslocoService
+  ) {
+    _translocoService.langChanges$
+      .pipe(
+        switchMap((lang) => _translocoService.load('internetStatus/' + lang))
+      )
+      .subscribe();
+  }
 }

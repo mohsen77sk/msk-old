@@ -4,11 +4,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import {
+  TranslocoModule,
+  TRANSLOCO_SCOPE,
+  TranslocoService,
+} from '@ngneat/transloco';
 import { scopeLoader } from 'scoped-translations';
 
 import { MskServiceWorkerSnackBarComponent } from './snack-bar/snack-bar.component';
 import { MskServiceWorkerService } from './service-worker.service';
+import { switchMap } from 'rxjs';
 
 @NgModule({
   declarations: [MskServiceWorkerSnackBarComponent],
@@ -28,12 +33,7 @@ import { MskServiceWorkerService } from './service-worker.service';
   providers: [
     {
       provide: TRANSLOCO_SCOPE,
-      useValue: {
-        scope: 'serviceWorker',
-        loader: scopeLoader(
-          (lang: string, root: string) => import(`${root}/${lang}.json`)
-        ),
-      },
+      useValue: 'serviceWorker',
     },
     MskServiceWorkerService,
   ],
@@ -42,5 +42,14 @@ export class MskServiceWorkerModule {
   /**
    * Constructor
    */
-  constructor(private _mskServiceWorkerService: MskServiceWorkerService) {}
+  constructor(
+    private _mskServiceWorkerService: MskServiceWorkerService,
+    private _translocoService: TranslocoService
+  ) {
+    _translocoService.langChanges$
+      .pipe(
+        switchMap((lang) => _translocoService.load('serviceWorker/' + lang))
+      )
+      .subscribe();
+  }
 }

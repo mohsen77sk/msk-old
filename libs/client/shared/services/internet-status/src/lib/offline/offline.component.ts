@@ -27,6 +27,16 @@ export class MskOfflineComponent {
    * Host binding for component classes
    */
   @HostBinding('class') get classList(): any {
-    return ['w-full', 'bg-warn', 'text-white', 'text-center', 'py-1'];
+    return {
+      'py-1': this.message,
+      'w-full': this.message,
+      'text-white': this.message,
+      'text-center': this.message,
+      'text-opacity-87': this.message,
+      'transition-colors': this.message,
+      'duration-500': this.message,
+      'bg-green-500': this.message == 'online',
+      'bg-warn-500': this.message == 'offline',
+    };
   }
 }
