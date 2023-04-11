@@ -32,6 +32,7 @@ import { MskConfigModule } from '@msk/client/shared/services/config';
 import { MskConfirmationModule } from '@msk/client/shared/services/confirmation';
 import { MskMediaWatcherModule } from '@msk/client/shared/services/media-watcher';
 import { MskServiceWorkerModule } from '@msk/client/shared/services/service-worker';
+import { MskInternetStatusModule } from '@msk/client/shared/services/internet-status';
 import { MskSplashScreenModule } from '@msk/client/shared/services/splash-screen';
 import { MskPlatformModule } from '@msk/client/shared/services/platform';
 import { MskUtilsModule } from '@msk/client/shared/services/utils';
@@ -53,6 +54,7 @@ const routerConfig: ExtraOptions = {
     MskConfirmationModule,
     MskMediaWatcherModule,
     MskServiceWorkerModule,
+    MskInternetStatusModule,
     MskSplashScreenModule,
     MskPlatformModule,
     MskUtilsModule,

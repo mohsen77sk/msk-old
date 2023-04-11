@@ -414,6 +414,43 @@
         "type:util"
       ]
     },
+    "client-shared-services-internet-status": {
+      "projectType": "library",
+      "root": "libs/client/shared/services/internet-status",
+      "sourceRoot": "libs/client/shared/services/internet-status/src",
+      "prefix": "msk",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "{workspaceRoot}/coverage/{projectRoot}"
+          ],
+          "options": {
+            "jestConfig": "libs/client/shared/services/internet-status/jest.config.ts",
+            "passWithNoTests": true
+          },
+          "configurations": {
+            "ci": {
+              "ci": true,
+              "codeCoverage": true
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": [
+            "{options.outputFile}"
+          ],
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/shared/services/internet-status/**/*.ts",
+              "libs/client/shared/services/internet-status/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client-shared-services-media-watcher": {
       "$schema": "..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
       "projectType": "library",
