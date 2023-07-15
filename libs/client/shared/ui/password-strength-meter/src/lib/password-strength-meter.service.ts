@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
 
 import { zxcvbn, zxcvbnOptions, ZxcvbnResult } from '@zxcvbn-ts/core';
-import zxcvbnCommonPackage from '@zxcvbn-ts/language-common';
-import zxcvbnEnPackage from '@zxcvbn-ts/language-en';
-import zxcvbnFaPackage from './language-fa';
+import { dictionary } from '@zxcvbn-ts/language-common';
+import {
+  dictionary as enDictionary,
+  translations as enTranslations,
+} from '@zxcvbn-ts/language-en';
+import {
+  dictionary as faDictionary,
+  translations as faTranslations,
+} from './language-fa';
 
 import { minLengthMatcher } from './matcher/minLengthMatcher';
 
 type LOCALE_TYPE = 'en' | 'fa';
 
 const Locale = {
-  en: zxcvbnEnPackage.translations,
-  fa: zxcvbnFaPackage.translations,
+  en: enTranslations,
+  fa: faTranslations,
 };
 
 @Injectable()
@@ -42,7 +48,7 @@ export class MskPasswordStrengthMeterService {
 
   /**
    * This will return the password strength score with feedback messages
-   * return type { score: number; feedback: { suggestions: string[]; warning: string } }
+   * return type { score: number; feedback: { warning: string | null; suggestions: string[]; } }
    *
    * @param password
    */
@@ -51,7 +57,7 @@ export class MskPasswordStrengthMeterService {
     language?: string
   ): {
     score: number;
-    feedback: { suggestions: string[]; warning: string };
+    feedback: { warning: string | null; suggestions: string[] };
   } {
     const result = this._checkPassword(password, language);
     return { score: result.score, feedback: result.feedback };
@@ -75,8 +81,9 @@ export class MskPasswordStrengthMeterService {
     zxcvbnOptions.setOptions({
       translations: Locale[language as LOCALE_TYPE],
       dictionary: {
-        ...zxcvbnCommonPackage.dictionary,
-        ...zxcvbnEnPackage.dictionary,
+        ...dictionary,
+        ...enDictionary,
+        ...faDictionary,
       },
     });
     // Add min length matcher

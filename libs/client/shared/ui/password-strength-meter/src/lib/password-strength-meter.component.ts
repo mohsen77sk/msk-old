@@ -22,7 +22,7 @@ export class MskPasswordStrengthMeterComponent implements OnChanges {
   @Output() strengthChange = new EventEmitter<number>();
 
   passwordStrength: number | null = null;
-  feedback: { suggestions: string[]; warning: string } | null = null;
+  feedback: { warning: string | null; suggestions: string[] } | null = null;
   private _prevPasswordStrength: number | null = null;
   private _defaultColours = [
     'darkred',
