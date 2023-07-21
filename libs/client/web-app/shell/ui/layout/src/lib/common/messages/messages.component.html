@@ -17,7 +17,7 @@
       </span>
     </span>
   </ng-container>
-  <mat-icon class="mat-icon-rtl-mirror">inbox</mat-icon>
+  <mat-icon svgIcon="heroicons_outline:inbox"></mat-icon>
 </button>
 
 <!-- Messages panel -->
@@ -31,8 +31,10 @@
     >
       <div class="-mx-1 sm:hidden">
         <button mat-icon-button (click)="closePanel()">
-          <mat-icon class="mat-icon-rtl-mirror icon-size-5 text-current">
-            close
+          <mat-icon
+            class="icon-size-5 text-current"
+            svgIcon="heroicons_outline:x-mark"
+          >
           </mat-icon>
         </button>
       </div>
@@ -50,8 +52,10 @@
         [disabled]="unreadCount === 0"
         (click)="markAllAsRead()"
       >
-        <mat-icon class="mat-icon-rtl-mirror icon-size-5 text-current">
-          drafts
+        <mat-icon
+          class="icon-size-5 text-current"
+          svgIcon="heroicons_solid:envelope-open"
+        >
         </mat-icon>
       </button>
     </div>
@@ -127,7 +131,10 @@
               *transloco="let t"
               [matTooltip]="t('layout.remove')"
             >
-              <mat-icon class="mat-icon-rtl-mirror icon-size-4">close</mat-icon>
+              <mat-icon
+                class="icon-size-4"
+                svgIcon="heroicons_outline:x-mark"
+              ></mat-icon>
             </button>
           </div>
         </div>
@@ -139,9 +146,7 @@
             <div
               class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
             >
-              <mat-icon class="mat-icon-rtl-mirror icon-size-5">
-                {{ message.icon }}
-              </mat-icon>
+              <mat-icon class="icon-size-5" [svgIcon]="message.icon"></mat-icon>
             </div>
           </ng-container>
 
@@ -180,8 +185,10 @@
           <div
             class="flex-0 bg-primary-100 flex h-14 w-14 items-center justify-center rounded-full"
           >
-            <mat-icon class="mat-icon-rtl-mirror text-primary-500">
-              inbox
+            <mat-icon
+              class="text-primary-500"
+              svgIcon="heroicons_outline:inbox"
+            >
             </mat-icon>
           </div>
           <div class="mt-5 text-2xl font-semibold tracking-tight">

@@ -10,8 +10,10 @@
       *ngIf="showAvatar && user?.avatar"
       [src]="user.avatar"
     />
-    <mat-icon class="mat-icon-rtl-mirror" *ngIf="!showAvatar || !user?.avatar">
-      account_circle
+    <mat-icon
+      svgIcon="heroicons_outline:user-circle"
+      *ngIf="!showAvatar || !user?.avatar"
+    >
     </mat-icon>
   </span>
 </button>
@@ -27,26 +29,29 @@
   </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item>
-    <mat-icon class="mat-icon-rtl-mirror"> account_circle </mat-icon>
+    <mat-icon svgIcon="heroicons_outline:user-circle"></mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('layout.profile') }}</span>
     </ng-container>
   </button>
   <button mat-menu-item>
-    <mat-icon class="mat-icon-rtl-mirror"> settings </mat-icon>
+    <mat-icon svgIcon="heroicons_outline:cog-8-tooth"></mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('layout.settings') }}</span>
     </ng-container>
   </button>
   <button mat-menu-item (click)="openLayoutSetting()">
-    <mat-icon class="mat-icon-rtl-mirror"> settings_suggest </mat-icon>
+    <mat-icon svgIcon="heroicons_outline:cog"></mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('layout.layout-settings') }}</span>
     </ng-container>
   </button>
   <mat-divider class="my-2"></mat-divider>
   <button mat-menu-item (click)="signOut()">
-    <mat-icon class="mat-icon-rtl-mirror"> logout </mat-icon>
+    <mat-icon
+      class="mat-icon-rtl-mirror"
+      svgIcon="heroicons_outline:arrow-right-on-rectangle"
+    ></mat-icon>
     <ng-container *transloco="let t">
       <span>{{ t('layout.sign-out') }}</span>
     </ng-container>

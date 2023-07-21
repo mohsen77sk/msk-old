@@ -11,17 +11,29 @@ export class MskIconsModule {
     private _domSanitizer: DomSanitizer,
     private _matIconRegistry: MatIconRegistry
   ) {
-    //
-    this._matIconRegistry.setDefaultFontSetClass('material-symbols-rounded');
-    //
-    this._matIconRegistry.registerFontClassAlias('mat_solid', 'material-icons');
-    this._matIconRegistry.registerFontClassAlias(
+    this._matIconRegistry.addSvgIconSetInNamespace(
       'mat_outline',
-      'material-icons-outlined'
+      this._domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/icons/material-outline.svg'
+      )
     );
-    this._matIconRegistry.registerFontClassAlias(
-      'mat_symbols_rounded',
-      'material-symbols-rounded'
+    this._matIconRegistry.addSvgIconSetInNamespace(
+      'mat_solid',
+      this._domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/icons/material-solid.svg'
+      )
+    );
+    this._matIconRegistry.addSvgIconSetInNamespace(
+      'heroicons_outline',
+      this._domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/icons/heroicons-outline.svg'
+      )
+    );
+    this._matIconRegistry.addSvgIconSetInNamespace(
+      'heroicons_solid',
+      this._domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/icons/heroicons-solid.svg'
+      )
     );
   }
 }

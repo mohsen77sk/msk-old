@@ -3,7 +3,10 @@
   <ng-container *ngIf="data.dismissible">
     <div class="absolute top-0 flex w-full justify-end px-4 pt-3">
       <button mat-icon-button [matDialogClose]="undefined">
-        <mat-icon class="text-secondary">close</mat-icon>
+        <mat-icon
+          class="text-secondary"
+          [svgIcon]="'heroicons_outline:x'"
+        ></mat-icon>
       </button>
     </div>
   </ng-container>
@@ -35,7 +38,10 @@
             data.icon?.color === 'error'
         }"
       >
-        <mat-icon class="text-current">{{ data.icon?.name }}</mat-icon>
+        <mat-icon
+          class="text-current"
+          [svgIcon]="data.icon?.name ?? ''"
+        ></mat-icon>
       </div>
     </ng-container>
 

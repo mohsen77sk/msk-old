@@ -10,7 +10,10 @@
     <div
       class="min-h-20 bg-primary flex h-20 flex-row items-center px-6 text-white"
     >
-      <mat-icon class="icon-size-7 text-current">settings_suggest</mat-icon>
+      <mat-icon
+        class="icon-size-7 text-current"
+        svgIcon="heroicons_solid:cog"
+      ></mat-icon>
       <div class="text-2xl font-semibold tracking-tight ltr:ml-3 rtl:mr-3">
         <ng-container *transloco="let t">
           <span>{{ t('layout.layout-settings') }}</span>
@@ -21,7 +24,10 @@
         mat-icon-button
         (click)="settingsDrawer.close()"
       >
-        <mat-icon class="text-current">close</mat-icon>
+        <mat-icon
+          class="text-current"
+          svgIcon="heroicons_outline:x-mark"
+        ></mat-icon>
       </button>
     </div>
 
@@ -69,7 +75,10 @@
           (click)="setLayoutScheme('auto')"
         >
           <div class="flex items-center overflow-hidden rounded-full">
-            <mat-icon class="icon-size-5">auto_mode</mat-icon>
+            <mat-icon
+              class="icon-size-5"
+              svgIcon="heroicons_solid:bolt"
+            ></mat-icon>
           </div>
           <div
             class="mx-2 flex items-center font-medium leading-5"
@@ -87,7 +96,10 @@
           (click)="setLayoutScheme('dark')"
         >
           <div class="flex items-center overflow-hidden rounded-full">
-            <mat-icon class="icon-size-5">dark_mode</mat-icon>
+            <mat-icon
+              class="icon-size-5"
+              svgIcon="heroicons_solid:moon"
+            ></mat-icon>
           </div>
           <div
             class="mx-2 flex items-center font-medium leading-5"
@@ -105,7 +117,10 @@
           (click)="setLayoutScheme('light')"
         >
           <div class="flex items-center overflow-hidden rounded-full">
-            <mat-icon class="icon-size-5">light_mode</mat-icon>
+            <mat-icon
+              class="icon-size-5"
+              svgIcon="heroicons_solid:sun"
+            ></mat-icon>
           </div>
           <div
             class="mx-2 flex items-center font-medium leading-5"

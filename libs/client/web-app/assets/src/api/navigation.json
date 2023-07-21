@@ -5,13 +5,13 @@
     "tooltip": "Main",
     "subtitle": "Overview",
     "type": "group",
-    "icon": "home",
+    "icon": "heroicons_outline:home",
     "children": [
       {
         "id": "dashboard",
         "title": "Dashboard",
         "type": "basic",
-        "icon": "dashboard",
+        "icon": "heroicons_outline:rectangle-group",
         "link": "/dashboard"
       }
     ]
@@ -22,7 +22,7 @@
     "tooltip": "Applications",
     "subtitle": "Application management",
     "type": "group",
-    "icon": "apps",
+    "icon": "heroicons_outline:squares-2x2",
     "children": []
   }
 ]

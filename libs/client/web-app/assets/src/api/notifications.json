@@ -1,7 +1,7 @@
 [
   {
     "id": "493190c9-5b61-4912-afe5-78c21f1044d7",
-    "icon": "email",
+    "icon": "heroicons_solid:bell",
     "title": "Daily challenges",
     "description": "Your submission has been accepted",
     "time": "2022-01-30T06:38:23.225Z",
@@ -9,7 +9,7 @@
   },
   {
     "id": "6e3e97e5-effc-4fb7-b730-52a151f0b641",
-    "icon": "email",
+    "icon": "heroicons_solid:user",
     "description": "<strong>Leo Gill</strong> added you to <em>Top Secret Project</em> group and assigned you as a <em>Project Manager</em>",
     "time": "2022-01-31T10:35:10.715Z",
     "read": true,

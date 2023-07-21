@@ -12,9 +12,9 @@
     <!-- Icon -->
     <ng-container *ngIf="item.icon">
       <mat-icon
-        class="mat-icon-rtl-mirror msk-vertical-navigation-item-icon"
+        class="msk-vertical-navigation-item-icon"
         [ngClass]="item.classes?.icon!"
-        [innerText]="item.icon"
+        [svgIcon]="item.icon"
       ></mat-icon>
     </ng-container>
 
@@ -49,7 +49,7 @@
     <!-- Arrow -->
     <mat-icon
       class="mat-icon-rtl-mirror msk-vertical-navigation-item-arrow icon-size-4"
-      [innerText]="'chevron_right'"
+      [svgIcon]="'heroicons-outline:chevron-right'"
     ></mat-icon>
   </div>
 </div>
