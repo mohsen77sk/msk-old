@@ -1,0 +1,29 @@
+{
+  "name": "client-web-app-shell-core-notification",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/web-app/shell/core/notification/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/web-app/shell/core/notification"
+      ],
+      "options": {
+        "jestConfig": "libs/client/web-app/shell/core/notification/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/web-app/shell/core/notification/src/**/*.ts",
+          "libs/client/web-app/shell/core/notification/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-web", "type:util"]
+}

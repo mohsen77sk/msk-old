@@ -276,7 +276,6 @@ const config = {
     require('@tailwindcss/typography')({
       modifiers: ['sm', 'lg'],
     }),
-    require('@tailwindcss/line-clamp'),
   ],
 };
 

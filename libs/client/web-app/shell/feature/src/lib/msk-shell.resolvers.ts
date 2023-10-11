@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  Resolve,
-  RouterStateSnapshot,
-} from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { forkJoin, Observable } from 'rxjs';
 
 import { UserService } from '@msk/client/web-app/shell/core/user';
@@ -14,7 +10,7 @@ import { NotificationService } from '@msk/client/web-app/shell/core/notification
 @Injectable({
   providedIn: 'root',
 })
-export class InitialDataResolver implements Resolve<any> {
+export class InitialDataResolver  {
   /**
    * Constructor
    */

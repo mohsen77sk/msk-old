@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-pipes-date-time",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/pipes/date-time/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/pipes/date-time"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/pipes/date-time/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/pipes/date-time/src/**/*.ts",
+          "libs/client/shared/pipes/date-time/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

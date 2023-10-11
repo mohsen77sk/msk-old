@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-directives-scroll-reset",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/directives/scroll-reset/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/directives/scroll-reset"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/directives/scroll-reset/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/directives/scroll-reset/src/**/*.ts",
+          "libs/client/shared/directives/scroll-reset/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

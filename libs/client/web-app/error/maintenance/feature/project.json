@@ -1,0 +1,29 @@
+{
+  "name": "client-web-app-error-maintenance-feature",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/web-app/error/maintenance/feature/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/web-app/error/maintenance/feature"
+      ],
+      "options": {
+        "jestConfig": "libs/client/web-app/error/maintenance/feature/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/web-app/error/maintenance/feature/src/**/*.ts",
+          "libs/client/web-app/error/maintenance/feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-web", "type:feature"]
+}

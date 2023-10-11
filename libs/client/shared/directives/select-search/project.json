@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-directives-select-search",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/directives/select-search/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/directives/select-search"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/directives/select-search/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/directives/select-search/**/*.ts",
+          "libs/client/shared/directives/select-search/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

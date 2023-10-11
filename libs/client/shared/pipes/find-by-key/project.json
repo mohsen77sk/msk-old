@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-pipes-find-by-key",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/pipes/find-by-key/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/pipes/find-by-key"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/pipes/find-by-key/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/pipes/find-by-key/src/**/*.ts",
+          "libs/client/shared/pipes/find-by-key/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

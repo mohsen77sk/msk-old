@@ -1,0 +1,29 @@
+{
+  "name": "client-web-app-error-not-found-feature",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/web-app/error/not-found/feature/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/web-app/error/not-found/feature"
+      ],
+      "options": {
+        "jestConfig": "libs/client/web-app/error/not-found/feature/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/web-app/error/not-found/feature/src/**/*.ts",
+          "libs/client/web-app/error/not-found/feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-web", "type:feature"]
+}

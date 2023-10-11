@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-ui-password-strength-meter",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/ui/password-strength-meter/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/ui/password-strength-meter"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/ui/password-strength-meter/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/ui/password-strength-meter/src/**/*.ts",
+          "libs/client/shared/ui/password-strength-meter/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "client-shared-ui-drawer",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/ui/drawer/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/drawer"],
+      "options": {
+        "jestConfig": "libs/client/shared/ui/drawer/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/ui/drawer/src/**/*.ts",
+          "libs/client/shared/ui/drawer/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

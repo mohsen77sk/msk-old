@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-utils-material-intl",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/utils/material-intl/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/utils/material-intl"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/utils/material-intl/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/utils/material-intl/src/**/*.ts",
+          "libs/client/shared/utils/material-intl/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:util"]
+}

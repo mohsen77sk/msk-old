@@ -1,0 +1,29 @@
+{
+  "name": "client-web-app-auth-sign-in-feature",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/web-app/auth/sign-in/feature/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/web-app/auth/sign-in/feature"
+      ],
+      "options": {
+        "jestConfig": "libs/client/web-app/auth/sign-in/feature/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/web-app/auth/sign-in/feature/src/**/*.ts",
+          "libs/client/web-app/auth/sign-in/feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-web", "type:feature"]
+}

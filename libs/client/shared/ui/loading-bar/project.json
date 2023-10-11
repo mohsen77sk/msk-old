@@ -1,0 +1,27 @@
+{
+  "name": "client-shared-ui-loading-bar",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/ui/loading-bar/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/loading-bar"],
+      "options": {
+        "jestConfig": "libs/client/shared/ui/loading-bar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/ui/loading-bar/src/**/*.ts",
+          "libs/client/shared/ui/loading-bar/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}

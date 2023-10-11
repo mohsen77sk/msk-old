@@ -1,0 +1,27 @@
+{
+  "name": "client-shared-services-excel",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/services/excel/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/client/shared/services/excel"],
+      "options": {
+        "jestConfig": "libs/client/shared/services/excel/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/services/excel/**/*.ts",
+          "libs/client/shared/services/excel/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:util"]
+}

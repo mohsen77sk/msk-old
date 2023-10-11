@@ -1,0 +1,29 @@
+{
+  "name": "client-shared-directives-scrollbar",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/client/shared/directives/scrollbar/src",
+  "prefix": "msk",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/client/shared/directives/scrollbar"
+      ],
+      "options": {
+        "jestConfig": "libs/client/shared/directives/scrollbar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/shared/directives/scrollbar/src/**/*.ts",
+          "libs/client/shared/directives/scrollbar/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client-shared", "type:ui"]
+}
