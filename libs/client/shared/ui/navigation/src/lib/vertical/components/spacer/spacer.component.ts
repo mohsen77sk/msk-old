@@ -32,7 +32,7 @@ export class MskVerticalNavigationSpacerItemComponent
    */
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
-    private _mskNavigationService: MskNavigationService
+    private _mskNavigationService: MskNavigationService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

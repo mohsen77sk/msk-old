@@ -35,7 +35,7 @@ export class MaterialLayoutComponent implements OnInit, OnDestroy {
     private _mskConfigService: MskConfigService,
     private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
-    private _mskMediaWatcherService: MskMediaWatcherService
+    private _mskMediaWatcherService: MskMediaWatcherService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -91,7 +91,7 @@ export class MaterialLayoutComponent implements OnInit, OnDestroy {
     // Get the navigation
     const navigation =
       this._mskNavigationService.getComponent<MskVerticalNavigationComponent>(
-        name
+        name,
       );
 
     if (navigation) {

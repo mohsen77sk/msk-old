@@ -34,7 +34,10 @@ export class MskSelectSearchDirective {
   /**
    * Constructor
    */
-  constructor(private _matSelect: MatSelect, private _renderer: Renderer2) {}
+  constructor(
+    private _matSelect: MatSelect,
+    private _renderer: Renderer2,
+  ) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Accessors
@@ -90,12 +93,12 @@ export class MskSelectSearchDirective {
           // If search in multi items
           else if (Array.isArray(this.searchItems)) {
             return this.searchItems.some((key) =>
-              this._includes(item[key], search)
+              this._includes(item[key], search),
             );
           } else {
             return true;
           }
-        })
+        }),
       );
       // Active first item
       setTimeout(() => this._matSelect._keyManager.setFirstItemActive(), 0);
@@ -168,16 +171,16 @@ export class MskSelectSearchDirective {
             selectedValues = [];
           }
           const optionValues = this._matSelect.options.map(
-            (option) => option.value
+            (option) => option.value,
           );
 
           this._previousSelectedValues.forEach((previousValue) => {
             if (
               !updatedSelectedValues.some((v) =>
-                this._matSelect.compareWith(v, previousValue)
+                this._matSelect.compareWith(v, previousValue),
               ) &&
               !optionValues.some((v) =>
-                this._matSelect.compareWith(v, previousValue)
+                this._matSelect.compareWith(v, previousValue),
               )
             ) {
               // if a value that was selected before is deselected and not found in the options, it was deselected

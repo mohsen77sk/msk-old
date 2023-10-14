@@ -44,11 +44,11 @@ export class MskServiceWorkerModule {
    */
   constructor(
     private _mskServiceWorkerService: MskServiceWorkerService,
-    private _translocoService: TranslocoService
+    private _translocoService: TranslocoService,
   ) {
     _translocoService.langChanges$
       .pipe(
-        switchMap((lang) => _translocoService.load('serviceWorker/' + lang))
+        switchMap((lang) => _translocoService.load('serviceWorker/' + lang)),
       )
       .subscribe();
   }

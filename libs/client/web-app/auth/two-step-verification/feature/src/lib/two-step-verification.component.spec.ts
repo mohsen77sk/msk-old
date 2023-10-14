@@ -8,9 +8,8 @@ describe('TwoStepVerificationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TwoStepVerificationComponent ]
-    })
-    .compileComponents();
+      declarations: [TwoStepVerificationComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

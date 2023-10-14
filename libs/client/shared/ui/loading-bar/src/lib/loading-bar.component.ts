@@ -44,7 +44,7 @@ export class MskLoadingBarComponent implements OnChanges, OnInit, OnDestroy {
     if ('autoMode' in changes) {
       // Set the auto mode in the service
       this._mskLoadingBarService.setAutoMode(
-        coerceBooleanProperty(changes['autoMode'].currentValue)
+        coerceBooleanProperty(changes['autoMode'].currentValue),
       );
     }
   }

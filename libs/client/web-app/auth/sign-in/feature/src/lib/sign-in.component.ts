@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
+import {
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  NgForm,
+  Validators,
+} from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskAlertType } from '@msk/client/shared/ui/alert';
 

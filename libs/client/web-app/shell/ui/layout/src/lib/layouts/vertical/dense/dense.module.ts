@@ -50,7 +50,7 @@ import { DenseLayoutComponent } from './dense.component';
         scope: 'layout',
         loader: scopeLoader(
           (lang: string, root: string) =>
-            import(`../../../${root}/${lang}.json`)
+            import(`../../../${root}/${lang}.json`),
         ),
       },
     },

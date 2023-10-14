@@ -694,7 +694,9 @@
               margin-right: 4px;
             }
 
-            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
+                .mat-mdc-select
+              ):not(.mat-datepicker-toggle) {
               margin-right: 12px;
             }
           }
@@ -719,7 +721,9 @@
               margin-left: 4px !important;
             }
 
-            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
+                .mat-mdc-select
+              ):not(.mat-datepicker-toggle) {
               margin-left: 12px !important;
             }
           }
@@ -839,7 +843,9 @@
             margin-right: 8px;
           }
 
-          > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+          > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(
+              .mat-datepicker-toggle
+            ) {
             margin-right: 16px;
           }
         }
@@ -869,7 +875,9 @@
             margin-left: 8px;
           }
 
-          > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+          > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(
+              .mat-datepicker-toggle
+            ) {
             margin-left: 16px;
           }
         }
@@ -1019,7 +1027,9 @@
                 margin: 0 -8px 0 4px !important;
               }
 
-              > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+              > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
+                  .mat-mdc-select
+                ):not(.mat-datepicker-toggle) {
                 margin-left: 12px !important;
                 margin-right: auto !important;
               }
@@ -1047,7 +1057,9 @@
                 margin: 0 4px 0 -8px !important;
               }
 
-              > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+              > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
+                  .mat-mdc-select
+                ):not(.mat-datepicker-toggle) {
                 margin-left: auto !important;
                 margin-right: 12px !important;
               }
@@ -1087,7 +1099,9 @@
               margin-left: 8px;
             }
 
-            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
+                .mat-mdc-select
+              ):not(.mat-datepicker-toggle) {
               margin-left: 16px;
               margin-right: auto;
             }
@@ -1119,7 +1133,9 @@
               margin-right: 8px;
             }
 
-            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(.mat-mdc-select):not(.mat-datepicker-toggle) {
+            > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
+                .mat-mdc-select
+              ):not(.mat-datepicker-toggle) {
               margin-left: auto;
               margin-right: 16px;
             }

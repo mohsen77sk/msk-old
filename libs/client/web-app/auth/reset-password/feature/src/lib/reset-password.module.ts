@@ -51,7 +51,7 @@ const routes: Routes = [
       useValue: {
         scope: 'resetPassword',
         loader: scopeLoader(
-          (lang: string, root: string) => import(`./${root}/${lang}.json`)
+          (lang: string, root: string) => import(`./${root}/${lang}.json`),
         ),
       },
     },

@@ -72,7 +72,7 @@ export class MskNavigationService {
     // Check if the navigation exists
     if (!this._navigationStore.has(key)) {
       console.warn(
-        `Navigation with the key '${key}' does not exist in the store.`
+        `Navigation with the key '${key}' does not exist in the store.`,
       );
     }
 
@@ -89,7 +89,7 @@ export class MskNavigationService {
    */
   getFlatNavigation(
     navigation: MskNavigationItem[],
-    flatNavigation: MskNavigationItem[] = []
+    flatNavigation: MskNavigationItem[] = [],
   ): MskNavigationItem[] {
     for (const item of navigation) {
       if (item.type === 'basic') {
@@ -120,7 +120,7 @@ export class MskNavigationService {
    */
   getItem(
     id: string,
-    navigation: MskNavigationItem[]
+    navigation: MskNavigationItem[],
   ): MskNavigationItem | null {
     for (const item of navigation) {
       if (item.id === id) {
@@ -150,7 +150,7 @@ export class MskNavigationService {
   getItemParent(
     id: string,
     navigation: MskNavigationItem[],
-    parent: MskNavigationItem[] | MskNavigationItem
+    parent: MskNavigationItem[] | MskNavigationItem,
   ): MskNavigationItem[] | MskNavigationItem | null {
     for (const item of navigation) {
       if (item.id === id) {

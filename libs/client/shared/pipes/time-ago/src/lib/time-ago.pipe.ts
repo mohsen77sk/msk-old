@@ -30,7 +30,7 @@ export class MskTimeAgoPipe extends AsyncPipe implements PipeTransform {
    */
   constructor(
     @Inject(LOCALE_ID) private _locale: string,
-    private _changeDetectorRef: ChangeDetectorRef
+    private _changeDetectorRef: ChangeDetectorRef,
   ) {
     super(_changeDetectorRef);
 
@@ -40,9 +40,9 @@ export class MskTimeAgoPipe extends AsyncPipe implements PipeTransform {
           addSuffix: true,
           includeSeconds: true,
           locale: locale[this._locale.valueOf()],
-        })
+        }),
       ),
-      distinctUntilChanged()
+      distinctUntilChanged(),
     );
   }
 

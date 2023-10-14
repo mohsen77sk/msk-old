@@ -46,7 +46,7 @@ export class MskVerticalNavigationAsideItemComponent
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
     private _router: Router,
-    private _mskNavigationService: MskNavigationService
+    private _mskNavigationService: MskNavigationService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -77,9 +77,9 @@ export class MskVerticalNavigationAsideItemComponent
     this._router.events
       .pipe(
         filter(
-          (event): event is NavigationEnd => event instanceof NavigationEnd
+          (event): event is NavigationEnd => event instanceof NavigationEnd,
         ),
-        takeUntil(this._unsubscribeAll)
+        takeUntil(this._unsubscribeAll),
       )
       .subscribe((event: NavigationEnd) => {
         // Mark if active
@@ -136,7 +136,7 @@ export class MskVerticalNavigationAsideItemComponent
    */
   private _hasActiveChild(
     item: MskNavigationItem,
-    currentUrl: string
+    currentUrl: string,
   ): boolean {
     const children = item.children;
 

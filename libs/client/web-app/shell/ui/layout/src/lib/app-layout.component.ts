@@ -50,7 +50,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     @Inject(DOCUMENT) private _document: any,
     private _mskConfigService: MskConfigService,
     private _mskMediaWatcherService: MskMediaWatcherService,
-    private _mskPlatformService: MskPlatformService
+    private _mskPlatformService: MskPlatformService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -86,7 +86,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           }
 
           return options;
-        })
+        }),
       )
       .subscribe((options) => {
         // Store the options
@@ -114,7 +114,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this._router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
-        takeUntil(this._unsubscribeAll)
+        takeUntil(this._unsubscribeAll),
       )
       .subscribe(() => {
         // Update the layout type
@@ -124,7 +124,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     // Set the OS name
     this._renderer2.addClass(
       this._document.body,
-      this._mskPlatformService.osName
+      this._mskPlatformService.osName,
     );
   }
 
@@ -208,7 +208,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     // 2. Get the query parameter from the current route and
     // set the layoutType and save the layoutType to the layoutConfig
     const layoutFromQueryParam = route.snapshot.queryParamMap.get(
-      'layoutType'
+      'layoutType',
     ) as LayoutType;
     if (layoutFromQueryParam) {
       this.layoutType = layoutFromQueryParam;
@@ -271,7 +271,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
       if (className.startsWith('theme-')) {
         this._document.body.classList.remove(
           className,
-          className.split('-')[1]
+          className.split('-')[1],
         );
       }
     });

@@ -40,7 +40,7 @@ export class NotificationService {
       .pipe(
         tap((notifications) => {
           this._notifications.next(notifications);
-        })
+        }),
       );
   }
 
@@ -72,9 +72,9 @@ export class NotificationService {
 
               // Return the updated notification
               return updatedNotification;
-            })
-          )
-      )
+            }),
+          ),
+      ),
     );
   }
 
@@ -102,9 +102,9 @@ export class NotificationService {
 
               // Return the deleted status
               return isDeleted;
-            })
-          )
-      )
+            }),
+          ),
+      ),
     );
   }
 
@@ -129,9 +129,9 @@ export class NotificationService {
 
               // Return the updated status
               return isUpdated;
-            })
-          )
-      )
+            }),
+          ),
+      ),
     );
   }
 }

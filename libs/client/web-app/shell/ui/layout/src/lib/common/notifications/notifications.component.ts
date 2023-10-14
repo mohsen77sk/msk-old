@@ -48,7 +48,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
     private _viewContainerRef: ViewContainerRef,
     private _changeDetectorRef: ChangeDetectorRef,
     private _notificationService: NotificationService,
-    private _mskConfigService: MskConfigService
+    private _mskConfigService: MskConfigService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
 
     // Attach the portal to the overlay
     this._overlayRef.attach(
-      new TemplatePortal(this._notificationsPanel, this._viewContainerRef)
+      new TemplatePortal(this._notificationsPanel, this._viewContainerRef),
     );
   }
 
@@ -182,7 +182,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
       positionStrategy: this._overlay
         .position()
         .flexibleConnectedTo(
-          this._notificationsOrigin._elementRef.nativeElement
+          this._notificationsOrigin._elementRef.nativeElement,
         )
         .withLockedPosition(true)
         .withPush(true)
@@ -230,7 +230,7 @@ export class NotificationsComponent implements OnInit, OnDestroy {
 
     if (this.notifications && this.notifications.length) {
       count = this.notifications.filter(
-        (notification) => !notification.read
+        (notification) => !notification.read,
       ).length;
     }
 

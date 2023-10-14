@@ -52,7 +52,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
     private _mskAlertService: MskAlertService,
-    private _mskUtilsService: MskUtilsService
+    private _mskUtilsService: MskUtilsService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -105,7 +105,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
     if ('dismissible' in changes) {
       // Coerce the value to a boolean
       this.dismissible = coerceBooleanProperty(
-        changes['dismissible'].currentValue
+        changes['dismissible'].currentValue,
       );
     }
 
@@ -124,7 +124,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
     this._mskAlertService.onDismiss
       .pipe(
         filter((name) => this.name === name),
-        takeUntil(this._unsubscribeAll)
+        takeUntil(this._unsubscribeAll),
       )
       .subscribe(() => {
         // Dismiss the alert
@@ -135,7 +135,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
     this._mskAlertService.onShow
       .pipe(
         filter((name) => this.name === name),
-        takeUntil(this._unsubscribeAll)
+        takeUntil(this._unsubscribeAll),
       )
       .subscribe(() => {
         // Show the alert

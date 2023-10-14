@@ -32,7 +32,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
   constructor(
     private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
-    private _mskMediaWatcherService: MskMediaWatcherService
+    private _mskMediaWatcherService: MskMediaWatcherService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -81,7 +81,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
     // Get the navigation
     const navigation =
       this._mskNavigationService.getComponent<MskVerticalNavigationComponent>(
-        name
+        name,
       );
 
     if (navigation) {

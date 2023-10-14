@@ -36,7 +36,7 @@ export class MessageService {
     return this._httpClient.get<Message[]>('assets/api/messages.json').pipe(
       tap((messages) => {
         this._messages.next(messages);
-      })
+      }),
     );
   }
 
@@ -56,9 +56,9 @@ export class MessageService {
 
             // Return the new message from observable
             return newMessage;
-          })
-        )
-      )
+          }),
+        ),
+      ),
     );
   }
 
@@ -90,9 +90,9 @@ export class MessageService {
 
               // Return the updated message
               return updatedMessage;
-            })
-          )
-      )
+            }),
+          ),
+      ),
     );
   }
 
@@ -120,9 +120,9 @@ export class MessageService {
 
               // Return the deleted status
               return isDeleted;
-            })
-          )
-      )
+            }),
+          ),
+      ),
     );
   }
 
@@ -147,9 +147,9 @@ export class MessageService {
 
               // Return the updated status
               return isUpdated;
-            })
-          )
-      )
+            }),
+          ),
+      ),
     );
   }
 }

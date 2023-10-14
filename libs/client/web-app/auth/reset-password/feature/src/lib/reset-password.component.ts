@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
+import {
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  NgForm,
+  Validators,
+} from '@angular/forms';
 import { mskAnimations } from '@msk/client/shared/animations';
 import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskAlertType } from '@msk/client/shared/ui/alert';
@@ -31,7 +36,7 @@ export class ResetPasswordComponent implements OnInit {
    */
   constructor(
     private _formBuilder: UntypedFormBuilder,
-    private _mskConfigService: MskConfigService
+    private _mskConfigService: MskConfigService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -50,7 +55,7 @@ export class ResetPasswordComponent implements OnInit {
       },
       {
         validators: MskValidators.mustMatch('password', 'passwordConfirm'),
-      }
+      },
     );
 
     // Subscribe to config changes

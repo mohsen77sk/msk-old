@@ -15,7 +15,7 @@ import { MskPasswordStrengthMeterService } from './password-strength-meter.servi
   styleUrls: ['./password-strength-meter.component.scss'],
 })
 export class MskPasswordStrengthMeterComponent implements OnChanges {
-  @Input() language!: string;
+  @Input() language!: 'en' | 'fa';
   @Input() password!: string;
   @Input() enableFeedback = false;
   @Input() colors: string[] = [];
@@ -24,7 +24,7 @@ export class MskPasswordStrengthMeterComponent implements OnChanges {
   passwordStrength: number | null = null;
   feedback: { warning: string | null; suggestions: string[] } | null = null;
   private _prevPasswordStrength: number | null = null;
-  private _defaultColours = [
+  private _defaultColors = [
     'darkred',
     'orangered',
     'orange',
@@ -36,7 +36,7 @@ export class MskPasswordStrengthMeterComponent implements OnChanges {
    * Constructor
    */
   constructor(
-    private _mskPasswordStrengthMeterService: MskPasswordStrengthMeterService
+    private _mskPasswordStrengthMeterService: MskPasswordStrengthMeterService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -67,12 +67,12 @@ export class MskPasswordStrengthMeterComponent implements OnChanges {
    */
   getMeterFillColor(strength: number | null): string {
     if (!strength || strength < 0 || strength > 5) {
-      return this.colors[0] ? this.colors[0] : this._defaultColours[0];
+      return this.colors[0] ? this.colors[0] : this._defaultColors[0];
     }
 
     return this.colors[strength]
       ? this.colors[strength]
-      : this._defaultColours[strength];
+      : this._defaultColors[strength];
   }
 
   // -----------------------------------------------------------------------------------------------------
@@ -92,14 +92,14 @@ export class MskPasswordStrengthMeterComponent implements OnChanges {
       if (this.enableFeedback) {
         const result = this._mskPasswordStrengthMeterService.scoreWithFeedback(
           this.password,
-          this.language
+          this.language,
         );
         this.passwordStrength = result.score;
         this.feedback = result.feedback;
       } else {
         this.passwordStrength = this._mskPasswordStrengthMeterService.score(
           this.password,
-          this.language
+          this.language,
         );
         this.feedback = null;
       }

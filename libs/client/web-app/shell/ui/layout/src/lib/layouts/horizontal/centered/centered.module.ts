@@ -50,7 +50,7 @@ import { CenteredLayoutComponent } from './centered.component';
         scope: 'layout',
         loader: scopeLoader(
           (lang: string, root: string) =>
-            import(`../../../${root}/${lang}.json`)
+            import(`../../../${root}/${lang}.json`),
         ),
       },
     },

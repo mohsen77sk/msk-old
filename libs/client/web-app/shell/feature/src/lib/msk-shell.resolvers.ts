@@ -10,7 +10,7 @@ import { NotificationService } from '@msk/client/web-app/shell/core/notification
 @Injectable({
   providedIn: 'root',
 })
-export class InitialDataResolver  {
+export class InitialDataResolver {
   /**
    * Constructor
    */
@@ -18,7 +18,7 @@ export class InitialDataResolver  {
     private _userService: UserService,
     private _navigationService: NavigationService,
     private _messageService: MessageService,
-    private _notificationService: NotificationService
+    private _notificationService: NotificationService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ export class InitialDataResolver  {
    */
   resolve(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    state: RouterStateSnapshot,
   ): Observable<any> {
     // Fork join multiple API endpoint calls to wait all of them to finish
     return forkJoin([

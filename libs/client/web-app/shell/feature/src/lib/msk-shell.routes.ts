@@ -50,28 +50,28 @@ export const mskShellRoutes: Route[] = [
         path: 'sign-in',
         loadChildren: () =>
           import('@msk/client/web-app/auth/sign-in/feature').then(
-            (m) => m.AuthSignInModule
+            (m) => m.AuthSignInModule,
           ),
       },
       {
         path: 'forgot-password',
         loadChildren: () =>
           import('@msk/client/web-app/auth/forgot-password/feature').then(
-            (m) => m.AuthForgotPasswordModule
+            (m) => m.AuthForgotPasswordModule,
           ),
       },
       {
         path: 'reset-password',
         loadChildren: () =>
           import('@msk/client/web-app/auth/reset-password/feature').then(
-            (m) => m.AuthResetPasswordModule
+            (m) => m.AuthResetPasswordModule,
           ),
       },
       {
         path: 'two-step-verification',
         loadChildren: () =>
           import('@msk/client/web-app/auth/two-step-verification/feature').then(
-            (m) => m.AuthTwoStepVerificationModule
+            (m) => m.AuthTwoStepVerificationModule,
           ),
       },
     ],
@@ -90,7 +90,7 @@ export const mskShellRoutes: Route[] = [
         path: 'sign-out',
         loadChildren: () =>
           import('@msk/client/web-app/auth/sign-out/feature').then(
-            (m) => m.AuthSignOutModule
+            (m) => m.AuthSignOutModule,
           ),
       },
     ],
@@ -110,7 +110,7 @@ export const mskShellRoutes: Route[] = [
         path: 'dashboard',
         loadChildren: () =>
           import('@msk/client/web-app/admin/dashboard/feature').then(
-            (m) => m.DashboardModule
+            (m) => m.DashboardModule,
           ),
       },
 
@@ -143,7 +143,7 @@ export const mskShellRoutes: Route[] = [
         pathMatch: 'full',
         loadChildren: () =>
           import('@msk/client/web-app/error/maintenance/feature').then(
-            (m) => m.MaintenanceModule
+            (m) => m.MaintenanceModule,
           ),
       },
       {
@@ -151,7 +151,7 @@ export const mskShellRoutes: Route[] = [
         pathMatch: 'full',
         loadChildren: () =>
           import('@msk/client/web-app/error/not-found/feature').then(
-            (m) => m.NotFoundModule
+            (m) => m.NotFoundModule,
           ),
       },
       { path: '**', redirectTo: 'not-found' },

@@ -47,7 +47,7 @@ export class MessagesComponent implements OnInit, OnDestroy {
     private _viewContainerRef: ViewContainerRef,
     private _changeDetectorRef: ChangeDetectorRef,
     private _messageService: MessageService,
-    private _mskConfigService: MskConfigService
+    private _mskConfigService: MskConfigService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ export class MessagesComponent implements OnInit, OnDestroy {
 
     // Attach the portal to the overlay
     this._overlayRef.attach(
-      new TemplatePortal(this._messagesPanel, this._viewContainerRef)
+      new TemplatePortal(this._messagesPanel, this._viewContainerRef),
     );
   }
 

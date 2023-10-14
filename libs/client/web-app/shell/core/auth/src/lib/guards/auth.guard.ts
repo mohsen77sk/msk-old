@@ -6,11 +6,14 @@ import { AuthService } from '../auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard  {
+export class AuthGuard {
   /**
    * Constructor
    */
-  constructor(private _authService: AuthService, private _router: Router) {}
+  constructor(
+    private _authService: AuthService,
+    private _router: Router,
+  ) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Public methods
@@ -24,7 +27,7 @@ export class AuthGuard  {
    */
   canMatch(
     route: Route,
-    segments: UrlSegment[]
+    segments: UrlSegment[],
   ):
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree>
@@ -52,7 +55,7 @@ export class AuthGuard  {
           // Redirect to the sign-in page with a redirectUrl param
           const redirectURL = `/${segments.join('/')}`;
           const urlTree = this._router.parseUrl(
-            `sign-in?redirectURL=${redirectURL}`
+            `sign-in?redirectURL=${redirectURL}`,
           );
 
           return of(urlTree);
@@ -60,7 +63,7 @@ export class AuthGuard  {
 
         // Allow the access
         return of(true);
-      })
+      }),
     );
   }
 }

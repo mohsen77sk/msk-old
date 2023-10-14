@@ -31,7 +31,7 @@ export class LayoutSettingsComponent implements OnInit, OnDestroy {
    */
   constructor(
     private _router: Router,
-    private _mskConfigService: MskConfigService
+    private _mskConfigService: MskConfigService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

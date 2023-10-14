@@ -41,7 +41,7 @@ export class MskPasswordStrengthMeterService {
    *
    *  @param password
    */
-  score(password: string, language?: string): number {
+  score(password: string, language?: LOCALE_TYPE): number {
     const result = this._checkPassword(password, language);
     return result.score;
   }
@@ -54,7 +54,7 @@ export class MskPasswordStrengthMeterService {
    */
   scoreWithFeedback(
     password: string,
-    language?: string
+    language?: LOCALE_TYPE,
   ): {
     score: number;
     feedback: { warning: string | null; suggestions: string[] };
@@ -75,7 +75,7 @@ export class MskPasswordStrengthMeterService {
    */
   private _checkPassword(
     password: string,
-    language: string = 'en'
+    language: LOCALE_TYPE = 'en',
   ): ZxcvbnResult {
     // Set option
     zxcvbnOptions.setOptions({

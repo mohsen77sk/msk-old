@@ -12,7 +12,7 @@ export class MskServiceWorkerService {
   constructor(
     @Inject(DOCUMENT) private _document: any,
     private _swUpdate: SwUpdate,
-    private _matSnackBar: MatSnackBar
+    private _matSnackBar: MatSnackBar,
   ) {
     // If the service worker is enabled
     if (this._swUpdate.isEnabled) {
@@ -33,7 +33,7 @@ export class MskServiceWorkerService {
                 'dark:text-amber-400',
               ],
               direction: this._document.body.getAttribute('dir'),
-            }
+            },
           );
         }
       });

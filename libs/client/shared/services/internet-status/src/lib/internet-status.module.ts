@@ -27,11 +27,11 @@ export class MskInternetStatusModule {
    */
   constructor(
     private _mskInternetStatusService: MskInternetStatusService,
-    private _translocoService: TranslocoService
+    private _translocoService: TranslocoService,
   ) {
     _translocoService.langChanges$
       .pipe(
-        switchMap((lang) => _translocoService.load('internetStatus/' + lang))
+        switchMap((lang) => _translocoService.load('internetStatus/' + lang)),
       )
       .subscribe();
   }

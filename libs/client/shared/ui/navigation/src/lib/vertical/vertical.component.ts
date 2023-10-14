@@ -80,13 +80,15 @@ export class MskVerticalNavigationComponent
   @Input() position: MskVerticalNavigationPosition = 'start';
   @Input() transparentOverlay = false;
   @Output()
-  readonly appearanceChanged: EventEmitter<MskVerticalNavigationAppearance> = new EventEmitter<MskVerticalNavigationAppearance>();
+  readonly appearanceChanged: EventEmitter<MskVerticalNavigationAppearance> =
+    new EventEmitter<MskVerticalNavigationAppearance>();
   @Output() readonly modeChanged: EventEmitter<MskVerticalNavigationMode> =
     new EventEmitter<MskVerticalNavigationMode>();
   @Output() readonly openedChanged: EventEmitter<boolean> =
     new EventEmitter<boolean>();
   @Output()
-  readonly positionChanged: EventEmitter<MskVerticalNavigationPosition> = new EventEmitter<MskVerticalNavigationPosition>();
+  readonly positionChanged: EventEmitter<MskVerticalNavigationPosition> =
+    new EventEmitter<MskVerticalNavigationPosition>();
   @ViewChild('navigationContent') private _navigationContentEl!: ElementRef;
 
   activeAsideItemId: string | null = null;
@@ -119,7 +121,7 @@ export class MskVerticalNavigationComponent
     @Inject(DOCUMENT) private _document: any,
     private _scrollStrategyOptions: ScrollStrategyOptions,
     private _mskNavigationService: MskNavigationService,
-    private _mskUtilsService: MskUtilsService
+    private _mskUtilsService: MskUtilsService,
   ) {
     this._handleAsideOverlayClick = (): void => {
       this.closeAside();
@@ -164,7 +166,7 @@ export class MskVerticalNavigationComponent
    */
   @ViewChildren(MskScrollbarDirective)
   set mskScrollbarDirectives(
-    mskScrollbarDirectives: QueryList<MskScrollbarDirective>
+    mskScrollbarDirectives: QueryList<MskScrollbarDirective>,
   ) {
     // Store the directives
     this._mskScrollbarDirectives = mskScrollbarDirectives;
@@ -182,7 +184,7 @@ export class MskVerticalNavigationComponent
     // Update the scrollbars on collapsable items' collapse/expand
     this._mskScrollbarDirectivesSubscription = merge(
       this.onCollapsableItemCollapsed,
-      this.onCollapsableItemExpanded
+      this.onCollapsableItemExpanded,
     )
       .pipe(takeUntil(this._unsubscribeAll), delay(250))
       .subscribe(() => {
@@ -310,7 +312,7 @@ export class MskVerticalNavigationComponent
     if ('transparentOverlay' in changes) {
       // Coerce the value to a boolean
       this.transparentOverlay = coerceBooleanProperty(
-        changes['transparentOverlay'].currentValue
+        changes['transparentOverlay'].currentValue,
       );
     }
   }
@@ -331,7 +333,7 @@ export class MskVerticalNavigationComponent
     this._router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
-        takeUntil(this._unsubscribeAll)
+        takeUntil(this._unsubscribeAll),
       )
       .subscribe(() => {
         // If the mode is 'over' and the navigation is opened...
@@ -364,7 +366,7 @@ export class MskVerticalNavigationComponent
         // Find the active item
         const activeItem =
           this._navigationContentEl.nativeElement.querySelector(
-            '.msk-vertical-navigation-item-active'
+            '.msk-vertical-navigation-item-active',
           );
 
         // If the active item exists, scroll it into view
@@ -385,7 +387,7 @@ export class MskVerticalNavigationComponent
           mskScrollbarDirective.scrollToElement(
             '.msk-vertical-navigation-item-active',
             -120,
-            true
+            true,
           );
         });
       }
@@ -586,14 +588,14 @@ export class MskVerticalNavigationComponent
     // Add a class depending on the transparentOverlay option
     if (this.transparentOverlay) {
       this._overlay?.classList.add(
-        'msk-vertical-navigation-overlay-transparent'
+        'msk-vertical-navigation-overlay-transparent',
       );
     }
 
     // Append the overlay to the parent of the navigation
     this._renderer2.appendChild(
       this._elementRef.nativeElement.parentElement,
-      this._overlay
+      this._overlay,
     );
 
     // Enable block scroll strategy
@@ -604,7 +606,7 @@ export class MskVerticalNavigationComponent
       .build([
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-          style({ opacity: 1 })
+          style({ opacity: 1 }),
         ),
       ])
       .create(this._overlay);
@@ -631,7 +633,7 @@ export class MskVerticalNavigationComponent
       .build([
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-          style({ opacity: 0 })
+          style({ opacity: 0 }),
         ),
       ])
       .create(this._overlay);
@@ -676,7 +678,7 @@ export class MskVerticalNavigationComponent
     // Append the aside overlay to the parent of the navigation
     this._renderer2.appendChild(
       this._elementRef.nativeElement.parentElement,
-      this._asideOverlay
+      this._asideOverlay,
     );
 
     // Create the enter animation and attach it to the player
@@ -684,7 +686,7 @@ export class MskVerticalNavigationComponent
       .build([
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-          style({ opacity: 1 })
+          style({ opacity: 1 }),
         ),
       ])
       .create(this._asideOverlay);
@@ -695,7 +697,7 @@ export class MskVerticalNavigationComponent
     // Add an event listener to the aside overlay
     this._asideOverlay?.addEventListener(
       'click',
-      this._handleAsideOverlayClick
+      this._handleAsideOverlayClick,
     );
   }
 
@@ -714,7 +716,7 @@ export class MskVerticalNavigationComponent
       .build([
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-          style({ opacity: 0 })
+          style({ opacity: 0 }),
         ),
       ])
       .create(this._asideOverlay);
@@ -729,7 +731,7 @@ export class MskVerticalNavigationComponent
         // Remove the event listener
         this._asideOverlay.removeEventListener(
           'click',
-          this._handleAsideOverlayClick
+          this._handleAsideOverlayClick,
         );
 
         // Remove the aside overlay

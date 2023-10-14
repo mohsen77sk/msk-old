@@ -81,7 +81,9 @@ msk-vertical-navigation {
       }
     }
 
-    &:not(.msk-vertical-navigation-hover):not(.msk-vertical-navigation-mode-over) {
+    &:not(.msk-vertical-navigation-hover):not(
+        .msk-vertical-navigation-mode-over
+      ) {
       /* Wrapper */
       .msk-vertical-navigation-wrapper {
         /* Content */

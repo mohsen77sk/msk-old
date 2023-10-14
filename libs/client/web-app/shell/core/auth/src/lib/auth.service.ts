@@ -13,7 +13,7 @@ export class AuthService {
    */
   constructor(
     private _httpClient: HttpClient,
-    private _userService: UserService
+    private _userService: UserService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

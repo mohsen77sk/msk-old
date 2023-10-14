@@ -47,7 +47,7 @@ const routes: Routes = [
       useValue: {
         scope: 'forgotPassword',
         loader: scopeLoader(
-          (lang: string, root: string) => import(`./${root}/${lang}.json`)
+          (lang: string, root: string) => import(`./${root}/${lang}.json`),
         ),
       },
     },

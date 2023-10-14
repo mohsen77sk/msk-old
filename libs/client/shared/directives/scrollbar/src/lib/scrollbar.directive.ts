@@ -42,7 +42,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
   constructor(
     private _elementRef: ElementRef,
     private _platform: Platform,
-    private _router: Router
+    private _router: Router,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -77,7 +77,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
     if ('mskScrollbar' in changes) {
       // Interpret empty string as 'true'
       this.mskScrollbar = coerceBooleanProperty(
-        changes['mskScrollbar'].currentValue
+        changes['mskScrollbar'].currentValue,
       );
 
       // If enabled, init the directive
@@ -96,7 +96,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
       this._options = merge(
         {},
         this._options,
-        changes['mskScrollbarOptions'].currentValue
+        changes['mskScrollbarOptions'].currentValue,
       );
 
       // Return if not initialized
@@ -180,7 +180,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
       this._elementRef.nativeElement[prefix + 'Left'],
       this._elementRef.nativeElement[prefix + 'Top'],
       this._elementRef.nativeElement[prefix + 'Width'],
-      this._elementRef.nativeElement[prefix + 'Height']
+      this._elementRef.nativeElement[prefix + 'Height'],
     );
   }
 
@@ -195,12 +195,12 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
     if (!absolute && this._ps) {
       scrollbarPosition = new MskScrollbarPosition(
         this._ps.reach.x || 0,
-        this._ps.reach.y || 0
+        this._ps.reach.y || 0,
       );
     } else {
       scrollbarPosition = new MskScrollbarPosition(
         this._elementRef.nativeElement.scrollLeft,
-        this._elementRef.nativeElement.scrollTop
+        this._elementRef.nativeElement.scrollTop,
       );
     }
 
@@ -306,7 +306,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
     qs: string,
     offset: number = 0,
     ignoreVisible: boolean = false,
-    speed?: number
+    speed?: number,
   ): void {
     const element = this._elementRef.nativeElement.querySelector(qs);
 
@@ -373,7 +373,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
       const step = (newTimestamp: number): void => {
         scrollCount += Math.PI / (speed / (newTimestamp - oldTimestamp));
         newValue = Math.round(
-          value + cosParameter + cosParameter * Math.cos(scrollCount)
+          value + cosParameter + cosParameter * Math.cos(scrollCount),
         );
 
         // Only continue animation if scroll position has not changed

@@ -15,14 +15,14 @@ const fadeIn = trigger('fadeIn', [
     'void',
     style({
       opacity: 0,
-    })
+    }),
   ),
 
   state(
     '*',
     style({
       opacity: 1,
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -45,7 +45,7 @@ const fadeInTop = trigger('fadeInTop', [
     style({
       opacity: 0,
       transform: 'translate3d(0, -100%, 0)',
-    })
+    }),
   ),
 
   state(
@@ -53,7 +53,7 @@ const fadeInTop = trigger('fadeInTop', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -76,7 +76,7 @@ const fadeInBottom = trigger('fadeInBottom', [
     style({
       opacity: 0,
       transform: 'translate3d(0, 100%, 0)',
-    })
+    }),
   ),
 
   state(
@@ -84,7 +84,7 @@ const fadeInBottom = trigger('fadeInBottom', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -107,7 +107,7 @@ const fadeInLeft = trigger('fadeInLeft', [
     style({
       opacity: 0,
       transform: 'translate3d(-100%, 0, 0)',
-    })
+    }),
   ),
 
   state(
@@ -115,7 +115,7 @@ const fadeInLeft = trigger('fadeInLeft', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -138,7 +138,7 @@ const fadeInRight = trigger('fadeInRight', [
     style({
       opacity: 0,
       transform: 'translate3d(100%, 0, 0)',
-    })
+    }),
   ),
 
   state(
@@ -146,7 +146,7 @@ const fadeInRight = trigger('fadeInRight', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -168,14 +168,14 @@ const fadeOut = trigger('fadeOut', [
     '*',
     style({
       opacity: 1,
-    })
+    }),
   ),
 
   state(
     'void',
     style({
       opacity: 0,
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -198,7 +198,7 @@ const fadeOutTop = trigger('fadeOutTop', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   state(
@@ -206,7 +206,7 @@ const fadeOutTop = trigger('fadeOutTop', [
     style({
       opacity: 0,
       transform: 'translate3d(0, -100%, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -229,7 +229,7 @@ const fadeOutBottom = trigger('fadeOutBottom', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   state(
@@ -237,7 +237,7 @@ const fadeOutBottom = trigger('fadeOutBottom', [
     style({
       opacity: 0,
       transform: 'translate3d(0, 100%, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -260,7 +260,7 @@ const fadeOutLeft = trigger('fadeOutLeft', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   state(
@@ -268,7 +268,7 @@ const fadeOutLeft = trigger('fadeOutLeft', [
     style({
       opacity: 0,
       transform: 'translate3d(-100%, 0, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false
@@ -291,7 +291,7 @@ const fadeOutRight = trigger('fadeOutRight', [
     style({
       opacity: 1,
       transform: 'translate3d(0, 0, 0)',
-    })
+    }),
   ),
 
   state(
@@ -299,7 +299,7 @@ const fadeOutRight = trigger('fadeOutRight', [
     style({
       opacity: 0,
       transform: 'translate3d(100%, 0, 0)',
-    })
+    }),
   ),
 
   // Prevent the transition if the state is false

@@ -9,31 +9,31 @@ export class MskIconsModule {
    */
   constructor(
     private _domSanitizer: DomSanitizer,
-    private _matIconRegistry: MatIconRegistry
+    private _matIconRegistry: MatIconRegistry,
   ) {
     this._matIconRegistry.addSvgIconSetInNamespace(
       'mat_outline',
       this._domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/icons/material-outline.svg'
-      )
+        'assets/icons/material-outline.svg',
+      ),
     );
     this._matIconRegistry.addSvgIconSetInNamespace(
       'mat_solid',
       this._domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/icons/material-solid.svg'
-      )
+        'assets/icons/material-solid.svg',
+      ),
     );
     this._matIconRegistry.addSvgIconSetInNamespace(
       'heroicons_outline',
       this._domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/icons/heroicons-outline.svg'
-      )
+        'assets/icons/heroicons-outline.svg',
+      ),
     );
     this._matIconRegistry.addSvgIconSetInNamespace(
       'heroicons_solid',
       this._domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/icons/heroicons-solid.svg'
-      )
+        'assets/icons/heroicons-solid.svg',
+      ),
     );
   }
 }

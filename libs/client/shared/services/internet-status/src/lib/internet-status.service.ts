@@ -22,7 +22,7 @@ export class MskInternetStatusService {
   constructor(
     private _injector: Injector,
     private _appRef: ApplicationRef,
-    private _componentFactoryResolver: ComponentFactoryResolver
+    private _componentFactoryResolver: ComponentFactoryResolver,
   ) {
     /**
      * Get the online/offline status from browser window
@@ -34,7 +34,7 @@ export class MskInternetStatusService {
       .pipe(
         map(() => {
           this.createComponent();
-        })
+        }),
       )
       .subscribe();
 
@@ -42,7 +42,7 @@ export class MskInternetStatusService {
       .pipe(
         map(() => {
           this.removeComponent();
-        })
+        }),
       )
       .subscribe();
   }

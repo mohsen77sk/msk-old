@@ -38,7 +38,7 @@ export class LanguagesComponent implements OnInit {
   constructor(
     private _dateAdapter: DateAdapter<any>,
     private _translocoService: TranslocoService,
-    private _mskConfigService: MskConfigService
+    private _mskConfigService: MskConfigService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

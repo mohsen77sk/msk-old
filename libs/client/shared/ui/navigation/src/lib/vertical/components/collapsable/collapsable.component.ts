@@ -45,7 +45,7 @@ export class MskVerticalNavigationCollapsableItemComponent
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
     private _router: Router,
-    private _mskNavigationService: MskNavigationService
+    private _mskNavigationService: MskNavigationService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -135,9 +135,9 @@ export class MskVerticalNavigationCollapsableItemComponent
     this._router.events
       .pipe(
         filter(
-          (event): event is NavigationEnd => event instanceof NavigationEnd
+          (event): event is NavigationEnd => event instanceof NavigationEnd,
         ),
-        takeUntil(this._unsubscribeAll)
+        takeUntil(this._unsubscribeAll),
       )
       .subscribe((event: NavigationEnd) => {
         // If the item has a children that has a matching url with the current url, expand...
@@ -198,7 +198,7 @@ export class MskVerticalNavigationCollapsableItemComponent
 
     // Execute the observable
     this._mskVerticalNavigationComponent.onCollapsableItemCollapsed.next(
-      this.item
+      this.item,
     );
   }
 
@@ -225,7 +225,7 @@ export class MskVerticalNavigationCollapsableItemComponent
 
     // Execute the observable
     this._mskVerticalNavigationComponent.onCollapsableItemExpanded.next(
-      this.item
+      this.item,
     );
   }
 
@@ -265,7 +265,7 @@ export class MskVerticalNavigationCollapsableItemComponent
    */
   private _hasActiveChild(
     item: MskNavigationItem,
-    currentUrl: string
+    currentUrl: string,
   ): boolean {
     const children = item.children;
 
@@ -302,7 +302,7 @@ export class MskVerticalNavigationCollapsableItemComponent
    */
   private _isChildrenOf(
     parent: MskNavigationItem,
-    item: MskNavigationItem
+    item: MskNavigationItem,
   ): boolean {
     const children = parent.children;
 

@@ -18,7 +18,7 @@ export class MskValidators {
    */
   static mustMatch(
     controlPath: string,
-    matchingControlPath: string
+    matchingControlPath: string,
   ): ValidatorFn {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       // Get the control and matching control

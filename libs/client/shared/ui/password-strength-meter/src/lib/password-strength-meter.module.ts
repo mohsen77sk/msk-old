@@ -15,6 +15,6 @@ export class MskPasswordStrengthMeterModule {
    * Constructor
    */
   constructor(
-    private _mskPasswordStrengthMeterService: MskPasswordStrengthMeterService
+    private _mskPasswordStrengthMeterService: MskPasswordStrengthMeterService,
   ) {}
 }

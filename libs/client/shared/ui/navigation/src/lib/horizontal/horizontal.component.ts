@@ -40,7 +40,7 @@ export class MskHorizontalNavigationComponent
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
     private _mskNavigationService: MskNavigationService,
-    private _mskUtilsService: MskUtilsService
+    private _mskUtilsService: MskUtilsService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

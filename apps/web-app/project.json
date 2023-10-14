@@ -35,9 +35,7 @@
           "includePaths": ["libs/client/shared/styles/src"]
         },
         "scripts": [],
-        "allowedCommonJsDependencies": [
-          "flat"
-        ],
+        "allowedCommonJsDependencies": ["flat"],
         "serviceWorker": true,
         "ngswConfigPath": "apps/web-app/ngsw-config.json"
       },

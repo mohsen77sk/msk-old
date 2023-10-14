@@ -6,14 +6,12 @@ const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 const flattenColorPalette =
   require('tailwindcss/lib/util/flattenColorPalette').default;
-const generateContrasts = require(path.resolve(
-  __dirname,
-  '../utils/generate-contrasts'
-));
-const jsonToSassMap = require(path.resolve(
-  __dirname,
-  '../utils/json-to-sass-map'
-));
+const generateContrasts = require(
+  path.resolve(__dirname, '../utils/generate-contrasts'),
+);
+const jsonToSassMap = require(
+  path.resolve(__dirname, '../utils/json-to-sass-map'),
+);
 
 // -----------------------------------------------------------------------------------------------------
 // @ Utilities
@@ -32,7 +30,7 @@ const normalizeTheme = (theme) => {
       _.omitBy(
         theme,
         (palette, paletteName) =>
-          paletteName.startsWith('on') || _.isEmpty(palette)
+          paletteName.startsWith('on') || _.isEmpty(palette),
       ),
       (palette, paletteName) => [
         paletteName,
@@ -40,8 +38,8 @@ const normalizeTheme = (theme) => {
           ...palette,
           DEFAULT: palette['DEFAULT'] || palette[500],
         },
-      ]
-    )
+      ],
+    ),
   );
 };
 
@@ -60,7 +58,7 @@ const theming = plugin.withOptions(
         _.map(options.themes, (theme, themeName) => [
           themeName,
           _.defaults({}, theme, options.themes['default']),
-        ])
+        ]),
       );
 
       /**
@@ -71,7 +69,7 @@ const theming = plugin.withOptions(
         _.map(userThemes, (theme, themeName) => [
           themeName,
           normalizeTheme(theme),
-        ])
+        ]),
       );
 
       /**
@@ -94,14 +92,14 @@ const theming = plugin.withOptions(
                         `on-${paletteName}`,
                         hue,
                       ]) || color,
-                    ])
+                    ]),
                   ),
                 },
-              ])
+              ]),
             ),
-            ['primary', 'accent', 'warn']
+            ['primary', 'accent', 'warn'],
           ),
-        ])
+        ]),
       );
 
       /**
@@ -115,14 +113,17 @@ const theming = plugin.withOptions(
             selector: `".theme-${themeName}"`,
             ...theme,
           },
-        ])
+        ]),
       );
 
       /* Generate the SASS map using the themes object */
       const sassMap = jsonToSassMap(JSON.stringify({ 'user-themes': themes }));
 
       /* Get the file path */
-      const filename = path.resolve(__dirname, '../../styles/src/_user-themes.scss');
+      const filename = path.resolve(
+        __dirname,
+        '../../styles/src/_user-themes.scss',
+      );
 
       /* Read the file and get its data */
       let data;
@@ -169,23 +170,23 @@ const theming = plugin.withOptions(
                                   hue,
                                   _.get(theme, [`on-${paletteName}`, hue]) ||
                                     color,
-                                ]
-                              )
+                                ],
+                              ),
                             ),
                           ],
-                        ])
-                      )
-                    )
+                        ]),
+                      ),
+                    ),
                   ),
                   (value, key) => [
                     [`--color-${e(key)}`, value],
                     [`--color-${e(key)}-rgb`, chroma(value).rgb().join(',')],
-                  ]
-                )
-              )
+                  ],
+                ),
+              ),
             ),
-          ])
-        )
+          ]),
+        ),
       );
 
       /**
@@ -230,16 +231,16 @@ const theming = plugin.withOptions(
                 _.map(background, (value, key) => [
                   [`--color-${e(key)}`, value],
                   [`--color-${e(key)}-rgb`, chroma(value).rgb().join(',')],
-                ])
-              )
+                ]),
+              ),
             ),
             ..._.fromPairs(
               _.flatten(
                 _.map(foreground, (value, key) => [
                   [`--color-${e(key)}`, value],
                   [`--color-${e(key)}-rgb`, chroma(value).rgb().join(',')],
-                ])
-              )
+                ]),
+              ),
             ),
           },
         };
@@ -266,7 +267,7 @@ const theming = plugin.withOptions(
             _.flatten(
               _.map(
                 _.keys(
-                  flattenColorPalette(normalizeTheme(options.themes.default))
+                  flattenColorPalette(normalizeTheme(options.themes.default)),
                 ),
                 (name) => [
                   [name, `rgba(var(--color-${name}-rgb), <alpha-value>)`],
@@ -274,9 +275,9 @@ const theming = plugin.withOptions(
                     `on-${name}`,
                     `rgba(var(--color-on-${name}-rgb), <alpha-value>)`,
                   ],
-                ]
-              )
-            )
+                ],
+              ),
+            ),
           ),
         },
         msk: {
@@ -325,7 +326,7 @@ const theming = plugin.withOptions(
         },
       },
     };
-  }
+  },
 );
 
 module.exports = theming;

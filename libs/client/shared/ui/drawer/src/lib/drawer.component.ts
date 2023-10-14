@@ -48,11 +48,13 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
   @Output()
   readonly fixedChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output()
-  readonly modeChanged: EventEmitter<MskDrawerMode> = new EventEmitter<MskDrawerMode>();
+  readonly modeChanged: EventEmitter<MskDrawerMode> =
+    new EventEmitter<MskDrawerMode>();
   @Output()
   readonly openedChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output()
-  readonly positionChanged: EventEmitter<MskDrawerPosition> = new EventEmitter<MskDrawerPosition>();
+  readonly positionChanged: EventEmitter<MskDrawerPosition> =
+    new EventEmitter<MskDrawerPosition>();
 
   private readonly _handleOverlayClick: any;
   private _animationsEnabled = false;
@@ -68,7 +70,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     private _elementRef: ElementRef,
     private _renderer2: Renderer2,
     private _drawerService: MskDrawerService,
-    private _utilsService: MskUtilsService
+    private _utilsService: MskUtilsService,
   ) {
     this._handleOverlayClick = (): void => {
       this.close();
@@ -207,7 +209,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     if ('transparentOverlay' in changes) {
       // Coerce the value to a boolean
       this.transparentOverlay = coerceBooleanProperty(
-        changes['transparentOverlay'].currentValue
+        changes['transparentOverlay'].currentValue,
       );
     }
   }
@@ -338,7 +340,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
     // Append the backdrop to the parent of the drawer
     this._renderer2.appendChild(
       this._elementRef.nativeElement.parentElement,
-      this._overlay
+      this._overlay,
     );
 
     // Create enter animation and attach it to the player
@@ -347,7 +349,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
         style({ opacity: 0 }),
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-          style({ opacity: 1 })
+          style({ opacity: 1 }),
         ),
       ])
       .create(this._overlay);
@@ -374,7 +376,7 @@ export class MskDrawerComponent implements OnChanges, OnInit, OnDestroy {
       .build([
         animate(
           '300ms cubic-bezier(0.25, 0.8, 0.25, 1)',
-          style({ opacity: 0 })
+          style({ opacity: 0 }),
         ),
       ])
       .create(this._overlay);

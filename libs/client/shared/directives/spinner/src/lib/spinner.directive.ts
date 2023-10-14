@@ -58,7 +58,7 @@ export class MskSpinnerDirective implements OnInit {
     private renderer: Renderer2,
     private directiveElement: ElementRef,
     private directiveView: ViewContainerRef,
-    private componentFactoryResolver: ComponentFactoryResolver
+    private componentFactoryResolver: ComponentFactoryResolver,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -71,7 +71,7 @@ export class MskSpinnerDirective implements OnInit {
   ngOnInit() {
     this._componentFactory =
       this.componentFactoryResolver.resolveComponentFactory(
-        MskSpinnerComponent
+        MskSpinnerComponent,
       );
     if (this._shouldShow) {
       this.show();
@@ -98,7 +98,7 @@ export class MskSpinnerDirective implements OnInit {
   show() {
     if (!this.isSpinnerExist) {
       this._spinner = this.directiveView.createComponent<MskSpinnerComponent>(
-        this._componentFactory
+        this._componentFactory,
       );
       this._setInstanceInputs(this._spinner.instance);
       this._spinner.changeDetectorRef.detectChanges();
@@ -107,7 +107,7 @@ export class MskSpinnerDirective implements OnInit {
           this.renderer.appendChild(
             // render in mat-form-field-flex
             this.directiveElement.nativeElement.parentElement?.parentElement,
-            this._spinner.location.nativeElement
+            this._spinner.location.nativeElement,
           );
           break;
 
@@ -115,7 +115,7 @@ export class MskSpinnerDirective implements OnInit {
           this.renderer.appendChild(
             // render in root element
             this.directiveElement.nativeElement,
-            this._spinner.location.nativeElement
+            this._spinner.location.nativeElement,
           );
           break;
       }

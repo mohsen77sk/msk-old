@@ -306,7 +306,8 @@ msk-vertical-navigation {
           height: 20px;
           line-height: 20px;
           margin-left: auto;
-          transition: transform 300ms cubic-bezier(0.25, 0.8, 0.25, 1),
+          transition:
+            transform 300ms cubic-bezier(0.25, 0.8, 0.25, 1),
             color 375ms cubic-bezier(0.25, 0.8, 0.25, 1);
         }
       }
@@ -602,7 +603,9 @@ msk-vertical-navigation-collapsable-item {
       }
 
       /* Hover state */
-      &:not(.msk-vertical-navigation-item-active-forced):not(.msk-vertical-navigation-item-active):not(.msk-vertical-navigation-item-disabled) {
+      &:not(.msk-vertical-navigation-item-active-forced):not(
+          .msk-vertical-navigation-item-active
+        ):not(.msk-vertical-navigation-item-disabled) {
         &:hover {
           @apply dark:bg-opacity-12 bg-gray-800 bg-opacity-5 dark:bg-white;
 

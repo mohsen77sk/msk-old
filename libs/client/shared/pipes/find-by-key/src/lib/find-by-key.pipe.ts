@@ -24,7 +24,7 @@ export class MskFindByKeyPipe implements PipeTransform {
     // If the given value is an array of strings...
     if (Array.isArray(value)) {
       return value.map((item) =>
-        source.find((sourceItem) => sourceItem[key] === item)
+        source.find((sourceItem) => sourceItem[key] === item),
       );
     }
 

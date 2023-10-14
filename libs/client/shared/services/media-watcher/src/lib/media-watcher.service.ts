@@ -10,7 +10,7 @@ export class MskMediaWatcherService {
     matchingAliases: string[];
     matchingQueries: any;
   }> = new ReplaySubject<{ matchingAliases: string[]; matchingQueries: any }>(
-    1
+    1,
   );
 
   /**
@@ -18,7 +18,7 @@ export class MskMediaWatcherService {
    */
   constructor(
     private _breakpointObserver: BreakpointObserver,
-    private _mskConfigService: MskConfigService
+    private _mskConfigService: MskConfigService,
   ) {
     this._mskConfigService.config$
       .pipe(
@@ -27,8 +27,8 @@ export class MskMediaWatcherService {
             Object.entries(config.screens).map(([alias, screen]) => [
               alias,
               `(min-width: ${screen})`,
-            ])
-          )
+            ]),
+          ),
         ),
         switchMap((screens) =>
           this._breakpointObserver.observe(Object.values(screens)).pipe(
@@ -40,12 +40,12 @@ export class MskMediaWatcherService {
               // Get the matching breakpoints and use them to fill the subject
               const matchingBreakpoints =
                 Object.entries(state.breakpoints).filter(
-                  ([query, matches]) => matches
+                  ([query, matches]) => matches,
                 ) ?? [];
               for (const [query] of matchingBreakpoints) {
                 // Find the alias of the matching query
                 const matchingAlias = Object.entries(screens).find(
-                  ([alias, q]) => q === query
+                  ([alias, q]) => q === query,
                 )?.[0];
 
                 // Add the matching query to the observable values
@@ -60,9 +60,9 @@ export class MskMediaWatcherService {
                 matchingAliases,
                 matchingQueries,
               });
-            })
-          )
-        )
+            }),
+          ),
+        ),
       )
       .subscribe();
   }

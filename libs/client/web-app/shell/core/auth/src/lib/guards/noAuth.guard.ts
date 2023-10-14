@@ -6,11 +6,14 @@ import { AuthService } from '../auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class NoAuthGuard  {
+export class NoAuthGuard {
   /**
    * Constructor
    */
-  constructor(private _authService: AuthService, private _router: Router) {}
+  constructor(
+    private _authService: AuthService,
+    private _router: Router,
+  ) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Public methods
@@ -24,7 +27,7 @@ export class NoAuthGuard  {
    */
   canMatch(
     route: Route,
-    segments: UrlSegment[]
+    segments: UrlSegment[],
   ):
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree>

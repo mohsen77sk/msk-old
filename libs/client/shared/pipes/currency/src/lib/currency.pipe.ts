@@ -27,7 +27,7 @@ export class MskCurrencyPipe implements PipeTransform {
     value: number | string | null | undefined,
     currencyCode?: string,
     digitsInfo?: string,
-    locale?: string
+    locale?: string,
   ): string | null {
     if (!isValue(value)) return null;
 
@@ -45,7 +45,7 @@ export class MskCurrencyPipe implements PipeTransform {
           locale,
           currency as string,
           currencyCode,
-          digitsInfo
+          digitsInfo,
         );
       }
     } catch (error) {
@@ -55,7 +55,7 @@ export class MskCurrencyPipe implements PipeTransform {
 }
 
 function isValue(
-  value: number | string | null | undefined
+  value: number | string | null | undefined,
 ): value is number | string {
   return !(value == null || value === '' || value !== value);
 }

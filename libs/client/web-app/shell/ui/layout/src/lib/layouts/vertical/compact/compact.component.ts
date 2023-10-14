@@ -32,7 +32,7 @@ export class CompactLayoutComponent implements OnInit, OnDestroy {
   constructor(
     private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
-    private _mskMediaWatcherService: MskMediaWatcherService
+    private _mskMediaWatcherService: MskMediaWatcherService,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ export class CompactLayoutComponent implements OnInit, OnDestroy {
       .subscribe((navigation: Navigation) => {
         this.navigation = cloneDeep(navigation);
         this.navigation.forEach((item) =>
-          item.type == 'group' ? (item.type = 'aside') : null
+          item.type == 'group' ? (item.type = 'aside') : null,
         );
       });
 
@@ -84,7 +84,7 @@ export class CompactLayoutComponent implements OnInit, OnDestroy {
     // Get the navigation
     const navigation =
       this._mskNavigationService.getComponent<MskVerticalNavigationComponent>(
-        name
+        name,
       );
 
     if (navigation) {

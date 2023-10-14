@@ -10,13 +10,13 @@ export class MskSplashScreenService {
    */
   constructor(
     @Inject(DOCUMENT) private _document: any,
-    private _router: Router
+    private _router: Router,
   ) {
     // Hide it on the first NavigationEnd event
     this._router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
-        take(1)
+        take(1),
       )
       .subscribe(() => {
         this.hide();

@@ -14,7 +14,7 @@ export class MskConfirmationDialogComponent {
    */
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: MskConfirmationConfig,
-    public matDialogRef: MatDialogRef<MskConfirmationDialogComponent>
+    public matDialogRef: MatDialogRef<MskConfirmationDialogComponent>,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

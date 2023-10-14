@@ -19,7 +19,7 @@ export class MskServiceWorkerSnackBarComponent {
    */
   constructor(
     private _swUpdate: SwUpdate,
-    public sbRef: MatSnackBarRef<MskServiceWorkerSnackBarComponent>
+    public sbRef: MatSnackBarRef<MskServiceWorkerSnackBarComponent>,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------

@@ -36,7 +36,7 @@ export class MskHorizontalNavigationBasicItemComponent
   constructor(
     private _changeDetectorRef: ChangeDetectorRef,
     private _mskNavigationService: MskNavigationService,
-    private _mskUtilsService: MskUtilsService
+    private _mskUtilsService: MskUtilsService,
   ) {
     // Set the equivalent of {exact: false} as default for active match options.
     // We are not assigning the item.isActiveMatchOptions directly to the

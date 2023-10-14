@@ -30,7 +30,7 @@ export class MskLoadingBarInterceptor implements HttpInterceptor {
    */
   intercept(
     req: HttpRequest<any>,
-    next: HttpHandler
+    next: HttpHandler,
   ): Observable<HttpEvent<any>> {
     // If the Auto mode is turned off, do nothing
     if (!this.handleRequestsAutomatically) {
@@ -44,7 +44,7 @@ export class MskLoadingBarInterceptor implements HttpInterceptor {
       finalize(() => {
         // Set the status to false if there are any errors or the request is completed
         this._mskLoadingBarService.setLoadingStatus(false, req.url);
-      })
+      }),
     );
   }
 }

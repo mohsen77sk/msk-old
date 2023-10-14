@@ -9,7 +9,7 @@ export class PaginatorIntl extends MatPaginatorIntl {
     super();
 
     _translocoService.langChanges$.subscribe(() =>
-      setTimeout(() => this.getPaginatorIntl())
+      setTimeout(() => this.getPaginatorIntl()),
     );
   }
 
@@ -18,19 +18,19 @@ export class PaginatorIntl extends MatPaginatorIntl {
    */
   getPaginatorIntl() {
     this.itemsPerPageLabel = this._translocoService.translate(
-      'paginator.items_per_page_label'
+      'paginator.items_per_page_label',
     );
     this.nextPageLabel = this._translocoService.translate(
-      'paginator.next_page_label'
+      'paginator.next_page_label',
     );
     this.previousPageLabel = this._translocoService.translate(
-      'paginator.previous_page_label'
+      'paginator.previous_page_label',
     );
     this.firstPageLabel = this._translocoService.translate(
-      'paginator.first_page_label'
+      'paginator.first_page_label',
     );
     this.lastPageLabel = this._translocoService.translate(
-      'paginator.last_page_label'
+      'paginator.last_page_label',
     );
 
     this.changes.next();
@@ -46,7 +46,7 @@ export class PaginatorIntl extends MatPaginatorIntl {
   override getRangeLabel: (
     page: number,
     pageSize: number,
-    length: number
+    length: number,
   ) => string = (page: number, pageSize: number, length: number) => {
     if (length == 0 || pageSize == 0) {
       return this._translocoService.translate('paginator.range_page_label_1', {

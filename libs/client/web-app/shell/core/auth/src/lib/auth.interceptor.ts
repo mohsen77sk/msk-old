@@ -16,7 +16,10 @@ export class AuthInterceptor implements HttpInterceptor {
   /**
    * Constructor
    */
-  constructor(private _router: Router, private _authService: AuthService) {}
+  constructor(
+    private _router: Router,
+    private _authService: AuthService,
+  ) {}
 
   /**
    * Intercept
@@ -26,7 +29,7 @@ export class AuthInterceptor implements HttpInterceptor {
    */
   intercept(
     req: HttpRequest<any>,
-    next: HttpHandler
+    next: HttpHandler,
   ): Observable<HttpEvent<any>> {
     // Clone the request object
     let newReq = req.clone();
@@ -46,7 +49,7 @@ export class AuthInterceptor implements HttpInterceptor {
       newReq = req.clone({
         headers: req.headers.set(
           'Authorization',
-          'Bearer ' + this._authService.accessToken
+          'Bearer ' + this._authService.accessToken,
         ),
       });
     }
@@ -70,7 +73,7 @@ export class AuthInterceptor implements HttpInterceptor {
         }
 
         return throwError(() => error);
-      })
+      }),
     );
   }
 }

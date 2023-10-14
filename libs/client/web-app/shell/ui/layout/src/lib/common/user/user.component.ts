@@ -43,7 +43,7 @@ export class UserComponent implements OnInit, OnDestroy {
     private _userService: UserService,
     private _mskConfigService: MskConfigService,
     private _mskDrawerService: MskDrawerService,
-    private _changeDetectorRef: ChangeDetectorRef
+    private _changeDetectorRef: ChangeDetectorRef,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -97,7 +97,7 @@ export class UserComponent implements OnInit, OnDestroy {
   openLayoutSetting(): void {
     // Get the layoutSettings
     const layoutSettings = this._mskDrawerService.getComponent(
-      'layoutSettingsDrawer'
+      'layoutSettingsDrawer',
     );
 
     if (layoutSettings) {

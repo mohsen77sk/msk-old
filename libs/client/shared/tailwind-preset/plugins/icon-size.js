@@ -19,7 +19,7 @@ module.exports = plugin(
       },
       {
         values: theme('iconSize'),
-      }
+      },
     );
   },
   {
@@ -43,5 +43,5 @@ module.exports = plugin(
         24: '6rem',
       },
     },
-  }
+  },
 );

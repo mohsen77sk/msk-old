@@ -34,7 +34,7 @@ export class MskConfirmationService {
    */
   constructor(
     @Inject(DOCUMENT) private _document: any,
-    private _matDialog: MatDialog
+    private _matDialog: MatDialog,
   ) {}
 
   // -----------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ export class MskConfirmationService {
   // -----------------------------------------------------------------------------------------------------
 
   open(
-    config: MskConfirmationConfig = {}
+    config: MskConfirmationConfig = {},
   ): MatDialogRef<MskConfirmationDialogComponent> {
     // Merge the user config with the default config
     const userConfig = merge({}, this._defaultConfig, config);

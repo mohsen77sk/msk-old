@@ -11,7 +11,7 @@ export class MskLoadingBarService {
     new BehaviorSubject<'determinate' | 'indeterminate'>('indeterminate');
   private _progress$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private _show$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
-    false
+    false,
   );
   private _urlMap: Map<string, boolean> = new Map<string, boolean>();
 

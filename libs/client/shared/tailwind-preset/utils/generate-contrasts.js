@@ -28,7 +28,7 @@ const generateContrasts = (palette) => {
       chroma.contrast(color, darkColor) > chroma.contrast(color, lightColor)
         ? darkColor
         : lightColor,
-    ])
+    ]),
   );
 };
 
