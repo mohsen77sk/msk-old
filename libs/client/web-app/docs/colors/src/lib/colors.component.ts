@@ -1,0 +1,228 @@
+import { Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'msk-colors',
+  templateUrl: './colors.component.html',
+  styleUrls: ['./colors.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+})
+export class ColorsComponent {
+  color = [
+    {
+      name: 'Primary',
+      bg: 'bg-primary',
+      text: 'text-on-primary',
+      border: 'border-on-primary',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent',
+      text: 'text-on-accent',
+      border: 'border-on-accent',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn',
+      text: 'text-on-warn',
+      border: 'border-on-warn',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-50',
+      text: 'text-on-primary-50',
+      border: 'border-on-primary-50',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-50',
+      text: 'text-on-accent-50',
+      border: 'border-on-accent-50',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-50',
+      text: 'text-on-warn-50',
+      border: 'border-on-warn-50',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-100',
+      text: 'text-on-primary-100',
+      border: 'border-on-primary-100',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-100',
+      text: 'text-on-accent-100',
+      border: 'border-on-accent-100',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-100',
+      text: 'text-on-warn-100',
+      border: 'border-on-warn-100',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-200',
+      text: 'text-on-primary-200',
+      border: 'border-on-primary-200',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-200',
+      text: 'text-on-accent-200',
+      border: 'border-on-accent-200',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-200',
+      text: 'text-on-warn-200',
+      border: 'border-on-warn-200',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-300',
+      text: 'text-on-primary-300',
+      border: 'border-on-primary-300',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-300',
+      text: 'text-on-accent-300',
+      border: 'border-on-accent-300',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-300',
+      text: 'text-on-warn-300',
+      border: 'border-on-warn-300',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-400',
+      text: 'text-on-primary-400',
+      border: 'border-on-primary-400',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-400',
+      text: 'text-on-accent-400',
+      border: 'border-on-accent-400',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-400',
+      text: 'text-on-warn-400',
+      border: 'border-on-warn-400',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-500',
+      text: 'text-on-primary-500',
+      border: 'border-on-primary-500',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-500',
+      text: 'text-on-accent-500',
+      border: 'border-on-accent-500',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-500',
+      text: 'text-on-warn-500',
+      border: 'border-on-warn-500',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-600',
+      text: 'text-on-primary-600',
+      border: 'border-on-primary-600',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-600',
+      text: 'text-on-accent-600',
+      border: 'border-on-accent-600',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-600',
+      text: 'text-on-warn-600',
+      border: 'border-on-warn-600',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-700',
+      text: 'text-on-primary-700',
+      border: 'border-on-primary-700',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-700',
+      text: 'text-on-accent-700',
+      border: 'border-on-accent-700',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-700',
+      text: 'text-on-warn-700',
+      border: 'border-on-warn-700',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-800',
+      text: 'text-on-primary-800',
+      border: 'border-on-primary-800',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-800',
+      text: 'text-on-accent-800',
+      border: 'border-on-accent-800',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-800',
+      text: 'text-on-warn-800',
+      border: 'border-on-warn-800',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-900',
+      text: 'text-on-primary-900',
+      border: 'border-on-primary-900',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-900',
+      text: 'text-on-accent-900',
+      border: 'border-on-accent-900',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-900',
+      text: 'text-on-warn-900',
+      border: 'border-on-warn-900',
+    },
+    {
+      name: 'Primary',
+      bg: 'bg-primary-950',
+      text: 'text-on-primary-950',
+      border: 'border-on-primary-950',
+    },
+    {
+      name: 'Accent',
+      bg: 'bg-accent-950',
+      text: 'text-on-accent-950',
+      border: 'border-on-accent-950',
+    },
+    {
+      name: 'Warn',
+      bg: 'bg-warn-950',
+      text: 'text-on-warn-950',
+      border: 'border-on-warn-950',
+    },
+  ];
+}

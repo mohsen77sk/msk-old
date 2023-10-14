@@ -24,5 +24,22 @@
     "type": "group",
     "icon": "heroicons_outline:squares-2x2",
     "children": []
+  },
+  {
+    "id": "documentation",
+    "title": "Documentation",
+    "tooltip": "Documentation",
+    "subtitle": "Everything you need to know about Project",
+    "type": "group",
+    "icon": "heroicons_outline:rectangle-stack",
+    "children": [
+      {
+        "id": "colors",
+        "title": "Colors",
+        "type": "basic",
+        "icon": "heroicons_outline:swatch",
+        "link": "/docs/colors"
+      }
+    ]
   }
 ]

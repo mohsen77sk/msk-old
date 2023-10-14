@@ -11,7 +11,10 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -76,7 +79,9 @@
       "@msk/client/shared/ui/alert": [
         "libs/client/shared/ui/alert/src/index.ts"
       ],
-      "@msk/client/shared/ui/card": ["libs/client/shared/ui/card/src/index.ts"],
+      "@msk/client/shared/ui/card": [
+        "libs/client/shared/ui/card/src/index.ts"
+      ],
       "@msk/client/shared/ui/drawer": [
         "libs/client/shared/ui/drawer/src/index.ts"
       ],
@@ -154,8 +159,14 @@
       ],
       "@msk/client/web-app/shell/ui/layout": [
         "libs/client/web-app/shell/ui/layout/src/index.ts"
+      ],
+      "@msk/client/web-app/docs/colors": [
+        "libs/client/web-app/docs/colors/src/index.ts"
       ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

@@ -122,6 +122,22 @@ export const mskShellRoutes: Route[] = [
     ],
   },
 
+  // Docs routes
+  {
+    path: 'docs',
+    component: LayoutComponent,
+    resolve: {
+      initialData: InitialDataResolver,
+    },
+    children: [
+      {
+        path: 'colors',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/colors').then((m) => m.ColorsModule),
+      },
+    ],
+  },
+
   // Error routes & Catch all
   {
     path: '',
