@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forChild(routes), MatIconModule],
   declarations: [ColorsComponent],
 })
-export class ColorsModule {}
+export class DocsColorsModule {}

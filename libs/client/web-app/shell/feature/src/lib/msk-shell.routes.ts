@@ -133,7 +133,16 @@ export const mskShellRoutes: Route[] = [
       {
         path: 'colors',
         loadChildren: () =>
-          import('@msk/client/web-app/docs/colors').then((m) => m.ColorsModule),
+          import('@msk/client/web-app/docs/colors').then(
+            (m) => m.DocsColorsModule,
+          ),
+      },
+      {
+        path: 'forms',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/forms').then(
+            (m) => m.DocsFormsModule,
+          ),
       },
     ],
   },

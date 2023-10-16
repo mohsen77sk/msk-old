@@ -39,6 +39,13 @@
         "type": "basic",
         "icon": "heroicons_outline:swatch",
         "link": "/docs/colors"
+      },
+      {
+        "id": "forms",
+        "title": "Forms",
+        "type": "basic",
+        "icon": "heroicons_outline:pencil-square",
+        "link": "/docs/forms"
       }
     ]
   }
