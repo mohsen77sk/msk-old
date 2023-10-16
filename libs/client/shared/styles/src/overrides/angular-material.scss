@@ -1071,19 +1071,20 @@
 
     /* Emphasized affix */
     &.msk-mat-emphasized-affix {
-      .mat-form-field-wrapper {
-        .mat-form-field-flex {
-          .mat-form-field-prefix {
-            margin: 0 -16px 0 16px;
-            padding-left: unset;
-            padding-right: 16px;
+      .mat-mdc-text-field-wrapper {
+        .mat-mdc-form-field-flex {
+          .mat-mdc-form-field-icon-prefix,
+          .mat-mdc-form-field-text-prefix {
+            margin: 0 -16px 0 16px !important;
+            padding-left: unset !important;
+            padding-right: 16px !important;
             border-radius: 0 6px 6px 0;
-            border-left-width: 1px;
-            border-right-width: 0px;
+            border-left-width: 1px !important;
+            border-right-width: 0px !important;
 
             > .mat-icon {
-              margin-left: 16px;
-              margin-right: auto;
+              margin-left: 16px !important;
+              margin-right: auto !important;
             }
 
             > .mat-mdc-icon-button {
@@ -1096,48 +1097,48 @@
             }
 
             > .mat-datepicker-toggle {
-              margin-left: 8px;
+              margin-left: 8px !important;
             }
 
             > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
                 .mat-mdc-select
               ):not(.mat-datepicker-toggle) {
-              margin-left: 16px;
-              margin-right: auto;
+              margin-left: 16px !important;
+              margin-right: auto !important;
             }
           }
 
           .mat-mdc-form-field-icon-suffix,
           .mat-mdc-form-field-text-suffix {
-            margin: 0 16px 0 -16px;
-            padding-left: 16px;
-            padding-right: unset;
+            margin: 0 16px 0 -16px !important;
+            padding-left: 16px !important;
+            padding-right: unset !important;
             border-radius: 6px 0 0 6px;
-            border-left-width: 0px;
-            border-right-width: 1px;
+            border-left-width: 0px !important;
+            border-right-width: 1px !important;
 
             > .mat-icon {
-              margin-left: auto;
-              margin-right: 16px;
+              margin-left: auto !important;
+              margin-right: 16px !important;
             }
 
             > .mat-mdc-icon-button {
-              margin: 0 6px 0 -10px;
+              margin: 0 6px 0 -10px !important;
             }
 
             > .mat-mdc-select {
-              margin: 0 16px 0 -4px;
+              margin: 0 16px 0 -4px !important;
             }
 
             > .mat-datepicker-toggle {
-              margin-right: 8px;
+              margin-right: 8px !important;
             }
 
             > *:not(.mat-icon):not(.mat-mdc-icon-button):not(
                 .mat-mdc-select
               ):not(.mat-datepicker-toggle) {
-              margin-left: auto;
-              margin-right: 16px;
+              margin-left: auto !important;
+              margin-right: 16px !important;
             }
           }
         }
@@ -1417,6 +1418,18 @@
 
     .mat-mdc-select-arrow {
       margin: 0 0 0 8px;
+    }
+  }
+}
+
+[dir='rtl'] {
+  .mat-mdc-select {
+    .mat-mdc-select-arrow-wrapper {
+      transform: translateY(0) !important;
+
+      .mat-mdc-select-arrow {
+        margin: 0 8px 0 0;
+      }
     }
   }
 }
