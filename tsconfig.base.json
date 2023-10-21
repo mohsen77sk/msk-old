@@ -136,6 +136,9 @@
       "@msk/client/web-app/docs/colors": [
         "libs/client/web-app/docs/colors/src/index.ts"
       ],
+      "@msk/client/web-app/docs/confirmation": [
+        "libs/client/web-app/docs/confirmation/src/index.ts"
+      ],
       "@msk/client/web-app/docs/forms": [
         "libs/client/web-app/docs/forms/src/index.ts"
       ],

@@ -151,6 +151,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsFormsModule,
           ),
       },
+      {
+        path: 'confirmation',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/confirmation').then(
+            (m) => m.DocsConfirmationModule,
+          ),
+      },
     ],
   },
 

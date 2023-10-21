@@ -53,6 +53,13 @@
         "type": "basic",
         "icon": "heroicons_outline:pencil-square",
         "link": "/docs/forms"
+      },
+      {
+        "id": "confirmation",
+        "title": "Confirmation",
+        "type": "basic",
+        "icon": "heroicons_outline:question-mark-circle",
+        "link": "/docs/confirmation"
       }
     ]
   }
