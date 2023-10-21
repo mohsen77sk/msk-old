@@ -1,0 +1,9 @@
+<ng-content></ng-content>
+
+<ng-template let-highlightedCode="highlightedCode" let-lang="lang">
+  <div class="msk-highlight msk-highlight-code-container" dir="ltr">
+    <pre [ngClass]="'language-' + lang">
+    <code [ngClass]="'language-' + lang" [innerHTML]="highlightedCode"></code>
+  </pre>
+  </div>
+</ng-template>

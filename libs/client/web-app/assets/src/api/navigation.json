@@ -34,6 +34,13 @@
     "icon": "heroicons_outline:rectangle-stack",
     "children": [
       {
+        "id": "animations",
+        "title": "Animations",
+        "type": "basic",
+        "icon": "heroicons_outline:play",
+        "link": "/docs/animations"
+      },
+      {
         "id": "colors",
         "title": "Colors",
         "type": "basic",

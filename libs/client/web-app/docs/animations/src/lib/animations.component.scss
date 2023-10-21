@@ -1,0 +1,84 @@
+msk-animations {
+  .mat-mdc-form-field {
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  .example-viewer {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+    overflow: hidden;
+    @apply bg-card rounded-2xl shadow;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      min-height: 56px;
+      max-height: 56px;
+      padding: 0 40px;
+      border-bottom-width: 1px;
+
+      h6 {
+        font-weight: 700;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .mat-mdc-tab-group {
+    .mat-mdc-tab-header {
+      padding: 24px 0;
+    }
+
+    .mat-mdc-tab-body-wrapper {
+      .mat-mdc-tab-body {
+        &:first-child {
+          .mat-mdc-tab-body-content {
+            display: flex;
+            justify-content: center;
+            min-height: 200px;
+          }
+        }
+
+        .animated-box {
+          width: 120px;
+          height: 120px;
+          overflow: hidden;
+          border-radius: 4px;
+          cursor: pointer;
+          user-select: none;
+
+          .animated-box-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 0 auto;
+            height: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    @apply text-secondary bg-gray-400;
+  }
+
+  .animated-box {
+    @apply bg-primary shadow-md;
+
+    .animated-box-content {
+      @apply text-on-primary;
+    }
+  }
+}

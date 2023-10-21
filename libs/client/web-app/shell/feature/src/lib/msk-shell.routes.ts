@@ -131,6 +131,13 @@ export const mskShellRoutes: Route[] = [
     },
     children: [
       {
+        path: 'animations',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/animations').then(
+            (m) => m.DocsAnimationsModule,
+          ),
+      },
+      {
         path: 'colors',
         loadChildren: () =>
           import('@msk/client/web-app/docs/colors').then(
