@@ -49,11 +49,10 @@
       <form
         class="bg-card mt-8 flex flex-col overflow-hidden rounded-2xl p-8 pb-4 shadow"
       >
-        <div class="gt-xs:flex-row flex flex-col">
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pr-3 flex-auto"
-          >
+        <div
+          class="flex flex-col sm:flex-row sm:space-x-4 rtl:sm:space-x-reverse"
+        >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-label>First name</mat-label>
             <input matInput />
             <mat-icon
@@ -62,10 +61,7 @@
               [svgIcon]="'heroicons_solid:user-circle'"
             ></mat-icon>
           </mat-form-field>
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pl-3 flex-auto"
-          >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-label>Last name</mat-label>
             <input matInput />
             <mat-icon
@@ -382,11 +378,10 @@
             ></mat-icon>
           </mat-form-field>
         </div>
-        <div class="gt-xs:flex-row flex flex-col">
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pr-3 flex-auto"
-          >
+        <div
+          class="flex flex-col sm:flex-row sm:space-x-4 rtl:sm:space-x-reverse"
+        >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-label>Select with prefix</mat-label>
             <mat-select>
               <mat-option value="select1-1">Select 1-1</mat-option>
@@ -399,10 +394,7 @@
               [svgIcon]="'heroicons_solid:map-pin'"
             ></mat-icon>
           </mat-form-field>
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pl-3 flex-auto"
-          >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-label>Select with suffix</mat-label>
             <mat-select>
               <mat-option value="select2-1">Select 2-1</mat-option>
@@ -416,11 +408,10 @@
             ></mat-icon>
           </mat-form-field>
         </div>
-        <div class="gt-xs:flex-row flex flex-col">
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pr-3 flex-auto"
-          >
+        <div
+          class="flex flex-col sm:flex-row sm:space-x-4 rtl:sm:space-x-reverse"
+        >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-label>Native select with prefix</mat-label>
             <select matNativeControl>
               <option value=""></option>
@@ -434,10 +425,7 @@
               [svgIcon]="'heroicons_solid:map-pin'"
             ></mat-icon>
           </mat-form-field>
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pl-3 flex-auto"
-          >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-label>Native select with suffix</mat-label>
             <select matNativeControl>
               <option value=""></option>
@@ -640,16 +628,12 @@
             ></mat-icon>
           </mat-form-field>
         </div>
-        <div class="gt-xs:flex-row flex flex-col">
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pr-3 flex-auto"
-          >
+        <div
+          class="flex flex-col sm:flex-row sm:space-x-4 rtl:sm:space-x-reverse"
+        >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-select [placeholder]="'Select with prefix'">
-              <mat-option value="select1-1"
-                >Select 1-1 Select 1-1 Select 1-1 Select 1-1 Select 1-1 Select
-                1-1 Select 1-1</mat-option
-              >
+              <mat-option value="select1-1">Select 1-1</mat-option>
               <mat-option value="select1-2">Select 1-2</mat-option>
               <mat-option value="select1-3">Select 1-3</mat-option>
             </mat-select>
@@ -659,15 +643,9 @@
               [svgIcon]="'heroicons_solid:map-pin'"
             ></mat-icon>
           </mat-form-field>
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pl-3 flex-auto"
-          >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
             <mat-select [placeholder]="'Select with suffix'">
-              <mat-option value="select2-1"
-                >Select 2-1 Select 2-1 Select 2-1 Select 2-1 Select 2-1 Select
-                2-1 Select 2-1</mat-option
-              >
+              <mat-option value="select2-1">Select 2-1</mat-option>
               <mat-option value="select2-2">Select 2-2</mat-option>
               <mat-option value="select2-3">Select 2-3</mat-option>
             </mat-select>
@@ -678,20 +656,13 @@
             ></mat-icon>
           </mat-form-field>
         </div>
-        <div class="gt-xs:flex-row flex flex-col">
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pr-3 flex-auto"
-          >
-            <select
-              matNativeControl
-              [placeholder]="'Native select with prefix'"
-            >
+        <div
+          class="flex flex-col sm:flex-row sm:space-x-4 rtl:sm:space-x-reverse"
+        >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
+            <select matNativeControl placeholder="Native select with prefix">
               <option value=""></option>
-              <option value="select1-1">
-                Select 1-1 Select 1-1 Select 1-1 Select 1-1 Select 1-1 Select
-                1-1 Select 1-1
-              </option>
+              <option value="select1-1">Select 1-1</option>
               <option value="select1-2">Select 1-2</option>
               <option value="select1-3">Select 1-3</option>
             </select>
@@ -701,19 +672,10 @@
               [svgIcon]="'heroicons_solid:map-pin'"
             ></mat-icon>
           </mat-form-field>
-          <mat-form-field
-            [ngClass]="formFieldHelpers"
-            class="gt-xs:pl-3 flex-auto"
-          >
-            <select
-              matNativeControl
-              [placeholder]="'Native select with suffix'"
-            >
+          <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
+            <select matNativeControl placeholder="Native select with suffix">
               <option value=""></option>
-              <option value="select2-1">
-                Select 2-1 Select 2-1 Select 2-1 Select 2-1 Select 2-1 Select
-                2-1 Select 2-1
-              </option>
+              <option value="select2-1">Select 2-1</option>
               <option value="select2-2">Select 2-2</option>
               <option value="select2-3">Select 2-3</option>
             </select>

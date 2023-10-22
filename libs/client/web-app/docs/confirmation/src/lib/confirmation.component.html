@@ -78,21 +78,15 @@
               <mat-checkbox [color]="'primary'" [formControlName]="'show'">
                 Show Icon
               </mat-checkbox>
-              <div class="mt-6 flex w-full items-center">
+              <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
                 <!-- Icon name -->
-                <mat-form-field
-                  class="w-1/2 pr-2"
-                  [subscriptSizing]="'dynamic'"
-                >
+                <mat-form-field [subscriptSizing]="'dynamic'">
                   <mat-label>Icon name</mat-label>
                   <input matInput [formControlName]="'name'" />
                 </mat-form-field>
 
                 <!-- Icon color -->
-                <mat-form-field
-                  class="w-1/2 pl-2"
-                  [subscriptSizing]="'dynamic'"
-                >
+                <mat-form-field [subscriptSizing]="'dynamic'">
                   <mat-label>Icon color</mat-label>
                   <mat-select [formControlName]="'color'">
                     <ng-container
@@ -132,21 +126,15 @@
                 >
                   Show Confirm button
                 </mat-checkbox>
-                <div class="mt-4 flex w-full items-center">
+                <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
                   <!-- Confirm label -->
-                  <mat-form-field
-                    class="w-1/2 pr-2"
-                    [subscriptSizing]="'dynamic'"
-                  >
+                  <mat-form-field [subscriptSizing]="'dynamic'">
                     <mat-label>Confirm button label</mat-label>
                     <input matInput [formControlName]="'label'" />
                   </mat-form-field>
 
                   <!-- Confirm color -->
-                  <mat-form-field
-                    class="w-1/2 pl-2"
-                    [subscriptSizing]="'dynamic'"
-                  >
+                  <mat-form-field [subscriptSizing]="'dynamic'">
                     <mat-label>Confirm button color</mat-label>
                     <mat-select [formControlName]="'color'">
                       <ng-container
@@ -170,12 +158,9 @@
                 >
                   Show Cancel button
                 </mat-checkbox>
-                <div class="mt-4 flex w-full items-center">
+                <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
                   <!-- Cancel label -->
-                  <mat-form-field
-                    class="w-1/2 pr-2"
-                    [subscriptSizing]="'dynamic'"
-                  >
+                  <mat-form-field [subscriptSizing]="'dynamic'">
                     <mat-label>Cancel button label</mat-label>
                     <input matInput [formControlName]="'label'" />
                   </mat-form-field>
