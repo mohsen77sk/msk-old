@@ -158,6 +158,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsConfirmationModule,
           ),
       },
+      {
+        path: 'typography',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/typography').then(
+            (m) => m.DocsTypographyModule,
+          ),
+      },
     ],
   },
 

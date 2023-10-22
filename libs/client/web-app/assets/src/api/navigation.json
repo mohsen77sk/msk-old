@@ -60,6 +60,13 @@
         "type": "basic",
         "icon": "heroicons_outline:question-mark-circle",
         "link": "/docs/confirmation"
+      },
+      {
+        "id": "typography",
+        "title": "Typography",
+        "type": "basic",
+        "icon": "heroicons_outline:pencil",
+        "link": "/docs/typography"
       }
     ]
   }

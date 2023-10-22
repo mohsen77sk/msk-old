@@ -142,6 +142,9 @@
       "@msk/client/web-app/docs/forms": [
         "libs/client/web-app/docs/forms/src/index.ts"
       ],
+      "@msk/client/web-app/docs/typography": [
+        "libs/client/web-app/docs/typography/src/index.ts"
+      ],
       "@msk/client/web-app/error/internal-server-error/feature": [
         "libs/client/web-app/error/internal-server-error/feature/src/index.ts"
       ],

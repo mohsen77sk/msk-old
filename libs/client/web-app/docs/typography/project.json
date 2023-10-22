@@ -1,7 +1,7 @@
 {
-  "name": "client-shared-ui-highlight",
+  "name": "client-web-app-docs-typography",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/client/shared/ui/highlight/src",
+  "sourceRoot": "libs/client/web-app/docs/typography/src",
   "prefix": "msk",
   "projectType": "library",
   "targets": {
@@ -9,7 +9,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/client/shared/ui/highlight/jest.config.ts",
+        "jestConfig": "libs/client/web-app/docs/typography/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -24,11 +24,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/client/shared/ui/highlight/**/*.ts",
-          "libs/client/shared/ui/highlight/**/*.html"
+          "libs/client/web-app/docs/typography/**/*.ts",
+          "libs/client/web-app/docs/typography/**/*.html"
         ]
       }
     }
   },
-  "tags": ["scope:client-shared", "type:ui"]
+  "tags": ["scope:client-web", "type:documents"]
 }
