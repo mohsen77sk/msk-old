@@ -1069,6 +1069,53 @@
       }
     }
 
+    /* Dense */
+    &.msk-mat-dense {
+      .mat-mdc-text-field-wrapper {
+        .mat-mdc-form-field-flex {
+          .mat-mdc-form-field-icon-prefix,
+          .mat-mdc-form-field-text-prefix {
+            > .mat-mdc-icon-button {
+              margin-right: -6px;
+              margin-left: 12px;
+            }
+          }
+
+          .mat-mdc-form-field-icon-suffix,
+          .mat-mdc-form-field-text-suffix {
+            > .mat-mdc-icon-button {
+              margin-right: 12px;
+              margin-left: -6px;
+            }
+          }
+        }
+      }
+
+      /* Rounded */
+      &.msk-mat-rounded {
+        .mat-mdc-text-field-wrapper {
+          border-radius: 20px;
+        }
+
+        /* Emphasized affix */
+        &.msk-mat-emphasized-affix {
+          .mat-mdc-text-field-wrapper {
+            .mat-mdc-form-field-flex {
+              .mat-mdc-form-field-icon-prefix,
+              .mat-mdc-form-field-text-prefix {
+                border-radius: 0 20px 20px 0 !important;
+              }
+
+              .mat-mdc-form-field-icon-suffix,
+              .mat-mdc-form-field-text-suffix {
+                border-radius: 20px 0 0 20px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
     /* Emphasized affix */
     &.msk-mat-emphasized-affix {
       .mat-mdc-text-field-wrapper {
