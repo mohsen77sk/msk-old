@@ -30,50 +30,47 @@
   </div>
 
   <!-- Main -->
-  <div class="flex-auto p-6 sm:p-10">
-    <div class="prose prose-sm max-w-2xl">
-      <h2>Body font size</h2>
-      <p>
-        The default body text is set to <strong>14px</strong>. This allows
-        building more complex and dense layouts without needing too much screen
-        space. Applications usually need to show a lot more information on one
-        page compared to, let's say, a blog post. This requires more denser
-        layouts hence the smaller default body font size.
-      </p>
+  <div class="prose prose-sm max-w-2xl flex-auto p-6 sm:p-10">
+    <h2>Body font size</h2>
+    <p>
+      The default body text is set to <strong>14px</strong>. This allows
+      building more complex and dense layouts without needing too much screen
+      space. Applications usually need to show a lot more information on one
+      page compared to, let's say, a blog post. This requires more denser
+      layouts hence the smaller default body font size.
+    </p>
 
-      <h2>Rich text</h2>
-      <p>
-        When building a web application, you don't want to have default HTML
-        element styles interfering with your design. This is because those style
-        are designed for building web sites, therefore, This project takes
-        advantage of Tailwind's reset styles to reset all element styles by
-        default.
-      </p>
-      <p>
-        This way, you can build complex layouts and application interfaces
-        without needing to reset element styles over and over again.
-      </p>
-      <p>
-        But this introduce a new problem when you actually want to show a
-        rich-text content with paragraphs, lists, links, titles and other HTML
-        elements. They will look bad and they won't be properly styled.
-      </p>
-      <p>
-        To overcome this issue, This project uses
-        <a
-          href="https://github.com/tailwindlabs/tailwindcss-typography"
-          target="_blank"
-        >
-          Tailwind's Official Typography Plugin
-        </a>
-        &nbsp;which adds <code>prose</code> class to provide typographic
-        defaults:
-      </p>
-      <textarea msk-highlight lang="html">
-        <div class="prose">
-          <!-- Some rich-text content with paragraphs, lists, links and etc. -->
-        </div>
-      </textarea>
-    </div>
+    <h2>Rich text</h2>
+    <p>
+      When building a web application, you don't want to have default HTML
+      element styles interfering with your design. This is because those style
+      are designed for building web sites, therefore, This project takes
+      advantage of Tailwind's reset styles to reset all element styles by
+      default.
+    </p>
+    <p>
+      This way, you can build complex layouts and application interfaces without
+      needing to reset element styles over and over again.
+    </p>
+    <p>
+      But this introduce a new problem when you actually want to show a
+      rich-text content with paragraphs, lists, links, titles and other HTML
+      elements. They will look bad and they won't be properly styled.
+    </p>
+    <p>
+      To overcome this issue, This project uses
+      <a
+        href="https://github.com/tailwindlabs/tailwindcss-typography"
+        target="_blank"
+      >
+        Tailwind's Official Typography Plugin
+      </a>
+      &nbsp;which adds <code>prose</code> class to provide typographic defaults:
+    </p>
+    <textarea msk-highlight lang="html">
+      <div class="prose">
+        <!-- Some rich-text content with paragraphs, lists, links and etc. -->
+      </div>
+    </textarea>
   </div>
 </div>

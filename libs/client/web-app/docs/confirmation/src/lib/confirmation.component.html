@@ -30,78 +30,310 @@
   </div>
 
   <!-- Main -->
-  <div class="flex-auto p-6 sm:p-10">
-    <div class="max-w-3xl">
-      <div class="prose prose-sm max-w-3xl">
-        <p>
-          One of the repetitive and tedious jobs in Angular is to create
-          confirmation dialogs. Since dialogs require their own components you
-          have to either create a separate component every time you need a
-          confirmation dialog or you have to create your own confirmation dialog
-          system that can be configured.
-        </p>
-        <p>
-          In order for you to save time while developing with MSK, we have
-          created a simple yet powerful <code>MskConfirmationService</code>
-          to create customized confirmation dialogs on-the-fly.
-        </p>
-        <p>
-          Below you can configure and preview the confirmation dialog. You can
-          use the generated configuration object within your code to have the
-          exact same dialog.
-        </p>
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      <strong>MskConfirmationService</strong> is a singleton service for
+      creating confirmation and information dialogs. Internally it uses
+      MatDialog to create and show the dialog.
+    </p>
+
+    <h2>Module</h2>
+    <textarea msk-highlight lang="typescript">
+      import { MskConfirmationService } from '@msk/client/shared/services/confirmation';
+    </textarea>
+
+    <h2>Confirmation Config</h2>
+    <p>Here is the interface for the <em>Confirmation configuration</em>:</p>
+    <textarea msk-highlight lang="typescript">
+          export interface MskConfirmationConfig
+          {
+            title?: string;
+            message?: string;
+            icon?: {
+              show?: boolean;
+              name?: string;
+              color?:
+                | 'primary'
+                | 'accent'
+                | 'warn'
+                | 'basic'
+                | 'info'
+                | 'success'
+                | 'warning'
+                | 'error';
+            };
+            actions?: {
+              confirm?: {
+                show?: boolean;
+                label?: string;
+                color?:
+                  | 'primary'
+                  | 'accent'
+                  | 'warn';
+              };
+              cancel?: {
+                show?: boolean;
+                label?: string;
+              };
+            };
+            dismissible?: boolean;
+          }
+        </textarea
+    >
+    <div class="bg-card mt-2 rounded px-6 py-3 shadow">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>title</div>
+            </td>
+            <td>Title of the confirmation dialog, HTML is allowed.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>message</div>
+            </td>
+            <td>Message of the confirmation dialog, HTML is allowed.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>icon.show</div>
+            </td>
+            <td>Whether to show the icon.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>icon.name</div>
+            </td>
+            <td>Name of the icon.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>icon.color</div>
+            </td>
+            <td>Color of the icon.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>actions.confirm.show</div>
+            </td>
+            <td>Whether to show the confirmation button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>actions.confirm.label</div>
+            </td>
+            <td>Label of the confirmation button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>actions.confirm.color</div>
+            </td>
+            <td>Color of the confirmation button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>actions.cancel.show</div>
+            </td>
+            <td>Whether to show the cancel button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>actions.confirm.label</div>
+            </td>
+            <td>Label of the cancel button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>dismissible</div>
+            </td>
+            <td>
+              Sets the dismissible status of the confirmation dialog.<br />
+              If <code>false</code>, confirmation dialog cannot be closed by
+              clicking on backdrop or pressing Escape key. The close button on
+              the top right corner also won't show up.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Methods</h2>
+    <div class="bg-card mt-4 rounded shadow">
+      <div class="text-secondary border-b px-6 py-3 font-mono">
+        open(config: MskConfirmationConfig):
+        MatDialogRef&lt;MskConfirmationDialogComponent&gt;
       </div>
-      <div class="example-viewer">
-        <div class="title">
-          <h6>Configure the dialog and preview it</h6>
-        </div>
+      <div class="p-6">
+        Opens the confirmation dialog with the given configuration
+      </div>
+    </div>
 
-        <div class="flex flex-col p-8 pt-0">
-          <form [formGroup]="configForm" class="flex flex-col items-start">
-            <!-- Title -->
-            <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
-              <mat-label>Title</mat-label>
-              <input matInput [formControlName]="'title'" />
-            </mat-form-field>
+    <h2>MatDialogRef</h2>
+    <p>
+      Since <code>MskConfirmationService</code> uses <em>MatDialog</em> behind
+      the scenes, it returns a reference to the created dialog. You can use all
+      available methods from that reference such as <code>updateSize</code> and
+      <code>updatePosition</code> to further customize the dialog.
+    </p>
+    <p>
+      See
+      <a
+        href="https://material.angular.io/components/dialog/api#MatDialogRef"
+        target="_blank"
+        rel="noreferrer"
+      >
+        https://material.angular.io/components/dialog/api#MatDialogRef
+      </a>
+      for the complete list of available methods.
+    </p>
+    <p>Using the reference, you can also access to the user input:</p>
+    <textarea msk-highlight [lang]="'ts'">
+          // Open the confirmation and save the reference
+          const dialogRef = this._mskConfirmationService.open({...});
 
-            <!-- Message -->
-            <mat-form-field class="mt-6 w-full" [subscriptSizing]="'dynamic'">
-              <mat-label>Message</mat-label>
-              <textarea matInput [formControlName]="'message'"> </textarea>
-            </mat-form-field>
+          // Subscribe to afterClosed from the dialog reference
+          dialogRef.afterClosed().subscribe((result) => {
+            console.log(result);
+          });
+        </textarea
+    >
+    <div class="bg-card mt-2 rounded px-6 py-3 shadow">
+      <table>
+        <thead>
+          <tr>
+            <th>Result</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div><code>'confirmed'</code></div>
+            </td>
+            <td>This is the result if the user pressed the Confirm button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div><code>'cancelled'</code></div>
+            </td>
+            <td>This is the result if the user pressed the Cancel button.</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div><code>undefined</code></div>
+            </td>
+            <td>
+              This is the result if the confirmation dismissed either using the
+              close button, clicking on the backdrop or pressing the Escape key.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-            <!-- Divider -->
-            <div class="mb-7 mt-8 w-full border-b"></div>
+    <h2>Demo</h2>
+    <p>
+      Below you can configure and preview the confirmation dialog. You can use
+      the generated configuration object within your code to have the exact same
+      dialog.
+    </p>
 
-            <!-- Icon -->
-            <div class="flex w-full flex-col" [formGroupName]="'icon'">
-              <mat-checkbox [color]="'primary'" [formControlName]="'show'">
-                Show Icon
+    <!-- Demo -->
+    <div class="bg-card mt-4 rounded shadow">
+      <div class="text-secondary border-b px-6 py-3">
+        <strong>Configure the dialog and preview it</strong>
+      </div>
+
+      <div class="flex flex-col p-8 pt-8">
+        <form [formGroup]="configForm" class="flex flex-col items-start">
+          <!-- Title -->
+          <mat-form-field class="w-full" [subscriptSizing]="'dynamic'">
+            <mat-label>Title</mat-label>
+            <input matInput [formControlName]="'title'" />
+          </mat-form-field>
+
+          <!-- Message -->
+          <mat-form-field class="mt-6 w-full" [subscriptSizing]="'dynamic'">
+            <mat-label>Message</mat-label>
+            <textarea matInput [formControlName]="'message'"> </textarea>
+          </mat-form-field>
+
+          <!-- Divider -->
+          <div class="mb-7 mt-8 w-full border-b"></div>
+
+          <!-- Icon -->
+          <div class="flex w-full flex-col" [formGroupName]="'icon'">
+            <mat-checkbox [color]="'primary'" [formControlName]="'show'">
+              Show Icon
+            </mat-checkbox>
+            <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
+              <!-- Icon name -->
+              <mat-form-field [subscriptSizing]="'dynamic'">
+                <mat-label>Icon name</mat-label>
+                <input matInput [formControlName]="'name'" />
+              </mat-form-field>
+
+              <!-- Icon color -->
+              <mat-form-field [subscriptSizing]="'dynamic'">
+                <mat-label>Icon color</mat-label>
+                <mat-select [formControlName]="'color'">
+                  <ng-container
+                    *ngFor="
+                      let color of [
+                        'primary',
+                        'accent',
+                        'warn',
+                        'basic',
+                        'info',
+                        'success',
+                        'warning',
+                        'error'
+                      ]
+                    "
+                  >
+                    <mat-option [value]="color">
+                      {{ color | titlecase }}
+                    </mat-option>
+                  </ng-container>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="mb-7 mt-8 w-full border-b"></div>
+
+          <!-- Actions -->
+          <div class="w-full" [formGroupName]="'actions'">
+            <!-- Confirm -->
+            <div class="flex w-full flex-col" [formGroupName]="'confirm'">
+              <mat-checkbox
+                class="mt-2"
+                [color]="'primary'"
+                [formControlName]="'show'"
+              >
+                Show Confirm button
               </mat-checkbox>
               <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
-                <!-- Icon name -->
+                <!-- Confirm label -->
                 <mat-form-field [subscriptSizing]="'dynamic'">
-                  <mat-label>Icon name</mat-label>
-                  <input matInput [formControlName]="'name'" />
+                  <mat-label>Confirm button label</mat-label>
+                  <input matInput [formControlName]="'label'" />
                 </mat-form-field>
 
-                <!-- Icon color -->
+                <!-- Confirm color -->
                 <mat-form-field [subscriptSizing]="'dynamic'">
-                  <mat-label>Icon color</mat-label>
+                  <mat-label>Confirm button color</mat-label>
                   <mat-select [formControlName]="'color'">
                     <ng-container
-                      *ngFor="
-                        let color of [
-                          'primary',
-                          'accent',
-                          'warn',
-                          'basic',
-                          'info',
-                          'success',
-                          'warning',
-                          'error'
-                        ]
-                      "
+                      *ngFor="let color of ['primary', 'accent', 'warn']"
                     >
                       <mat-option [value]="color">
                         {{ color | titlecase }}
@@ -112,91 +344,50 @@
               </div>
             </div>
 
-            <!-- Divider -->
-            <div class="mb-7 mt-8 w-full border-b"></div>
-
-            <!-- Actions -->
-            <div class="w-full" [formGroupName]="'actions'">
-              <!-- Confirm -->
-              <div class="flex w-full flex-col" [formGroupName]="'confirm'">
-                <mat-checkbox
-                  class="mt-2"
-                  [color]="'primary'"
-                  [formControlName]="'show'"
-                >
-                  Show Confirm button
-                </mat-checkbox>
-                <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
-                  <!-- Confirm label -->
-                  <mat-form-field [subscriptSizing]="'dynamic'">
-                    <mat-label>Confirm button label</mat-label>
-                    <input matInput [formControlName]="'label'" />
-                  </mat-form-field>
-
-                  <!-- Confirm color -->
-                  <mat-form-field [subscriptSizing]="'dynamic'">
-                    <mat-label>Confirm button color</mat-label>
-                    <mat-select [formControlName]="'color'">
-                      <ng-container
-                        *ngFor="let color of ['primary', 'accent', 'warn']"
-                      >
-                        <mat-option [value]="color">
-                          {{ color | titlecase }}
-                        </mat-option>
-                      </ng-container>
-                    </mat-select>
-                  </mat-form-field>
-                </div>
-              </div>
-
-              <!-- Cancel -->
-              <div class="mt-6 flex w-full flex-col" [formGroupName]="'cancel'">
-                <mat-checkbox
-                  class="mt-2"
-                  [color]="'primary'"
-                  [formControlName]="'show'"
-                >
-                  Show Cancel button
-                </mat-checkbox>
-                <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
-                  <!-- Cancel label -->
-                  <mat-form-field [subscriptSizing]="'dynamic'">
-                    <mat-label>Cancel button label</mat-label>
-                    <input matInput [formControlName]="'label'" />
-                  </mat-form-field>
-                </div>
+            <!-- Cancel -->
+            <div class="mt-6 flex w-full flex-col" [formGroupName]="'cancel'">
+              <mat-checkbox
+                class="mt-2"
+                [color]="'primary'"
+                [formControlName]="'show'"
+              >
+                Show Cancel button
+              </mat-checkbox>
+              <div class="mt-6 grid w-full grid-cols-2 items-center gap-4">
+                <!-- Cancel label -->
+                <mat-form-field [subscriptSizing]="'dynamic'">
+                  <mat-label>Cancel button label</mat-label>
+                  <input matInput [formControlName]="'label'" />
+                </mat-form-field>
               </div>
             </div>
-
-            <!-- Divider -->
-            <div class="mb-7 mt-8 w-full border-b"></div>
-
-            <!-- Dismissible -->
-            <mat-checkbox [color]="'primary'" [formControlName]="'dismissible'">
-              Dismissible
-            </mat-checkbox>
-          </form>
-
-          <div class="mt-12">
-            <button
-              mat-flat-button
-              [color]="'primary'"
-              (click)="openConfirmationDialog()"
-            >
-              Open Confirmation Dialog
-            </button>
           </div>
+
+          <!-- Divider -->
+          <div class="mb-7 mt-8 w-full border-b"></div>
+
+          <!-- Dismissible -->
+          <mat-checkbox [color]="'primary'" [formControlName]="'dismissible'">
+            Dismissible
+          </mat-checkbox>
+        </form>
+
+        <div class="mt-12">
+          <button
+            mat-flat-button
+            [color]="'primary'"
+            (click)="openConfirmationDialog()"
+          >
+            Open Confirmation Dialog
+          </button>
         </div>
       </div>
-
-      <!-- Config as json -->
-      <div class="dark mt-8 w-full overflow-hidden rounded-2xl p-4">
-        <textarea
-          msk-highlight
-          [code]="configForm.value | json"
-          [lang]="'json'"
-        ></textarea>
-      </div>
     </div>
+
+    <textarea
+      msk-highlight
+      [code]="configForm.value | json"
+      [lang]="'json'"
+    ></textarea>
   </div>
 </div>
