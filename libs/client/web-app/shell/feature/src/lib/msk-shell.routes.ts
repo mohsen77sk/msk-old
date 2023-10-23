@@ -165,6 +165,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsConfirmationModule,
           ),
       },
+      {
+        path: 'services/media-watcher',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/services/media-watcher').then(
+            (m) => m.DocsMediaWatcherModule,
+          ),
+      },
     ],
   },
 

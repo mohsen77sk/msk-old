@@ -1,0 +1,97 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Services </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Media Watcher </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Media Watcher
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      <strong>MskMediaWatcherService</strong> is a singleton service to watch
+      media changes. It automatically registers the breakpoints from TailwindCSS
+      configuration, so you can use the service without needing to configure it
+      first.
+    </p>
+
+    <h2>Module</h2>
+    <textarea msk-highlight lang="typescript">
+      import { MskMediaWatcherModule } from '@msk/client/shared/services/media-watcher';
+    </textarea>
+
+    <h2>Methods</h2>
+    <p>
+      To watch changes on registered breakpoints, you can use the
+      <strong>onMediaChange$</strong> getter:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
+
+      /**
+        * Constructor
+        */
+      constructor(private _mskMediaWatcherService: MskMediaWatcherService)
+      {
+        // Subscribe to media changes
+        this._mskMediaWatcherService.onMediaChange$
+          .pipe(takeUntil(this._unsubscribeAll))
+          .subscribe(({matchingAliases}) => {
+
+            // Check if the breakpoint is 'md' and up
+            this.isScreenSmall = matchingAliases.includes('md');
+          });
+      }
+    </textarea>
+    <p>
+      You can also listen for custom media queries using
+      <code>onMediaQueryChange$(query: string)</code> method:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
+
+      /**
+        * Constructor
+        */
+      constructor(private _mskMediaWatcherService: MskMediaWatcherService)
+      {
+        // Subscribe to media changes
+        this._mskMediaWatcherService.onMediaQueryChange$('(min-width: 1440px)')
+          .pipe(takeUntil(this._unsubscribeAll))
+          .subscribe((state) => {
+
+            // Calculate the drawer mode
+            this.drawerMode = state.matches ? 'side' : 'over';
+          });
+      }
+    </textarea>
+  </div>
+</div>

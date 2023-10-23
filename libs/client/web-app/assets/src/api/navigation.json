@@ -72,6 +72,12 @@
             "title": "Confirmation",
             "type": "basic",
             "link": "/docs/services/confirmation"
+          },
+          {
+            "id": "docs.services.media-watcher",
+            "title": "Media Watcher",
+            "type": "basic",
+            "link": "/docs/services/media-watcher"
           }
         ]
       }
