@@ -152,17 +152,17 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
-        path: 'confirmation',
-        loadChildren: () =>
-          import('@msk/client/web-app/docs/confirmation').then(
-            (m) => m.DocsConfirmationModule,
-          ),
-      },
-      {
         path: 'typography',
         loadChildren: () =>
           import('@msk/client/web-app/docs/typography').then(
             (m) => m.DocsTypographyModule,
+          ),
+      },
+      {
+        path: 'services/confirmation',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/services/confirmation').then(
+            (m) => m.DocsConfirmationModule,
           ),
       },
     ],

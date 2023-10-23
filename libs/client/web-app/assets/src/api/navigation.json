@@ -8,7 +8,7 @@
     "icon": "heroicons_outline:home",
     "children": [
       {
-        "id": "dashboard",
+        "id": "main.dashboard",
         "title": "Dashboard",
         "type": "basic",
         "icon": "heroicons_outline:rectangle-group",
@@ -26,7 +26,7 @@
     "children": []
   },
   {
-    "id": "documentation",
+    "id": "docs",
     "title": "Documentation",
     "tooltip": "Documentation",
     "subtitle": "Everything you need to know about Project",
@@ -34,39 +34,46 @@
     "icon": "heroicons_outline:rectangle-stack",
     "children": [
       {
-        "id": "animations",
+        "id": "docs.animations",
         "title": "Animations",
         "type": "basic",
         "icon": "heroicons_outline:play",
         "link": "/docs/animations"
       },
       {
-        "id": "colors",
+        "id": "docs.colors",
         "title": "Colors",
         "type": "basic",
         "icon": "heroicons_outline:swatch",
         "link": "/docs/colors"
       },
       {
-        "id": "forms",
+        "id": "docs.forms",
         "title": "Forms",
         "type": "basic",
         "icon": "heroicons_outline:pencil-square",
         "link": "/docs/forms"
       },
       {
-        "id": "confirmation",
-        "title": "Confirmation",
-        "type": "basic",
-        "icon": "heroicons_outline:question-mark-circle",
-        "link": "/docs/confirmation"
-      },
-      {
-        "id": "typography",
+        "id": "docs.typography",
         "title": "Typography",
         "type": "basic",
         "icon": "heroicons_outline:pencil",
         "link": "/docs/typography"
+      },
+      {
+        "id": "docs.services",
+        "title": "Services",
+        "type": "collapsable",
+        "icon": "heroicons_outline:square-3-stack-3d",
+        "children": [
+          {
+            "id": "docs.services.confirmation",
+            "title": "Confirmation",
+            "type": "basic",
+            "link": "/docs/services/confirmation"
+          }
+        ]
       }
     ]
   }

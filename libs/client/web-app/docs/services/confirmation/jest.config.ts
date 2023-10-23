@@ -1,10 +1,10 @@
 /* eslint-disable */
 export default {
   displayName: 'confirmation',
-  preset: '../../../../../jest.preset.js',
+  preset: '../../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory:
-    '../../../../../coverage/libs/client/web-app/docs/confirmation',
+    '../../../../../../coverage/libs/client/web-app/docs/services/confirmation',
   transform: {
     '^.+.(ts|mjs|js|html)$': [
       'jest-preset-angular',

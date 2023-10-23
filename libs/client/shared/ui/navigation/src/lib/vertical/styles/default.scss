@@ -511,6 +511,50 @@ msk-vertical-navigation {
         }
       }
     }
+
+    /* Collapsable */
+    msk-vertical-navigation-collapsable-item {
+      > .msk-vertical-navigation-item-wrapper {
+        .msk-vertical-navigation-item {
+          .msk-vertical-navigation-item-arrow {
+            margin-left: unset;
+            margin-right: auto;
+          }
+        }
+      }
+
+      /* 1st level */
+      .msk-vertical-navigation-item-children {
+        .msk-vertical-navigation-item {
+          padding-left: unset;
+          padding-right: 56px;
+        }
+
+        /* 2nd level */
+        .msk-vertical-navigation-item-children {
+          .msk-vertical-navigation-item {
+            padding-left: unset;
+            padding-right: 72px;
+          }
+
+          /* 3rd level */
+          .msk-vertical-navigation-item-children {
+            .msk-vertical-navigation-item {
+              padding-left: unset;
+              padding-right: 88px;
+            }
+
+            /* 4th level */
+            .msk-vertical-navigation-item-children {
+              .msk-vertical-navigation-item {
+                padding-left: unset;
+                padding-right: 104px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
