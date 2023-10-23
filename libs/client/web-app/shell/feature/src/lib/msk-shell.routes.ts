@@ -172,6 +172,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsMediaWatcherModule,
           ),
       },
+      {
+        path: 'services/splash-screen',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/services/splash-screen').then(
+            (m) => m.DocsSplashScreenModule,
+          ),
+      },
     ],
   },
 

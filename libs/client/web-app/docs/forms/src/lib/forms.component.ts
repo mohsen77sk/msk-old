@@ -6,7 +6,7 @@ import {
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'msk-forms',
+  selector: 'msk-docs-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss'],
   encapsulation: ViewEncapsulation.None,

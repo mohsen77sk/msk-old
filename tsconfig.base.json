@@ -145,6 +145,9 @@
       "@msk/client/web-app/docs/services/media-watcher": [
         "libs/client/web-app/docs/services/media-watcher/src/index.ts"
       ],
+      "@msk/client/web-app/docs/services/splash-screen": [
+        "libs/client/web-app/docs/services/splash-screen/src/index.ts"
+      ],
       "@msk/client/web-app/docs/typography": [
         "libs/client/web-app/docs/typography/src/index.ts"
       ],

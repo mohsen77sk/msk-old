@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { mskAnimations } from '@msk/client/shared/animations';
 
 @Component({
-  selector: 'msk-animations',
+  selector: 'msk-docs-animations',
   templateUrl: './animations.component.html',
   styleUrls: ['./animations.component.scss'],
   animations: mskAnimations,

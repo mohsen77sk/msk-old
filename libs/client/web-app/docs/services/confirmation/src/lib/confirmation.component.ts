@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MskConfirmationService } from '@msk/client/shared/services/confirmation';
 
 @Component({
-  selector: 'msk-confirmation',
+  selector: 'msk-docs-confirmation',
   templateUrl: './confirmation.component.html',
   styleUrls: ['./confirmation.component.scss'],
   encapsulation: ViewEncapsulation.None,
