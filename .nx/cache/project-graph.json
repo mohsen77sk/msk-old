@@ -1,0 +1,3503 @@
+{
+  "nodes": {
+    "client-web-app-error-internal-server-error-feature": {
+      "name": "client-web-app-error-internal-server-error-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-error-internal-server-error-feature",
+        "root": "libs/client/web-app/error/internal-server-error/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/error/internal-server-error/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/error/internal-server-error/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/error/internal-server-error/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/error/internal-server-error/feature/src/**/*.ts",
+                "libs/client/web-app/error/internal-server-error/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-auth-two-step-verification-feature": {
+      "name": "client-web-app-auth-two-step-verification-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-auth-two-step-verification-feature",
+        "root": "libs/client/web-app/auth/two-step-verification/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/auth/two-step-verification/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/auth/two-step-verification/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/auth/two-step-verification/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/auth/two-step-verification/feature/src/**/*.ts",
+                "libs/client/web-app/auth/two-step-verification/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-auth-forgot-password-feature": {
+      "name": "client-web-app-auth-forgot-password-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-auth-forgot-password-feature",
+        "root": "libs/client/web-app/auth/forgot-password/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/auth/forgot-password/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/auth/forgot-password/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/auth/forgot-password/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/auth/forgot-password/feature/src/**/*.ts",
+                "libs/client/web-app/auth/forgot-password/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-auth-reset-password-feature": {
+      "name": "client-web-app-auth-reset-password-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-auth-reset-password-feature",
+        "root": "libs/client/web-app/auth/reset-password/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/auth/reset-password/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/auth/reset-password/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/auth/reset-password/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/auth/reset-password/feature/src/**/*.ts",
+                "libs/client/web-app/auth/reset-password/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-services-media-watcher": {
+      "name": "client-web-app-docs-services-media-watcher",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-services-media-watcher",
+        "root": "libs/client/web-app/docs/services/media-watcher",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/services/media-watcher/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/services/media-watcher/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/services/media-watcher/**/*.ts",
+                "libs/client/web-app/docs/services/media-watcher/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-services-splash-screen": {
+      "name": "client-web-app-docs-services-splash-screen",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-services-splash-screen",
+        "root": "libs/client/web-app/docs/services/splash-screen",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/services/splash-screen/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/services/splash-screen/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/services/splash-screen/**/*.ts",
+                "libs/client/web-app/docs/services/splash-screen/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-services-confirmation": {
+      "name": "client-web-app-docs-services-confirmation",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-services-confirmation",
+        "root": "libs/client/web-app/docs/services/confirmation",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/services/confirmation/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/services/confirmation/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/services/confirmation/**/*.ts",
+                "libs/client/web-app/docs/services/confirmation/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-password-strength-meter": {
+      "name": "client-shared-ui-password-strength-meter",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-password-strength-meter",
+        "root": "libs/client/shared/ui/password-strength-meter",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/password-strength-meter/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/password-strength-meter"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/password-strength-meter/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/password-strength-meter/src/**/*.ts",
+                "libs/client/shared/ui/password-strength-meter/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-error-maintenance-feature": {
+      "name": "client-web-app-error-maintenance-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-error-maintenance-feature",
+        "root": "libs/client/web-app/error/maintenance/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/error/maintenance/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/error/maintenance/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/error/maintenance/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/error/maintenance/feature/src/**/*.ts",
+                "libs/client/web-app/error/maintenance/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-directives-select-search": {
+      "name": "client-shared-directives-select-search",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-directives-select-search",
+        "root": "libs/client/shared/directives/select-search",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/directives/select-search/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/directives/select-search"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/directives/select-search/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/directives/select-search/**/*.ts",
+                "libs/client/shared/directives/select-search/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-admin-dashboard-feature": {
+      "name": "client-web-app-admin-dashboard-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-admin-dashboard-feature",
+        "root": "libs/client/web-app/admin/dashboard/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/admin/dashboard/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/admin/dashboard/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/admin/dashboard/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/admin/dashboard/feature/src/**/*.ts",
+                "libs/client/web-app/admin/dashboard/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-internet-status": {
+      "name": "client-shared-services-internet-status",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-internet-status",
+        "root": "libs/client/shared/services/internet-status",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/internet-status/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/internet-status/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/internet-status/**/*.ts",
+                "libs/client/shared/services/internet-status/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-core-notification": {
+      "name": "client-web-app-shell-core-notification",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-core-notification",
+        "root": "libs/client/web-app/shell/core/notification",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/core/notification/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/core/notification"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/core/notification/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/core/notification/src/**/*.ts",
+                "libs/client/web-app/shell/core/notification/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-error-not-found-feature": {
+      "name": "client-web-app-error-not-found-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-error-not-found-feature",
+        "root": "libs/client/web-app/error/not-found/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/error/not-found/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/error/not-found/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/error/not-found/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/error/not-found/feature/src/**/*.ts",
+                "libs/client/web-app/error/not-found/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-service-worker": {
+      "name": "client-shared-services-service-worker",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-service-worker",
+        "root": "libs/client/shared/services/service-worker",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/service-worker/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/service-worker/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/service-worker/**/*.ts",
+                "libs/client/shared/services/service-worker/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-directives-scroll-reset": {
+      "name": "client-shared-directives-scroll-reset",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-directives-scroll-reset",
+        "root": "libs/client/shared/directives/scroll-reset",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/directives/scroll-reset/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/directives/scroll-reset"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/directives/scroll-reset/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/directives/scroll-reset/src/**/*.ts",
+                "libs/client/shared/directives/scroll-reset/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-auth-sign-out-feature": {
+      "name": "client-web-app-auth-sign-out-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-auth-sign-out-feature",
+        "root": "libs/client/web-app/auth/sign-out/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/auth/sign-out/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/auth/sign-out/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/auth/sign-out/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/auth/sign-out/feature/src/**/*.ts",
+                "libs/client/web-app/auth/sign-out/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-core-navigation": {
+      "name": "client-web-app-shell-core-navigation",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-core-navigation",
+        "root": "libs/client/web-app/shell/core/navigation",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/core/navigation/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/core/navigation"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/core/navigation/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/core/navigation/src/**/*.ts",
+                "libs/client/web-app/shell/core/navigation/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-media-watcher": {
+      "name": "client-shared-services-media-watcher",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-media-watcher",
+        "root": "libs/client/shared/services/media-watcher",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/media-watcher/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/media-watcher"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/media-watcher/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/media-watcher/src/**/*.ts",
+                "libs/client/shared/services/media-watcher/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-splash-screen": {
+      "name": "client-shared-services-splash-screen",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-splash-screen",
+        "root": "libs/client/shared/services/splash-screen",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/splash-screen/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/splash-screen"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/splash-screen/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/splash-screen/src/**/*.ts",
+                "libs/client/shared/services/splash-screen/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-landing-home-feature": {
+      "name": "client-web-app-landing-home-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-landing-home-feature",
+        "root": "libs/client/web-app/landing/home/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/landing/home/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/landing/home/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/landing/home/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/landing/home/feature/src/**/*.ts",
+                "libs/client/web-app/landing/home/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-auth-sign-in-feature": {
+      "name": "client-web-app-auth-sign-in-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-auth-sign-in-feature",
+        "root": "libs/client/web-app/auth/sign-in/feature",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/auth/sign-in/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/auth/sign-in/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/auth/sign-in/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/auth/sign-in/feature/src/**/*.ts",
+                "libs/client/web-app/auth/sign-in/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-confirmation": {
+      "name": "client-shared-services-confirmation",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-confirmation",
+        "root": "libs/client/shared/services/confirmation",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/confirmation/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/confirmation"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/confirmation/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/confirmation/src/**/*.ts",
+                "libs/client/shared/services/confirmation/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-directives-scrollbar": {
+      "name": "client-shared-directives-scrollbar",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-directives-scrollbar",
+        "root": "libs/client/shared/directives/scrollbar",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/directives/scrollbar/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/directives/scrollbar"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/directives/scrollbar/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/directives/scrollbar/src/**/*.ts",
+                "libs/client/shared/directives/scrollbar/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-core-message": {
+      "name": "client-web-app-shell-core-message",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-core-message",
+        "root": "libs/client/web-app/shell/core/message",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/core/message/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/core/message"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/core/message/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/core/message/src/**/*.ts",
+                "libs/client/web-app/shell/core/message/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-utils-material-intl": {
+      "name": "client-shared-utils-material-intl",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-utils-material-intl",
+        "root": "libs/client/shared/utils/material-intl",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/utils/material-intl/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/utils/material-intl"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/utils/material-intl/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/utils/material-intl/src/**/*.ts",
+                "libs/client/shared/utils/material-intl/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-directives-spinner": {
+      "name": "client-shared-directives-spinner",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-directives-spinner",
+        "root": "libs/client/shared/directives/spinner",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/directives/spinner/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/directives/spinner"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/directives/spinner/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/directives/spinner/src/**/*.ts",
+                "libs/client/shared/directives/spinner/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-platform": {
+      "name": "client-shared-services-platform",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-platform",
+        "root": "libs/client/shared/services/platform",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/platform/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/platform"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/platform/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/platform/**/*.ts",
+                "libs/client/shared/services/platform/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-pipes-find-by-key": {
+      "name": "client-shared-pipes-find-by-key",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-pipes-find-by-key",
+        "root": "libs/client/shared/pipes/find-by-key",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/pipes/find-by-key/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/pipes/find-by-key"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/pipes/find-by-key/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/pipes/find-by-key/src/**/*.ts",
+                "libs/client/shared/pipes/find-by-key/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-typography": {
+      "name": "client-web-app-docs-typography",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-typography",
+        "root": "libs/client/web-app/docs/typography",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/typography/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/typography/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/typography/**/*.ts",
+                "libs/client/web-app/docs/typography/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-ui-layout": {
+      "name": "client-web-app-shell-ui-layout",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-ui-layout",
+        "root": "libs/client/web-app/shell/ui/layout",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/ui/layout/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/ui/layout"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/ui/layout/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/ui/layout/src/**/*.ts",
+                "libs/client/web-app/shell/ui/layout/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-core-user": {
+      "name": "client-web-app-shell-core-user",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-core-user",
+        "root": "libs/client/web-app/shell/core/user",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/core/user/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/core/user"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/core/user/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/core/user/src/**/*.ts",
+                "libs/client/web-app/shell/core/user/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-animations": {
+      "name": "client-web-app-docs-animations",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-animations",
+        "root": "libs/client/web-app/docs/animations",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/animations/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/animations/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/animations/**/*.ts",
+                "libs/client/web-app/docs/animations/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-core-auth": {
+      "name": "client-web-app-shell-core-auth",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-core-auth",
+        "root": "libs/client/web-app/shell/core/auth",
+        "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/core/auth/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/core/auth"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/core/auth/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/core/auth/src/**/*.ts",
+                "libs/client/web-app/shell/core/auth/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-config": {
+      "name": "client-shared-services-config",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-config",
+        "root": "libs/client/shared/services/config",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/config/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/config"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/config/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/config/src/**/*.ts",
+                "libs/client/shared/services/config/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-pipes-date-time": {
+      "name": "client-shared-pipes-date-time",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-pipes-date-time",
+        "root": "libs/client/shared/pipes/date-time",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/pipes/date-time/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/pipes/date-time"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/pipes/date-time/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/pipes/date-time/src/**/*.ts",
+                "libs/client/shared/pipes/date-time/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "tailwind-preset": {
+      "name": "tailwind-preset",
+      "type": "lib",
+      "data": {
+        "name": "tailwind-preset",
+        "root": "libs/client/shared/tailwind-preset",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/tailwind-preset",
+        "targets": {},
+        "tags": [
+          "scope:client-shared"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-utils-transloco": {
+      "name": "client-shared-utils-transloco",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-utils-transloco",
+        "root": "libs/client/shared/utils/transloco",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/utils/transloco/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/utils/transloco"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/utils/transloco/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/utils/transloco/src/**/*.ts",
+                "libs/client/shared/utils/transloco/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-shell-feature": {
+      "name": "client-web-app-shell-feature",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-shell-feature",
+        "root": "libs/client/web-app/shell/feature",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/web-app/shell/feature/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/web-app/shell/feature"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/shell/feature/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/shell/feature/src/**/*.ts",
+                "libs/client/web-app/shell/feature/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:feature"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-pipes-currency": {
+      "name": "client-shared-pipes-currency",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-pipes-currency",
+        "root": "libs/client/shared/pipes/currency",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/pipes/currency/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/pipes/currency"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/pipes/currency/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/pipes/currency/**/*.ts",
+                "libs/client/shared/pipes/currency/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-loading-bar": {
+      "name": "client-shared-ui-loading-bar",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-loading-bar",
+        "root": "libs/client/shared/ui/loading-bar",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/loading-bar/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/loading-bar"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/loading-bar/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/loading-bar/src/**/*.ts",
+                "libs/client/shared/ui/loading-bar/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-pipes-time-ago": {
+      "name": "client-shared-pipes-time-ago",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-pipes-time-ago",
+        "root": "libs/client/shared/pipes/time-ago",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/pipes/time-ago/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/pipes/time-ago"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/pipes/time-ago/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/pipes/time-ago/src/**/*.ts",
+                "libs/client/shared/pipes/time-ago/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-excel": {
+      "name": "client-shared-services-excel",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-excel",
+        "root": "libs/client/shared/services/excel",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/excel/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/excel"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/excel/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/excel/**/*.ts",
+                "libs/client/shared/services/excel/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-services-utils": {
+      "name": "client-shared-services-utils",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-services-utils",
+        "root": "libs/client/shared/services/utils",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/services/utils/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/services/utils"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/services/utils/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/services/utils/src/**/*.ts",
+                "libs/client/shared/services/utils/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-fullscreen": {
+      "name": "client-shared-ui-fullscreen",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-fullscreen",
+        "root": "libs/client/shared/ui/fullscreen",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/fullscreen/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/fullscreen"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/fullscreen/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/fullscreen/src/**/*.ts",
+                "libs/client/shared/ui/fullscreen/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-navigation": {
+      "name": "client-shared-ui-navigation",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-navigation",
+        "root": "libs/client/shared/ui/navigation",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/navigation/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/navigation"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/navigation/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/navigation/src/**/*.ts",
+                "libs/client/shared/ui/navigation/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-highlight": {
+      "name": "client-shared-ui-highlight",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-highlight",
+        "root": "libs/client/shared/ui/highlight",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/shared/ui/highlight/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/highlight/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/highlight/**/*.ts",
+                "libs/client/shared/ui/highlight/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-colors": {
+      "name": "client-web-app-docs-colors",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-colors",
+        "root": "libs/client/web-app/docs/colors",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/colors/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/colors/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/colors/**/*.ts",
+                "libs/client/web-app/docs/colors/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-web-app-docs-forms": {
+      "name": "client-web-app-docs-forms",
+      "type": "lib",
+      "data": {
+        "name": "client-web-app-docs-forms",
+        "root": "libs/client/web-app/docs/forms",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/web-app/docs/forms/src",
+        "prefix": "msk",
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/client/web-app/docs/forms/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/web-app/docs/forms/**/*.ts",
+                "libs/client/web-app/docs/forms/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-web",
+          "type:documents"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-utils-icons": {
+      "name": "client-shared-utils-icons",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-utils-icons",
+        "root": "libs/client/shared/utils/icons",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/utils/icons/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/utils/icons"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/utils/icons/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/utils/icons/src/**/*.ts",
+                "libs/client/shared/utils/icons/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-app-config": {
+      "name": "client-shared-app-config",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-app-config",
+        "root": "libs/client/shared/app-config",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/app-config/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/app-config"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/app-config/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/app-config/src/**/*.ts",
+                "libs/client/shared/app-config/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-validators": {
+      "name": "client-shared-validators",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-validators",
+        "root": "libs/client/shared/validators",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/validators/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/validators"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/validators/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/validators/src/**/*.ts",
+                "libs/client/shared/validators/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-animations": {
+      "name": "client-shared-animations",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-animations",
+        "root": "libs/client/shared/animations",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/animations/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/animations"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/animations/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/animations/src/**/*.ts",
+                "libs/client/shared/animations/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:util"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-drawer": {
+      "name": "client-shared-ui-drawer",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-drawer",
+        "root": "libs/client/shared/ui/drawer",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/drawer/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/drawer"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/drawer/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/drawer/src/**/*.ts",
+                "libs/client/shared/ui/drawer/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-alert": {
+      "name": "client-shared-ui-alert",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-alert",
+        "root": "libs/client/shared/ui/alert",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/alert/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/alert"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/alert/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/alert/src/**/*.ts",
+                "libs/client/shared/ui/alert/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "client-shared-ui-card": {
+      "name": "client-shared-ui-card",
+      "type": "lib",
+      "data": {
+        "name": "client-shared-ui-card",
+        "root": "libs/client/shared/ui/card",
+        "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/client/shared/ui/card/src",
+        "prefix": "msk",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/client/shared/ui/card"
+            ],
+            "options": {
+              "jestConfig": "libs/client/shared/ui/card/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/client/shared/ui/card/src/**/*.ts",
+                "libs/client/shared/ui/card/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:client-shared",
+          "type:ui"
+        ],
+        "implicitDependencies": []
+      }
+    },
+    "web-app-e2e": {
+      "name": "web-app-e2e",
+      "type": "e2e",
+      "data": {
+        "name": "web-app-e2e",
+        "root": "apps/web-app-e2e",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/web-app-e2e/src",
+        "projectType": "application",
+        "targets": {
+          "e2e": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "executor": "@nx/cypress:cypress",
+            "options": {
+              "cypressConfig": "apps/web-app-e2e/cypress.json",
+              "devServerTarget": "web-app:serve:development",
+              "tsConfig": "apps/web-app-e2e/tsconfig.json"
+            },
+            "configurations": {
+              "production": {
+                "devServerTarget": "web-app:serve:production"
+              }
+            }
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "apps/web-app-e2e/**/*.{js,ts}"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [],
+        "implicitDependencies": [
+          "web-app"
+        ]
+      }
+    },
+    "web-app": {
+      "name": "web-app",
+      "type": "app",
+      "data": {
+        "name": "web-app",
+        "root": "apps/web-app",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "sourceRoot": "apps/web-app/src",
+        "prefix": "msk",
+        "targets": {
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@angular-devkit/build-angular:browser",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "options": {
+              "outputPath": "dist/apps/web-app",
+              "index": "apps/web-app/src/index.html",
+              "main": "apps/web-app/src/main.ts",
+              "polyfills": "apps/web-app/src/polyfills.ts",
+              "tsConfig": "apps/web-app/tsconfig.app.json",
+              "inlineStyleLanguage": "scss",
+              "assets": [
+                "apps/web-app/src/favicon.ico",
+                "apps/web-app/src/assets",
+                "apps/web-app/src/manifest.webmanifest",
+                {
+                  "glob": "**/*",
+                  "input": "libs/client/shared/assets/src",
+                  "output": "assets"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "libs/client/web-app/assets/src",
+                  "output": "assets"
+                }
+              ],
+              "styles": [
+                "apps/web-app/src/styles.scss"
+              ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "libs/client/shared/styles/src"
+                ]
+              },
+              "scripts": [],
+              "allowedCommonJsDependencies": [
+                "flat"
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/web-app/ngsw-config.json"
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "1.2mb",
+                    "maximumError": "2mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "70kb",
+                    "maximumError": "100kb"
+                  }
+                ],
+                "index": {
+                  "input": "apps/web-app/src/index.prod.html",
+                  "output": "index.html"
+                },
+                "fileReplacements": [
+                  {
+                    "replace": "apps/web-app/src/environments/environment.ts",
+                    "with": "apps/web-app/src/environments/environment.prod.ts"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "buildOptimizer": false,
+                "optimization": false,
+                "vendorChunk": true,
+                "extractLicenses": false,
+                "sourceMap": true,
+                "namedChunks": true
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "production": {
+                "browserTarget": "web-app:build:production"
+              },
+              "development": {
+                "browserTarget": "web-app:build:development"
+              }
+            },
+            "defaultConfiguration": "development",
+            "options": {
+              "port": 5200,
+              "proxyConfig": "apps/web-app/proxy.conf.json"
+            }
+          },
+          "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+              "browserTarget": "web-app:build"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "apps/web-app/src/**/*.ts",
+                "apps/web-app/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/apps/web-app"
+            ],
+            "options": {
+              "jestConfig": "apps/web-app/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [
+          "scope:web-app"
+        ],
+        "implicitDependencies": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "client-web-app-error-internal-server-error-feature": [],
+    "client-web-app-auth-two-step-verification-feature": [
+      {
+        "source": "client-web-app-auth-two-step-verification-feature",
+        "target": "client-shared-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-two-step-verification-feature",
+        "target": "client-shared-ui-alert",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-two-step-verification-feature",
+        "target": "client-shared-directives-spinner",
+        "type": "static"
+      }
+    ],
+    "client-web-app-auth-forgot-password-feature": [
+      {
+        "source": "client-web-app-auth-forgot-password-feature",
+        "target": "client-shared-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-forgot-password-feature",
+        "target": "client-shared-ui-alert",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-forgot-password-feature",
+        "target": "client-shared-directives-spinner",
+        "type": "static"
+      }
+    ],
+    "client-web-app-auth-reset-password-feature": [
+      {
+        "source": "client-web-app-auth-reset-password-feature",
+        "target": "client-shared-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-reset-password-feature",
+        "target": "client-shared-services-config",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-reset-password-feature",
+        "target": "client-shared-ui-alert",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-reset-password-feature",
+        "target": "client-shared-validators",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-reset-password-feature",
+        "target": "client-shared-ui-password-strength-meter",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-reset-password-feature",
+        "target": "client-shared-directives-spinner",
+        "type": "static"
+      }
+    ],
+    "client-web-app-docs-services-media-watcher": [
+      {
+        "source": "client-web-app-docs-services-media-watcher",
+        "target": "client-shared-ui-highlight",
+        "type": "static"
+      }
+    ],
+    "client-web-app-docs-services-splash-screen": [
+      {
+        "source": "client-web-app-docs-services-splash-screen",
+        "target": "client-shared-ui-highlight",
+        "type": "static"
+      }
+    ],
+    "client-web-app-docs-services-confirmation": [
+      {
+        "source": "client-web-app-docs-services-confirmation",
+        "target": "client-shared-services-confirmation",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-docs-services-confirmation",
+        "target": "client-shared-ui-highlight",
+        "type": "static"
+      }
+    ],
+    "client-shared-ui-password-strength-meter": [],
+    "client-web-app-error-maintenance-feature": [],
+    "client-shared-directives-select-search": [],
+    "client-web-app-admin-dashboard-feature": [],
+    "client-shared-services-internet-status": [],
+    "client-web-app-shell-core-notification": [],
+    "client-web-app-error-not-found-feature": [],
+    "client-shared-services-service-worker": [],
+    "client-shared-directives-scroll-reset": [],
+    "client-web-app-auth-sign-out-feature": [
+      {
+        "source": "client-web-app-auth-sign-out-feature",
+        "target": "client-web-app-shell-core-auth",
+        "type": "static"
+      }
+    ],
+    "client-web-app-shell-core-navigation": [
+      {
+        "source": "client-web-app-shell-core-navigation",
+        "target": "client-shared-ui-navigation",
+        "type": "static"
+      }
+    ],
+    "client-shared-services-media-watcher": [
+      {
+        "source": "client-shared-services-media-watcher",
+        "target": "client-shared-services-config",
+        "type": "static"
+      }
+    ],
+    "client-shared-services-splash-screen": [],
+    "client-web-app-landing-home-feature": [],
+    "client-web-app-auth-sign-in-feature": [
+      {
+        "source": "client-web-app-auth-sign-in-feature",
+        "target": "client-shared-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-sign-in-feature",
+        "target": "client-shared-ui-alert",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-auth-sign-in-feature",
+        "target": "client-shared-directives-spinner",
+        "type": "static"
+      }
+    ],
+    "client-shared-services-confirmation": [],
+    "client-shared-directives-scrollbar": [],
+    "client-web-app-shell-core-message": [],
+    "client-shared-utils-material-intl": [],
+    "client-shared-directives-spinner": [],
+    "client-shared-services-platform": [],
+    "client-shared-pipes-find-by-key": [],
+    "client-web-app-docs-typography": [
+      {
+        "source": "client-web-app-docs-typography",
+        "target": "client-shared-ui-highlight",
+        "type": "static"
+      }
+    ],
+    "client-web-app-shell-ui-layout": [
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-services-config",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-services-media-watcher",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-services-platform",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-web-app-shell-core-message",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-pipes-time-ago",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-web-app-shell-core-notification",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-ui-drawer",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-web-app-shell-core-user",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-ui-loading-bar",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-ui-navigation",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-web-app-shell-core-navigation",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-ui-layout",
+        "target": "client-shared-ui-fullscreen",
+        "type": "static"
+      }
+    ],
+    "client-web-app-shell-core-user": [],
+    "client-web-app-docs-animations": [
+      {
+        "source": "client-web-app-docs-animations",
+        "target": "client-shared-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-docs-animations",
+        "target": "client-shared-ui-highlight",
+        "type": "static"
+      }
+    ],
+    "client-web-app-shell-core-auth": [
+      {
+        "source": "client-web-app-shell-core-auth",
+        "target": "client-web-app-shell-core-user",
+        "type": "static"
+      }
+    ],
+    "client-shared-services-config": [],
+    "client-shared-pipes-date-time": [],
+    "tailwind-preset": [],
+    "client-shared-utils-transloco": [
+      {
+        "source": "client-shared-utils-transloco",
+        "target": "client-shared-services-config",
+        "type": "static"
+      }
+    ],
+    "client-web-app-shell-feature": [
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-utils-icons",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-utils-transloco",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-utils-material-intl",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-shell-core-auth",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-shell-core-message",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-shell-core-navigation",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-shell-core-notification",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-shell-core-user",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-shell-ui-layout",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-config",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-confirmation",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-media-watcher",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-service-worker",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-internet-status",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-splash-screen",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-platform",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-shared-services-utils",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-landing-home-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-auth-sign-in-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-auth-forgot-password-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-auth-reset-password-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-auth-two-step-verification-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-auth-sign-out-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-admin-dashboard-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-colors",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-forms",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-typography",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-services-confirmation",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-services-media-watcher",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-docs-services-splash-screen",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-error-internal-server-error-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-error-maintenance-feature",
+        "type": "static"
+      },
+      {
+        "source": "client-web-app-shell-feature",
+        "target": "client-web-app-error-not-found-feature",
+        "type": "static"
+      }
+    ],
+    "client-shared-pipes-currency": [],
+    "client-shared-ui-loading-bar": [],
+    "client-shared-pipes-time-ago": [],
+    "client-shared-services-excel": [],
+    "client-shared-services-utils": [],
+    "client-shared-ui-fullscreen": [],
+    "client-shared-ui-navigation": [
+      {
+        "source": "client-shared-ui-navigation",
+        "target": "client-shared-services-utils",
+        "type": "static"
+      },
+      {
+        "source": "client-shared-ui-navigation",
+        "target": "client-shared-animations",
+        "type": "static"
+      },
+      {
+        "source": "client-shared-ui-navigation",
+        "target": "client-shared-directives-scrollbar",
+        "type": "static"
+      }
+    ],
+    "client-shared-ui-highlight": [],
+    "client-web-app-docs-colors": [],
+    "client-web-app-docs-forms": [],
+    "client-shared-utils-icons": [],
+    "client-shared-app-config": [],
+    "client-shared-validators": [],
+    "client-shared-animations": [],
+    "client-shared-ui-drawer": [
+      {
+        "source": "client-shared-ui-drawer",
+        "target": "client-shared-services-utils",
+        "type": "static"
+      }
+    ],
+    "client-shared-ui-alert": [
+      {
+        "source": "client-shared-ui-alert",
+        "target": "client-shared-services-utils",
+        "type": "static"
+      },
+      {
+        "source": "client-shared-ui-alert",
+        "target": "client-shared-animations",
+        "type": "static"
+      }
+    ],
+    "client-shared-ui-card": [
+      {
+        "source": "client-shared-ui-card",
+        "target": "client-shared-animations",
+        "type": "static"
+      }
+    ],
+    "web-app-e2e": [
+      {
+        "source": "web-app-e2e",
+        "target": "web-app",
+        "type": "implicit"
+      }
+    ],
+    "web-app": [
+      {
+        "source": "web-app",
+        "target": "client-web-app-shell-feature",
+        "type": "static"
+      },
+      {
+        "source": "web-app",
+        "target": "client-shared-app-config",
+        "type": "static"
+      },
+      {
+        "source": "web-app",
+        "target": "tailwind-preset",
+        "type": "static"
+      }
+    ]
+  },
+  "version": "6.0"
+}

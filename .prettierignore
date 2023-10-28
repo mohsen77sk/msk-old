@@ -5,3 +5,5 @@
 
 .angular
 .vscode
+
+/.nx/cache
