@@ -1,0 +1,31 @@
+{
+  "add": "Add",
+  "modify": "Modify",
+  "remove": "Remove",
+  "delete": "Delete",
+  "active": "Active",
+  "disable": "Disable",
+  "blocked": "Blocked",
+  "send": "Send",
+  "save": "Save",
+  "cancel": "Cancel",
+  "error-validation": {
+    "required": "This is required",
+    "pattern": "Invalid value",
+    "min-length": "Min length is {{min}}",
+    "max-length": "Max length is {{max}}",
+    "min": "Min value is {{min}}",
+    "max": "Max value is {{max}}",
+    "email": "Please enter a valid email address",
+    "passwords-must-match": "Passwords must match"
+  },
+  "paginator": {
+    "items_per_page_label": "Items per page:",
+    "next_page_label": "Next page",
+    "previous_page_label": "Previous page",
+    "first_page_label": "First page",
+    "last_page_label": "Last page",
+    "range_page_label_1": "0 of {{length}}",
+    "range_page_label_2": "{{startIndex}} - {{endIndex}} of {{length}}"
+  }
+}

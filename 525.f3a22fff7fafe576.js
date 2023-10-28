@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb_app=self.webpackChunkweb_app||[]).push([[525],{4525:e=>{e.exports=JSON.parse('{"title-500":"Something went wrong!","description-500":"Server Error 500. Our staff has been notified, thank you for your understanding.","back-to-dashboard":"Back to Dashboard"}')}}]);

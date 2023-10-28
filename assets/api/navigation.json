@@ -1,0 +1,92 @@
+[
+  {
+    "id": "main",
+    "title": "Main",
+    "tooltip": "Main",
+    "subtitle": "Overview",
+    "type": "group",
+    "icon": "heroicons_outline:home",
+    "children": [
+      {
+        "id": "main.dashboard",
+        "title": "Dashboard",
+        "type": "basic",
+        "icon": "heroicons_outline:rectangle-group",
+        "link": "/dashboard"
+      }
+    ]
+  },
+  {
+    "id": "apps",
+    "title": "Applications",
+    "tooltip": "Applications",
+    "subtitle": "Application management",
+    "type": "group",
+    "icon": "heroicons_outline:squares-2x2",
+    "children": []
+  },
+  {
+    "id": "docs",
+    "title": "Documentation",
+    "tooltip": "Documentation",
+    "subtitle": "Everything you need to know about Project",
+    "type": "group",
+    "icon": "heroicons_outline:rectangle-stack",
+    "children": [
+      {
+        "id": "docs.animations",
+        "title": "Animations",
+        "type": "basic",
+        "icon": "heroicons_outline:play",
+        "link": "/docs/animations"
+      },
+      {
+        "id": "docs.colors",
+        "title": "Colors",
+        "type": "basic",
+        "icon": "heroicons_outline:swatch",
+        "link": "/docs/colors"
+      },
+      {
+        "id": "docs.forms",
+        "title": "Forms",
+        "type": "basic",
+        "icon": "heroicons_outline:pencil-square",
+        "link": "/docs/forms"
+      },
+      {
+        "id": "docs.typography",
+        "title": "Typography",
+        "type": "basic",
+        "icon": "heroicons_outline:pencil",
+        "link": "/docs/typography"
+      },
+      {
+        "id": "docs.services",
+        "title": "Services",
+        "type": "collapsable",
+        "icon": "heroicons_outline:square-3-stack-3d",
+        "children": [
+          {
+            "id": "docs.services.confirmation",
+            "title": "Confirmation",
+            "type": "basic",
+            "link": "/docs/services/confirmation"
+          },
+          {
+            "id": "docs.services.media-watcher",
+            "title": "Media Watcher",
+            "type": "basic",
+            "link": "/docs/services/media-watcher"
+          },
+          {
+            "id": "docs.services.splash-screen",
+            "title": "Splash Screen",
+            "type": "basic",
+            "link": "/docs/services/splash-screen"
+          }
+        ]
+      }
+    ]
+  }
+]

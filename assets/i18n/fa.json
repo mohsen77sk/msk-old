@@ -1,0 +1,31 @@
+{
+  "add": "جدید",
+  "modify": "ویرایش",
+  "remove": "برداشتن",
+  "delete": "حذف",
+  "active": "فعال",
+  "disable": "غیر فعال",
+  "blocked": "مسدود",
+  "send": "ارسال",
+  "save": "ذخیره",
+  "cancel": "لغو",
+  "error-validation": {
+    "required": "این فیلد اجباری است",
+    "pattern": "مقدار صحیح نیست",
+    "min-length": "حداکثر طول {{min}} کاراکتر است",
+    "max-length": "حداکثر طول {{max}} کاراکتر است",
+    "min": "حداقل مقدار {{min}} است",
+    "max": "حداقل مقدار {{max}} است",
+    "email": "لطفا یک آدرس ایمیل معتبر وارد کنید",
+    "passwords-must-match": "رمزهای عبور باید مطابقت داشته باشند"
+  },
+  "paginator": {
+    "items_per_page_label": "تعداد در صفحه:",
+    "next_page_label": "صفحه بعد",
+    "previous_page_label": "صفحه قبل",
+    "first_page_label": "صفحه اول",
+    "last_page_label": "صفحه آخر",
+    "range_page_label_1": "0 از {{length}}",
+    "range_page_label_2": "{{startIndex}} - {{endIndex}} از {{length}}"
+  }
+}

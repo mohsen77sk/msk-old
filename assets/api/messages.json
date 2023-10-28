@@ -1,0 +1,18 @@
+[
+  {
+    "id": "493190c9-5b61-4912-afe5-78c21f1044d7",
+    "icon": "heroicons_solid:user",
+    "title": "Gary Peters",
+    "description": "We should talk about that at lunch!",
+    "time": "2022-01-30T06:38:23.225Z",
+    "read": false
+  },
+  {
+    "id": "6e3e97e5-effc-4fb7-b730-52a151f0b641",
+    "icon": "heroicons_solid:user",
+    "title": "Leo Gill (Client #8817)",
+    "description": "You can download the latest invoices now. Please check and let me know.",
+    "time": "2022-01-31T10:35:10.715Z",
+    "read": true
+  }
+]
