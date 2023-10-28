@@ -22,10 +22,10 @@ msk-horizontal-navigation {
         .msk-horizontal-navigation-item {
           padding: 0 16px;
           cursor: pointer;
-          user-select: none;
           -moz-user-select: none;
           -webkit-user-select: none;
           -ms-user-select: none;
+          user-select: none;
 
           .msk-horizontal-navigation-item-icon {
             margin-right: 12px;

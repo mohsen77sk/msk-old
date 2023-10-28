@@ -2,8 +2,8 @@
 $msk-vertical-navigation-width: 280px;
 
 msk-vertical-navigation {
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -211,10 +211,10 @@ msk-vertical-navigation {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    user-select: none;
 
     .msk-vertical-navigation-item-wrapper {
       .msk-vertical-navigation-item {

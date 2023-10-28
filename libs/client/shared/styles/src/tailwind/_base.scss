@@ -5,12 +5,12 @@
 @layer base {
   * {
     /* Text rendering */
-    text-rendering: optimizeLegibility;
     -o-text-rendering: optimizeLegibility;
     -ms-text-rendering: optimizeLegibility;
     -moz-text-rendering: optimizeLegibility;
     -webkit-text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
 
     /* Remove the focus ring */
     &:focus {
