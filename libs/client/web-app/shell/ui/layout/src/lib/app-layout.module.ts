@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { BidiModule } from '@angular/cdk/bidi';
 import { EmptyLayoutModule } from './layouts/empty';
 import { ClassicLayoutModule } from './layouts/vertical/classic';
 import { ClassyLayoutModule } from './layouts/vertical/classy';
@@ -38,7 +39,7 @@ const layoutModules = [
 
 @NgModule({
   declarations: [LayoutComponent],
-  imports: [CommonModule, LayoutSettingsModule, ...layoutModules],
+  imports: [CommonModule, BidiModule, LayoutSettingsModule, ...layoutModules],
   exports: [LayoutComponent, ...layoutModules],
 })
 export class LayoutModule {}

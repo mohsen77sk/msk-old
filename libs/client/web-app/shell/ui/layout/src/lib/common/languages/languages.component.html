@@ -4,7 +4,6 @@
   *transloco="let t"
   [matTooltip]="t('layout.languages')"
   [matMenuTriggerFor]="languages"
-  [dir]="directionCodes[activeLang]"
 >
   <ng-container
     *ngTemplateOutlet="flagImage; context: { $implicit: activeLang }"
