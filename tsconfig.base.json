@@ -139,6 +139,9 @@
       "@msk/client/web-app/docs/forms": [
         "libs/client/web-app/docs/forms/src/index.ts"
       ],
+      "@msk/client/web-app/docs/services/config": [
+        "libs/client/web-app/docs/services/config/src/index.ts"
+      ],
       "@msk/client/web-app/docs/services/confirmation": [
         "libs/client/web-app/docs/services/confirmation/src/index.ts"
       ],

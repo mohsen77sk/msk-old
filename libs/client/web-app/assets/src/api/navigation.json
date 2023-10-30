@@ -68,6 +68,12 @@
         "icon": "heroicons_outline:square-3-stack-3d",
         "children": [
           {
+            "id": "docs.services.config",
+            "title": "Config",
+            "type": "basic",
+            "link": "/docs/services/config"
+          },
+          {
             "id": "docs.services.confirmation",
             "title": "Confirmation",
             "type": "basic",

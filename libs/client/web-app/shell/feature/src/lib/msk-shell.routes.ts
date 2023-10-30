@@ -159,6 +159,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'services/config',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/services/config').then(
+            (m) => m.DocsConfigModule,
+          ),
+      },
+      {
         path: 'services/confirmation',
         loadChildren: () =>
           import('@msk/client/web-app/docs/services/confirmation').then(

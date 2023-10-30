@@ -1,0 +1,187 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Services </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Config </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Config
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      <strong>MskConfigService</strong> is a singleton service to store and
+      access an application wide configuration object. It can be used to store
+      any kind of data and can be accessed from anywhere within your
+      application.
+    </p>
+
+    <h2>Module</h2>
+    <textarea msk-highlight lang="typescript">
+      import { MskConfigModule } from '@msk/client/shared/services/config';
+    </textarea>
+
+    <h2>Default configuration</h2>
+    <p>
+      By default, the application wide configuration is stored in
+      <code>@msk/client/web-app/shell/ui/layout</code> file and it includes the
+      <strong>layout style</strong> as well as the
+      <strong>color theme</strong> configurations:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { LayoutConfig } from '@msk/client/web-app/shell/ui/layout';
+
+      // Types
+      export type LayoutDirection = 'ltr' | 'rtl';
+      export type LayoutScheme = 'auto' | 'dark' | 'light';
+      export type LayoutScreens = { [key: string]: string };
+      export type LayoutTheme = 'theme-default' | string;
+      export type LayoutThemes = { id: string; name: string }[];
+
+      /**
+        * LayoutConfig interface. Update this interface to strictly type your config
+        * object.
+        */
+      export interface AppConfig
+      {
+        language: string;
+        direction: LayoutDirection;
+        screens: LayoutScreens;
+        scheme: LayoutScheme;
+        themes: LayoutThemes;
+        theme: LayoutTheme;
+        type: LayoutType;
+      }
+
+      /**
+        * Default configuration for the entire application. This object is used by
+        * MskConfigService to set the default configuration.
+        *
+        * If you need to store global configuration for your app, you can use this
+        * object to set the defaults. To access, update and reset the config, use
+        * MskConfigService and its methods.
+        *
+        * "Screens" are carried over to the BreakpointObserver for accessing them within
+        * components, and they are required.
+        *
+        * "Themes" are required for Tailwind to generate themes.
+        */
+      export const appConfig: AppConfig = {
+        language: 'en',
+        direction: 'ltr',
+        layout : 'classy',
+        scheme : 'light',
+        screens: {
+          sm: '600px',
+          md: '960px',
+          lg: '1280px',
+          xl: '1440px'
+        },
+        theme  : 'theme-default',
+        themes : [
+          {
+            id  : 'theme-default',
+            name: 'Default'
+          },
+          {
+            id  : 'theme-teal',
+            name: 'Teal'
+          },
+          {
+            id  : 'theme-purple',
+            name: 'Purple'
+          },
+          {
+            id  : 'theme-amber',
+            name: 'Amber'
+          }
+        ]
+      };
+    </textarea>
+    <p>
+      The default configuration is supplied to the
+      <strong>MskConfigService</strong> using the
+      <code>MskConfigModule.forRoot()</code> in
+      <strong>MskWebShellModule</strong>:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { layoutConfig } from '@msk/client/web-app/shell/ui/layout';
+
+      ...
+
+      imports: [
+        MskConfigModule.forRoot(layoutConfig),
+      ...
+    </textarea>
+
+    <h2>Methods</h2>
+    <p>
+      To set a configuration use <code>config</code> setter on
+      <strong>MskConfigService</strong>. The setter will intelligently merge the
+      configuration by replacing only the given options if they exist while
+      preserving others. If the supplied option does not exist on the
+      configuration, it will be added:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { MskConfigService } from '@msk/client/shared/services/config';
+
+      /**
+        * Constructor
+        */
+      constructor(private _mskConfigService: MskConfigService)
+      {
+        this._mskConfigService.config = { type: 'classy' };
+      }
+    </textarea>
+    <p>
+      To get the configuration use <code>config$</code> getter on
+      <strong>MskConfigService</strong> which returns an
+      <code>Observable</code> of the configuration object:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { MskConfigService } from '@msk/client/shared/services/config';
+      import { layoutConfig } from '@msk/client/web-app/shell/ui/layout';
+
+      config!: layoutConfig;
+
+      /**
+        * Constructor
+        */
+      constructor(private _mskConfigService: MskConfigService)
+      {
+        this._mskConfigService.config$
+          .pipe(takeUntil(this._unsubscribeAll))
+          .subscribe((layoutConfig: LayoutConfig) => {
+            this.layoutConfig = layoutConfig;
+          }
+      });
+    </textarea>
+  </div>
+</div>
