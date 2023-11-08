@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb_app=self.webpackChunkweb_app||[]).push([[2942],{2942:e=>{e.exports=JSON.parse('{"sign-in":"Sign in","two-step-verification":"Two step verification","enter-the-code-sent-to-you":"Enter the code sent to you","code":"Code"}')}}]);

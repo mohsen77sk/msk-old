@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkweb_app=self.webpackChunkweb_app||[]).push([[306],{33:e=>{e.exports=JSON.parse('{"return-to":"Return to","sign-in":"Sign in","forgot-password":"Forgot password?","forgot-password-description":"Fill the form to reset your password","username":"Username","send-reset-link":"Send reset link"}')}}]);
