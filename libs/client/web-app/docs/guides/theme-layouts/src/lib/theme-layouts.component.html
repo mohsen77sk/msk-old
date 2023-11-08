@@ -1,0 +1,113 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Guides </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Theme Layouts </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Theme Layouts
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      As previously mentioned, This project comes with a variety of different
+      layouts. These layouts are on the theme level, meaning that when changed,
+      they can completely alter the look of your app.
+    </p>
+    <p>
+      By default, layouts are applied automatically via the
+      <code>LayoutComponent</code>. The default layout is set by the
+      <code>layout.config.ts</code> file from
+      <strong>libs/client/web-app/shell/ui/layout</strong> directory. This
+      configuration file is supplied as the default configuration to the
+      <code>MskConfigService</code> which is a custom made configuration service
+      to store, write and read application wide configurations.
+    </p>
+
+    <msk-alert [appearance]="'border'" [type]="'info'">
+      More detailed information about <code>MskConfigService</code> can be found
+      in the
+      <a [routerLink]="['/docs/services/config']"> Services > Config </a>
+      section of this documentation.
+    </msk-alert>
+
+    <p>
+      After the default layout is read and set from the configuration service,
+      <code>LayoutComponent</code> will also read the current route tree, walk
+      through it starting from the root all the way to the current route and
+      look for the <strong>layout</strong> key-value from the
+      <em>data</em> object. If found, <code>LayoutComponent</code>
+      will switch to that layout. This is particularly useful if you want to
+      have different layouts for different portions of your app.
+    </p>
+    <p>
+      Here's an example from <code>msk-shell.routes.ts</code> file that loads
+      the <code>EmptyLayout</code> for <b>authentication</b> pages:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      // Auth routes (guest)
+      {
+        path: '',
+        canActivate: [NoAuthGuard],
+        canActivateChild: [NoAuthGuard],
+        component: LayoutComponent,
+        data: {
+          layout: 'empty'
+        },
+        children: [
+          {
+            path: 'sign-in'
+            ...
+          },
+        ]
+      }
+    </textarea>
+
+    <p>And here's another example that loads the <b>classic</b> layout:</p>
+    <textarea msk-highlight lang="typescript">
+      {
+        path       : 'some-path',
+        component  : SomeComponent,
+        data: {
+            layout: 'classic' // Load the classic layout for this route
+        }
+      }
+    </textarea>
+
+    <h2>LayoutComponent</h2>
+    <p>
+      The <code>LayoutComponent</code> plays an important part for managing
+      important things such as the <b>current layout</b> and the
+      <b>color theme</b>. Because of it, removing the
+      <code>LayoutComponent</code> and using the individual layouts by
+      themselves is not possible.
+    </p>
+  </div>
+</div>

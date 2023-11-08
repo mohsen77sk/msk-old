@@ -200,6 +200,13 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsComponentStructureModule,
           ),
       },
+      {
+        path: 'guides/theme-layouts',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/theme-layouts').then(
+            (m) => m.DocsThemeLayoutsModule,
+          ),
+      },
     ],
   },
 

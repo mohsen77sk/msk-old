@@ -110,6 +110,12 @@
             "title": "Component Structure",
             "type": "basic",
             "link": "/docs/guides/component-structure"
+          },
+          {
+            "id": "docs.guides.theme-layouts",
+            "title": "Theme Layouts",
+            "type": "basic",
+            "link": "/docs/guides/theme-layouts"
           }
         ]
       }

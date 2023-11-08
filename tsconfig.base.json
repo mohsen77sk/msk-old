@@ -145,6 +145,9 @@
       "@msk/client/web-app/docs/guides/directory-structure": [
         "libs/client/web-app/docs/guides/directory-structure/src/index.ts"
       ],
+      "@msk/client/web-app/docs/guides/theme-layouts": [
+        "libs/client/web-app/docs/guides/theme-layouts/src/index.ts"
+      ],
       "@msk/client/web-app/docs/services/config": [
         "libs/client/web-app/docs/services/config/src/index.ts"
       ],
