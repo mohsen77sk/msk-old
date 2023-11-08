@@ -186,6 +186,20 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsSplashScreenModule,
           ),
       },
+      {
+        path: 'guides/directory-structure',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/directory-structure').then(
+            (m) => m.DocsDirectoryStructureModule,
+          ),
+      },
+      {
+        path: 'guides/component-structure',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/component-structure').then(
+            (m) => m.DocsComponentStructureModule,
+          ),
+      },
     ],
   },
 

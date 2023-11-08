@@ -1,0 +1,191 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Guides </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Component Structure </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Component Structure
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <msk-alert [appearance]="'border'" [type]="'info'">
+      <span>
+        This project uses a route-based component loading strategy. There is
+        component less and empty-path routes specifically structured to load
+        components without hard coding them into templates. This provides great
+        extensibility and scalability to the app and we strongly suggest you
+        follow the same path.
+      </span>
+    </msk-alert>
+
+    <p>
+      Here's the diagram of this project default component structure for the
+      reference:
+    </p>
+
+    <!-- Component diagram -->
+    <div class="bg-card my-8 rounded p-8 shadow">
+      <!-- AppComponent -->
+      <div class="h-120 relative rounded border-2 border-gray-400 p-6 pt-12">
+        <span
+          class="bg-card absolute left-0 top-0 -mt-px ml-3 -translate-y-1/2 px-2 font-medium text-gray-500"
+        >
+          AppComponent
+        </span>
+        <!-- LayoutComponent -->
+        <div
+          class="relative h-full w-full rounded border-2 border-purple-400 p-6 pt-12"
+        >
+          <span
+            class="bg-card absolute left-0 top-0 -mt-px ml-3 -translate-y-1/2 px-2 font-medium text-purple-500"
+          >
+            LayoutComponent
+          </span>
+          <!-- xxxLayoutComponent -->
+          <div class="relative h-full w-full rounded border-2 border-green-400">
+            <span
+              class="bg-card absolute left-0 top-0 -mt-px ml-3 -translate-y-1/2 px-2 font-medium text-green-500"
+            >
+              Layout
+            </span>
+
+            <div class="flex h-full w-full">
+              <!-- Navigation -->
+              <div class="relative w-1/4 border-r-2 border-green-400">
+                <span
+                  class="absolute left-0 top-0 p-3 pl-6 font-medium text-green-700"
+                >
+                  Navigation
+                </span>
+              </div>
+              <!-- Wrapper -->
+              <div class="flex w-3/4 flex-col">
+                <!-- Header -->
+                <div class="relative h-12 w-full border-b-2 border-green-400">
+                  <span
+                    class="absolute left-0 top-0 p-3 pl-6 font-medium text-green-700"
+                  >
+                    Header
+                  </span>
+                </div>
+                <!-- Content -->
+                <div class="relative flex w-full flex-auto">
+                  <span
+                    class="absolute left-0 top-0 p-3 pl-6 font-medium text-green-700"
+                  >
+                    &lt;router-outlet&gt;
+                  </span>
+                </div>
+                <!-- Footer -->
+                <div class="relative h-12 w-full border-t-2 border-green-400">
+                  <span
+                    class="absolute left-0 top-0 p-3 pl-6 font-medium text-green-700"
+                  >
+                    Footer
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>AppComponent</h2>
+    <p>
+      This is the entry point of the application. It imports all the necessary
+      modules in order for Project and your app to work. All 3rd party modules
+      are also imported and configured here.
+    </p>
+
+    <h2>LayoutComponent</h2>
+    <p>
+      This component makes the layout switching easier. This project provides
+      variety of different layouts like <strong>ClassicLayout</strong> or
+      <strong>EnterpriseLayout</strong> and this component can load or switch
+      those layouts at any time.
+    </p>
+    <p>
+      To understand how <strong>LayoutComponent</strong> works, look at this
+      portion of the <code>msk-shell.routes.ts</code> file:
+    </p>
+
+    <textarea msk-highlight lang="typescript">
+      // Admin routes
+      {
+        path       : '',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component  : LayoutComponent,
+        resolve    : {
+          initialData: InitialDataResolver,
+        },
+        children   : [
+
+          // Dashboards
+          { path: 'dashboard', children: [
+
+          // Apps
+          { path: 'apps', children: [
+
+          ...
+        ]
+      }
+    </textarea>
+
+    <p>
+      As you can see, there is an empty-path route at the beginning of the
+      <strong>Admin</strong> routes which essentially loads the
+      <code>LayoutComponent</code> into the
+      <code>&lt;router-outlet&gt;</code> of the <em>AppComponent</em>.
+    </p>
+    <p>
+      After that, <code>LayoutComponent</code> loads the selected layout. All
+      layouts includes a <code>&lt;router-outlet&gt;</code> in their templates
+      which then loads the actual component that's being requested depending on
+      the active route.
+    </p>
+    <p>
+      More detailed information about layouts can be found in the
+      <a [routerLink]="['../theme-layouts']">Theme layouts</a>
+      section of this documentation.
+    </p>
+
+    <h2>Layout</h2>
+    <p>
+      This is the selected layout that's being loaded by the
+      <code>LayoutComponent</code>. All layouts located at the
+      <code>libs/client/web-app/shell/ui/layout</code> directory and these
+      layouts include common components like <strong>Navigation</strong>,
+      <strong>Header</strong> and <strong>Footer</strong>.
+    </p>
+  </div>
+</div>

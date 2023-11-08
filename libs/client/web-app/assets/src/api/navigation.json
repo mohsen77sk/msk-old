@@ -92,6 +92,26 @@
             "link": "/docs/services/splash-screen"
           }
         ]
+      },
+      {
+        "id": "docs.guides",
+        "title": "Guides",
+        "type": "collapsable",
+        "icon": "heroicons_outline:book-open",
+        "children": [
+          {
+            "id": "docs.guides.directory-structure",
+            "title": "Directory Structure",
+            "type": "basic",
+            "link": "/docs/guides/directory-structure"
+          },
+          {
+            "id": "docs.guides.component-structure",
+            "title": "Component Structure",
+            "type": "basic",
+            "link": "/docs/guides/component-structure"
+          }
+        ]
       }
     ]
   }

@@ -1,0 +1,123 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Guides </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Directory Structure </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Directory Structure
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <msk-alert [appearance]="'border'" [type]="'info'">
+      This project directory structure might look overwhelming and intimidating
+      at first, but following this page and giving a bit of time to understand
+      it before jumping right into code will help immensely.
+    </msk-alert>
+
+    <p>
+      This project was built around the idea of multi-purpose and multi-layout.
+      You can think of this project as a <em>Starter kit</em> and a
+      <em>guide</em> rather than just a simple template. The purpose of this
+      project is not only to provide pre-made styles for visual elements but is
+      also to be a guide to follow while building an app.
+    </p>
+    <p>
+      It's more of an answer to questions like
+      <strong>Where should I put this file?</strong> or
+      <strong>Which file should I put this piece of code into?</strong>
+      rather than just a compilation of example pages and ready to use styles.
+    </p>
+    <p>
+      Here's a simplified version of the entire directory structure of this
+      project:
+    </p>
+
+    <div class="bg-card mt-6 rounded p-6 pl-3 shadow">
+      <mat-tree
+        [dataSource]="generalTree.dataSource"
+        [treeControl]="generalTree.treeControl"
+      >
+        <!-- This is the tree node template for leaf nodes -->
+        <mat-tree-node
+          *matTreeNodeDef="let node"
+          matTreeNodePaddingIndent="32"
+          matTreeNodePadding
+        >
+          <div class="flex items-center font-mono">
+            <div
+              class="text-hint mr-2 flex h-8 w-8 items-center justify-center"
+              *ngIf="!node.last"
+            >
+              ├─
+            </div>
+            <div
+              class="text-hint mr-2 flex h-8 w-8 items-center justify-center"
+              *ngIf="node.last"
+            >
+              └─
+            </div>
+            <span>
+              {{ node.name }}
+            </span>
+          </div>
+        </mat-tree-node>
+        <!-- This is the tree node template for expandable nodes -->
+        <mat-tree-node
+          *matTreeNodeDef="let node; when: hasChild"
+          matTreeNodePaddingIndent="32"
+          matTreeNodePadding
+        >
+          <button
+            mat-icon-button
+            matTreeNodeToggle
+            [attr.aria-label]="'toggle ' + node.name"
+          >
+            <mat-icon
+              class="icon-size-4"
+              [svgIcon]="'heroicons_solid:minus'"
+              *ngIf="generalTree.treeControl.isExpanded(node)"
+            >
+            </mat-icon>
+            <mat-icon
+              class="icon-size-4"
+              [svgIcon]="'heroicons_solid:plus'"
+              *ngIf="!generalTree.treeControl.isExpanded(node)"
+            >
+            </mat-icon>
+          </button>
+          <span class="font-mono">
+            {{ node.name }}
+          </span>
+        </mat-tree-node>
+      </mat-tree>
+    </div>
+  </div>
+</div>
