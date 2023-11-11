@@ -142,11 +142,23 @@
       "@msk/client/web-app/docs/guides/component-structure": [
         "libs/client/web-app/docs/guides/component-structure/src/index.ts"
       ],
+      "@msk/client/web-app/docs/guides/component-theming": [
+        "libs/client/web-app/docs/guides/component-theming/src/index.ts"
+      ],
       "@msk/client/web-app/docs/guides/directory-structure": [
         "libs/client/web-app/docs/guides/directory-structure/src/index.ts"
       ],
+      "@msk/client/web-app/docs/guides/page-layouts": [
+        "libs/client/web-app/docs/guides/page-layouts/src/index.ts"
+      ],
+      "@msk/client/web-app/docs/guides/tailwindCSS": [
+        "libs/client/web-app/docs/guides/tailwindCSS/src/index.ts"
+      ],
       "@msk/client/web-app/docs/guides/theme-layouts": [
         "libs/client/web-app/docs/guides/theme-layouts/src/index.ts"
+      ],
+      "@msk/client/web-app/docs/guides/theming": [
+        "libs/client/web-app/docs/guides/theming/src/index.ts"
       ],
       "@msk/client/web-app/docs/services/config": [
         "libs/client/web-app/docs/services/config/src/index.ts"

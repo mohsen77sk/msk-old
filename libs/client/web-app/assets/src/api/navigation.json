@@ -116,6 +116,30 @@
             "title": "Theme Layouts",
             "type": "basic",
             "link": "/docs/guides/theme-layouts"
+          },
+          {
+            "id": "docs.guides.page-layouts",
+            "title": "Page Layouts",
+            "type": "basic",
+            "link": "/docs/guides/page-layouts"
+          },
+          {
+            "id": "docs.guides.tailwind-css",
+            "title": "TailwindCSS",
+            "type": "basic",
+            "link": "/docs/guides/tailwind-css"
+          },
+          {
+            "id": "docs.guides.theming",
+            "title": "Theming",
+            "type": "basic",
+            "link": "/docs/guides/theming"
+          },
+          {
+            "id": "docs.guides.component-theming",
+            "title": "Component Theming",
+            "type": "basic",
+            "link": "/docs/guides/component-theming"
           }
         ]
       }

@@ -207,6 +207,34 @@ export const mskShellRoutes: Route[] = [
             (m) => m.DocsThemeLayoutsModule,
           ),
       },
+      {
+        path: 'guides/page-layouts',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/page-layouts').then(
+            (m) => m.DocsPageLayoutsModule,
+          ),
+      },
+      {
+        path: 'guides/tailwind-css',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/tailwindCSS').then(
+            (m) => m.DocsTailwindCSSModule,
+          ),
+      },
+      {
+        path: 'guides/theming',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/theming').then(
+            (m) => m.DocsThemingModule,
+          ),
+      },
+      {
+        path: 'guides/component-theming',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/guides/component-theming').then(
+            (m) => m.DocsComponentThemingModule,
+          ),
+      },
     ],
   },
 

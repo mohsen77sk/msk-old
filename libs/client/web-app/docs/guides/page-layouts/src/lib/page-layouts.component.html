@@ -1,0 +1,50 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Guides </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Page Layouts </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Page Layouts
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      Like Theme layouts, This project also provides examples for variety of
+      different page layouts. These layouts are designed for the content of the
+      app and they provide consistency.
+    </p>
+    <p>
+      Unlike Theme layouts, <em>Page layouts</em> are
+      <strong>NOT</strong> components, they are basically pre-made pages for you
+      to reference and use it as the shell for your pages.
+    </p>
+  </div>
+</div>
