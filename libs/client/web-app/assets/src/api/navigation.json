@@ -62,6 +62,20 @@
         "link": "/docs/typography"
       },
       {
+        "id": "docs.components",
+        "title": "Components",
+        "type": "collapsable",
+        "icon": "heroicons_outline:square-3-stack-3d",
+        "children": [
+          {
+            "id": "docs.services.components",
+            "title": "Fullscreen",
+            "type": "basic",
+            "link": "/docs/components/fullscreen"
+          }
+        ]
+      },
+      {
         "id": "docs.services",
         "title": "Services",
         "type": "collapsable",

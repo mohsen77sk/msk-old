@@ -159,6 +159,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'components/fullscreen',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/components/fullscreen').then(
+            (m) => m.DocsFullscreenModule,
+          ),
+      },
+      {
         path: 'services/config',
         loadChildren: () =>
           import('@msk/client/web-app/docs/services/config').then(
