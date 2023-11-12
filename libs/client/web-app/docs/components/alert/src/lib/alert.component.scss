@@ -1,0 +1,33 @@
+msk-docs-alert {
+  msk-alert {
+    margin: 16px 0;
+  }
+
+  .example-viewer {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+    overflow: hidden;
+    @apply bg-card rounded-2xl shadow;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      min-height: 56px;
+      max-height: 56px;
+      padding: 0 40px;
+      border-bottom-width: 1px;
+
+      h6 {
+        font-weight: 700;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -136,6 +136,9 @@
       "@msk/client/web-app/docs/colors": [
         "libs/client/web-app/docs/colors/src/index.ts"
       ],
+      "@msk/client/web-app/docs/components/alert": [
+        "libs/client/web-app/docs/components/alert/src/index.ts"
+      ],
       "@msk/client/web-app/docs/components/fullscreen": [
         "libs/client/web-app/docs/components/fullscreen/src/index.ts"
       ],

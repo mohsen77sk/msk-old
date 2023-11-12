@@ -159,6 +159,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'components/alert',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/components/alert').then(
+            (m) => m.DocsAlertModule,
+          ),
+      },
+      {
         path: 'components/fullscreen',
         loadChildren: () =>
           import('@msk/client/web-app/docs/components/fullscreen').then(

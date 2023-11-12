@@ -68,6 +68,12 @@
         "icon": "heroicons_outline:square-3-stack-3d",
         "children": [
           {
+            "id": "docs.components.alert",
+            "title": "Alert",
+            "type": "basic",
+            "link": "/docs/components/alert"
+          },
+          {
             "id": "docs.components.fullscreen",
             "title": "Fullscreen",
             "type": "basic",
