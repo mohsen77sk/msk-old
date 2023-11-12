@@ -166,6 +166,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'components/highlight',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/components/highlight').then(
+            (m) => m.DocsHighlightModule,
+          ),
+      },
+      {
         path: 'services/config',
         loadChildren: () =>
           import('@msk/client/web-app/docs/services/config').then(
