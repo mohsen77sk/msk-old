@@ -1,0 +1,335 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Components </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Drawer </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Drawer
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      <strong>msk-drawer</strong> is a simple drawer component that can be
+      programmed in various ways. The main difference between Angular Material's
+      <strong>mat-drawer</strong> component is that the
+      <strong>msk-drawer</strong> can be placed anywhere on the DOM and it
+      doesn't have to wrap the content like <strong>mat-drawer</strong>.
+    </p>
+    <msk-alert [appearance]="'border'" [type]="'info'">
+      Since msk-drawer works with <em>absolute</em> positioning by default, the
+      parent of the drawer must have <code>position: relative</code> and
+      <code>overflow-x: hidden</code> properties otherwise the drawer won't be
+      able to work correctly.
+    </msk-alert>
+    <p><strong>Exported as: </strong><code>mskDrawer</code></p>
+
+    <h2>Module</h2>
+    <textarea msk-highlight lang="typescript">
+      import { MskDrawerModule } from '@msk/client/shared/ui/drawer';
+    </textarea>
+
+    <h2>Usage</h2>
+    <p>Here's the basic usage of the <code>msk-drawer</code>:</p>
+    <textarea msk-highlight lang="html">
+      <msk-drawer
+        [fixed]="true"
+        [mode]="isScreenSmall ? 'over' : 'side'"
+        [name]="'rightDrawer'"
+        [opened]="!isScreenSmall"
+        [position]="'start'"
+        [transparentOverlay]="false">
+      </msk-drawer>
+    </textarea>
+
+    <h2>Properties</h2>
+    <div class="bg-card rounded px-6 py-3 shadow">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Input()</div>
+              <div>fixed: boolean</div>
+            </td>
+            <td>
+              Whether the position of the drawer is <em>fixed</em> or
+              <em>absolute</em>.
+            </td>
+            <td>
+              <code class="whitespace-nowrap">false</code>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Input()</div>
+              <div>mode: MskDrawerMode</div>
+            </td>
+            <td>
+              <strong>over</strong> mode can be used to place the drawer on top
+              of the content and <strong>side</strong> mode can be used to push
+              the content and place the drawer next to it.
+            </td>
+            <td>
+              <code class="whitespace-nowrap">side</code>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div class="mb-2">
+                <code class="text-xs font-bold">REQUIRED</code>
+              </div>
+              <div>@Input()</div>
+              <div>name: string</div>
+            </td>
+            <td>
+              Unique name of the drawer. Required for drawer to work correctly.
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Input()</div>
+              <div>opened: boolean</div>
+            </td>
+            <td>
+              Whether the drawer is opened. Only works with
+              <strong>over</strong> mode.
+            </td>
+            <td>
+              <code class="whitespace-nowrap">false</code>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Input()</div>
+              <div>position: MskDrawerPosition</div>
+            </td>
+            <td>Position of the drawer.</td>
+            <td>
+              <code class="whitespace-nowrap">start</code>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Input()</div>
+              <div>transparentOverlay: boolean</div>
+            </td>
+            <td>
+              Whether the overlay of the drawer is transparent. Only works with
+              <strong>over</strong> mode.
+            </td>
+            <td>
+              <code class="whitespace-nowrap">false</code>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Output()</div>
+              <div>modeChanged: MskNavigationMode</div>
+            </td>
+            <td>An event emitted after the mode of the navigation changed.</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Output()</div>
+              <div>openedChanged: boolean</div>
+            </td>
+            <td>
+              An event emitted after the opened status of the drawer changed.
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>@Output()</div>
+              <div>positionChanged: MskNavigationPosition</div>
+            </td>
+            <td>An event emitted after the position of the drawer changed.</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Type aliases</h2>
+    <textarea msk-highlight lang="typescript">
+      export type MskDrawerMode =
+        | 'over'
+        | 'side';
+    </textarea>
+    <textarea msk-highlight lang="typescript">
+      export type MskDrawerPosition =
+        | 'start'
+        | 'end';
+    </textarea>
+
+    <h2>Service</h2>
+    <p>
+      The <code>MskDrawerService</code> can be used to remotely accessing to
+      drawers using their <strong>name</strong> properties to control them:
+    </p>
+    <div class="example-viewer">
+      <div class="title">
+        <h6>Example</h6>
+      </div>
+
+      <mat-tab-group [animationDuration]="'0ms'">
+        <mat-tab label="Preview">
+          <ng-template matTabContent>
+            <button
+              mat-flat-button
+              [color]="'primary'"
+              (click)="toggleDrawerMode()"
+            >
+              Toggle drawer mode
+            </button>
+
+            <button
+              class="ml-4"
+              mat-flat-button
+              [color]="'primary'"
+              (click)="toggleDrawerOpen()"
+            >
+              Toggle drawer open
+            </button>
+
+            <div class="min-h-80 relative mt-8 flex overflow-hidden border">
+              <msk-drawer
+                [name]="'startDrawer'"
+                [opened]="drawerOpened"
+                [mode]="drawerMode"
+                (openedChanged)="drawerOpenedChanged($event)"
+              >
+                <div class="p-4">
+                  Start drawer
+                  <div>Current mode: {{ drawerMode }}</div>
+                </div>
+              </msk-drawer>
+
+              <div class="flex-auto bg-gray-100 p-4">Some content</div>
+            </div>
+          </ng-template>
+        </mat-tab>
+
+        <mat-tab label="HTML">
+          <textarea msk-highlight [lang]="'html'">
+            <button
+              mat-flat-button
+              [color]="'primary'"
+              (click)="toggleDrawerMode();">
+                Toggle drawer mode
+            </button>
+
+            <button
+              class="ml-4"
+              mat-flat-button
+              [color]="'primary'"
+              (click)="toggleDrawerOpen();">
+                Toggle drawer open
+            </button>
+
+            <div class="relative flex overflow-hidden border mt-8 min-h-80">
+              <msk-drawer
+                [name]="'startDrawer'"
+                [opened]="drawerOpened"
+                [mode]="drawerMode">
+                <div class="p-4">
+                  start drawer
+                </div>
+              </msk-drawer>
+
+              <div class="flex-auto bg-gray-100 p-4">
+                Some content
+              </div>
+
+              <!-- End drawer must be positioned after the content
+
+                <msk-drawer
+                  [name]="'endDrawer'"
+                  [opened]="true"
+                  [position]="'end'"
+                  [mode]="'side'">
+                  <div class="p-4">
+                    End drawer
+                  </div>
+                </msk-drawer>
+
+              -->
+            </div>
+          </textarea>
+        </mat-tab>
+
+        <mat-tab label="Typescript">
+          <textarea msk-highlight [lang]="'typescript'">
+
+            // Set the defaults
+            this.drawerMode = 'side';
+            this.drawerOpened = true;
+
+            /**
+              * Toggle the drawer mode
+              */
+            toggleDrawerMode(): void
+            {
+              this.drawerMode = this.drawerMode === 'side' ? 'over' : 'side';
+            }
+
+            /**
+              * Toggle the drawer open
+              */
+            toggleDrawerOpen(): void
+            {
+              this.drawerOpened = !this.drawerOpened;
+            }
+
+            /**
+              * Drawer opened changed
+              *
+              * @param opened
+              */
+            drawerOpenedChanged(opened: boolean): void
+            {
+              this.drawerOpened = opened;
+            }
+
+          </textarea>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

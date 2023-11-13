@@ -142,6 +142,9 @@
       "@msk/client/web-app/docs/components/card": [
         "libs/client/web-app/docs/components/card/src/index.ts"
       ],
+      "@msk/client/web-app/docs/components/drawer": [
+        "libs/client/web-app/docs/components/drawer/src/index.ts"
+      ],
       "@msk/client/web-app/docs/components/fullscreen": [
         "libs/client/web-app/docs/components/fullscreen/src/index.ts"
       ],
