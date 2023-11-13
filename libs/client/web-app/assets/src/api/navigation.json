@@ -74,6 +74,12 @@
             "link": "/docs/components/alert"
           },
           {
+            "id": "docs.components.card",
+            "title": "Card",
+            "type": "basic",
+            "link": "/docs/components/card"
+          },
+          {
             "id": "docs.components.fullscreen",
             "title": "Fullscreen",
             "type": "basic",

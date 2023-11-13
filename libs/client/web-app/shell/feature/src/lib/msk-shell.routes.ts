@@ -166,6 +166,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'components/card',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/components/card').then(
+            (m) => m.DocsCardModule,
+          ),
+      },
+      {
         path: 'components/fullscreen',
         loadChildren: () =>
           import('@msk/client/web-app/docs/components/fullscreen').then(
