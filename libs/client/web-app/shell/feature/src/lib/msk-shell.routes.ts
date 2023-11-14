@@ -180,6 +180,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'components/loading-bar',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/components/loading-bar').then(
+            (m) => m.DocsLoadingBarModule,
+          ),
+      },
+      {
         path: 'components/fullscreen',
         loadChildren: () =>
           import('@msk/client/web-app/docs/components/fullscreen').then(
