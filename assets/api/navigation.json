@@ -86,6 +86,12 @@
             "link": "/docs/components/drawer"
           },
           {
+            "id": "docs.components.loading-bar",
+            "title": "Loading Bar",
+            "type": "basic",
+            "link": "/docs/components/loading-bar"
+          },
+          {
             "id": "docs.components.fullscreen",
             "title": "Fullscreen",
             "type": "basic",

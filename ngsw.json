@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1699893011510,
+  "timestamp": 1699945127106,
   "index": "/msk/index.html",
   "assetGroups": [
     {
@@ -39,7 +39,7 @@
         "/msk/5542.7827ad71a8d5d33e.js",
         "/msk/5546.3218dc95364a05a3.js",
         "/msk/5808.de13bbb623535aba.js",
-        "/msk/5916.dd8ff9a5b0de3235.js",
+        "/msk/5916.4f2aff03c1a25a7a.js",
         "/msk/5986.496664007e38d921.js",
         "/msk/619.3bb7e504c31cc0a6.js",
         "/msk/6217.7c6a7516c4784d49.js",
@@ -65,6 +65,7 @@
         "/msk/8525.11a7afdde1e9cffd.js",
         "/msk/8609.c0e80a83edfc2b39.js",
         "/msk/885.f17c6e844cd80283.js",
+        "/msk/9001.0e989b01dff68f54.js",
         "/msk/9170.e0e503ea95ec534f.js",
         "/msk/9172.3f0fcdb5152ea43e.js",
         "/msk/931.87f722de91f5f0e2.js",
@@ -72,11 +73,11 @@
         "/msk/9841.0062d56fea599402.js",
         "/msk/favicon.ico",
         "/msk/index.html",
-        "/msk/main.6ceb77a564d60087.js",
+        "/msk/main.2a30394187b65849.js",
         "/msk/manifest.webmanifest",
         "/msk/polyfills.c1c6e7db911dffc3.js",
-        "/msk/runtime.880b570fb0caa4cc.js",
-        "/msk/styles.047d69186865a369.css"
+        "/msk/runtime.c4243b30a05c6282.js",
+        "/msk/styles.a01bdab0fda77de6.css"
       ],
       "patterns": []
     },
@@ -169,7 +170,7 @@
     "/msk/5542.7827ad71a8d5d33e.js": "555a572e43d416bca8443adca8ff84045d519063",
     "/msk/5546.3218dc95364a05a3.js": "07233212abb8c538b703e756fb3458ce422735a9",
     "/msk/5808.de13bbb623535aba.js": "6b25aea033225284f66a55c540e20eb93debdb1e",
-    "/msk/5916.dd8ff9a5b0de3235.js": "91c4a923c83bfa49ef5d3ae2df559e57b7c9f219",
+    "/msk/5916.4f2aff03c1a25a7a.js": "bfc87ae5383025940a195f311ce16655996fb629",
     "/msk/5986.496664007e38d921.js": "91d7c9684cc247562199d43ff2b7a31f6b551cb3",
     "/msk/619.3bb7e504c31cc0a6.js": "164f8ac2f800cb41cb3e0ada4a3977d523227a98",
     "/msk/6217.7c6a7516c4784d49.js": "f2b72d265b1b8bfe4d4eebfc84a53887bc1725d9",
@@ -195,13 +196,14 @@
     "/msk/8525.11a7afdde1e9cffd.js": "4784325b62a1afaaab97644bbebb79c40898e5ab",
     "/msk/8609.c0e80a83edfc2b39.js": "889d04b18733ebf07e74803f83ca4be8b07836d9",
     "/msk/885.f17c6e844cd80283.js": "700fa100062c4869c07594d65a6d54b767e7465c",
+    "/msk/9001.0e989b01dff68f54.js": "9cc805ddb9533c536874f2431d9157f1b9ba7bc1",
     "/msk/9170.e0e503ea95ec534f.js": "7e76633140d5103d198da85d4ad55a0417eee5cf",
     "/msk/9172.3f0fcdb5152ea43e.js": "da570f6fe5f31b76164e727bb2bacecd348bddcc",
     "/msk/931.87f722de91f5f0e2.js": "e95116075b92d5d93a8b0cb2da8ca57ab4e510b2",
     "/msk/9586.100d8c93967c730f.js": "fa7dbb2e37a772b283337257b1d46e8b23fd654f",
     "/msk/9841.0062d56fea599402.js": "74000eea77039fa906badebcb124e83646eb9feb",
     "/msk/assets/api/messages.json": "292a07f004c85cc5e53eb63b8c36ad9e2caf2dfb",
-    "/msk/assets/api/navigation.json": "d9abf10986deef820ec91a7b3e29f8a42e0f01d3",
+    "/msk/assets/api/navigation.json": "59810aed80824f80f63e7fa3a3a7f24827455566",
     "/msk/assets/api/notifications.json": "95bd2586a9771ed5b39efcb46e1e61c9e6a9019d",
     "/msk/assets/api/user.json": "4bfa8b2ff89420008654f3da51a3f0610acc3a28",
     "/msk/assets/fonts/IRANSansX/FaNumralHelp.html": "2f334d264bee9260e44ae7a815d5f3ba332fbe7f",
@@ -248,12 +250,12 @@
     "/msk/assets/images/logo/logo.svg": "255a3fb20e25a6f42cde1b9c08be22d33f53cad0",
     "/msk/assets/styles/splash-screen.css": "ed450f12892ec93b8d6c1631f7effe303baefbf9",
     "/msk/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/msk/index.html": "280edeb9a3442af48ee0147a5e4943e07340e072",
-    "/msk/main.6ceb77a564d60087.js": "3e200c39d0f069463830dfc3a0709b2f22567113",
+    "/msk/index.html": "a12d0eff9354bf450f1d288e7ad9e966ed4744c2",
+    "/msk/main.2a30394187b65849.js": "8deb239c5a85e027e5d934ea1b03f7b5c926f020",
     "/msk/manifest.webmanifest": "30ea026f54107b67946ae1a0135764f1af26d2dc",
     "/msk/polyfills.c1c6e7db911dffc3.js": "989ba8a815fc9bbcc5900400694e961c53f41d43",
-    "/msk/runtime.880b570fb0caa4cc.js": "179e2cfe113c285deab1d139f6a22d65999c5e7d",
-    "/msk/styles.047d69186865a369.css": "40823bfef1c6318c6b2b3c56eac0767b50d5fb6f"
+    "/msk/runtime.c4243b30a05c6282.js": "97460543df8cc6ef26eae04e5a934be00e4ca304",
+    "/msk/styles.a01bdab0fda77de6.css": "46f2b76b41fe9e3dc09e3c4d3c21c5fb04be2e41"
   },
   "navigationUrls": [
     {
