@@ -201,6 +201,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'components/navigation',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/components/navigation').then(
+            (m) => m.DocsNavigationModule,
+          ),
+      },
+      {
         path: 'services/config',
         loadChildren: () =>
           import('@msk/client/web-app/docs/services/config').then(

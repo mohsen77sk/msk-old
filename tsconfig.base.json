@@ -154,6 +154,9 @@
       "@msk/client/web-app/docs/components/loading-bar": [
         "libs/client/web-app/docs/components/loading-bar/src/index.ts"
       ],
+      "@msk/client/web-app/docs/components/navigation": [
+        "libs/client/web-app/docs/components/navigation/src/index.ts"
+      ],
       "@msk/client/web-app/docs/forms": [
         "libs/client/web-app/docs/forms/src/index.ts"
       ],
