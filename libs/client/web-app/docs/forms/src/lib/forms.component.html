@@ -144,13 +144,21 @@
       <form
         class="bg-card mt-8 flex flex-col overflow-hidden rounded-2xl p-8 pb-4 shadow"
       >
-        <mat-form-field class="flex-auto" subscriptSizing="fixed">
+        <mat-form-field
+          [ngClass]="formFieldHelpers"
+          class="flex-auto"
+          subscriptSizing="fixed"
+        >
           <mat-label>Fixed subscript sizing</mat-label>
           <input matInput [formControl]="fixedSubscriptInput" required />
           <mat-error>Required field!</mat-error>
         </mat-form-field>
 
-        <mat-form-field class="flex-auto" subscriptSizing="fixed">
+        <mat-form-field
+          [ngClass]="formFieldHelpers"
+          class="flex-auto"
+          subscriptSizing="fixed"
+        >
           <mat-label>Fixed subscript sizing with mat-hint</mat-label>
           <input
             matInput
@@ -165,13 +173,21 @@
       <form
         class="bg-card mt-8 flex flex-col overflow-hidden rounded-2xl p-8 pb-4 shadow"
       >
-        <mat-form-field class="flex-auto" subscriptSizing="dynamic">
+        <mat-form-field
+          [ngClass]="formFieldHelpers"
+          class="flex-auto"
+          subscriptSizing="dynamic"
+        >
           <mat-label>Dynamic subscript sizing</mat-label>
           <input matInput [formControl]="dynamicSubscriptInput" required />
           <mat-error>Required field!</mat-error>
         </mat-form-field>
 
-        <mat-form-field class="flex-auto" subscriptSizing="dynamic">
+        <mat-form-field
+          [ngClass]="formFieldHelpers"
+          class="flex-auto"
+          subscriptSizing="dynamic"
+        >
           <mat-label>Dynamic subscript sizing with mat-hint</mat-label>
           <input
             matInput
@@ -180,6 +196,52 @@
           />
           <mat-hint>Hint text for the field</mat-hint>
           <mat-error>Required field!</mat-error>
+        </mat-form-field>
+      </form>
+
+      <div class="prose prose-sm max-w-3xl">
+        <h2 class="mt-12">Select with search</h2>
+      </div>
+
+      <form
+        class="bg-card mt-8 flex flex-col overflow-hidden rounded-2xl p-8 pb-4 shadow"
+      >
+        <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
+          <mat-label>Select with search</mat-label>
+          <mat-select
+            mskSelectSearch
+            [searchList]="selectList"
+            [searchItems]="'value'"
+            [searchPlaceholder]="'search...'"
+            #searchSelect="mskSelectSearch"
+            value=""
+          >
+            <mat-option
+              *ngFor="let item of searchSelect.filteredList | async"
+              [value]="item.key"
+            >
+              {{ item.value }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto">
+          <mat-label>Select multiple with search</mat-label>
+          <mat-select
+            mskSelectSearch
+            [searchList]="selectList"
+            [searchItems]="'value'"
+            [searchPlaceholder]="'search...'"
+            #searchMultipleSelect="mskSelectSearch"
+            multiple
+            value=""
+          >
+            <mat-option
+              *ngFor="let item of searchMultipleSelect.filteredList | async"
+              [value]="item.key"
+            >
+              {{ item.value }}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </form>
 

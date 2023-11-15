@@ -19,6 +19,16 @@ export class FormsComponent {
   fixedSubscriptInputWithHint = new FormControl('', [Validators.required]);
   dynamicSubscriptInputWithHint = new FormControl('', [Validators.required]);
 
+  selectList = [
+    { key: '1', value: 'first item' },
+    { key: '2', value: 'second item' },
+    { key: '3', value: 'third item' },
+    { key: '4', value: 'fourth item' },
+    { key: '5', value: 'fifth item' },
+    { key: '6', value: 'sixth item' },
+    { key: '7', value: 'seventh item' },
+  ];
+
   // -----------------------------------------------------------------------------------------------------
   // @ Public methods
   // -----------------------------------------------------------------------------------------------------

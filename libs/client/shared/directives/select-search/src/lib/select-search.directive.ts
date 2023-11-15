@@ -18,10 +18,6 @@ export class MskSelectSearchDirective {
     this._list = val;
     // Set filter list
     this.filteredList.next(this._list ? this._list.slice() : []);
-    // If showing search, Disable OptionCentering in mat-select
-    if (this.showSearch) {
-      this._matSelect.disableOptionCentering = true;
-    }
   }
   @Input() searchItems: string | string[] | undefined;
   @Input() searchPlaceholder = 'search ...';
@@ -75,7 +71,7 @@ export class MskSelectSearchDirective {
     // Create search input
     const input = this._renderer.createElement('input');
     this._renderer.setAttribute(input, 'placeholder', this.searchPlaceholder);
-    this._renderer.addClass(input, 'mat-input-element');
+    this._renderer.addClass(input, 'mdc-text-field__input');
     // Get the search keyword and filter the list
     this._renderer.listen(input, 'input', () => {
       const search = input.value ? input.value.toLowerCase() : '';
@@ -107,7 +103,8 @@ export class MskSelectSearchDirective {
     // Crate option
     const matOption = this._renderer.createElement('mat-option');
     this._renderer.setAttribute(matOption, 'role', 'option');
-    this._renderer.addClass(matOption, 'mat-option');
+    this._renderer.addClass(matOption, 'mat-mdc-option');
+    this._renderer.addClass(matOption, 'mdc-list-item');
     this._renderer.addClass(matOption, 'z-999');
     this._renderer.addClass(matOption, 'top-0');
     this._renderer.addClass(matOption, 'sticky');
@@ -118,10 +115,11 @@ export class MskSelectSearchDirective {
     this._renderer.appendChild(matOption, input);
 
     // Insert search option to panel
-    const panel = document.querySelector('.mat-select-panel');
+    const panel = document.querySelector('.mat-mdc-select-panel');
     if (!panel) {
       throw new Error('Cannot find mat select panel');
     }
+    this._renderer.setStyle(panel, 'padding-top', '0');
     this._renderer.insertBefore(panel, matOption, panel.firstChild);
 
     // Focus input
@@ -153,14 +151,10 @@ export class MskSelectSearchDirective {
     // if <mat-select [multiple]="true">
     // store previously selected values and restore them when they are deselected
     // because the option is not available while we are currently filtering
-    this._previousSelectedValues = this._matSelect.ngControl.value;
+    this._previousSelectedValues = this._matSelect.value;
 
-    this._matSelect.ngControl.valueChanges?.subscribe((selectedValues) => {
+    this._matSelect.valueChange?.subscribe((selectedValues) => {
       let restoreSelectedValues = false;
-      const updatedSelectedValues =
-        selectedValues && Array.isArray(selectedValues)
-          ? [...selectedValues]
-          : [];
 
       if (this._matSelect.multiple) {
         if (
@@ -176,25 +170,25 @@ export class MskSelectSearchDirective {
 
           this._previousSelectedValues.forEach((previousValue) => {
             if (
-              !updatedSelectedValues.some((v) =>
+              !selectedValues.some((v: unknown) =>
                 this._matSelect.compareWith(v, previousValue),
               ) &&
-              !optionValues.some((v) =>
+              !optionValues.some((v: unknown) =>
                 this._matSelect.compareWith(v, previousValue),
               )
             ) {
               // if a value that was selected before is deselected and not found in the options, it was deselected
               // due to the filtering, so we restore it.
-              updatedSelectedValues.push(previousValue);
+              selectedValues.push(previousValue);
               restoreSelectedValues = true;
             }
           });
         }
       }
-      this._previousSelectedValues = updatedSelectedValues;
+      this._previousSelectedValues = selectedValues;
 
       if (restoreSelectedValues) {
-        this._matSelect._onChange(updatedSelectedValues);
+        this._matSelect._onChange(selectedValues);
       }
     });
   }

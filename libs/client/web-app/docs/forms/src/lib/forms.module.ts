@@ -11,6 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MskSelectSearchModule } from '@msk/client/shared/directives/select-search';
 
 import { FormsComponent } from './forms.component';
 
@@ -35,6 +36,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatDatepickerModule,
     MatButtonToggleModule,
+    MskSelectSearchModule,
   ],
   declarations: [FormsComponent],
 })
