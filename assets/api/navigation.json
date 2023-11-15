@@ -102,6 +102,12 @@
             "title": "Highlight",
             "type": "basic",
             "link": "/docs/components/highlight"
+          },
+          {
+            "id": "docs.components.navigation",
+            "title": "Navigation",
+            "type": "basic",
+            "link": "/docs/components/navigation"
           }
         ]
       },
