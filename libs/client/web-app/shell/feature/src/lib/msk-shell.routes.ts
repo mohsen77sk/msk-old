@@ -208,6 +208,20 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'directives/scrollbar',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/directives/scrollbar').then(
+            (m) => m.DocsScrollbarModule,
+          ),
+      },
+      {
+        path: 'directives/scroll-reset',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/directives/scroll-reset').then(
+            (m) => m.DocsScrollResetModule,
+          ),
+      },
+      {
         path: 'services/config',
         loadChildren: () =>
           import('@msk/client/web-app/docs/services/config').then(

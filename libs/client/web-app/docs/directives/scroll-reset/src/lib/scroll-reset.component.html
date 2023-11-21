@@ -1,0 +1,72 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Guides </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> ScrollReset </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          ScrollReset
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      <strong>mskScrollReset</strong> is a helper directive to reset the given
+      element's scroll position to the top on route changes.
+    </p>
+    <p>
+      This directive is especially useful in situations like having a
+      <code>router-outlet</code> inside a scrollable area such as
+      <code>mat-drawer-content</code>, <code>mat-sidenav-content</code> or a
+      custom scrollable element.
+    </p>
+    <p><strong>Exported as: </strong><code>mskScrollReset</code></p>
+
+    <h2>Module</h2>
+    <textarea msk-highlight lang="typescript">
+      import { MskScrollResetModule } from '@msk/client/shared/directives/scroll-reset';
+    </textarea>
+
+    <h2>Usage</h2>
+    <p>Here are some of the basic usages of the <code>mskScrollReset</code>:</p>
+    <textarea msk-highlight lang="html">
+      <mat-drawer-content mskScrollReset>
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </textarea>
+
+    <textarea class="mt-8" msk-highlight lang="html">
+      <div class="mail">
+        <div class="threads" mskScrollReset>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </textarea>
+  </div>
+</div>

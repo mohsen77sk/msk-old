@@ -112,6 +112,26 @@
         ]
       },
       {
+        "id": "docs.directives",
+        "title": "Directives",
+        "type": "collapsable",
+        "icon": "heroicons_outline:square-3-stack-3d",
+        "children": [
+          {
+            "id": "docs.directives.scrollbar",
+            "title": "Scrollbar",
+            "type": "basic",
+            "link": "/docs/directives/scrollbar"
+          },
+          {
+            "id": "docs.directives.scroll-reset",
+            "title": "ScrollReset",
+            "type": "basic",
+            "link": "/docs/directives/scroll-reset"
+          }
+        ]
+      },
+      {
         "id": "docs.services",
         "title": "Services",
         "type": "collapsable",

@@ -157,6 +157,12 @@
       "@msk/client/web-app/docs/components/navigation": [
         "libs/client/web-app/docs/components/navigation/src/index.ts"
       ],
+      "@msk/client/web-app/docs/directives/scroll-reset": [
+        "libs/client/web-app/docs/directives/scroll-reset/src/index.ts"
+      ],
+      "@msk/client/web-app/docs/directives/scrollbar": [
+        "libs/client/web-app/docs/directives/scrollbar/src/index.ts"
+      ],
       "@msk/client/web-app/docs/forms": [
         "libs/client/web-app/docs/forms/src/index.ts"
       ],
