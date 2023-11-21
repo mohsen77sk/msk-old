@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1700037787375,
+  "timestamp": 1700561361067,
   "index": "/msk/index.html",
   "assetGroups": [
     {
@@ -23,6 +23,7 @@
         "/msk/2381.5126a0add963e997.js",
         "/msk/2760.f76f901287d90e4a.js",
         "/msk/2942.3eab2921d2334763.js",
+        "/msk/3085.e235cdb1fa8b59d9.js",
         "/msk/3326.e274b9d6cb15dd11.js",
         "/msk/3328.77e7cbf96bdc12c2.js",
         "/msk/333.d8e9ab9aa1c0cdaa.js",
@@ -44,6 +45,7 @@
         "/msk/619.3bb7e504c31cc0a6.js",
         "/msk/6217.7c6a7516c4784d49.js",
         "/msk/6223.ab77fbf5c189aecc.js",
+        "/msk/6257.5046dedd37cf1ca3.js",
         "/msk/6279.e8f244a349d41d37.js",
         "/msk/639.022d943454bdde34.js",
         "/msk/6409.460427c16dcc7576.js",
@@ -74,10 +76,10 @@
         "/msk/9841.0062d56fea599402.js",
         "/msk/favicon.ico",
         "/msk/index.html",
-        "/msk/main.b40641891ef1682d.js",
+        "/msk/main.b21f1b213d44404d.js",
         "/msk/manifest.webmanifest",
         "/msk/polyfills.c1c6e7db911dffc3.js",
-        "/msk/runtime.240e2513b80e84c8.js",
+        "/msk/runtime.fac6ca18a700cc01.js",
         "/msk/styles.f44ff0d5e6b928e5.css"
       ],
       "patterns": []
@@ -155,6 +157,7 @@
     "/msk/2381.5126a0add963e997.js": "4b95b550312e796653b93bcf7c984e82f67c8d7a",
     "/msk/2760.f76f901287d90e4a.js": "2962e737db99e7bfbb023bb86458a18a9316d37c",
     "/msk/2942.3eab2921d2334763.js": "0091efb497c6220819d34e5ea24255b99493dd8d",
+    "/msk/3085.e235cdb1fa8b59d9.js": "1b201fcbde7a32e386127688bc3e805e771f8c59",
     "/msk/3326.e274b9d6cb15dd11.js": "8213113d3af42828cf53ba2eba04b246f706d2e8",
     "/msk/3328.77e7cbf96bdc12c2.js": "7496fee4e32e8beb51ed171b2b1c7704214e5980",
     "/msk/333.d8e9ab9aa1c0cdaa.js": "eb1fd2c355f92fff9d70d84565a5463b38303435",
@@ -176,6 +179,7 @@
     "/msk/619.3bb7e504c31cc0a6.js": "164f8ac2f800cb41cb3e0ada4a3977d523227a98",
     "/msk/6217.7c6a7516c4784d49.js": "f2b72d265b1b8bfe4d4eebfc84a53887bc1725d9",
     "/msk/6223.ab77fbf5c189aecc.js": "06807c47cc841bd50574798823ba66bbbef2083b",
+    "/msk/6257.5046dedd37cf1ca3.js": "55b8b9b24ea521637209eec5c2279feb1cfb5f86",
     "/msk/6279.e8f244a349d41d37.js": "5d32775240938460093c41bff3b092887a53180b",
     "/msk/639.022d943454bdde34.js": "a63f2bbd0f4cdd8e9b39a995bddf67980fa323aa",
     "/msk/6409.460427c16dcc7576.js": "08dfb950fa57ae12959b541075ba5b07e269000d",
@@ -205,7 +209,7 @@
     "/msk/9586.100d8c93967c730f.js": "fa7dbb2e37a772b283337257b1d46e8b23fd654f",
     "/msk/9841.0062d56fea599402.js": "74000eea77039fa906badebcb124e83646eb9feb",
     "/msk/assets/api/messages.json": "292a07f004c85cc5e53eb63b8c36ad9e2caf2dfb",
-    "/msk/assets/api/navigation.json": "7f741dab5875a4c8910f27c3e0b236f59050e673",
+    "/msk/assets/api/navigation.json": "ab69c19e360e6b7cb899cbd27d236bd8c94726e6",
     "/msk/assets/api/notifications.json": "95bd2586a9771ed5b39efcb46e1e61c9e6a9019d",
     "/msk/assets/api/user.json": "4bfa8b2ff89420008654f3da51a3f0610acc3a28",
     "/msk/assets/fonts/IRANSansX/FaNumralHelp.html": "2f334d264bee9260e44ae7a815d5f3ba332fbe7f",
@@ -252,11 +256,11 @@
     "/msk/assets/images/logo/logo.svg": "255a3fb20e25a6f42cde1b9c08be22d33f53cad0",
     "/msk/assets/styles/splash-screen.css": "ed450f12892ec93b8d6c1631f7effe303baefbf9",
     "/msk/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/msk/index.html": "026d58acfd3188205dd3e62a8d2977691ae78439",
-    "/msk/main.b40641891ef1682d.js": "f5949d1f4d253c31660aabe72a5e5d757dcdc86b",
+    "/msk/index.html": "a5334cc1111952f21bc4e8a398e23d4ea81059e6",
+    "/msk/main.b21f1b213d44404d.js": "c851a59c591044f42d2998a3126655d4f8fa172b",
     "/msk/manifest.webmanifest": "30ea026f54107b67946ae1a0135764f1af26d2dc",
     "/msk/polyfills.c1c6e7db911dffc3.js": "989ba8a815fc9bbcc5900400694e961c53f41d43",
-    "/msk/runtime.240e2513b80e84c8.js": "c27f71ba9da037785e5706907c280e26c6736b3d",
+    "/msk/runtime.fac6ca18a700cc01.js": "70a2f0a357705f465eb962c1c518cdd78670246e",
     "/msk/styles.f44ff0d5e6b928e5.css": "5a0d0cfc10adc5512e8a1848c212cb801943dd7f"
   },
   "navigationUrls": [
