@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1700982364382,
+  "timestamp": 1700985445039,
   "index": "/msk/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,10 @@
       "urls": [
         "/msk/1300.31404aed93f7d78b.js",
         "/msk/14.f89b10ab68b538a4.js",
-        "/msk/1435.b0735fac08829163.js",
+        "/msk/1435.d1abf401db9c2b28.js",
         "/msk/1602.8aeeb756b0985cc5.js",
         "/msk/1759.8aa75fd0f63de2f2.js",
+        "/msk/181.4bef0f3d6978fee5.js",
         "/msk/2082.50629356828f0455.js",
         "/msk/2103.471395b48506fc52.js",
         "/msk/2215.74145fd88b825243.js",
@@ -77,10 +78,10 @@
         "/msk/9841.0062d56fea599402.js",
         "/msk/favicon.ico",
         "/msk/index.html",
-        "/msk/main.3ae28aedd26fb78c.js",
+        "/msk/main.a87abd6d681b1e67.js",
         "/msk/manifest.webmanifest",
         "/msk/polyfills.c1c6e7db911dffc3.js",
-        "/msk/runtime.f9624d50f3975cce.js",
+        "/msk/runtime.8858f0f22249e5bf.js",
         "/msk/styles.f44ff0d5e6b928e5.css"
       ],
       "patterns": []
@@ -148,9 +149,10 @@
   "hashTable": {
     "/msk/1300.31404aed93f7d78b.js": "67fb4731c75df7e50465623cdb9679daf5c33084",
     "/msk/14.f89b10ab68b538a4.js": "2ba9da0c5359e618bbf6e06aadb682c4ec38c287",
-    "/msk/1435.b0735fac08829163.js": "b7f70f847232833a5a47e56612e4de45f46c3a73",
+    "/msk/1435.d1abf401db9c2b28.js": "61b766bd386f8917133853a1dc3d45d960022379",
     "/msk/1602.8aeeb756b0985cc5.js": "8a538e6021f97f4423536bbb455a2ccb89db7170",
     "/msk/1759.8aa75fd0f63de2f2.js": "8ded4c1c8b119faf2bcd55e87e762983afa68c24",
+    "/msk/181.4bef0f3d6978fee5.js": "063b2366dfc8a74f53f61fe895c9548e437c363c",
     "/msk/2082.50629356828f0455.js": "6780dab04ea7f3a14cc6a7a50b2e20b5a4573b75",
     "/msk/2103.471395b48506fc52.js": "4cf1c2c22a8e2eb303cf7edbf0546d708a1b6a96",
     "/msk/2215.74145fd88b825243.js": "bc94cadb05bfed9b99a536f11be230f0bc5c4dd5",
@@ -211,7 +213,7 @@
     "/msk/9586.100d8c93967c730f.js": "fa7dbb2e37a772b283337257b1d46e8b23fd654f",
     "/msk/9841.0062d56fea599402.js": "74000eea77039fa906badebcb124e83646eb9feb",
     "/msk/assets/api/messages.json": "292a07f004c85cc5e53eb63b8c36ad9e2caf2dfb",
-    "/msk/assets/api/navigation.json": "c7d7094deff82095e1a82be623e4d40782033c66",
+    "/msk/assets/api/navigation.json": "33fdcb66bd801c80f6bc55aa46b6096998729e0a",
     "/msk/assets/api/notifications.json": "95bd2586a9771ed5b39efcb46e1e61c9e6a9019d",
     "/msk/assets/api/user.json": "4bfa8b2ff89420008654f3da51a3f0610acc3a28",
     "/msk/assets/fonts/IRANSansX/FaNumralHelp.html": "2f334d264bee9260e44ae7a815d5f3ba332fbe7f",
@@ -258,11 +260,11 @@
     "/msk/assets/images/logo/logo.svg": "255a3fb20e25a6f42cde1b9c08be22d33f53cad0",
     "/msk/assets/styles/splash-screen.css": "ed450f12892ec93b8d6c1631f7effe303baefbf9",
     "/msk/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
-    "/msk/index.html": "a4eb311111130cd4a35b9c48d21b5ee0788958ce",
-    "/msk/main.3ae28aedd26fb78c.js": "a1c3ad367231c46b085fd3494da3814667eafd1e",
+    "/msk/index.html": "3aaca0ae06581eabc10eb175d0e2dfa5eb7e78f1",
+    "/msk/main.a87abd6d681b1e67.js": "45ff217b470b877b494d0837e11ff378270719f7",
     "/msk/manifest.webmanifest": "30ea026f54107b67946ae1a0135764f1af26d2dc",
     "/msk/polyfills.c1c6e7db911dffc3.js": "989ba8a815fc9bbcc5900400694e961c53f41d43",
-    "/msk/runtime.f9624d50f3975cce.js": "aac828ac140fbb878dc768f2de79a1ba6c05d5ba",
+    "/msk/runtime.8858f0f22249e5bf.js": "96b761ffe32e8b4ab5b6009342ee65d762c75bf4",
     "/msk/styles.f44ff0d5e6b928e5.css": "5a0d0cfc10adc5512e8a1848c212cb801943dd7f"
   },
   "navigationUrls": [

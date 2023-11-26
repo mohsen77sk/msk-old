@@ -178,6 +178,20 @@
         ]
       },
       {
+        "id": "docs.validators",
+        "title": "Validators",
+        "type": "collapsable",
+        "icon": "heroicons_outline:square-3-stack-3d",
+        "children": [
+          {
+            "id": "docs.validators.must-match",
+            "title": "MustMatch",
+            "type": "basic",
+            "link": "/docs/validators/must-match"
+          }
+        ]
+      },
+      {
         "id": "docs.guides",
         "title": "Guides",
         "type": "collapsable",
