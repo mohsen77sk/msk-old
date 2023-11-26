@@ -164,6 +164,20 @@
         ]
       },
       {
+        "id": "docs.pipes",
+        "title": "Pipes",
+        "type": "collapsable",
+        "icon": "heroicons_outline:square-3-stack-3d",
+        "children": [
+          {
+            "id": "docs.pipes.find-by-key",
+            "title": "FindByKey",
+            "type": "basic",
+            "link": "/docs/pipes/find-by-key"
+          }
+        ]
+      },
+      {
         "id": "docs.guides",
         "title": "Guides",
         "type": "collapsable",
