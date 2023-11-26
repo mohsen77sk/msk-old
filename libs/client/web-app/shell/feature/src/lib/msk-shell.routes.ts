@@ -257,6 +257,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'validators/must-match',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/validators/must-match').then(
+            (m) => m.DocsMustMatchModule,
+          ),
+      },
+      {
         path: 'guides/directory-structure',
         loadChildren: () =>
           import('@msk/client/web-app/docs/guides/directory-structure').then(

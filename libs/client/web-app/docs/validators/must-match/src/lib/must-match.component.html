@@ -1,0 +1,112 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-primary-500 whitespace-nowrap"> Validators </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> MustMatch </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          MustMatch
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-3xl flex-auto p-6 sm:p-10">
+    <p>
+      The <code>mustMatch</code> validator can be used to check if two different
+      form fields has the same value. For example, a
+      <strong>Confirm password</strong> should have the same value with the
+      <strong>Password</strong> field. To validate that, the
+      <code>mustMatch</code> validator can be used.
+    </p>
+
+    <h3>Usage</h3>
+    <textarea msk-highlight lang="typescript">
+      MskValidators.mustMatch(controlPath, matchingControlPath)
+    </textarea>
+
+    <h3>Parameters</h3>
+    <div class="bg-card mb-4 rounded px-6 py-3 shadow">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>controlPath: string</div>
+            </td>
+            <td>
+              A dot-delimited string values that define the path to the control.
+            </td>
+          </tr>
+          <tr>
+            <td class="text-md text-secondary font-mono">
+              <div>matchingControlPath: string</div>
+            </td>
+            <td>
+              A dot-delimited string values that define the path to the matching
+              control.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Because the <code>mustMatch</code> validator requires parameters, it must
+      be used within the <code>validators</code> option of the form builder:
+    </p>
+    <textarea msk-highlight lang="typescript">
+      import { MskValidators } from '@msk/client/shared/validators';
+
+      // Create the reset password form
+      this.resetPasswordForm = this._formBuilder.group(
+        {
+          password       : ['', Validators.required],
+          passwordConfirm: ['', Validators.required]
+        },
+        {
+          validators: MskValidators.mustMatch('password', 'passwordConfirm')
+        }
+      );
+    </textarea>
+
+    <p>
+      To show an error message on the field, the <code>mat-error</code> element
+      can be used within the <code>mat-form-field</code>:
+    </p>
+    <textarea msk-highlight lang="html">
+      <mat-error *ngIf="resetPasswordForm.get('passwordConfirm').hasError('mustMatch')">
+        Passwords must match
+      </mat-error>
+    </textarea>
+  </div>
+</div>
