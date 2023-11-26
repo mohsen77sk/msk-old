@@ -250,6 +250,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'pipes/find-by-key',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/pipes/find-by-key').then(
+            (m) => m.DocsFindByKeyModule,
+          ),
+      },
+      {
         path: 'guides/directory-structure',
         loadChildren: () =>
           import('@msk/client/web-app/docs/guides/directory-structure').then(
