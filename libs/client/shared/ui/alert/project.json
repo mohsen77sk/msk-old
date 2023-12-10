@@ -9,18 +9,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/alert"],
       "options": {
-        "jestConfig": "libs/client/shared/ui/alert/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/ui/alert/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/ui/alert/src/**/*.ts",
-          "libs/client/shared/ui/alert/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

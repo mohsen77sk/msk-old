@@ -9,18 +9,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/client/shared/pipes/currency"],
       "options": {
-        "jestConfig": "libs/client/shared/pipes/currency/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/pipes/currency/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/pipes/currency/**/*.ts",
-          "libs/client/shared/pipes/currency/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

@@ -9,18 +9,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/client/shared/services/excel"],
       "options": {
-        "jestConfig": "libs/client/shared/services/excel/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/services/excel/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/services/excel/**/*.ts",
-          "libs/client/shared/services/excel/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:util"]

@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/directives/scroll-reset"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/directives/scroll-reset/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/directives/scroll-reset/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/directives/scroll-reset/src/**/*.ts",
-          "libs/client/shared/directives/scroll-reset/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

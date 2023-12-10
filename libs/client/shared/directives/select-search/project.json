@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/directives/select-search"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/directives/select-search/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/directives/select-search/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/directives/select-search/**/*.ts",
-          "libs/client/shared/directives/select-search/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

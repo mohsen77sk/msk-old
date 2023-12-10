@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/utils/transloco"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/utils/transloco/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/utils/transloco/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/utils/transloco/src/**/*.ts",
-          "libs/client/shared/utils/transloco/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:util"]

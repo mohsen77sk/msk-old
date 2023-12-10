@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/directives/spinner"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/directives/spinner/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/directives/spinner/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/directives/spinner/src/**/*.ts",
-          "libs/client/shared/directives/spinner/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

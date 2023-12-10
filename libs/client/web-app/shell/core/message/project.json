@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/web-app/shell/core/message"
       ],
       "options": {
-        "jestConfig": "libs/client/web-app/shell/core/message/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/web-app/shell/core/message/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/web-app/shell/core/message/src/**/*.ts",
-          "libs/client/web-app/shell/core/message/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-web", "type:util"]

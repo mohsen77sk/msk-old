@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/services/splash-screen"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/services/splash-screen/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/services/splash-screen/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/services/splash-screen/src/**/*.ts",
-          "libs/client/shared/services/splash-screen/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:util"]

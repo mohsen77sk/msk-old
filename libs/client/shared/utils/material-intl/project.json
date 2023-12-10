@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/utils/material-intl"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/utils/material-intl/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/utils/material-intl/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/utils/material-intl/src/**/*.ts",
-          "libs/client/shared/utils/material-intl/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:util"]

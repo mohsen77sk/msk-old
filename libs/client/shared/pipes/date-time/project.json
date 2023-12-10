@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/pipes/date-time"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/pipes/date-time/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/pipes/date-time/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/pipes/date-time/src/**/*.ts",
-          "libs/client/shared/pipes/date-time/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

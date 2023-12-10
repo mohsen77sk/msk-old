@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/web-app/shell/ui/layout"
       ],
       "options": {
-        "jestConfig": "libs/client/web-app/shell/ui/layout/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/web-app/shell/ui/layout/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/web-app/shell/ui/layout/src/**/*.ts",
-          "libs/client/web-app/shell/ui/layout/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-web", "type:ui"]

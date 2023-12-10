@@ -9,18 +9,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/client/shared/ui/card"],
       "options": {
-        "jestConfig": "libs/client/shared/ui/card/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/ui/card/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/ui/card/src/**/*.ts",
-          "libs/client/shared/ui/card/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]

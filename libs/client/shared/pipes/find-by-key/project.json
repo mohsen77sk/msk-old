@@ -11,18 +11,11 @@
         "{workspaceRoot}/coverage/libs/client/shared/pipes/find-by-key"
       ],
       "options": {
-        "jestConfig": "libs/client/shared/pipes/find-by-key/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/client/shared/pipes/find-by-key/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/client/shared/pipes/find-by-key/src/**/*.ts",
-          "libs/client/shared/pipes/find-by-key/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": ["scope:client-shared", "type:ui"]
