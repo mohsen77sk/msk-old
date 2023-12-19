@@ -51,6 +51,7 @@ import {
   filter,
   takeUntil,
 } from 'rxjs';
+import { Direction } from '@angular/cdk/bidi';
 
 @Component({
   selector: 'msk-vertical-navigation',
@@ -107,7 +108,7 @@ export class MskVerticalNavigationComponent
   private _scrollStrategy: ScrollStrategy = this._scrollStrategyOptions.block();
   private _mskScrollbarDirectives!: QueryList<MskScrollbarDirective>;
   private _mskScrollbarDirectivesSubscription!: Subscription;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -118,7 +119,7 @@ export class MskVerticalNavigationComponent
     private _elementRef: ElementRef,
     private _renderer2: Renderer2,
     private _router: Router,
-    @Inject(DOCUMENT) private _document: any,
+    @Inject(DOCUMENT) private _document: Document,
     private _scrollStrategyOptions: ScrollStrategyOptions,
     private _mskNavigationService: MskNavigationService,
     private _mskUtilsService: MskUtilsService,
@@ -406,7 +407,7 @@ export class MskVerticalNavigationComponent
     this._mskNavigationService.deregisterComponent(this.name);
 
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 
@@ -530,8 +531,8 @@ export class MskVerticalNavigationComponent
    *
    * @returns direction
    */
-  checkDirection(): string {
-    return this._document.body.getAttribute('dir');
+  checkDirection(): Direction {
+    return (this._document.body.getAttribute('dir') as Direction) ?? 'ltr';
   }
 
   // -----------------------------------------------------------------------------------------------------

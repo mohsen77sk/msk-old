@@ -13,7 +13,7 @@ export class MskExcelService {
   /**
    * Constructor
    */
-  constructor(@Inject(DOCUMENT) private _document: any) {}
+  constructor(@Inject(DOCUMENT) private _document: Document) {}
 
   // -----------------------------------------------------------------------------------------------------
   // @ Public methods

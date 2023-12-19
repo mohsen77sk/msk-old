@@ -1,5 +1,6 @@
 /* eslint-disable @angular-eslint/component-selector */
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import { Direction } from '@angular/cdk/bidi';
 
 import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
@@ -25,8 +26,8 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy {
   //
   navigation!: Navigation;
   isScreenSmall!: boolean;
-  layoutDirection!: any;
-  private _unsubscribeAll: Subject<unknown> = new Subject();
+  layoutDirection!: Direction;
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -74,7 +75,7 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

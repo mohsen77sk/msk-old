@@ -38,7 +38,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
   layoutTheme!: LayoutTheme;
   layoutType!: LayoutType;
 
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -47,7 +47,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     private _activatedRoute: ActivatedRoute,
     private _renderer2: Renderer2,
     private _router: Router,
-    @Inject(DOCUMENT) private _document: any,
+    @Inject(DOCUMENT) private _document: Document,
     private _mskConfigService: MskConfigService,
     private _mskMediaWatcherService: MskMediaWatcherService,
     private _mskPlatformService: MskPlatformService,
@@ -133,7 +133,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

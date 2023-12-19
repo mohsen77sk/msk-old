@@ -26,7 +26,7 @@ export class FuturisticLayoutComponent implements OnInit, OnDestroy {
   navigation!: Navigation;
   isScreenSmall!: boolean;
   user!: User;
-  private _unsubscribeAll: Subject<unknown> = new Subject();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -74,7 +74,7 @@ export class FuturisticLayoutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

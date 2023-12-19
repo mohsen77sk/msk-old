@@ -1,5 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { Direction } from '@angular/cdk/bidi';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SwUpdate, VersionEvent } from '@angular/service-worker';
 import { MskServiceWorkerSnackBarComponent } from './snack-bar/snack-bar.component';
@@ -10,7 +11,7 @@ export class MskServiceWorkerService {
    * constructor
    */
   constructor(
-    @Inject(DOCUMENT) private _document: any,
+    @Inject(DOCUMENT) private _document: Document,
     private _swUpdate: SwUpdate,
     private _matSnackBar: MatSnackBar,
   ) {
@@ -32,7 +33,7 @@ export class MskServiceWorkerService {
                 'text-amber-600',
                 'dark:text-amber-400',
               ],
-              direction: this._document.body.getAttribute('dir'),
+              direction: this._document.body.getAttribute('dir') as Direction,
             },
           );
         }

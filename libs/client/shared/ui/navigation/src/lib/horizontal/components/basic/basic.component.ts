@@ -28,7 +28,7 @@ export class MskHorizontalNavigationBasicItemComponent
 
   isActiveMatchOptions: IsActiveMatchOptions;
   private _mskHorizontalNavigationComponent!: MskHorizontalNavigationComponent;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -82,7 +82,7 @@ export class MskHorizontalNavigationBasicItemComponent
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 }

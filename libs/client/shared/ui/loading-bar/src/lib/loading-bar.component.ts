@@ -23,7 +23,7 @@ export class MskLoadingBarComponent implements OnChanges, OnInit, OnDestroy {
   mode!: 'determinate' | 'indeterminate';
   progress = 0;
   show = false;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -78,7 +78,7 @@ export class MskLoadingBarComponent implements OnChanges, OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 }

@@ -24,7 +24,7 @@ export class LayoutSettingsComponent implements OnInit, OnDestroy {
   layoutTheme!: LayoutTheme;
   layoutType!: LayoutType;
 
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -56,7 +56,7 @@ export class LayoutSettingsComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

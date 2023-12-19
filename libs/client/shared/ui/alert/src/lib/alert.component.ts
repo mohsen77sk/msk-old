@@ -44,7 +44,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
   @Output() readonly dismissedChanged: EventEmitter<boolean> =
     new EventEmitter<boolean>();
 
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -148,7 +148,7 @@ export class MskAlertComponent implements OnChanges, OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

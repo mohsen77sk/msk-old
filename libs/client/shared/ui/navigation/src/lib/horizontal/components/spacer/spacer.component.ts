@@ -25,7 +25,7 @@ export class MskHorizontalNavigationSpacerItemComponent
   @Input() name!: string;
 
   private _mskHorizontalNavigationComponent!: MskHorizontalNavigationComponent;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -61,7 +61,7 @@ export class MskHorizontalNavigationSpacerItemComponent
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 }

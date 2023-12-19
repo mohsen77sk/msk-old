@@ -13,6 +13,7 @@ import {
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { MatButton } from '@angular/material/button';
+import { Direction } from '@angular/cdk/bidi';
 
 import { Message } from '@msk/client/web-app/shell/core/message';
 import { MessageService } from '@msk/client/web-app/shell/core/message';
@@ -32,12 +33,12 @@ export class MessagesComponent implements OnInit, OnDestroy {
   @ViewChild('messagesOrigin') private _messagesOrigin!: MatButton;
   @ViewChild('messagesPanel') private _messagesPanel!: TemplateRef<any>;
 
-  layoutDirection!: any;
+  layoutDirection!: Direction;
   messages!: Message[];
   unreadCount = 0;
 
   private _overlayRef!: OverlayRef;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -85,7 +86,7 @@ export class MessagesComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
 
     // Dispose the overlay

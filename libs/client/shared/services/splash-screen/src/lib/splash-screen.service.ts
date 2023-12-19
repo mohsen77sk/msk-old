@@ -9,7 +9,7 @@ export class MskSplashScreenService {
    * Constructor
    */
   constructor(
-    @Inject(DOCUMENT) private _document: any,
+    @Inject(DOCUMENT) private _document: Document,
     private _router: Router,
   ) {
     // Hide it on the first NavigationEnd event

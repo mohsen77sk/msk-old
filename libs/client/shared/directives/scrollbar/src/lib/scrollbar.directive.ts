@@ -34,7 +34,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
   private _animation: number | undefined;
   private _options: PerfectScrollbar.Options | undefined;
   private _ps: PerfectScrollbar | undefined;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -135,7 +135,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
     this._destroy();
 
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

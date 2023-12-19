@@ -9,6 +9,7 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { Direction } from '@angular/cdk/bidi';
 
 import { User, UserService } from '@msk/client/web-app/shell/core/user';
 import { MskConfigService } from '@msk/client/shared/services/config';
@@ -31,9 +32,9 @@ export class UserComponent implements OnInit, OnDestroy {
   @Input() showAvatar = true;
   user!: User;
 
-  layoutDirection!: any;
+  layoutDirection!: Direction;
 
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -76,7 +77,7 @@ export class UserComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 

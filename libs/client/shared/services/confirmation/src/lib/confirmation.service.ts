@@ -1,5 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { Direction } from '@angular/cdk/bidi';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { merge } from 'lodash-es';
 import { MskConfirmationDialogComponent } from './dialog/dialog.component';
@@ -33,7 +34,7 @@ export class MskConfirmationService {
    * Constructor
    */
   constructor(
-    @Inject(DOCUMENT) private _document: any,
+    @Inject(DOCUMENT) private _document: Document,
     private _matDialog: MatDialog,
   ) {}
 
@@ -49,7 +50,7 @@ export class MskConfirmationService {
 
     // Open the dialog
     return this._matDialog.open(MskConfirmationDialogComponent, {
-      direction: this._document.body.getAttribute('dir'),
+      direction: this._document.body.getAttribute('dir') as Direction,
       autoFocus: false,
       disableClose: !userConfig.dismissible,
       data: userConfig,

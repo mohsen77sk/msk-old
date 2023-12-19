@@ -28,7 +28,7 @@ export class MskVerticalNavigationBasicItemComponent
 
   isActiveMatchOptions: IsActiveMatchOptions;
   private _mskVerticalNavigationComponent!: MskVerticalNavigationComponent;
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -82,7 +82,7 @@ export class MskVerticalNavigationBasicItemComponent
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 }

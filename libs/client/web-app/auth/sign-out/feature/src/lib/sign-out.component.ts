@@ -12,7 +12,7 @@ import { Subject, timer, finalize, takeUntil, takeWhile, tap } from 'rxjs';
 export class SignOutComponent implements OnInit, OnDestroy {
   countdown = 5;
 
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -51,7 +51,7 @@ export class SignOutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 }

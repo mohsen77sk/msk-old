@@ -25,7 +25,7 @@ export class DenseLayoutComponent implements OnInit, OnDestroy {
   navigation!: Navigation;
   isScreenSmall!: boolean;
   navigationAppearance: 'default' | 'dense' = 'dense';
-  private _unsubscribeAll: Subject<unknown> = new Subject();
+  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -67,7 +67,7 @@ export class DenseLayoutComponent implements OnInit, OnDestroy {
    */
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   }
 
