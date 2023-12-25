@@ -526,28 +526,28 @@ msk-vertical-navigation {
       /* 1st level */
       .msk-vertical-navigation-item-children {
         .msk-vertical-navigation-item {
-          padding-left: unset;
+          padding-left: 16px;
           padding-right: 56px;
         }
 
         /* 2nd level */
         .msk-vertical-navigation-item-children {
           .msk-vertical-navigation-item {
-            padding-left: unset;
+            padding-left: 16px;
             padding-right: 72px;
           }
 
           /* 3rd level */
           .msk-vertical-navigation-item-children {
             .msk-vertical-navigation-item {
-              padding-left: unset;
+              padding-left: 16px;
               padding-right: 88px;
             }
 
             /* 4th level */
             .msk-vertical-navigation-item-children {
               .msk-vertical-navigation-item {
-                padding-left: unset;
+                padding-left: 16px;
                 padding-right: 104px;
               }
             }
