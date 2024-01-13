@@ -9,8 +9,8 @@ import { DateAdapter } from '@angular/material/core';
 import { TranslocoService } from '@ngneat/transloco';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
-import { enUS } from 'date-fns/esm/locale';
-import { faIR } from 'date-fns-jalali/esm/locale';
+import { enUS } from 'date-fns/locale';
+import { faIR } from 'date-fns-jalali/locale';
 
 const locale = {
   en: enUS,

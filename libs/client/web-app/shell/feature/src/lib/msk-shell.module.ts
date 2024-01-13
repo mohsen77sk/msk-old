@@ -14,8 +14,8 @@ import { MskIconsModule } from '@msk/client/shared/utils/icons';
 import { MskTranslocoModule } from '@msk/client/shared/utils/transloco';
 import { MskMaterialIntlModule } from '@msk/client/shared/utils/material-intl';
 
-import { enUS } from 'date-fns/esm/locale';
-import { faIR } from 'date-fns-jalali/esm/locale';
+import { enUS } from 'date-fns/locale';
+import { faIR } from 'date-fns-jalali/locale';
 import { NgxMatDateFnsModule } from 'ngx-material-date-fns-adapter';
 
 import { AuthCoreModule } from '@msk/client/web-app/shell/core/auth';

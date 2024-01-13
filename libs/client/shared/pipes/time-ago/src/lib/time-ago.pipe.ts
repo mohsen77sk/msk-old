@@ -9,8 +9,8 @@ import { AsyncPipe } from '@angular/common';
 import { Observable, timer, distinctUntilChanged, map } from 'rxjs';
 
 import { parseISO, formatDistanceToNow } from 'date-fns';
-import locale_enUS from 'date-fns/locale/en-US';
-import locale_faIR from 'date-fns/locale/fa-IR';
+import { enUS as locale_enUS } from 'date-fns/locale';
+import { faIR as locale_faIR } from 'date-fns/locale';
 
 const locale: any = {
   en: locale_enUS,
