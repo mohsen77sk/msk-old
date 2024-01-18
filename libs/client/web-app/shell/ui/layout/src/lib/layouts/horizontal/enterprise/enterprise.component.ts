@@ -1,8 +1,13 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { Direction } from '@angular/cdk/bidi';
+import {
+  Component,
+  DestroyRef,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+} from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
-import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
 import {
   MskNavigationService,
@@ -14,7 +19,6 @@ import {
 } from '@msk/client/web-app/shell/core/navigation';
 
 import { cloneDeep } from 'lodash-es';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'enterprise-layout',
@@ -22,18 +26,16 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./enterprise.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class EnterpriseLayoutComponent implements OnInit, OnDestroy {
-  //
+export class EnterpriseLayoutComponent implements OnInit {
+  destroyRef = inject(DestroyRef);
+
   navigation!: Navigation;
   isScreenSmall!: boolean;
-  layoutDirection!: Direction;
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
    */
   constructor(
-    private _mskConfigService: MskConfigService,
     private _navigationService: NavigationService,
     private _mskNavigationService: MskNavigationService,
     private _mskMediaWatcherService: MskMediaWatcherService,
@@ -47,36 +49,20 @@ export class EnterpriseLayoutComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
-    // Subscribe to config changes
-    this._mskConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
-      .subscribe((config: any) => {
-        // Store the layoutDirection
-        this.layoutDirection = config.direction;
-      });
     // Subscribe to navigation data
     this._navigationService.navigation$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((navigation: Navigation) => {
         this.navigation = cloneDeep(navigation);
       });
 
     // Subscribe to media changes
     this._mskMediaWatcherService.onMediaChange$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(({ matchingAliases }) => {
         // Check if the screen is small
         this.isScreenSmall = !matchingAliases.includes('md');
       });
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------

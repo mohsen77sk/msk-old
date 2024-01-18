@@ -1,5 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+} from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
 import {
@@ -12,7 +19,6 @@ import {
 } from '@msk/client/web-app/shell/core/navigation';
 
 import { cloneDeep } from 'lodash-es';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'compact-layout',
@@ -20,11 +26,11 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./compact.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class CompactLayoutComponent implements OnInit, OnDestroy {
-  //
+export class CompactLayoutComponent implements OnInit {
+  destroyRef = inject(DestroyRef);
+
   navigation!: Navigation;
   isScreenSmall!: boolean;
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -45,7 +51,7 @@ export class CompactLayoutComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Subscribe to navigation data
     this._navigationService.navigation$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((navigation: Navigation) => {
         this.navigation = cloneDeep(navigation);
         this.navigation.forEach((item) =>
@@ -55,20 +61,11 @@ export class CompactLayoutComponent implements OnInit, OnDestroy {
 
     // Subscribe to media changes
     this._mskMediaWatcherService.onMediaChange$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(({ matchingAliases }) => {
         // Check if the screen is small
         this.isScreenSmall = !matchingAliases.includes('md');
       });
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------

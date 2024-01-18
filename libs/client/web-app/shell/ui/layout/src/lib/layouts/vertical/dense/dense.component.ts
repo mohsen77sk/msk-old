@@ -1,5 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+} from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
 import {
@@ -12,7 +19,6 @@ import {
 } from '@msk/client/web-app/shell/core/navigation';
 
 import { cloneDeep } from 'lodash-es';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'dense-layout',
@@ -20,12 +26,12 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./dense.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class DenseLayoutComponent implements OnInit, OnDestroy {
-  //
+export class DenseLayoutComponent implements OnInit {
+  destroyRef = inject(DestroyRef);
+
   navigation!: Navigation;
   isScreenSmall!: boolean;
   navigationAppearance: 'default' | 'dense' = 'dense';
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -46,29 +52,20 @@ export class DenseLayoutComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Subscribe to navigation data
     this._navigationService.navigation$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((navigation: Navigation) => {
         this.navigation = cloneDeep(navigation);
       });
 
     // Subscribe to media changes
     this._mskMediaWatcherService.onMediaChange$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(({ matchingAliases }) => {
         // Check if the screen is small
         this.isScreenSmall = !matchingAliases.includes('md');
         // Change the navigation appearance
         this.navigationAppearance = this.isScreenSmall ? 'default' : 'dense';
       });
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------

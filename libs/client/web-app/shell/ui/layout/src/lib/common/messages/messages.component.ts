@@ -3,13 +3,16 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  DestroyRef,
   OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
+  inject,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { MatButton } from '@angular/material/button';
@@ -18,8 +21,6 @@ import { Direction } from '@angular/cdk/bidi';
 import { Message } from '@msk/client/web-app/shell/core/message';
 import { MessageService } from '@msk/client/web-app/shell/core/message';
 import { MskConfigService } from '@msk/client/shared/services/config';
-
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'messages',
@@ -32,13 +33,13 @@ import { Subject, takeUntil } from 'rxjs';
 export class MessagesComponent implements OnInit, OnDestroy {
   @ViewChild('messagesOrigin') private _messagesOrigin!: MatButton;
   @ViewChild('messagesPanel') private _messagesPanel!: TemplateRef<any>;
+  destroyRef = inject(DestroyRef);
 
   layoutDirection!: Direction;
   messages!: Message[];
   unreadCount = 0;
 
   private _overlayRef!: OverlayRef;
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -61,14 +62,15 @@ export class MessagesComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Subscribe to config changes
     this._mskConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((config: any) => {
         // Store the layoutDirection
         this.layoutDirection = config.direction;
       });
+
     // Subscribe to message changes
     this._messageService.messages$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((messages: Message[]) => {
         // Load the messages
         this.messages = messages;
@@ -85,10 +87,6 @@ export class MessagesComponent implements OnInit, OnDestroy {
    * On destroy
    */
   ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
-
     // Dispose the overlay
     if (this._overlayRef) {
       this._overlayRef.dispose();

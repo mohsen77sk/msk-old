@@ -1,78 +1,67 @@
 <!-- ----------------------------------------------------------------------------------------------------- -->
 <!-- Empty layout -->
 <!-- ----------------------------------------------------------------------------------------------------- -->
-<empty-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'empty'"
-></empty-layout>
+@if (layoutType === 'empty') {
+<empty-layout [dir]="layoutDirection"></empty-layout>
+}
 
 <!-- ----------------------------------------------------------------------------------------------------- -->
 <!-- Layouts with horizontal navigation -->
 <!-- ----------------------------------------------------------------------------------------------------- -->
 
 <!-- Centered -->
-<centered-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'centered'"
-></centered-layout>
+@if (layoutType === 'centered') {
+<centered-layout [dir]="layoutDirection"></centered-layout>
+}
 
 <!-- Enterprise -->
-<enterprise-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'enterprise'"
-></enterprise-layout>
+@if (layoutType === 'enterprise') {
+<enterprise-layout [dir]="layoutDirection"></enterprise-layout>
+}
 
 <!-- Material -->
-<material-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'material'"
-></material-layout>
+@if (layoutType === 'material') {
+<material-layout [dir]="layoutDirection"></material-layout>
+}
 
 <!-- Modern -->
-<modern-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'modern'"
-></modern-layout>
+@if (layoutType === 'modern') {
+<modern-layout [dir]="layoutDirection"></modern-layout>
+}
 
 <!-- ----------------------------------------------------------------------------------------------------- -->
 <!-- Layouts with vertical navigation -->
 <!-- ----------------------------------------------------------------------------------------------------- -->
 
 <!-- Classic -->
-<classic-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'classic'"
-></classic-layout>
+@if (layoutType === 'classic') {
+<classic-layout [dir]="layoutDirection"></classic-layout>
+}
 
 <!-- Classy -->
-<classy-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'classy'"
-></classy-layout>
+@if (layoutType === 'classy') {
+<classy-layout [dir]="layoutDirection"></classy-layout>
+}
 
 <!-- Compact -->
-<compact-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'compact'"
-></compact-layout>
+@if (layoutType === 'compact') {
+<compact-layout [dir]="layoutDirection"></compact-layout>
+}
 
 <!-- Dense -->
-<dense-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'dense'"
-></dense-layout>
+@if (layoutType === 'dense') {
+<dense-layout [dir]="layoutDirection"></dense-layout>
+}
 
 <!-- Futuristic -->
-<futuristic-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'futuristic'"
-></futuristic-layout>
+@if (layoutType === 'futuristic') {
+<futuristic-layout [dir]="layoutDirection"></futuristic-layout>
+}
 
 <!-- Thin -->
-<thin-layout
-  [dir]="layoutDirection"
-  *ngIf="layoutType === 'thin'"
-></thin-layout>
+@if (layoutType === 'thin') {
+<thin-layout [dir]="layoutDirection"></thin-layout>
+}
 
 <!-- ----------------------------------------------------------------------------------------------------- -->
 <!-- Layout settings drawer - Remove this to remove the drawer -->

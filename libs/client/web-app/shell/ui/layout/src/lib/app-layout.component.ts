@@ -1,13 +1,15 @@
 /* eslint-disable @angular-eslint/component-selector */
 import {
   Component,
+  DestroyRef,
   Inject,
-  OnDestroy,
   OnInit,
   Renderer2,
   ViewEncapsulation,
+  inject,
 } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DOCUMENT } from '@angular/common';
 
 import { MskConfigService } from '@msk/client/shared/services/config';
@@ -22,7 +24,7 @@ import {
 } from './app-layout.types';
 import { LayoutConfig } from './layout.config';
 
-import { combineLatest, Subject, filter, map, takeUntil } from 'rxjs';
+import { combineLatest, filter, map } from 'rxjs';
 
 @Component({
   selector: 'layout',
@@ -30,15 +32,14 @@ import { combineLatest, Subject, filter, map, takeUntil } from 'rxjs';
   styleUrls: ['./app-layout.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class LayoutComponent implements OnInit, OnDestroy {
-  //
+export class LayoutComponent implements OnInit {
+  destroyRef = inject(DestroyRef);
+
   layoutConfig!: LayoutConfig;
   layoutDirection!: LayoutDirection;
   layoutScheme!: LayoutScheme;
   layoutTheme!: LayoutTheme;
   layoutType!: LayoutType;
-
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -70,7 +71,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
       ]),
     ])
       .pipe(
-        takeUntil(this._unsubscribeAll),
+        takeUntilDestroyed(this.destroyRef),
         map(([config, mql]) => {
           const options = {
             scheme: config.scheme,
@@ -100,7 +101,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
     // Subscribe to config changes
     this._mskConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((config: LayoutConfig) => {
         // Store the layoutConfig
         this.layoutConfig = config;
@@ -113,8 +114,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
     // Subscribe to NavigationEnd event
     this._router.events
       .pipe(
+        takeUntilDestroyed(this.destroyRef),
         filter((event) => event instanceof NavigationEnd),
-        takeUntil(this._unsubscribeAll),
       )
       .subscribe(() => {
         // Update the layout type
@@ -126,15 +127,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
       this._document.body,
       this._mskPlatformService.osName,
     );
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------

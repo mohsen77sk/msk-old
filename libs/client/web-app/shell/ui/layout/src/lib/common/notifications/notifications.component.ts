@@ -3,13 +3,16 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  DestroyRef,
   OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
+  inject,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { MatButton } from '@angular/material/button';
@@ -18,8 +21,6 @@ import { Direction } from '@angular/cdk/bidi';
 import { Notification } from '@msk/client/web-app/shell/core/notification';
 import { NotificationService } from '@msk/client/web-app/shell/core/notification';
 import { MskConfigService } from '@msk/client/shared/services/config';
-
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'notifications',
@@ -33,13 +34,13 @@ export class NotificationsComponent implements OnInit, OnDestroy {
   @ViewChild('notificationsOrigin') private _notificationsOrigin!: MatButton;
   @ViewChild('notificationsPanel')
   private _notificationsPanel!: TemplateRef<any>;
+  destroyRef = inject(DestroyRef);
 
   layoutDirection!: Direction;
   notifications!: Notification[];
   unreadCount = 0;
 
   private _overlayRef!: OverlayRef;
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -62,14 +63,15 @@ export class NotificationsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Subscribe to config changes
     this._mskConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((config: any) => {
         // Store the layoutDirection
         this.layoutDirection = config.direction;
       });
+
     // Subscribe to notification changes
     this._notificationService.notifications$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((notifications: Notification[]) => {
         // Load the notifications
         this.notifications = notifications;
@@ -86,10 +88,6 @@ export class NotificationsComponent implements OnInit, OnDestroy {
    * On destroy
    */
   ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
-
     // Dispose the overlay
     if (this._overlayRef) {
       this._overlayRef.dispose();

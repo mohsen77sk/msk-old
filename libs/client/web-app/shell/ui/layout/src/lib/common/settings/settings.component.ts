@@ -1,5 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+} from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { MskConfigService } from '@msk/client/shared/services/config';
 import {
@@ -9,7 +16,6 @@ import {
   LayoutType,
 } from '../../app-layout.types';
 import { LayoutConfig } from '../../layout.config';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'layout-settings',
@@ -17,14 +23,14 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./settings.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class LayoutSettingsComponent implements OnInit, OnDestroy {
+export class LayoutSettingsComponent implements OnInit {
+  destroyRef = inject(DestroyRef);
+
   layoutConfig!: LayoutConfig;
   layoutScheme!: LayoutScheme;
   layoutThemes!: LayoutThemes;
   layoutTheme!: LayoutTheme;
   layoutType!: LayoutType;
-
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -44,20 +50,11 @@ export class LayoutSettingsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Subscribe to config changes
     this._mskConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((config: LayoutConfig) => {
         // Store the layoutConfig
         this.layoutConfig = config;
       });
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------

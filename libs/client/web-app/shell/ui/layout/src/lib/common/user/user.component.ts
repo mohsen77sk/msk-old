@@ -3,19 +3,17 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import {
   Component,
   OnInit,
-  OnDestroy,
   ChangeDetectionStrategy,
   Input,
   ChangeDetectorRef,
+  inject,
+  DestroyRef,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
-import { Direction } from '@angular/cdk/bidi';
 
 import { User, UserService } from '@msk/client/web-app/shell/core/user';
-import { MskConfigService } from '@msk/client/shared/services/config';
 import { MskDrawerService } from '@msk/client/shared/ui/drawer';
-
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'user',
@@ -24,17 +22,15 @@ import { Subject, takeUntil } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'user',
 })
-export class UserComponent implements OnInit, OnDestroy {
+export class UserComponent implements OnInit {
   /* eslint-disable @typescript-eslint/naming-convention */
   static ngAcceptInputType_showAvatar: BooleanInput;
   /* eslint-enable @typescript-eslint/naming-convention */
 
+  destroyRef = inject(DestroyRef);
+
   @Input() showAvatar = true;
   user!: User;
-
-  layoutDirection!: Direction;
-
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -42,7 +38,6 @@ export class UserComponent implements OnInit, OnDestroy {
   constructor(
     private _router: Router,
     private _userService: UserService,
-    private _mskConfigService: MskConfigService,
     private _mskDrawerService: MskDrawerService,
     private _changeDetectorRef: ChangeDetectorRef,
   ) {}
@@ -55,30 +50,14 @@ export class UserComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
-    // Subscribe to config changes
-    this._mskConfigService.config$
-      .pipe(takeUntil(this._unsubscribeAll))
-      .subscribe((config: any) => {
-        // Store the layoutDirection
-        this.layoutDirection = config.direction;
-      });
     // Subscribe to user changes
     this._userService.user$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((user: User) => {
         this.user = user;
         // Mark for check
         this._changeDetectorRef.markForCheck();
       });
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------

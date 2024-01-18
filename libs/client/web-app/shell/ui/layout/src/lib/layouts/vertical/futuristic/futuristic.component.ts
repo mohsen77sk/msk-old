@@ -1,5 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+} from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 import { MskMediaWatcherService } from '@msk/client/shared/services/media-watcher';
 import {
@@ -13,7 +20,6 @@ import {
 import { User, UserService } from '@msk/client/web-app/shell/core/user';
 
 import { cloneDeep } from 'lodash-es';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'futuristic-layout',
@@ -21,12 +27,12 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./futuristic.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class FuturisticLayoutComponent implements OnInit, OnDestroy {
-  //
+export class FuturisticLayoutComponent implements OnInit {
+  destroyRef = inject(DestroyRef);
+
   navigation!: Navigation;
   isScreenSmall!: boolean;
   user!: User;
-  private _unsubscribeAll: Subject<void> = new Subject();
 
   /**
    * Constructor
@@ -48,34 +54,25 @@ export class FuturisticLayoutComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Subscribe to navigation data
     this._navigationService.navigation$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((navigation: Navigation) => {
         this.navigation = cloneDeep(navigation);
       });
 
     // Subscribe to the user service
     this._userService.user$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((user: User) => {
         this.user = user;
       });
 
     // Subscribe to media changes
     this._mskMediaWatcherService.onMediaChange$
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(({ matchingAliases }) => {
         // Check if the screen is small
         this.isScreenSmall = !matchingAliases.includes('md');
       });
-  }
-
-  /**
-   * On destroy
-   */
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
-    this._unsubscribeAll.complete();
   }
 
   // -----------------------------------------------------------------------------------------------------
