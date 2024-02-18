@@ -2,24 +2,24 @@
 <msk-loading-bar></msk-loading-bar>
 
 <!-- Navigation -->
-<ng-container *ngIf="isScreenSmall">
-  <msk-vertical-navigation
-    class="dark bg-gray-900 print:hidden"
-    [mode]="'over'"
-    [name]="'mainNavigation'"
-    [navigation]="navigation"
-    [opened]="false"
-  >
-    <!-- Navigation header hook -->
-    <ng-container mskVerticalNavigationContentHeader>
-      <!-- Logo -->
-      <div class="flex h-20 items-center px-8 pt-6">
-        <img class="w-10" src="assets/images/logo/logo.svg" />
-        <label class="mx-4 text-2xl font-black">MSK</label>
-      </div>
-    </ng-container>
-  </msk-vertical-navigation>
-</ng-container>
+@if (isScreenSmall) {
+<msk-vertical-navigation
+  class="dark bg-gray-900 print:hidden"
+  [mode]="'over'"
+  [name]="'mainNavigation'"
+  [navigation]="navigation"
+  [opened]="false"
+>
+  <!-- Navigation header hook -->
+  <ng-container mskVerticalNavigationContentHeader>
+    <!-- Logo -->
+    <div class="flex h-20 items-center px-8 pt-6">
+      <img class="w-10" src="assets/images/logo/logo.svg" />
+      <label class="mx-4 text-2xl font-black">MSK</label>
+    </div>
+  </ng-container>
+</msk-vertical-navigation>
+}
 
 <!-- Wrapper -->
 <div
@@ -27,35 +27,35 @@
 >
   <!-- Header -->
   <div
-    class="z-49 flex-0 relative flex h-16 w-full flex-col justify-center overflow-hidden shadow dark:shadow-none print:hidden sm:h-20 md:h-36"
+    class="z-49 flex-0 relative flex h-16 w-full flex-col justify-center overflow-hidden shadow sm:h-20 md:h-36 dark:shadow-none print:hidden"
   >
     <!-- Top bar -->
     <div
-      class="dark relative flex w-full flex-auto justify-center bg-gray-800 px-4 dark:bg-gray-900 md:px-8"
+      class="dark relative flex w-full flex-auto justify-center bg-gray-800 px-4 md:px-8 dark:bg-gray-900"
     >
       <div
         class="max-w-360 flex h-16 w-full items-center justify-between sm:h-20"
       >
         <!-- Logo -->
-        <ng-container *ngIf="!isScreenSmall">
-          <div class="flex items-center">
-            <img
-              class="w-10"
-              src="assets/images/logo/logo.svg"
-              alt="Logo image"
-            />
-            <label class="mx-4 text-2xl font-black">MSK</label>
-          </div>
-        </ng-container>
+        @if (!isScreenSmall) {
+        <div class="flex items-center">
+          <img
+            class="w-10"
+            src="assets/images/logo/logo.svg"
+            alt="Logo image"
+          />
+          <label class="mx-4 text-2xl font-black">MSK</label>
+        </div>
+        } @else {
         <!-- Navigation toggle button -->
-        <ng-container *ngIf="isScreenSmall">
-          <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
-            <mat-icon svgIcon="heroicons_outline:bars-3"></mat-icon>
-          </button>
-        </ng-container>
+        <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
+          <mat-icon svgIcon="heroicons_outline:bars-3"></mat-icon>
+        </button>
+        }
+
         <!-- Components -->
         <div
-          class="flex items-center space-x-0.5 px-2 rtl:space-x-reverse md:space-x-1"
+          class="flex items-center space-x-0.5 px-2 md:space-x-1 rtl:space-x-reverse"
         >
           <languages></languages>
           <msk-fullscreen
@@ -70,19 +70,19 @@
       </div>
     </div>
     <!-- Bottom bar -->
-    <ng-container *ngIf="!isScreenSmall">
-      <div
-        class="bg-card flex flex-auto justify-center px-4 dark:bg-gray-700 md:px-8"
-      >
-        <div class="max-w-360 relative flex h-16 w-full items-center">
-          <msk-horizontal-navigation
-            class="-mx-4"
-            [name]="'mainNavigation'"
-            [navigation]="navigation"
-          ></msk-horizontal-navigation>
-        </div>
+    @if (!isScreenSmall) {
+    <div
+      class="bg-card flex flex-auto justify-center px-4 md:px-8 dark:bg-gray-700"
+    >
+      <div class="max-w-360 relative flex h-16 w-full items-center">
+        <msk-horizontal-navigation
+          class="-mx-4"
+          [name]="'mainNavigation'"
+          [navigation]="navigation"
+        ></msk-horizontal-navigation>
       </div>
-    </ng-container>
+    </div>
+    }
   </div>
 
   <!-- Content -->

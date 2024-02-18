@@ -3,8 +3,9 @@ import { Inject, LOCALE_ID, Pipe, PipeTransform } from '@angular/core';
 import { format as gregorianFormat } from 'date-fns';
 import { format as jalaliFormat } from 'date-fns-jalali';
 
-import { enUS } from 'date-fns/esm/locale';
-import { faIR } from 'date-fns-jalali/esm/locale';
+import { enUS } from 'date-fns/locale';
+import { faIR } from 'date-fns-jalali/locale';
+import { AvailableLangsIds } from 'scoped-translations';
 
 const locale = {
   en: enUS,
@@ -28,8 +29,8 @@ export class MskDateTimePipe implements PipeTransform {
   /**
    * Getter for locale
    */
-  get locale(): 'en' | 'fa' {
-    return this._locale.valueOf() as 'en' | 'fa';
+  get locale(): AvailableLangsIds {
+    return this._locale.valueOf() as AvailableLangsIds;
   }
 
   /**

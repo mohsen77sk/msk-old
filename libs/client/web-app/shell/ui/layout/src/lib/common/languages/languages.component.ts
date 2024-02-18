@@ -9,8 +9,10 @@ import { DateAdapter } from '@angular/material/core';
 import { TranslocoService } from '@ngneat/transloco';
 import { MskConfigService } from '@msk/client/shared/services/config';
 
+import { Locale } from 'date-fns/locale';
 import { enUS } from 'date-fns/locale';
 import { faIR } from 'date-fns-jalali/locale';
+import { AvailableLangs, AvailableLangsIds } from 'scoped-translations';
 
 const locale = {
   en: enUS,
@@ -27,8 +29,8 @@ const locale = {
 })
 export class LanguagesComponent implements OnInit {
   //
-  availableLangs!: { id: string; label: string }[];
-  activeLang!: string;
+  availableLangs!: AvailableLangs[];
+  activeLang!: AvailableLangsIds;
   flagCodes!: any;
   directionCodes!: any;
 
@@ -36,7 +38,7 @@ export class LanguagesComponent implements OnInit {
    * Constructor
    */
   constructor(
-    private _dateAdapter: DateAdapter<any>,
+    private _dateAdapter: DateAdapter<Locale>,
     private _translocoService: TranslocoService,
     private _mskConfigService: MskConfigService,
   ) {}
@@ -50,15 +52,13 @@ export class LanguagesComponent implements OnInit {
    */
   ngOnInit(): void {
     // Get the available languages from transloco
-    this.availableLangs = this._translocoService.getAvailableLangs() as {
-      id: string;
-      label: string;
-    }[];
+    this.availableLangs =
+      this._translocoService.getAvailableLangs() as AvailableLangs[];
 
     // Subscribe to language changes
     this._translocoService.langChanges$.subscribe((activeLang) => {
       // Get the active lang
-      this.activeLang = activeLang;
+      this.activeLang = activeLang as AvailableLangsIds;
     });
 
     // Set the country iso codes for languages for flags
@@ -83,9 +83,9 @@ export class LanguagesComponent implements OnInit {
    *
    * @param lang
    */
-  setActiveLang(lang: string): void {
+  setActiveLang(lang: AvailableLangsIds): void {
     // Set the active locale
-    this._dateAdapter.setLocale(locale[lang as 'en' | 'fa']);
+    this._dateAdapter.setLocale(locale[lang]);
     // Set the active lang
     this._translocoService.setActiveLang(lang);
     // Set the active lang & direction in config
@@ -93,15 +93,5 @@ export class LanguagesComponent implements OnInit {
       language: lang,
       direction: this.directionCodes[lang],
     };
-  }
-
-  /**
-   * Track by function for ngFor loops
-   *
-   * @param index
-   * @param item
-   */
-  trackByFn(index: number, item: any): any {
-    return item.id || index;
   }
 }

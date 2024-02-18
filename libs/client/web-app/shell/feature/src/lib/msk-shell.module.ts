@@ -7,6 +7,7 @@ import {
 } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { TranslocoService } from '@ngneat/transloco';
+import { AvailableLangsIds } from 'scoped-translations';
 
 import { mskShellRoutes } from './msk-shell.routes';
 
@@ -14,6 +15,7 @@ import { MskIconsModule } from '@msk/client/shared/utils/icons';
 import { MskTranslocoModule } from '@msk/client/shared/utils/transloco';
 import { MskMaterialIntlModule } from '@msk/client/shared/utils/material-intl';
 
+import { Locale } from 'date-fns/locale';
 import { enUS } from 'date-fns/locale';
 import { faIR } from 'date-fns-jalali/locale';
 import { NgxMatDateFnsModule } from 'ngx-material-date-fns-adapter';
@@ -97,8 +99,8 @@ const routerConfig: ExtraOptions = {
     {
       provide: MAT_DATE_LOCALE,
       deps: [TranslocoService],
-      useFactory: (translocoService: TranslocoService): any => {
-        return locale[translocoService.getActiveLang() as 'en' | 'fa'];
+      useFactory: (translocoService: TranslocoService): Locale => {
+        return locale[translocoService.getActiveLang() as AvailableLangsIds];
       },
     },
   ],

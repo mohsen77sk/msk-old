@@ -6,17 +6,17 @@
   (click)="openPanel()"
   #messagesOrigin
 >
-  <ng-container *ngIf="unreadCount > 0">
+  @if (unreadCount > 0) {
+  <span
+    class="absolute left-0 right-0 top-0 z-10 flex h-3 items-center justify-center"
+  >
     <span
-      class="absolute left-0 right-0 top-0 z-10 flex h-3 items-center justify-center"
+      class="ml-4 mt-2.5 flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full bg-indigo-600 px-1 text-xs font-medium text-indigo-50"
     >
-      <span
-        class="min-w-4 ml-4 mt-2.5 flex h-4 shrink-0 items-center justify-center rounded-full bg-indigo-600 px-1 text-xs font-medium text-indigo-50"
-      >
-        {{ unreadCount }}
-      </span>
+      {{ unreadCount }}
     </span>
-  </ng-container>
+  </span>
+  }
   <mat-icon svgIcon="heroicons_outline:inbox"></mat-icon>
 </button>
 
@@ -65,144 +65,127 @@
       class="bg-card sm:max-h-120 relative flex flex-auto flex-col divide-y overflow-y-auto"
     >
       <!-- Messages -->
-      <ng-container *ngFor="let message of messages; trackBy: trackByFn">
-        <div
-          class="group flex px-6 py-4 hover:bg-gray-50 dark:hover:bg-black dark:hover:bg-opacity-5"
-          [ngClass]="{ unread: !message.read }"
-        >
-          <!-- Message with a link -->
-          <ng-container *ngIf="message.link">
-            <!-- Normal links -->
-            <ng-container *ngIf="!message.useRouter">
-              <a class="flex flex-auto cursor-pointer" [href]="message.link">
-                <ng-container *ngTemplateOutlet="messageContent">
-                </ng-container>
-              </a>
-            </ng-container>
-            <!-- Router links -->
-            <ng-container *ngIf="message.useRouter">
-              <a
-                class="flex flex-auto cursor-pointer"
-                [routerLink]="message.link"
-              >
-                <ng-container *ngTemplateOutlet="messageContent">
-                </ng-container>
-              </a>
-            </ng-container>
-          </ng-container>
-
-          <!-- Message without a link -->
-          <ng-container *ngIf="!message.link">
-            <div class="flex flex-auto">
-              <ng-container *ngTemplateOutlet="messageContent"> </ng-container>
-            </div>
-          </ng-container>
-
-          <!-- Actions -->
-          <div class="relative flex flex-col">
-            <!-- Indicator -->
-            <button
-              type="button"
-              class="min-h-6 h-6 w-6"
-              mat-icon-button
-              (click)="toggleRead(message)"
-              *transloco="let t"
-              [matTooltip]="
-                t(
-                  message.read ? 'layout.mark-as-unread' : 'layout.mark-as-read'
-                )
-              "
-            >
-              <span
-                class="h-2 w-2 rounded-full"
-                [ngClass]="{
-                  'bg-gray-400 dark:bg-gray-500 sm:opacity-0 sm:group-hover:opacity-100':
-                    message.read,
-                  'bg-primary': !message.read
-                }"
-              ></span>
-            </button>
-            <!-- Remove -->
-            <button
-              type="button"
-              class="min-h-6 h-6 w-6 sm:opacity-0 sm:group-hover:opacity-100"
-              mat-icon-button
-              (click)="delete(message)"
-              *transloco="let t"
-              [matTooltip]="t('layout.remove')"
-            >
-              <mat-icon
-                class="icon-size-4"
-                svgIcon="heroicons_outline:x-mark"
-              ></mat-icon>
-            </button>
-          </div>
+      @for (message of messages; track message.id) {
+      <div
+        class="group flex px-6 py-4 hover:bg-gray-50 dark:hover:bg-black dark:hover:bg-opacity-5"
+        [ngClass]="{ unread: !message.read }"
+      >
+        <!-- Message with a Normal link -->
+        @if (message.link && !message.useRouter) {
+        <a class="flex flex-auto cursor-pointer" [href]="message.link">
+          <ng-container *ngTemplateOutlet="messageContent"> </ng-container>
+        </a>
+        <!-- Message with a Router links -->
+        } @else if (message.link && message.useRouter) {
+        <a class="flex flex-auto cursor-pointer" [routerLink]="message.link">
+          <ng-container *ngTemplateOutlet="messageContent"> </ng-container>
+        </a>
+        } @else {
+        <!-- Message without a link -->
+        <div class="flex flex-auto">
+          <ng-container *ngTemplateOutlet="messageContent"> </ng-container>
         </div>
+        }
 
-        <!-- Message content template -->
-        <ng-template #messageContent>
-          <!-- Icon -->
-          <ng-container *ngIf="message.icon && !message.image">
-            <div
-              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
-            >
-              <mat-icon class="icon-size-5" [svgIcon]="message.icon"></mat-icon>
-            </div>
-          </ng-container>
-
-          <!-- Image -->
-          <ng-container *ngIf="message.image">
-            <img
-              class="h-8 w-8 shrink-0 overflow-hidden rounded-full object-cover object-center"
-              [src]="message.image"
-              alt="Message image"
-            />
-          </ng-container>
-
-          <!-- Title, description & time -->
-          <div class="mx-4 flex flex-auto flex-col">
-            <ng-container *ngIf="message.title">
-              <div
-                class="line-clamp-1 font-semibold"
-                [innerHTML]="message.title"
-              ></div>
-            </ng-container>
-            <ng-container *ngIf="message.description">
-              <div class="line-clamp-2" [innerHTML]="message.description"></div>
-            </ng-container>
-            <div class="text-secondary mt-2 text-sm leading-none">
-              {{ message.time | mskTimeAgo }}
-            </div>
-          </div>
-        </ng-template>
-      </ng-container>
-
-      <!-- No messages -->
-      <ng-container *ngIf="!messages || !messages.length">
-        <div
-          class="flex flex-auto flex-col items-center justify-center px-8 py-12 sm:justify-start"
-        >
-          <div
-            class="flex-0 bg-primary-100 flex h-14 w-14 items-center justify-center rounded-full"
+        <!-- Actions -->
+        <div class="relative flex flex-col">
+          <!-- Indicator -->
+          <button
+            type="button"
+            class="h-6 min-h-6 w-6"
+            mat-icon-button
+            (click)="toggleRead(message)"
+            *transloco="let t"
+            [matTooltip]="
+              t(message.read ? 'layout.mark-as-unread' : 'layout.mark-as-read')
+            "
+          >
+            <span
+              class="h-2 w-2 rounded-full"
+              [ngClass]="{
+                'bg-gray-400 sm:opacity-0 sm:group-hover:opacity-100 dark:bg-gray-500':
+                  message.read,
+                'bg-primary': !message.read
+              }"
+            ></span>
+          </button>
+          <!-- Remove -->
+          <button
+            type="button"
+            class="h-6 min-h-6 w-6 sm:opacity-0 sm:group-hover:opacity-100"
+            mat-icon-button
+            (click)="delete(message)"
+            *transloco="let t"
+            [matTooltip]="t('layout.remove')"
           >
             <mat-icon
-              class="text-primary-500"
-              svgIcon="heroicons_outline:inbox"
-            >
-            </mat-icon>
-          </div>
-          <div class="mt-5 text-2xl font-semibold tracking-tight">
-            <ng-container *transloco="let t">
-              {{ t('layout.no-messages') }}
-            </ng-container>
-          </div>
-          <div class="text-secondary max-w-60 text-md mt-1 w-full text-center">
-            <ng-container *transloco="let t">
-              {{ t('layout.description-messages') }}
-            </ng-container>
+              class="icon-size-4"
+              svgIcon="heroicons_outline:x-mark"
+            ></mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Message content template -->
+      <ng-template #messageContent>
+        <!-- Icon -->
+        @if (message.icon && !message.image) {
+        <div
+          class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700"
+        >
+          <mat-icon class="icon-size-5" [svgIcon]="message.icon"></mat-icon>
+        </div>
+        }
+
+        <!-- Image -->
+        @if (message.image) {
+        <img
+          class="h-8 w-8 shrink-0 overflow-hidden rounded-full object-cover object-center"
+          [src]="message.image"
+          alt="Message image"
+        />
+        }
+
+        <!-- Title, description & time -->
+        <div class="mx-4 flex flex-auto flex-col">
+          @if (message.title) {
+          <div
+            class="line-clamp-1 font-semibold"
+            [innerHTML]="message.title"
+          ></div>
+          } @if (message.description) {
+          <div class="line-clamp-2" [innerHTML]="message.description"></div>
+          }
+          <div class="text-secondary mt-2 text-sm leading-none">
+            {{ message.time | mskTimeAgo }}
           </div>
         </div>
-      </ng-container>
+      </ng-template>
+      }
+
+      <!-- No messages -->
+      @if (!messages || !messages.length) {
+      <div
+        class="flex flex-auto flex-col items-center justify-center px-8 py-12 sm:justify-start"
+      >
+        <div
+          class="flex-0 bg-primary-100 flex h-14 w-14 items-center justify-center rounded-full"
+        >
+          <mat-icon class="text-primary-500" svgIcon="heroicons_outline:inbox">
+          </mat-icon>
+        </div>
+        <div class="mt-5 text-2xl font-semibold tracking-tight">
+          <ng-container *transloco="let t">
+            {{ t('layout.no-messages') }}
+          </ng-container>
+        </div>
+        <div class="text-secondary text-md mt-1 w-full max-w-60 text-center">
+          <ng-container *transloco="let t">
+            {{ t('layout.description-messages') }}
+          </ng-container>
+        </div>
+      </div>
+      }
     </div>
   </div>
 </ng-template>

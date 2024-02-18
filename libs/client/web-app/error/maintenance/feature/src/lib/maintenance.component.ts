@@ -7,10 +7,7 @@ import {
 @Component({
   selector: 'msk-maintenance',
   templateUrl: './maintenance.component.html',
-  styleUrls: ['./maintenance.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MaintenanceComponent {
-  constructor() {}
-}
+export class MaintenanceComponent {}

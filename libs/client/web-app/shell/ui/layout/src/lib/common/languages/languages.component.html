@@ -12,16 +12,16 @@
 
 <!-- Language menu -->
 <mat-menu [xPosition]="'before'" #languages="matMenu">
-  <ng-container *ngFor="let lang of availableLangs; trackBy: trackByFn">
-    <button mat-menu-item (click)="setActiveLang(lang.id)">
-      <span class="flex items-center">
-        <ng-container
-          *ngTemplateOutlet="flagImage; context: { $implicit: lang.id }"
-        ></ng-container>
-        <span class="mx-3">{{ lang.label }}</span>
-      </span>
-    </button>
-  </ng-container>
+  @for (lang of availableLangs; track lang.id) {
+  <button mat-menu-item (click)="setActiveLang(lang.id)">
+    <span class="flex items-center">
+      <ng-container
+        *ngTemplateOutlet="flagImage; context: { $implicit: lang.id }"
+      ></ng-container>
+      <span class="mx-3">{{ lang.label }}</span>
+    </span>
+  </button>
+  }
 </mat-menu>
 
 <!-- Flag image template -->

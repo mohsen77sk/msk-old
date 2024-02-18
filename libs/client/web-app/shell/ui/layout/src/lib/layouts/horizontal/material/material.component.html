@@ -2,24 +2,24 @@
 <msk-loading-bar></msk-loading-bar>
 
 <!-- Navigation -->
-<ng-container *ngIf="isScreenSmall">
-  <msk-vertical-navigation
-    class="dark bg-gray-900 print:hidden"
-    [mode]="'over'"
-    [name]="'mainNavigation'"
-    [navigation]="navigation"
-    [opened]="false"
-  >
-    <!-- Navigation header hook -->
-    <ng-container mskVerticalNavigationContentHeader>
-      <!-- Logo -->
-      <div class="flex h-20 items-center px-8 pt-6">
-        <img class="w-10" src="assets/images/logo/logo.svg" />
-        <label class="mx-4 text-2xl font-black">MSK</label>
-      </div>
-    </ng-container>
-  </msk-vertical-navigation>
-</ng-container>
+@if (isScreenSmall) {
+<msk-vertical-navigation
+  class="dark bg-gray-900 print:hidden"
+  [mode]="'over'"
+  [name]="'mainNavigation'"
+  [navigation]="navigation"
+  [opened]="false"
+>
+  <!-- Navigation header hook -->
+  <ng-container mskVerticalNavigationContentHeader>
+    <!-- Logo -->
+    <div class="flex h-20 items-center px-8 pt-6">
+      <img class="w-10" src="assets/images/logo/logo.svg" />
+      <label class="mx-4 text-2xl font-black">MSK</label>
+    </div>
+  </ng-container>
+</msk-vertical-navigation>
+}
 
 <!-- Wrapper -->
 <div
@@ -34,28 +34,27 @@
     >
       <!-- Top bar -->
       <div
-        class="flex-0 relative flex h-16 flex-auto items-center justify-between px-4 md:px-6"
+        class="relative flex h-16 flex-auto items-center justify-between px-4 md:px-6"
       >
         <!-- Logo -->
-        <ng-container *ngIf="!isScreenSmall">
-          <div class="mx-2 flex items-center">
-            <img
-              class="w-10"
-              src="assets/images/logo/logo.svg"
-              alt="Logo image"
-            />
-            <label class="mx-4 text-2xl font-black">MSK</label>
-          </div>
-        </ng-container>
+        @if (!isScreenSmall) {
+        <div class="mx-2 flex items-center">
+          <img
+            class="w-10"
+            src="assets/images/logo/logo.svg"
+            alt="Logo image"
+          />
+          <label class="mx-4 text-2xl font-black">MSK</label>
+        </div>
+        } @else {
         <!-- Navigation toggle button -->
-        <ng-container *ngIf="isScreenSmall">
-          <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
-            <mat-icon svgIcon="heroicons_outline:bars-3"></mat-icon>
-          </button>
-        </ng-container>
+        <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
+          <mat-icon svgIcon="heroicons_outline:bars-3"></mat-icon>
+        </button>
+        }
         <!-- Components -->
         <div
-          class="flex items-center space-x-0.5 px-2 rtl:space-x-reverse md:space-x-1"
+          class="flex items-center space-x-0.5 px-2 md:space-x-1 rtl:space-x-reverse"
         >
           <languages></languages>
           <msk-fullscreen
@@ -69,14 +68,14 @@
         </div>
       </div>
       <!-- Bottom bar -->
-      <ng-container *ngIf="!isScreenSmall">
-        <div class="flex-0 relative flex h-16 flex-auto items-center px-4">
-          <msk-horizontal-navigation
-            [name]="'mainNavigation'"
-            [navigation]="navigation"
-          ></msk-horizontal-navigation>
-        </div>
-      </ng-container>
+      @if (!isScreenSmall) {
+      <div class="relative flex h-16 flex-auto items-center px-4">
+        <msk-horizontal-navigation
+          [name]="'mainNavigation'"
+          [navigation]="navigation"
+        ></msk-horizontal-navigation>
+      </div>
+      }
     </div>
   </div>
 

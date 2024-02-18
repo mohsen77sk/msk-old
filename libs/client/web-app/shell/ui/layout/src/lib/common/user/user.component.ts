@@ -1,5 +1,4 @@
 /* eslint-disable @angular-eslint/component-selector */
-import { BooleanInput } from '@angular/cdk/coercion';
 import {
   Component,
   OnInit,
@@ -8,6 +7,8 @@ import {
   ChangeDetectorRef,
   inject,
   DestroyRef,
+  ViewEncapsulation,
+  booleanAttribute,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
@@ -19,17 +20,14 @@ import { MskDrawerService } from '@msk/client/shared/ui/drawer';
   selector: 'user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'user',
 })
 export class UserComponent implements OnInit {
-  /* eslint-disable @typescript-eslint/naming-convention */
-  static ngAcceptInputType_showAvatar: BooleanInput;
-  /* eslint-enable @typescript-eslint/naming-convention */
-
   destroyRef = inject(DestroyRef);
 
-  @Input() showAvatar = true;
+  @Input({ transform: booleanAttribute }) showAvatar = true;
   user!: User;
 
   /**

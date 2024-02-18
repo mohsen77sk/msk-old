@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 
 import { MskPasswordStrengthMeterService } from './password-strength-meter.service';
+import { AvailableLangsIds } from 'scoped-translations';
 
 @Component({
   selector: 'msk-password-strength-meter',
@@ -15,7 +16,7 @@ import { MskPasswordStrengthMeterService } from './password-strength-meter.servi
   styleUrls: ['./password-strength-meter.component.scss'],
 })
 export class MskPasswordStrengthMeterComponent implements OnChanges {
-  @Input() language!: 'en' | 'fa';
+  @Input() language!: AvailableLangsIds;
   @Input() password!: string;
   @Input() enableFeedback = false;
   @Input() colors: string[] = [];

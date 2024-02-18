@@ -17,6 +17,7 @@ import localeEn from '@angular/common/locales/en';
 import localeFa from '@angular/common/locales/fa';
 registerLocaleData(localeEn, 'en');
 registerLocaleData(localeFa, 'fa');
+
 @NgModule({
   providers: [
     {

@@ -12,8 +12,7 @@ import {
 } from './language-fa';
 
 import { minLengthMatcher } from './matcher/minLengthMatcher';
-
-type LOCALE_TYPE = 'en' | 'fa';
+import { AvailableLangsIds } from 'scoped-translations';
 
 const Locale = {
   en: enTranslations,
@@ -41,7 +40,7 @@ export class MskPasswordStrengthMeterService {
    *
    *  @param password
    */
-  score(password: string, language?: LOCALE_TYPE): number {
+  score(password: string, language?: AvailableLangsIds): number {
     const result = this._checkPassword(password, language);
     return result.score;
   }
@@ -54,7 +53,7 @@ export class MskPasswordStrengthMeterService {
    */
   scoreWithFeedback(
     password: string,
-    language?: LOCALE_TYPE,
+    language?: AvailableLangsIds,
   ): {
     score: number;
     feedback: { warning: string | null; suggestions: string[] };
@@ -75,11 +74,11 @@ export class MskPasswordStrengthMeterService {
    */
   private _checkPassword(
     password: string,
-    language: LOCALE_TYPE = 'en',
+    language: AvailableLangsIds = 'en',
   ): ZxcvbnResult {
     // Set option
     zxcvbnOptions.setOptions({
-      translations: Locale[language as LOCALE_TYPE],
+      translations: Locale[language as AvailableLangsIds],
       dictionary: {
         ...dictionary,
         ...enDictionary,
