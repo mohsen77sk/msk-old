@@ -23,7 +23,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'material-layout',
   templateUrl: './material.component.html',
-  styleUrls: ['./material.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class MaterialLayoutComponent implements OnInit {

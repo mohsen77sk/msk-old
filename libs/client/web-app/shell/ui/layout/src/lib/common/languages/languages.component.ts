@@ -22,7 +22,6 @@ const locale = {
 @Component({
   selector: 'languages',
   templateUrl: './languages.component.html',
-  styleUrls: ['./languages.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'languages',

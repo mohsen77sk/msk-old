@@ -2,6 +2,7 @@
 import {
   Component,
   DestroyRef,
+  HostBinding,
   OnInit,
   ViewEncapsulation,
   inject,
@@ -20,7 +21,6 @@ import { LayoutConfig } from '../../layout.config';
 @Component({
   selector: 'layout-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class LayoutSettingsComponent implements OnInit {
@@ -39,6 +39,20 @@ export class LayoutSettingsComponent implements OnInit {
     private _router: Router,
     private _mskConfigService: MskConfigService,
   ) {}
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Accessors
+  // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * Host binding for component inline styles
+   */
+  @HostBinding('style') get styleList(): object {
+    return {
+      width: 'auto',
+      flex: 'none',
+    };
+  }
 
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks

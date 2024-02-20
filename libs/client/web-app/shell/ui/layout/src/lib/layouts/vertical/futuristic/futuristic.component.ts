@@ -24,7 +24,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'futuristic-layout',
   templateUrl: './futuristic.component.html',
-  styleUrls: ['./futuristic.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class FuturisticLayoutComponent implements OnInit {

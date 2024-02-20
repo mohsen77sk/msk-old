@@ -23,7 +23,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'classic-layout',
   templateUrl: './classic.component.html',
-  styleUrls: ['./classic.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ClassicLayoutComponent implements OnInit {

@@ -23,7 +23,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'thin-layout',
   templateUrl: './thin.component.html',
-  styleUrls: ['./thin.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ThinLayoutComponent implements OnInit {

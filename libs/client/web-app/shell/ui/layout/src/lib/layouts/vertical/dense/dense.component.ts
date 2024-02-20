@@ -23,7 +23,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'dense-layout',
   templateUrl: './dense.component.html',
-  styleUrls: ['./dense.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class DenseLayoutComponent implements OnInit {

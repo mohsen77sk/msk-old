@@ -23,7 +23,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'compact-layout',
   templateUrl: './compact.component.html',
-  styleUrls: ['./compact.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class CompactLayoutComponent implements OnInit {

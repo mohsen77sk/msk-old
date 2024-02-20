@@ -14,16 +14,12 @@
         class="icon-size-7 text-current"
         svgIcon="heroicons_solid:cog"
       ></mat-icon>
-      <div class="text-2xl font-semibold tracking-tight ltr:ml-3 rtl:mr-3">
+      <div class="ms-3 text-2xl font-semibold tracking-tight">
         <ng-container *transloco="let t">
           <span>{{ t('layout.layout-settings') }}</span>
         </ng-container>
       </div>
-      <button
-        class="ltr:ml-auto rtl:mr-auto"
-        mat-icon-button
-        (click)="settingsDrawer.close()"
-      >
+      <button class="ms-auto" mat-icon-button (click)="settingsDrawer.close()">
         <mat-icon
           class="text-current"
           svgIcon="heroicons_outline:x-mark"

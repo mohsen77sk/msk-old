@@ -23,7 +23,6 @@ import { cloneDeep } from 'lodash-es';
 @Component({
   selector: 'modern-layout',
   templateUrl: './modern.component.html',
-  styleUrls: ['./modern.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ModernLayoutComponent implements OnInit {

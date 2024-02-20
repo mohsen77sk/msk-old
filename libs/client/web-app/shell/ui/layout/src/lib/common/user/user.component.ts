@@ -19,7 +19,6 @@ import { MskDrawerService } from '@msk/client/shared/ui/drawer';
 @Component({
   selector: 'user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'user',
