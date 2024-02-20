@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 
 import {
   TranslocoModule,
-  TRANSLOCO_SCOPE,
   TranslocoService,
+  provideTranslocoScope,
 } from '@ngneat/transloco';
 
 import { MskInternetStatusService } from './internet-status.service';
@@ -14,10 +14,7 @@ import { switchMap } from 'rxjs';
   declarations: [MskOfflineComponent],
   imports: [TranslocoModule],
   providers: [
-    {
-      provide: TRANSLOCO_SCOPE,
-      useValue: 'internetStatus',
-    },
+    provideTranslocoScope({ scope: 'internetStatus' }),
     MskInternetStatusService,
   ],
 })

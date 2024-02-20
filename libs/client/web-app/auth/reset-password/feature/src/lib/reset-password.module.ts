@@ -15,7 +15,7 @@ import { MskPasswordStrengthMeterModule } from '@msk/client/shared/ui/password-s
 import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
 import { NgxTouchKeyboardModule } from 'ngx-touch-keyboard';
 
-import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import { TranslocoModule, provideTranslocoScope } from '@ngneat/transloco';
 import { scopeLoader } from 'scoped-translations';
 
 import { ResetPasswordComponent } from './reset-password.component';
@@ -46,15 +46,12 @@ const routes: Routes = [
     TranslocoModule,
   ],
   providers: [
-    {
-      provide: TRANSLOCO_SCOPE,
-      useValue: {
-        scope: 'resetPassword',
-        loader: scopeLoader(
-          (lang: string, root: string) => import(`./${root}/${lang}.json`),
-        ),
-      },
-    },
+    provideTranslocoScope({
+      scope: 'resetPassword',
+      loader: scopeLoader(
+        (lang: string, root: string) => import(`./${root}/${lang}.json`),
+      ),
+    }),
   ],
   declarations: [ResetPasswordComponent],
 })

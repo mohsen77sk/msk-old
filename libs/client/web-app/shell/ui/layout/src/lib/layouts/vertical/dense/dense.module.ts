@@ -12,7 +12,7 @@ import { MskNavigationModule } from '@msk/client/shared/ui/navigation';
 import { MskLoadingBarModule } from '@msk/client/shared/ui/loading-bar';
 import { MskMediaWatcherModule } from '@msk/client/shared/services/media-watcher';
 
-import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import { TranslocoModule, provideTranslocoScope } from '@ngneat/transloco';
 import { scopeLoader } from 'scoped-translations';
 
 import { MessagesModule } from '../../../common/messages/messages.module';
@@ -44,16 +44,12 @@ import { DenseLayoutComponent } from './dense.component';
     UserModule,
   ],
   providers: [
-    {
-      provide: TRANSLOCO_SCOPE,
-      useValue: {
-        scope: 'layout',
-        loader: scopeLoader(
-          (lang: string, root: string) =>
-            import(`../../../${root}/${lang}.json`),
-        ),
-      },
-    },
+    provideTranslocoScope({
+      scope: 'layout',
+      loader: scopeLoader(
+        (lang: string, root: string) => import(`../../../${root}/${lang}.json`),
+      ),
+    }),
   ],
   exports: [DenseLayoutComponent],
 })

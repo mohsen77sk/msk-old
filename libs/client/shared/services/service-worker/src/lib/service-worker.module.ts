@@ -6,10 +6,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import {
   TranslocoModule,
-  TRANSLOCO_SCOPE,
   TranslocoService,
+  provideTranslocoScope,
 } from '@ngneat/transloco';
-import { scopeLoader } from 'scoped-translations';
 
 import { MskServiceWorkerSnackBarComponent } from './snack-bar/snack-bar.component';
 import { MskServiceWorkerService } from './service-worker.service';
@@ -31,10 +30,7 @@ import { switchMap } from 'rxjs';
     }),
   ],
   providers: [
-    {
-      provide: TRANSLOCO_SCOPE,
-      useValue: 'serviceWorker',
-    },
+    provideTranslocoScope({ scope: 'serviceWorker' }),
     MskServiceWorkerService,
   ],
 })

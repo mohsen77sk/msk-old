@@ -13,7 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MskAlertModule } from '@msk/client/shared/ui/alert';
 import { MskSpinnerModule } from '@msk/client/shared/directives/spinner';
 
-import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import { TranslocoModule, provideTranslocoScope } from '@ngneat/transloco';
 import { scopeLoader } from 'scoped-translations';
 
 import { TwoStepVerificationComponent } from './two-step-verification.component';
@@ -42,15 +42,12 @@ const routes: Routes = [
     TranslocoModule,
   ],
   providers: [
-    {
-      provide: TRANSLOCO_SCOPE,
-      useValue: {
-        scope: 'towStep',
-        loader: scopeLoader(
-          (lang: string, root: string) => import(`./${root}/${lang}.json`),
-        ),
-      },
-    },
+    provideTranslocoScope({
+      scope: 'towStep',
+      loader: scopeLoader(
+        (lang: string, root: string) => import(`./${root}/${lang}.json`),
+      ),
+    }),
   ],
   declarations: [TwoStepVerificationComponent],
 })
