@@ -26,6 +26,43 @@
     "children": []
   },
   {
+    "id": "pages",
+    "title": "Pages",
+    "tooltip": "Pages",
+    "subtitle": "Pages management",
+    "type": "group",
+    "icon": "heroicons_outline:document-duplicate",
+    "children": [
+      {
+        "id": "pages.error",
+        "title": "Error",
+        "type": "collapsable",
+        "icon": "heroicons_outline:exclamation-circle",
+        "children": [
+          {
+            "id": "pages.error.not-found",
+            "title": "Not found",
+            "type": "basic",
+            "link": "/pages/error/not-found"
+          },
+          {
+            "id": "pages.error.internal-server-error",
+            "title": "Internal server error",
+            "type": "basic",
+            "link": "/pages/error/internal-server-error"
+          }
+        ]
+      },
+      {
+        "id": "pages.maintenance",
+        "title": "Maintenance",
+        "type": "basic",
+        "icon": "heroicons_outline:exclamation-triangle",
+        "link": "/pages/maintenance"
+      }
+    ]
+  },
+  {
     "id": "docs",
     "title": "Documentation",
     "tooltip": "Documentation",
