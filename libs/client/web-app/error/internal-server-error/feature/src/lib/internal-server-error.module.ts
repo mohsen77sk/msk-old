@@ -18,7 +18,7 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forChild(routes), TranslocoModule],
   providers: [
     provideTranslocoScope({
-      scope: 'error',
+      scope: 'internalServerError',
       loader: scopeLoader(
         (lang: string, root: string) => import(`./${root}/${lang}.json`),
       ),

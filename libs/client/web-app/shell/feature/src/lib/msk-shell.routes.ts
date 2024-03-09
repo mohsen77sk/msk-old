@@ -119,6 +119,39 @@ export const mskShellRoutes: Route[] = [
         path: 'apps',
         children: [],
       },
+
+      // Pages
+      {
+        path: 'pages',
+        children: [
+          // Error
+          {
+            path: 'error/not-found',
+            pathMatch: 'full',
+            loadChildren: () =>
+              import('@msk/client/web-app/error/not-found/feature').then(
+                (m) => m.NotFoundModule,
+              ),
+          },
+          {
+            path: 'error/internal-server-error',
+            pathMatch: 'full',
+            loadChildren: () =>
+              import(
+                '@msk/client/web-app/error/internal-server-error/feature'
+              ).then((m) => m.InternalServerErrorModule),
+          },
+          // Maintenance
+          {
+            path: 'maintenance',
+            pathMatch: 'full',
+            loadChildren: () =>
+              import('@msk/client/web-app/error/maintenance/feature').then(
+                (m) => m.MaintenanceModule,
+              ),
+          },
+        ],
+      },
     ],
   },
 
