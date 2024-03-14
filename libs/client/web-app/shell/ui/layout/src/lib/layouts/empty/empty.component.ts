@@ -6,9 +6,4 @@ import { Component, ViewEncapsulation } from '@angular/core';
   templateUrl: './empty.component.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class EmptyLayoutComponent {
-  /**
-   * Constructor
-   */
-  constructor() {}
-}
+export class EmptyLayoutComponent {}

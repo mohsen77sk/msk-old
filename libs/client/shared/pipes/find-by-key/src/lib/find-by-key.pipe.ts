@@ -9,11 +9,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MskFindByKeyPipe implements PipeTransform {
   /**
-   * Constructor
-   */
-  constructor() {}
-
-  /**
    * Transform
    *
    * @param value A string or an array of strings to find from source

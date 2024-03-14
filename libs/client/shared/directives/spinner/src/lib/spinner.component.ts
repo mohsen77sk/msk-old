@@ -23,9 +23,4 @@ export class MskSpinnerComponent {
    * `primary`, `accent`, `warn`.
    */
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-
-  /**
-   * constructor
-   */
-  constructor() {}
 }

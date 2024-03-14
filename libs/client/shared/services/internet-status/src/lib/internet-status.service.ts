@@ -52,7 +52,7 @@ export class MskInternetStatusService {
   // -----------------------------------------------------------------------------------------------------
 
   /**
-   *
+   * Create the component
    */
   createComponent(): void {
     // Create a component reference from the component
@@ -75,7 +75,7 @@ export class MskInternetStatusService {
   }
 
   /**
-   *
+   * Remove the component
    */
   removeComponent(): void {
     // Set message to 'online'

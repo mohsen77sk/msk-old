@@ -17,5 +17,5 @@
       "outputs": ["{options.outputFile}"]
     }
   },
-  "tags": []
+  "tags": ["scope:client-shared", "type:util"]
 }

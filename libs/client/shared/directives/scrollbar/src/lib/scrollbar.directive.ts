@@ -175,7 +175,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    *
    * @param prefix
    */
-  geometry(prefix: string = 'scroll'): MskScrollbarGeometry {
+  geometry(prefix = 'scroll'): MskScrollbarGeometry {
     return new MskScrollbarGeometry(
       this._elementRef.nativeElement[prefix + 'Left'],
       this._elementRef.nativeElement[prefix + 'Top'],
@@ -189,7 +189,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    *
    * @param absolute
    */
-  position(absolute: boolean = false): MskScrollbarPosition {
+  position(absolute = false): MskScrollbarPosition {
     let scrollbarPosition;
 
     if (!absolute && this._ps) {
@@ -254,7 +254,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    * @param offset
    * @param speed
    */
-  scrollToTop(offset: number = 0, speed?: number): void {
+  scrollToTop(offset = 0, speed?: number): void {
     this.animateScrolling('scrollTop', offset, speed);
   }
 
@@ -264,7 +264,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    * @param offset
    * @param speed
    */
-  scrollToBottom(offset: number = 0, speed?: number): void {
+  scrollToBottom(offset = 0, speed?: number): void {
     const top =
       this._elementRef.nativeElement.scrollHeight -
       this._elementRef.nativeElement.clientHeight;
@@ -277,7 +277,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    * @param offset
    * @param speed
    */
-  scrollToLeft(offset: number = 0, speed?: number): void {
+  scrollToLeft(offset = 0, speed?: number): void {
     this.animateScrolling('scrollLeft', offset, speed);
   }
 
@@ -287,7 +287,7 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    * @param offset
    * @param speed
    */
-  scrollToRight(offset: number = 0, speed?: number): void {
+  scrollToRight(offset = 0, speed?: number): void {
     const left =
       this._elementRef.nativeElement.scrollWidth -
       this._elementRef.nativeElement.clientWidth;
@@ -304,8 +304,8 @@ export class MskScrollbarDirective implements OnChanges, OnInit, OnDestroy {
    */
   scrollToElement(
     qs: string,
-    offset: number = 0,
-    ignoreVisible: boolean = false,
+    offset = 0,
+    ignoreVisible = false,
     speed?: number,
   ): void {
     const element = this._elementRef.nativeElement.querySelector(qs);

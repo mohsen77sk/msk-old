@@ -5,8 +5,8 @@ import { mskAnimations } from '@msk/client/shared/animations';
   selector: 'msk-docs-animations',
   templateUrl: './animations.component.html',
   styleUrls: ['./animations.component.scss'],
-  animations: mskAnimations,
   encapsulation: ViewEncapsulation.None,
+  animations: mskAnimations,
 })
 export class AnimationsComponent {
   animationStates: any;

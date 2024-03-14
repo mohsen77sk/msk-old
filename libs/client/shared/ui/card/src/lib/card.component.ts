@@ -29,11 +29,6 @@ export class MskCardComponent implements OnChanges {
   @Input() face: MskCardFace = 'front';
   @Input() flippable = false;
 
-  /**
-   * Constructor
-   */
-  constructor() {}
-
   // -----------------------------------------------------------------------------------------------------
   // @ Accessors
   // -----------------------------------------------------------------------------------------------------

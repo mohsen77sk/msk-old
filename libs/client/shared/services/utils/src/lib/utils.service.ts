@@ -3,11 +3,6 @@ import { IsActiveMatchOptions } from '@angular/router';
 
 @Injectable()
 export class MskUtilsService {
-  /**
-   * Constructor
-   */
-  constructor() {}
-
   // -----------------------------------------------------------------------------------------------------
   // @ Accessors
   // -----------------------------------------------------------------------------------------------------

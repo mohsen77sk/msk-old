@@ -14,11 +14,6 @@ export class MskLoadingBarService {
   );
   private _urlMap: Map<string, boolean> = new Map<string, boolean>();
 
-  /**
-   * Constructor
-   */
-  constructor() {}
-
   // -----------------------------------------------------------------------------------------------------
   // @ Accessors
   // -----------------------------------------------------------------------------------------------------
