@@ -187,6 +187,9 @@
       "@msk/client/web-app/docs/guides/theming": [
         "libs/client/web-app/docs/guides/theming/src/index.ts"
       ],
+      "@msk/client/web-app/docs/icons": [
+        "libs/client/web-app/docs/icons/src/index.ts"
+      ],
       "@msk/client/web-app/docs/pipes/find-by-key": [
         "libs/client/web-app/docs/pipes/find-by-key/src/index.ts"
       ],

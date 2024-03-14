@@ -1,0 +1,107 @@
+<div
+  class="absolute inset-0 flex min-w-0 flex-col overflow-y-auto"
+  cdkScrollable
+>
+  <!-- Header -->
+  <div
+    class="flex-0 bg-card flex flex-col border-b p-6 sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-8 dark:bg-transparent"
+  >
+    <div class="min-w-0 flex-1">
+      <!-- Breadcrumbs -->
+      <div
+        class="flex flex-wrap items-center space-x-1 font-medium leading-4 rtl:space-x-reverse"
+      >
+        <a class="text-primary-500 whitespace-nowrap"> Documentation </a>
+        <mat-icon
+          class="icon-size-4 text-secondary mat-icon-rtl-mirror"
+          [svgIcon]="'heroicons_solid:chevron-right'"
+        ></mat-icon>
+        <a class="text-secondary whitespace-nowrap"> Icons </a>
+      </div>
+      <!-- Title -->
+      <div class="mt-2">
+        <h2
+          class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl"
+        >
+          Icons
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="prose prose-sm max-w-none flex-auto p-6 sm:p-10">
+    @if (filteredIcons$ | async; as icons) {
+    <h2>Usage</h2>
+    <textarea
+      msk-highlight
+      lang="html"
+      [code]="
+        '<mat-icon svgIcon=&#34;' + calcSvgIconAttr() + '&#34;></mat-icon>'
+      "
+    ></textarea>
+
+    <h2>Icons</h2>
+    <div class="my-6">
+      <div class="flex flex-col sm:flex-row">
+        <mat-form-field class="mb-4 flex-auto" subscriptSizing="dynamic">
+          <mat-label>Search an icon</mat-label>
+          <input
+            matInput
+            [attr.autocomplete]="'off'"
+            (input)="filterIcons($event)"
+          />
+        </mat-form-field>
+        <mat-form-field class="mb-4 min-w-40 sm:ms-4" subscriptSizing="dynamic">
+          <mat-label>Icon size</mat-label>
+          <mat-select [(value)]="iconSize">
+            <mat-option [value]="'icon-size-4'">16</mat-option>
+            <mat-option [value]="'icon-size-5'">20</mat-option>
+            <mat-option [value]="'icon-size-6'">24</mat-option>
+            <mat-option [value]="'icon-size-8'">32</mat-option>
+            <mat-option [value]="'icon-size-10'">40</mat-option>
+            <mat-option [value]="'icon-size-12'">48</mat-option>
+            <mat-option [value]="'icon-size-16'">64</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="mb-4 min-w-40 sm:ms-4" subscriptSizing="dynamic">
+          <mat-label>Icon type</mat-label>
+          <mat-select
+            [(value)]="iconType"
+            (selectionChange)="selectType($event)"
+          >
+            <mat-option [value]="'outline'">Outline</mat-option>
+            <mat-option [value]="'solid'">Solid</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-[repeat(auto-fill,minmax(8rem,1fr))] gap-x-6 gap-y-4"
+    >
+      @for (icon of icons.list; track icon) {
+      <div class="group">
+        <div class="relative h-[8.5rem]">
+          <div
+            class="bg-card absolute inset-0 flex size-full cursor-pointer items-center justify-center rounded-xl border-2"
+            [class.border-primary]="selectedIcon === icon"
+            (click)="selectIcon(icons.namespace, icon)"
+          >
+            <mat-icon
+              [ngClass]="iconSize"
+              [svgIcon]="icons.namespace + ':' + icon"
+            ></mat-icon>
+          </div>
+        </div>
+        <div
+          class="text-secondary mt-3 line-clamp-2 h-10 truncate whitespace-normal text-center leading-5"
+        >
+          {{ icon }}
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</div>

@@ -85,6 +85,26 @@
         "link": "/docs/colors"
       },
       {
+        "id": "docs.icons",
+        "title": "Icons",
+        "type": "collapsable",
+        "icon": "heroicons_outline:bolt",
+        "children": [
+          {
+            "id": "docs.icons.heroicons",
+            "title": "Heroicons",
+            "type": "basic",
+            "link": "/docs/icons/heroicons"
+          },
+          {
+            "id": "docs.icons.material",
+            "title": "Material",
+            "type": "basic",
+            "link": "/docs/icons/material"
+          }
+        ]
+      },
+      {
         "id": "docs.forms",
         "title": "Forms",
         "type": "basic",

@@ -178,6 +178,13 @@ export const mskShellRoutes: Route[] = [
           ),
       },
       {
+        path: 'icons',
+        loadChildren: () =>
+          import('@msk/client/web-app/docs/icons').then(
+            (m) => m.DocsIconsModule,
+          ),
+      },
+      {
         path: 'forms',
         loadChildren: () =>
           import('@msk/client/web-app/docs/forms').then(
