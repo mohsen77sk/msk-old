@@ -5,7 +5,7 @@
       <button mat-icon-button [matDialogClose]="undefined">
         <mat-icon
           class="text-secondary"
-          [svgIcon]="'heroicons_outline:x'"
+          [svgIcon]="'heroicons_outline:x-mark'"
         ></mat-icon>
       </button>
     </div>
@@ -70,7 +70,7 @@
     *ngIf="data.actions?.confirm?.show || data.actions?.cancel?.show"
   >
     <div
-      class="flex items-center justify-center bg-gray-50 px-4 py-4 dark:bg-black dark:bg-opacity-10 sm:justify-end"
+      class="flex items-center justify-center bg-gray-50 px-4 py-4 sm:justify-end dark:bg-black dark:bg-opacity-10"
     >
       <!-- Cancel -->
       <ng-container *ngIf="data.actions?.cancel?.show">
