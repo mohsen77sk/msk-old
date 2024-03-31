@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb_app=self.webpackChunkweb_app||[]).push([[4172],{4172:e=>{e.exports=JSON.parse('{"title":"Ooops... 404!","description":"The page you requested could not be found","back-to-dashboard":"Back to Dashboard"}')}}]);

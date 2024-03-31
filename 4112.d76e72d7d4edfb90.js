@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweb_app=self.webpackChunkweb_app||[]).push([[4112],{4112:e=>{e.exports=JSON.parse('{"title":"We are under scheduled maintenance.","description":"Sorry for the inconvenience, we will be back shortly!","back-to-dashboard":"Back to Dashboard"}')}}]);
