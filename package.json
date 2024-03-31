@@ -7,7 +7,7 @@
     "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
-    "build-demo": "nx build --base-Href=/msk/",
+    "build-demo": "nx build --base-Href=/msk-old/",
     "test": "nx test"
   },
   "private": true,
